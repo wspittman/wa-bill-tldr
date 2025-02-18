@@ -1,0 +1,3558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://WSLWebServices.leg.wa.gov/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://WSLWebServices.leg.wa.gov/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Information on legislation being considered by the Washington State Legislature.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://WSLWebServices.leg.wa.gov/">
+      <s:element name="GetAmendmentsForYear">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="billNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAmendmentsForYearResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAmendmentsForYearResult" type="tns:ArrayOfAmendment" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAmendment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Amendment" nillable="true" type="tns:Amendment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Amendment">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="BillNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LegislativeSession" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FloorNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SponsorName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Drafter" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FloorAction" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FloorActionDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DocumentExists" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="HtmUrl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PdfUrl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Agency" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAmendmentsForBiennium">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="billNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAmendmentsForBienniumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAmendmentsForBienniumResult" type="tns:ArrayOfAmendment" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHearings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="billNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHearingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHearingsResult" type="tns:ArrayOfHearing" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfHearing">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Hearing" nillable="true" type="tns:Hearing" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Hearing">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BillId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Biennium" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CommitteeMeeting" type="tns:CommitteeMeeting" />
+          <s:element minOccurs="0" maxOccurs="1" name="HearingType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HearingTypeDescription" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CommitteeMeeting">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AgendaId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Agency" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Committees" type="tns:ArrayOfCommittee" />
+          <s:element minOccurs="0" maxOccurs="1" name="Room" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Building" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ZipCode" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Date" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Cancelled" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="RevisedDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactInformation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CommitteeType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Notes" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCommittee">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Committee" nillable="true" type="tns:Committee" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Committee">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:LegislativeEntity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="LegislativeEntity">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LongName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Agency" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Acronym" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetLegislationByRequestNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationByRequestNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLegislationByRequestNumberResult" type="tns:Legislation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Legislation">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:LegislationInfo">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="StateFiscalNote" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="LocalFiscalNote" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="Appropriations" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="RequestedByGovernor" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="RequestedByBudgetCommittee" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="RequestedByDepartment" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="RequestedByOther" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShortDescription" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Request" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IntroducedDate" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="CurrentStatus" type="tns:LegislativeStatus" />
+              <s:element minOccurs="0" maxOccurs="1" name="Sponsor" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="PrimeSponsorID" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="LongDescription" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LegalTitle" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Companions" type="tns:ArrayOfCompanion" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="LegislationInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Biennium" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BillNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubstituteVersion" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EngrossedVersion" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShortLegislationType" type="tns:LegislationType" />
+          <s:element minOccurs="0" maxOccurs="1" name="OriginalAgency" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Active" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayNumber" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LegislationType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ShortLegislationType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LongLegislationType" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LegislativeStatus">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BillId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HistoryLine" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ActionDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="AmendedByOppositeBody" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="PartialVeto" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Veto" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="AmendmentsExist" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCompanion">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Companion" nillable="true" type="tns:Companion" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Companion">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Biennium" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetRcwCitesAffected">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="billId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRcwCitesAffectedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRcwCitesAffectedResult" type="tns:ArrayOfRcwCiteAffected" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfRcwCiteAffected">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RcwCiteAffected" nillable="true" type="tns:RcwCiteAffected" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RcwCiteAffected">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RcwCite" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Action" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSessionLawChapter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="billId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSessionLawChapterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSessionLawChapterResult" type="tns:SessionLaw" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SessionLaw">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ChapterNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Year" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="LegislativeSession" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LegislatureNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EffectiveDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="MultipleEffectiveDates" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Biennium" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillTitle" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PartialVeto" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Veto" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="LegTypeId" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSponsors">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="billId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSponsorsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSponsorsResult" type="tns:ArrayOfSponsor" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSponsor">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Sponsor" nillable="true" type="tns:Sponsor" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Sponsor">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:LegislativeEntity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Order" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetRollCalls">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="billNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRollCallsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRollCallsResult" type="tns:ArrayOfRollCall" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfRollCall">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RollCall" nillable="true" type="tns:RollCall" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RollCall">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Agency" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Biennium" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Motion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SequenceNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VoteDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="YeaVotes" type="tns:RollCallType" />
+          <s:element minOccurs="0" maxOccurs="1" name="NayVotes" type="tns:RollCallType" />
+          <s:element minOccurs="0" maxOccurs="1" name="AbsentVotes" type="tns:RollCallType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExcusedVotes" type="tns:RollCallType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Votes" type="tns:ArrayOfVote" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RollCallType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Count" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MembersVoting" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfVote">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Vote" nillable="true" type="tns:Vote" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Vote">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MemberId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VOte" type="tns:VoteType" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="VoteType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Yea" />
+          <s:enumeration value="Nay" />
+          <s:enumeration value="Absent" />
+          <s:enumeration value="Excused" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetCurrentStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="billNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrentStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCurrentStatusResult" type="tns:LegislativeStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationTypes">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLegislationTypesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLegislationTypesResult" type="tns:ArrayOfLegislationType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLegislationType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LegislationType" nillable="true" type="tns:LegislationType" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetTotalLegislationIntroducedByDateRange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="beginDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="legTypeId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="agencyId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="allVersions" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTotalLegislationIntroducedByDateRangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetTotalLegislationIntroducedByDateRangeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="billNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLegislationResult" type="tns:ArrayOfLegislation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLegislation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Legislation" nillable="true" type="tns:Legislation" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetLegislationIntroducedSince">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sinceDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationIntroducedSinceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLegislationIntroducedSinceResult" type="tns:ArrayOfLegislation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrefiledLegislation">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPrefiledLegislationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPrefiledLegislationResult" type="tns:ArrayOfLegislation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislativeStatusChangesByBillNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="billNumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="beginDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislativeStatusChangesByBillNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLegislativeStatusChangesByBillNumberResult" type="tns:ArrayOfLegislativeStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLegislativeStatus">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LegislativeStatus" nillable="true" type="tns:LegislativeStatus" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetLegislativeStatusChangesByBillId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="billId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="beginDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislativeStatusChangesByBillIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLegislativeStatusChangesByBillIdResult" type="tns:ArrayOfLegislativeStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationHistoricalRecapCategoriesByLegislationNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="billNumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="beginDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationHistoricalRecapCategoriesByLegislationNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLegislationHistoricalRecapCategoriesByLegislationNumberResult" type="tns:ArrayOfLegislationRecapCategories" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLegislationRecapCategories">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LegislationRecapCategories" nillable="true" type="tns:LegislationRecapCategories" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LegislationRecapCategories">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="BillNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="HistoryText" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ActionDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Category" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Agency" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetLegislativeStatusChangesByDateRange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="beginDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislativeStatusChangesByDateRangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLegislativeStatusChangesByDateRangeResult" type="tns:ArrayOfLegislativeStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationByYear">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationByYearResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLegislationByYearResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLegislationInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LegislationInfo" nillable="true" type="tns:LegislationInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetLegislationInfoIntroducedSince">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sinceDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationInfoIntroducedSinceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLegislationInfoIntroducedSinceResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPreFiledLegislationInfo">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPreFiledLegislationInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPreFiledLegislationInfoResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHouseLegislationPassedHouse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHouseLegislationPassedHouseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHouseLegislationPassedHouseResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHouseLegislationPassedSenate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHouseLegislationPassedSenateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHouseLegislationPassedSenateResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSenateLegislationPassedSenate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSenateLegislationPassedSenateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSenateLegislationPassedSenateResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSenateLegislationPassedHouse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSenateLegislationPassedHouseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSenateLegislationPassedHouseResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationPassedLegislature">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationPassedLegislatureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLegislationPassedLegislatureResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationPassedLegislatureWithinTimeFrame">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="beginDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationPassedLegislatureWithinTimeFrameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLegislationPassedLegislatureWithinTimeFrameResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationPassedHouse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationPassedHouseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLegislationPassedHouseResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationPassedSenate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationPassedSenateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLegislationPassedSenateResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationGovernorSigned">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agency" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationGovernorSignedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLegislationGovernorSignedResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationGovernorVeto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agency" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationGovernorVetoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLegislationGovernorVetoResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationGovernorPartialVeto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agency" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationGovernorPartialVetoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLegislationGovernorPartialVetoResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPublishedEnrolledLegislation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPublishedEnrolledLegislationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPublishedEnrolledLegislationResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationPassedHouseWithinTimeFrame">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="beginDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationPassedHouseWithinTimeFrameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLegislationPassedHouseWithinTimeFrameResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationPassedSenateWithinTimeFrame">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="beginDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationPassedSenateWithinTimeFrameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLegislationPassedSenateWithinTimeFrameResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationNotYetIntroducedInHouseOfOrigin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationNotYetIntroducedInHouseOfOriginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLegislationNotYetIntroducedInHouseOfOriginResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationPassedOriginalBodyAndNotIntroducedInOppositeBody">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationPassedOriginalBodyAndNotIntroducedInOppositeBodyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLegislationPassedOriginalBodyAndNotIntroducedInOppositeBodyResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislativeBillListFeatureData">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLegislativeBillListFeatureDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLegislativeBillListFeatureDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArrayOfAmendment" nillable="true" type="tns:ArrayOfAmendment" />
+      <s:element name="ArrayOfHearing" nillable="true" type="tns:ArrayOfHearing" />
+      <s:element name="Legislation" nillable="true" type="tns:Legislation" />
+      <s:element name="ArrayOfRcwCiteAffected" nillable="true" type="tns:ArrayOfRcwCiteAffected" />
+      <s:element name="SessionLaw" nillable="true" type="tns:SessionLaw" />
+      <s:element name="ArrayOfSponsor" nillable="true" type="tns:ArrayOfSponsor" />
+      <s:element name="ArrayOfRollCall" nillable="true" type="tns:ArrayOfRollCall" />
+      <s:element name="LegislativeStatus" nillable="true" type="tns:LegislativeStatus" />
+      <s:element name="ArrayOfLegislationType" nillable="true" type="tns:ArrayOfLegislationType" />
+      <s:element name="int" type="s:int" />
+      <s:element name="ArrayOfLegislation" nillable="true" type="tns:ArrayOfLegislation" />
+      <s:element name="ArrayOfLegislativeStatus" nillable="true" type="tns:ArrayOfLegislativeStatus" />
+      <s:element name="ArrayOfLegislationRecapCategories" nillable="true" type="tns:ArrayOfLegislationRecapCategories" />
+      <s:element name="ArrayOfLegislationInfo" nillable="true" type="tns:ArrayOfLegislationInfo" />
+      <s:element name="DataTable" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+            <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAmendmentsForYearSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAmendmentsForYear" />
+  </wsdl:message>
+  <wsdl:message name="GetAmendmentsForYearSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAmendmentsForYearResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAmendmentsForBienniumSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAmendmentsForBiennium" />
+  </wsdl:message>
+  <wsdl:message name="GetAmendmentsForBienniumSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAmendmentsForBienniumResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHearingsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHearings" />
+  </wsdl:message>
+  <wsdl:message name="GetHearingsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHearingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationByRequestNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLegislationByRequestNumber" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationByRequestNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLegislationByRequestNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRcwCitesAffectedSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRcwCitesAffected" />
+  </wsdl:message>
+  <wsdl:message name="GetRcwCitesAffectedSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRcwCitesAffectedResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionLawChapterSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSessionLawChapter" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionLawChapterSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSessionLawChapterResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSponsorsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSponsors" />
+  </wsdl:message>
+  <wsdl:message name="GetSponsorsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSponsorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRollCallsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRollCalls" />
+  </wsdl:message>
+  <wsdl:message name="GetRollCallsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRollCallsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCurrentStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCurrentStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationTypesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLegislationTypes" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationTypesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLegislationTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTotalLegislationIntroducedByDateRangeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTotalLegislationIntroducedByDateRange" />
+  </wsdl:message>
+  <wsdl:message name="GetTotalLegislationIntroducedByDateRangeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTotalLegislationIntroducedByDateRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLegislation" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLegislationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationIntroducedSinceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLegislationIntroducedSince" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationIntroducedSinceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLegislationIntroducedSinceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPrefiledLegislationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPrefiledLegislation" />
+  </wsdl:message>
+  <wsdl:message name="GetPrefiledLegislationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPrefiledLegislationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislativeStatusChangesByBillNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLegislativeStatusChangesByBillNumber" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislativeStatusChangesByBillNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLegislativeStatusChangesByBillNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislativeStatusChangesByBillIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLegislativeStatusChangesByBillId" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislativeStatusChangesByBillIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLegislativeStatusChangesByBillIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationHistoricalRecapCategoriesByLegislationNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLegislationHistoricalRecapCategoriesByLegislationNumber" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationHistoricalRecapCategoriesByLegislationNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLegislationHistoricalRecapCategoriesByLegislationNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislativeStatusChangesByDateRangeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLegislativeStatusChangesByDateRange" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislativeStatusChangesByDateRangeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLegislativeStatusChangesByDateRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationByYearSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLegislationByYear" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationByYearSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLegislationByYearResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationInfoIntroducedSinceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLegislationInfoIntroducedSince" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationInfoIntroducedSinceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLegislationInfoIntroducedSinceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPreFiledLegislationInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPreFiledLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPreFiledLegislationInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPreFiledLegislationInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHouseLegislationPassedHouseSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHouseLegislationPassedHouse" />
+  </wsdl:message>
+  <wsdl:message name="GetHouseLegislationPassedHouseSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHouseLegislationPassedHouseResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHouseLegislationPassedSenateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHouseLegislationPassedSenate" />
+  </wsdl:message>
+  <wsdl:message name="GetHouseLegislationPassedSenateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHouseLegislationPassedSenateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSenateLegislationPassedSenateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSenateLegislationPassedSenate" />
+  </wsdl:message>
+  <wsdl:message name="GetSenateLegislationPassedSenateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSenateLegislationPassedSenateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSenateLegislationPassedHouseSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSenateLegislationPassedHouse" />
+  </wsdl:message>
+  <wsdl:message name="GetSenateLegislationPassedHouseSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSenateLegislationPassedHouseResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedLegislatureSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLegislationPassedLegislature" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedLegislatureSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLegislationPassedLegislatureResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedLegislatureWithinTimeFrameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLegislationPassedLegislatureWithinTimeFrame" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedLegislatureWithinTimeFrameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLegislationPassedLegislatureWithinTimeFrameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedHouseSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLegislationPassedHouse" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedHouseSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLegislationPassedHouseResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedSenateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLegislationPassedSenate" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedSenateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLegislationPassedSenateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationGovernorSignedSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLegislationGovernorSigned" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationGovernorSignedSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLegislationGovernorSignedResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationGovernorVetoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLegislationGovernorVeto" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationGovernorVetoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLegislationGovernorVetoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationGovernorPartialVetoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLegislationGovernorPartialVeto" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationGovernorPartialVetoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLegislationGovernorPartialVetoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPublishedEnrolledLegislationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPublishedEnrolledLegislation" />
+  </wsdl:message>
+  <wsdl:message name="GetPublishedEnrolledLegislationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPublishedEnrolledLegislationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedHouseWithinTimeFrameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLegislationPassedHouseWithinTimeFrame" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedHouseWithinTimeFrameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLegislationPassedHouseWithinTimeFrameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedSenateWithinTimeFrameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLegislationPassedSenateWithinTimeFrame" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedSenateWithinTimeFrameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLegislationPassedSenateWithinTimeFrameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationNotYetIntroducedInHouseOfOriginSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLegislationNotYetIntroducedInHouseOfOrigin" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationNotYetIntroducedInHouseOfOriginSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLegislationNotYetIntroducedInHouseOfOriginResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedOriginalBodyAndNotIntroducedInOppositeBodySoapIn">
+    <wsdl:part name="parameters" element="tns:GetLegislationPassedOriginalBodyAndNotIntroducedInOppositeBody" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedOriginalBodyAndNotIntroducedInOppositeBodySoapOut">
+    <wsdl:part name="parameters" element="tns:GetLegislationPassedOriginalBodyAndNotIntroducedInOppositeBodyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislativeBillListFeatureDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLegislativeBillListFeatureData" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislativeBillListFeatureDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLegislativeBillListFeatureDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAmendmentsForYearHttpGetIn">
+    <wsdl:part name="year" type="s:string" />
+    <wsdl:part name="billNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAmendmentsForYearHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfAmendment" />
+  </wsdl:message>
+  <wsdl:message name="GetAmendmentsForBienniumHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAmendmentsForBienniumHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfAmendment" />
+  </wsdl:message>
+  <wsdl:message name="GetHearingsHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetHearingsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfHearing" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationByRequestNumberHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="requestNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationByRequestNumberHttpGetOut">
+    <wsdl:part name="Body" element="tns:Legislation" />
+  </wsdl:message>
+  <wsdl:message name="GetRcwCitesAffectedHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRcwCitesAffectedHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfRcwCiteAffected" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionLawChapterHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionLawChapterHttpGetOut">
+    <wsdl:part name="Body" element="tns:SessionLaw" />
+  </wsdl:message>
+  <wsdl:message name="GetSponsorsHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSponsorsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfSponsor" />
+  </wsdl:message>
+  <wsdl:message name="GetRollCallsHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRollCallsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfRollCall" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentStatusHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentStatusHttpGetOut">
+    <wsdl:part name="Body" element="tns:LegislativeStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationTypesHttpGetIn" />
+  <wsdl:message name="GetLegislationTypesHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationType" />
+  </wsdl:message>
+  <wsdl:message name="GetTotalLegislationIntroducedByDateRangeHttpGetIn">
+    <wsdl:part name="beginDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+    <wsdl:part name="legTypeId" type="s:string" />
+    <wsdl:part name="agencyId" type="s:string" />
+    <wsdl:part name="allVersions" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTotalLegislationIntroducedByDateRangeHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislation" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationIntroducedSinceHttpGetIn">
+    <wsdl:part name="sinceDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationIntroducedSinceHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislation" />
+  </wsdl:message>
+  <wsdl:message name="GetPrefiledLegislationHttpGetIn" />
+  <wsdl:message name="GetPrefiledLegislationHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislation" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislativeStatusChangesByBillNumberHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billNumber" type="s:string" />
+    <wsdl:part name="beginDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislativeStatusChangesByBillNumberHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislativeStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislativeStatusChangesByBillIdHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billId" type="s:string" />
+    <wsdl:part name="beginDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislativeStatusChangesByBillIdHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislativeStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationHistoricalRecapCategoriesByLegislationNumberHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billNumber" type="s:string" />
+    <wsdl:part name="beginDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationHistoricalRecapCategoriesByLegislationNumberHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationRecapCategories" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislativeStatusChangesByDateRangeHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="beginDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislativeStatusChangesByDateRangeHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislativeStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationByYearHttpGetIn">
+    <wsdl:part name="year" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationByYearHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationInfoIntroducedSinceHttpGetIn">
+    <wsdl:part name="sinceDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationInfoIntroducedSinceHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPreFiledLegislationInfoHttpGetIn" />
+  <wsdl:message name="GetPreFiledLegislationInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetHouseLegislationPassedHouseHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetHouseLegislationPassedHouseHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetHouseLegislationPassedSenateHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetHouseLegislationPassedSenateHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetSenateLegislationPassedSenateHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSenateLegislationPassedSenateHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetSenateLegislationPassedHouseHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSenateLegislationPassedHouseHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedLegislatureHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedLegislatureHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedLegislatureWithinTimeFrameHttpGetIn">
+    <wsdl:part name="beginDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedLegislatureWithinTimeFrameHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedHouseHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedHouseHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedSenateHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedSenateHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationGovernorSignedHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationGovernorSignedHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationGovernorVetoHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationGovernorVetoHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationGovernorPartialVetoHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationGovernorPartialVetoHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPublishedEnrolledLegislationHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPublishedEnrolledLegislationHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedHouseWithinTimeFrameHttpGetIn">
+    <wsdl:part name="beginDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedHouseWithinTimeFrameHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedSenateWithinTimeFrameHttpGetIn">
+    <wsdl:part name="beginDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedSenateWithinTimeFrameHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationNotYetIntroducedInHouseOfOriginHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationNotYetIntroducedInHouseOfOriginHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedOriginalBodyAndNotIntroducedInOppositeBodyHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedOriginalBodyAndNotIntroducedInOppositeBodyHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislativeBillListFeatureDataHttpGetIn" />
+  <wsdl:message name="GetLegislativeBillListFeatureDataHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetAmendmentsForYearHttpPostIn">
+    <wsdl:part name="year" type="s:string" />
+    <wsdl:part name="billNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAmendmentsForYearHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfAmendment" />
+  </wsdl:message>
+  <wsdl:message name="GetAmendmentsForBienniumHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAmendmentsForBienniumHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfAmendment" />
+  </wsdl:message>
+  <wsdl:message name="GetHearingsHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetHearingsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfHearing" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationByRequestNumberHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="requestNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationByRequestNumberHttpPostOut">
+    <wsdl:part name="Body" element="tns:Legislation" />
+  </wsdl:message>
+  <wsdl:message name="GetRcwCitesAffectedHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRcwCitesAffectedHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfRcwCiteAffected" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionLawChapterHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionLawChapterHttpPostOut">
+    <wsdl:part name="Body" element="tns:SessionLaw" />
+  </wsdl:message>
+  <wsdl:message name="GetSponsorsHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSponsorsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfSponsor" />
+  </wsdl:message>
+  <wsdl:message name="GetRollCallsHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRollCallsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfRollCall" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentStatusHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentStatusHttpPostOut">
+    <wsdl:part name="Body" element="tns:LegislativeStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationTypesHttpPostIn" />
+  <wsdl:message name="GetLegislationTypesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationType" />
+  </wsdl:message>
+  <wsdl:message name="GetTotalLegislationIntroducedByDateRangeHttpPostIn">
+    <wsdl:part name="beginDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+    <wsdl:part name="legTypeId" type="s:string" />
+    <wsdl:part name="agencyId" type="s:string" />
+    <wsdl:part name="allVersions" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTotalLegislationIntroducedByDateRangeHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislation" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationIntroducedSinceHttpPostIn">
+    <wsdl:part name="sinceDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationIntroducedSinceHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislation" />
+  </wsdl:message>
+  <wsdl:message name="GetPrefiledLegislationHttpPostIn" />
+  <wsdl:message name="GetPrefiledLegislationHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislation" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislativeStatusChangesByBillNumberHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billNumber" type="s:string" />
+    <wsdl:part name="beginDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislativeStatusChangesByBillNumberHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislativeStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislativeStatusChangesByBillIdHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billId" type="s:string" />
+    <wsdl:part name="beginDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislativeStatusChangesByBillIdHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislativeStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationHistoricalRecapCategoriesByLegislationNumberHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billNumber" type="s:string" />
+    <wsdl:part name="beginDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationHistoricalRecapCategoriesByLegislationNumberHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationRecapCategories" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislativeStatusChangesByDateRangeHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="beginDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislativeStatusChangesByDateRangeHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislativeStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationByYearHttpPostIn">
+    <wsdl:part name="year" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationByYearHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationInfoIntroducedSinceHttpPostIn">
+    <wsdl:part name="sinceDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationInfoIntroducedSinceHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPreFiledLegislationInfoHttpPostIn" />
+  <wsdl:message name="GetPreFiledLegislationInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetHouseLegislationPassedHouseHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetHouseLegislationPassedHouseHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetHouseLegislationPassedSenateHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetHouseLegislationPassedSenateHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetSenateLegislationPassedSenateHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSenateLegislationPassedSenateHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetSenateLegislationPassedHouseHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSenateLegislationPassedHouseHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedLegislatureHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedLegislatureHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedLegislatureWithinTimeFrameHttpPostIn">
+    <wsdl:part name="beginDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedLegislatureWithinTimeFrameHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedHouseHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedHouseHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedSenateHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedSenateHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationGovernorSignedHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationGovernorSignedHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationGovernorVetoHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationGovernorVetoHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationGovernorPartialVetoHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationGovernorPartialVetoHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPublishedEnrolledLegislationHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPublishedEnrolledLegislationHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedHouseWithinTimeFrameHttpPostIn">
+    <wsdl:part name="beginDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedHouseWithinTimeFrameHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedSenateWithinTimeFrameHttpPostIn">
+    <wsdl:part name="beginDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedSenateWithinTimeFrameHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationNotYetIntroducedInHouseOfOriginHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationNotYetIntroducedInHouseOfOriginHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedOriginalBodyAndNotIntroducedInOppositeBodyHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationPassedOriginalBodyAndNotIntroducedInOppositeBodyHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislativeBillListFeatureDataHttpPostIn" />
+  <wsdl:message name="GetLegislativeBillListFeatureDataHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:portType name="LegislationServiceSoap">
+    <wsdl:operation name="GetAmendmentsForYear">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of all pending and acted on amendments for the bill during the year. &lt;BR&gt;Exception thrown for invalid year.</wsdl:documentation>
+      <wsdl:input message="tns:GetAmendmentsForYearSoapIn" />
+      <wsdl:output message="tns:GetAmendmentsForYearSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAmendmentsForBiennium">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of all pending and acted on amendments for the bill during the biennium. &lt;BR&gt;Exception thrown for invalid biennium. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetAmendmentsForBienniumSoapIn" />
+      <wsdl:output message="tns:GetAmendmentsForBienniumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHearings">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of committee hearings for the bill. &lt;BR&gt;Exception thrown for invalid biennium. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetHearingsSoapIn" />
+      <wsdl:output message="tns:GetHearingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationByRequestNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns legislation information based on the original request number of the draft submitted. &lt;BR&gt;Exception thrown for invalid biennium or requestNumber or if no information found. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationByRequestNumberSoapIn" />
+      <wsdl:output message="tns:GetLegislationByRequestNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRcwCitesAffected">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns RCW Cites referenced within the legislation. &lt;BR&gt;Exception thrown for invalid biennium or billId. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetRcwCitesAffectedSoapIn" />
+      <wsdl:output message="tns:GetRcwCitesAffectedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionLawChapter">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns chapter and session law information on given bill. &lt;BR&gt;Exception thrown for invalid biennium or billId. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetSessionLawChapterSoapIn" />
+      <wsdl:output message="tns:GetSessionLawChapterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSponsors">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns list of bill sponsors. &lt;BR&gt;Exception thrown for invalid biennium or billId. &lt;BR&gt;Expects biennium in the format 2005-06.</wsdl:documentation>
+      <wsdl:input message="tns:GetSponsorsSoapIn" />
+      <wsdl:output message="tns:GetSponsorsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRollCalls">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns list of roll calls taken on the bill. &lt;BR&gt;Exception thrown for invalid biennium. &lt;BR&gt;Expects biennium in the format 2005-06.</wsdl:documentation>
+      <wsdl:input message="tns:GetRollCallsSoapIn" />
+      <wsdl:output message="tns:GetRollCallsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the current status of the bill in the legislative process. &lt;BR&gt;Exception thrown for invalid biennium or if no status found. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetCurrentStatusSoapIn" />
+      <wsdl:output message="tns:GetCurrentStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationTypes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of all valid types of legislation.</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationTypesSoapIn" />
+      <wsdl:output message="tns:GetLegislationTypesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalLegislationIntroducedByDateRange">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns legislation introduced in the given date range by the given legislation type.</wsdl:documentation>
+      <wsdl:input message="tns:GetTotalLegislationIntroducedByDateRangeSoapIn" />
+      <wsdl:output message="tns:GetTotalLegislationIntroducedByDateRangeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns legislation information on the bill.  If substitutes to the bill have been proposed, they will be listed separately.  The active flag is true for versions that can be passed on the floor. &lt;BR&gt;Exception thrown for invalid biennium. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationSoapIn" />
+      <wsdl:output message="tns:GetLegislationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationIntroducedSince">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns detailed legislation information on all bills introduced since the date given.  If substitutes to the bill have been proposed, they will be listed separately.  The active flag is true for versions that can be passed on the floor.</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationIntroducedSinceSoapIn" />
+      <wsdl:output message="tns:GetLegislationIntroducedSinceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrefiledLegislation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns detailed legislation information on all prefiled bills (currently in prefiled status). &lt;BR&gt;Once a bill is formally introduced, its information can be obtained by calling the GetLegislation method.</wsdl:documentation>
+      <wsdl:input message="tns:GetPrefiledLegislationSoapIn" />
+      <wsdl:output message="tns:GetPrefiledLegislationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislativeStatusChanges">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the current status of the bill in the legislative process. &lt;BR&gt;Exception thrown for invalid biennium or date range. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input name="GetLegislativeStatusChangesByBillNumber" message="tns:GetLegislativeStatusChangesByBillNumberSoapIn" />
+      <wsdl:output name="GetLegislativeStatusChangesByBillNumber" message="tns:GetLegislativeStatusChangesByBillNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislativeStatusChanges">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns all changes to the status of the bill that occurred in the date range. &lt;BR&gt;Exception thrown for invalid biennium, billId or date range. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input name="GetLegislativeStatusChangesByBillId" message="tns:GetLegislativeStatusChangesByBillIdSoapIn" />
+      <wsdl:output name="GetLegislativeStatusChangesByBillId" message="tns:GetLegislativeStatusChangesByBillIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationHistoricalRecapCategoriesByLegislationNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the legislation historical recap (status) categories for the given bill number. &lt;BR&gt;Exception thrown for invalid biennium or date range. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationHistoricalRecapCategoriesByLegislationNumberSoapIn" />
+      <wsdl:output message="tns:GetLegislationHistoricalRecapCategoriesByLegislationNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislativeStatusChanges">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns all changes to the legislation status that occurred in the date range. &lt;BR&gt;Exception thrown for invalid biennium or date range. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input name="GetLegislativeStatusChangesByDateRange" message="tns:GetLegislativeStatusChangesByDateRangeSoapIn" />
+      <wsdl:output name="GetLegislativeStatusChangesByDateRange" message="tns:GetLegislativeStatusChangesByDateRangeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationByYear">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills active during the year.  If substitutes to the bill have been proposed, they will be listed separately.  The active flag is true for versions that can be passed on the floor. &lt;BR&gt;Exception thrown for invalid year. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationByYearSoapIn" />
+      <wsdl:output message="tns:GetLegislationByYearSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationInfoIntroducedSince">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills introduced since the date given.  If substitutes to the bill have been proposed, they will be listed separately.  The active flag is true for versions that can be passed on the floor.</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationInfoIntroducedSinceSoapIn" />
+      <wsdl:output message="tns:GetLegislationInfoIntroducedSinceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPreFiledLegislationInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all prefiled bills (currently in prefiled status). &lt;BR&gt;Once a bill is formally introduced, its information can be obtained by calling the GetLegislation method.</wsdl:documentation>
+      <wsdl:input message="tns:GetPreFiledLegislationInfoSoapIn" />
+      <wsdl:output message="tns:GetPreFiledLegislationInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHouseLegislationPassedHouse">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all House bills that have passed the House.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetHouseLegislationPassedHouseSoapIn" />
+      <wsdl:output message="tns:GetHouseLegislationPassedHouseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHouseLegislationPassedSenate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all House bills that have passed the Senate.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetHouseLegislationPassedSenateSoapIn" />
+      <wsdl:output message="tns:GetHouseLegislationPassedSenateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSenateLegislationPassedSenate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all Senate bills that have passed the Senate.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetSenateLegislationPassedSenateSoapIn" />
+      <wsdl:output message="tns:GetSenateLegislationPassedSenateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSenateLegislationPassedHouse">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all Senate bills that have passed the House.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetSenateLegislationPassedHouseSoapIn" />
+      <wsdl:output message="tns:GetSenateLegislationPassedHouseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedLegislature">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have passed the legislature.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationPassedLegislatureSoapIn" />
+      <wsdl:output message="tns:GetLegislationPassedLegislatureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedLegislatureWithinTimeFrame">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have passed the legislature within the begin and end date.</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationPassedLegislatureWithinTimeFrameSoapIn" />
+      <wsdl:output message="tns:GetLegislationPassedLegislatureWithinTimeFrameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedHouse">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have passed the House.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationPassedHouseSoapIn" />
+      <wsdl:output message="tns:GetLegislationPassedHouseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedSenate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have passed the Senate.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationPassedSenateSoapIn" />
+      <wsdl:output message="tns:GetLegislationPassedSenateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationGovernorSigned">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have been signed by the governor.&lt;br/&gt;Exception thrown for invalid agency or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationGovernorSignedSoapIn" />
+      <wsdl:output message="tns:GetLegislationGovernorSignedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationGovernorVeto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have been vetoed by the governor.&lt;br/&gt;Exception thrown for invalid agency or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationGovernorVetoSoapIn" />
+      <wsdl:output message="tns:GetLegislationGovernorVetoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationGovernorPartialVeto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have been partially vetoed by the governor.&lt;br/&gt;Exception thrown for invalid agency or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationGovernorPartialVetoSoapIn" />
+      <wsdl:output message="tns:GetLegislationGovernorPartialVetoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPublishedEnrolledLegislation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have been enrolled and published by the legislature.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetPublishedEnrolledLegislationSoapIn" />
+      <wsdl:output message="tns:GetPublishedEnrolledLegislationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedHouseWithinTimeFrame">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that House passed off the floor for the first time between the begin and end date (even if the bill is not currently passed the House - For example, a House bill that the House passed may have been amended in the Senate and the House has not passed the amended version of the bill.  This bill would still be returned in this method.  If you don't want that bill, use the GetLegislationPassedHouse.).</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationPassedHouseWithinTimeFrameSoapIn" />
+      <wsdl:output message="tns:GetLegislationPassedHouseWithinTimeFrameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedSenateWithinTimeFrame">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that Senate passed off the floor for the first time between the begin and end date (even if the bill is not currently passed the House - For example, a Senate bill that the Senate passed may have been amended in the House and the Senate has not passed the amended version of the bill.  This bill would still be returned in this method.  If you don't want that bill, use the GetLegislationPassedSenate.).</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationPassedSenateWithinTimeFrameSoapIn" />
+      <wsdl:output message="tns:GetLegislationPassedSenateWithinTimeFrameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationNotYetIntroducedInHouseOfOrigin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on bills that are active, have available bill text, and have not yet been introduced in the house of origin.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationNotYetIntroducedInHouseOfOriginSoapIn" />
+      <wsdl:output message="tns:GetLegislationNotYetIntroducedInHouseOfOriginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedOriginalBodyAndNotIntroducedInOppositeBody">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on bills that have passed the originating body and not yet introduced in opposite body.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationPassedOriginalBodyAndNotIntroducedInOppositeBodySoapIn" />
+      <wsdl:output message="tns:GetLegislationPassedOriginalBodyAndNotIntroducedInOppositeBodySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislativeBillListFeatureData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a .net DataTable for the LegislativeBillList SharePoint Feature</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislativeBillListFeatureDataSoapIn" />
+      <wsdl:output message="tns:GetLegislativeBillListFeatureDataSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="LegislationServiceHttpGet">
+    <wsdl:operation name="GetAmendmentsForYear">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of all pending and acted on amendments for the bill during the year. &lt;BR&gt;Exception thrown for invalid year.</wsdl:documentation>
+      <wsdl:input message="tns:GetAmendmentsForYearHttpGetIn" />
+      <wsdl:output message="tns:GetAmendmentsForYearHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAmendmentsForBiennium">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of all pending and acted on amendments for the bill during the biennium. &lt;BR&gt;Exception thrown for invalid biennium. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetAmendmentsForBienniumHttpGetIn" />
+      <wsdl:output message="tns:GetAmendmentsForBienniumHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHearings">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of committee hearings for the bill. &lt;BR&gt;Exception thrown for invalid biennium. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetHearingsHttpGetIn" />
+      <wsdl:output message="tns:GetHearingsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationByRequestNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns legislation information based on the original request number of the draft submitted. &lt;BR&gt;Exception thrown for invalid biennium or requestNumber or if no information found. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationByRequestNumberHttpGetIn" />
+      <wsdl:output message="tns:GetLegislationByRequestNumberHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRcwCitesAffected">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns RCW Cites referenced within the legislation. &lt;BR&gt;Exception thrown for invalid biennium or billId. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetRcwCitesAffectedHttpGetIn" />
+      <wsdl:output message="tns:GetRcwCitesAffectedHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionLawChapter">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns chapter and session law information on given bill. &lt;BR&gt;Exception thrown for invalid biennium or billId. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetSessionLawChapterHttpGetIn" />
+      <wsdl:output message="tns:GetSessionLawChapterHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSponsors">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns list of bill sponsors. &lt;BR&gt;Exception thrown for invalid biennium or billId. &lt;BR&gt;Expects biennium in the format 2005-06.</wsdl:documentation>
+      <wsdl:input message="tns:GetSponsorsHttpGetIn" />
+      <wsdl:output message="tns:GetSponsorsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRollCalls">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns list of roll calls taken on the bill. &lt;BR&gt;Exception thrown for invalid biennium. &lt;BR&gt;Expects biennium in the format 2005-06.</wsdl:documentation>
+      <wsdl:input message="tns:GetRollCallsHttpGetIn" />
+      <wsdl:output message="tns:GetRollCallsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the current status of the bill in the legislative process. &lt;BR&gt;Exception thrown for invalid biennium or if no status found. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetCurrentStatusHttpGetIn" />
+      <wsdl:output message="tns:GetCurrentStatusHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationTypes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of all valid types of legislation.</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationTypesHttpGetIn" />
+      <wsdl:output message="tns:GetLegislationTypesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalLegislationIntroducedByDateRange">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns legislation introduced in the given date range by the given legislation type.</wsdl:documentation>
+      <wsdl:input message="tns:GetTotalLegislationIntroducedByDateRangeHttpGetIn" />
+      <wsdl:output message="tns:GetTotalLegislationIntroducedByDateRangeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns legislation information on the bill.  If substitutes to the bill have been proposed, they will be listed separately.  The active flag is true for versions that can be passed on the floor. &lt;BR&gt;Exception thrown for invalid biennium. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationHttpGetIn" />
+      <wsdl:output message="tns:GetLegislationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationIntroducedSince">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns detailed legislation information on all bills introduced since the date given.  If substitutes to the bill have been proposed, they will be listed separately.  The active flag is true for versions that can be passed on the floor.</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationIntroducedSinceHttpGetIn" />
+      <wsdl:output message="tns:GetLegislationIntroducedSinceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrefiledLegislation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns detailed legislation information on all prefiled bills (currently in prefiled status). &lt;BR&gt;Once a bill is formally introduced, its information can be obtained by calling the GetLegislation method.</wsdl:documentation>
+      <wsdl:input message="tns:GetPrefiledLegislationHttpGetIn" />
+      <wsdl:output message="tns:GetPrefiledLegislationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislativeStatusChanges">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the current status of the bill in the legislative process. &lt;BR&gt;Exception thrown for invalid biennium or date range. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input name="GetLegislativeStatusChangesByBillNumber" message="tns:GetLegislativeStatusChangesByBillNumberHttpGetIn" />
+      <wsdl:output name="GetLegislativeStatusChangesByBillNumber" message="tns:GetLegislativeStatusChangesByBillNumberHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislativeStatusChanges">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns all changes to the status of the bill that occurred in the date range. &lt;BR&gt;Exception thrown for invalid biennium, billId or date range. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input name="GetLegislativeStatusChangesByBillId" message="tns:GetLegislativeStatusChangesByBillIdHttpGetIn" />
+      <wsdl:output name="GetLegislativeStatusChangesByBillId" message="tns:GetLegislativeStatusChangesByBillIdHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationHistoricalRecapCategoriesByLegislationNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the legislation historical recap (status) categories for the given bill number. &lt;BR&gt;Exception thrown for invalid biennium or date range. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationHistoricalRecapCategoriesByLegislationNumberHttpGetIn" />
+      <wsdl:output message="tns:GetLegislationHistoricalRecapCategoriesByLegislationNumberHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislativeStatusChanges">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns all changes to the legislation status that occurred in the date range. &lt;BR&gt;Exception thrown for invalid biennium or date range. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input name="GetLegislativeStatusChangesByDateRange" message="tns:GetLegislativeStatusChangesByDateRangeHttpGetIn" />
+      <wsdl:output name="GetLegislativeStatusChangesByDateRange" message="tns:GetLegislativeStatusChangesByDateRangeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationByYear">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills active during the year.  If substitutes to the bill have been proposed, they will be listed separately.  The active flag is true for versions that can be passed on the floor. &lt;BR&gt;Exception thrown for invalid year. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationByYearHttpGetIn" />
+      <wsdl:output message="tns:GetLegislationByYearHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationInfoIntroducedSince">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills introduced since the date given.  If substitutes to the bill have been proposed, they will be listed separately.  The active flag is true for versions that can be passed on the floor.</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationInfoIntroducedSinceHttpGetIn" />
+      <wsdl:output message="tns:GetLegislationInfoIntroducedSinceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPreFiledLegislationInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all prefiled bills (currently in prefiled status). &lt;BR&gt;Once a bill is formally introduced, its information can be obtained by calling the GetLegislation method.</wsdl:documentation>
+      <wsdl:input message="tns:GetPreFiledLegislationInfoHttpGetIn" />
+      <wsdl:output message="tns:GetPreFiledLegislationInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHouseLegislationPassedHouse">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all House bills that have passed the House.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetHouseLegislationPassedHouseHttpGetIn" />
+      <wsdl:output message="tns:GetHouseLegislationPassedHouseHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHouseLegislationPassedSenate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all House bills that have passed the Senate.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetHouseLegislationPassedSenateHttpGetIn" />
+      <wsdl:output message="tns:GetHouseLegislationPassedSenateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSenateLegislationPassedSenate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all Senate bills that have passed the Senate.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetSenateLegislationPassedSenateHttpGetIn" />
+      <wsdl:output message="tns:GetSenateLegislationPassedSenateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSenateLegislationPassedHouse">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all Senate bills that have passed the House.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetSenateLegislationPassedHouseHttpGetIn" />
+      <wsdl:output message="tns:GetSenateLegislationPassedHouseHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedLegislature">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have passed the legislature.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationPassedLegislatureHttpGetIn" />
+      <wsdl:output message="tns:GetLegislationPassedLegislatureHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedLegislatureWithinTimeFrame">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have passed the legislature within the begin and end date.</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationPassedLegislatureWithinTimeFrameHttpGetIn" />
+      <wsdl:output message="tns:GetLegislationPassedLegislatureWithinTimeFrameHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedHouse">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have passed the House.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationPassedHouseHttpGetIn" />
+      <wsdl:output message="tns:GetLegislationPassedHouseHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedSenate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have passed the Senate.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationPassedSenateHttpGetIn" />
+      <wsdl:output message="tns:GetLegislationPassedSenateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationGovernorSigned">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have been signed by the governor.&lt;br/&gt;Exception thrown for invalid agency or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationGovernorSignedHttpGetIn" />
+      <wsdl:output message="tns:GetLegislationGovernorSignedHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationGovernorVeto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have been vetoed by the governor.&lt;br/&gt;Exception thrown for invalid agency or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationGovernorVetoHttpGetIn" />
+      <wsdl:output message="tns:GetLegislationGovernorVetoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationGovernorPartialVeto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have been partially vetoed by the governor.&lt;br/&gt;Exception thrown for invalid agency or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationGovernorPartialVetoHttpGetIn" />
+      <wsdl:output message="tns:GetLegislationGovernorPartialVetoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPublishedEnrolledLegislation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have been enrolled and published by the legislature.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetPublishedEnrolledLegislationHttpGetIn" />
+      <wsdl:output message="tns:GetPublishedEnrolledLegislationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedHouseWithinTimeFrame">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that House passed off the floor for the first time between the begin and end date (even if the bill is not currently passed the House - For example, a House bill that the House passed may have been amended in the Senate and the House has not passed the amended version of the bill.  This bill would still be returned in this method.  If you don't want that bill, use the GetLegislationPassedHouse.).</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationPassedHouseWithinTimeFrameHttpGetIn" />
+      <wsdl:output message="tns:GetLegislationPassedHouseWithinTimeFrameHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedSenateWithinTimeFrame">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that Senate passed off the floor for the first time between the begin and end date (even if the bill is not currently passed the House - For example, a Senate bill that the Senate passed may have been amended in the House and the Senate has not passed the amended version of the bill.  This bill would still be returned in this method.  If you don't want that bill, use the GetLegislationPassedSenate.).</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationPassedSenateWithinTimeFrameHttpGetIn" />
+      <wsdl:output message="tns:GetLegislationPassedSenateWithinTimeFrameHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationNotYetIntroducedInHouseOfOrigin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on bills that are active, have available bill text, and have not yet been introduced in the house of origin.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationNotYetIntroducedInHouseOfOriginHttpGetIn" />
+      <wsdl:output message="tns:GetLegislationNotYetIntroducedInHouseOfOriginHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedOriginalBodyAndNotIntroducedInOppositeBody">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on bills that have passed the originating body and not yet introduced in opposite body.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationPassedOriginalBodyAndNotIntroducedInOppositeBodyHttpGetIn" />
+      <wsdl:output message="tns:GetLegislationPassedOriginalBodyAndNotIntroducedInOppositeBodyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislativeBillListFeatureData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a .net DataTable for the LegislativeBillList SharePoint Feature</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislativeBillListFeatureDataHttpGetIn" />
+      <wsdl:output message="tns:GetLegislativeBillListFeatureDataHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="LegislationServiceHttpPost">
+    <wsdl:operation name="GetAmendmentsForYear">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of all pending and acted on amendments for the bill during the year. &lt;BR&gt;Exception thrown for invalid year.</wsdl:documentation>
+      <wsdl:input message="tns:GetAmendmentsForYearHttpPostIn" />
+      <wsdl:output message="tns:GetAmendmentsForYearHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAmendmentsForBiennium">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of all pending and acted on amendments for the bill during the biennium. &lt;BR&gt;Exception thrown for invalid biennium. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetAmendmentsForBienniumHttpPostIn" />
+      <wsdl:output message="tns:GetAmendmentsForBienniumHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHearings">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of committee hearings for the bill. &lt;BR&gt;Exception thrown for invalid biennium. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetHearingsHttpPostIn" />
+      <wsdl:output message="tns:GetHearingsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationByRequestNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns legislation information based on the original request number of the draft submitted. &lt;BR&gt;Exception thrown for invalid biennium or requestNumber or if no information found. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationByRequestNumberHttpPostIn" />
+      <wsdl:output message="tns:GetLegislationByRequestNumberHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRcwCitesAffected">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns RCW Cites referenced within the legislation. &lt;BR&gt;Exception thrown for invalid biennium or billId. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetRcwCitesAffectedHttpPostIn" />
+      <wsdl:output message="tns:GetRcwCitesAffectedHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionLawChapter">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns chapter and session law information on given bill. &lt;BR&gt;Exception thrown for invalid biennium or billId. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetSessionLawChapterHttpPostIn" />
+      <wsdl:output message="tns:GetSessionLawChapterHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSponsors">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns list of bill sponsors. &lt;BR&gt;Exception thrown for invalid biennium or billId. &lt;BR&gt;Expects biennium in the format 2005-06.</wsdl:documentation>
+      <wsdl:input message="tns:GetSponsorsHttpPostIn" />
+      <wsdl:output message="tns:GetSponsorsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRollCalls">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns list of roll calls taken on the bill. &lt;BR&gt;Exception thrown for invalid biennium. &lt;BR&gt;Expects biennium in the format 2005-06.</wsdl:documentation>
+      <wsdl:input message="tns:GetRollCallsHttpPostIn" />
+      <wsdl:output message="tns:GetRollCallsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the current status of the bill in the legislative process. &lt;BR&gt;Exception thrown for invalid biennium or if no status found. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetCurrentStatusHttpPostIn" />
+      <wsdl:output message="tns:GetCurrentStatusHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationTypes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of all valid types of legislation.</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationTypesHttpPostIn" />
+      <wsdl:output message="tns:GetLegislationTypesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalLegislationIntroducedByDateRange">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns legislation introduced in the given date range by the given legislation type.</wsdl:documentation>
+      <wsdl:input message="tns:GetTotalLegislationIntroducedByDateRangeHttpPostIn" />
+      <wsdl:output message="tns:GetTotalLegislationIntroducedByDateRangeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns legislation information on the bill.  If substitutes to the bill have been proposed, they will be listed separately.  The active flag is true for versions that can be passed on the floor. &lt;BR&gt;Exception thrown for invalid biennium. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationHttpPostIn" />
+      <wsdl:output message="tns:GetLegislationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationIntroducedSince">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns detailed legislation information on all bills introduced since the date given.  If substitutes to the bill have been proposed, they will be listed separately.  The active flag is true for versions that can be passed on the floor.</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationIntroducedSinceHttpPostIn" />
+      <wsdl:output message="tns:GetLegislationIntroducedSinceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrefiledLegislation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns detailed legislation information on all prefiled bills (currently in prefiled status). &lt;BR&gt;Once a bill is formally introduced, its information can be obtained by calling the GetLegislation method.</wsdl:documentation>
+      <wsdl:input message="tns:GetPrefiledLegislationHttpPostIn" />
+      <wsdl:output message="tns:GetPrefiledLegislationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislativeStatusChanges">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the current status of the bill in the legislative process. &lt;BR&gt;Exception thrown for invalid biennium or date range. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input name="GetLegislativeStatusChangesByBillNumber" message="tns:GetLegislativeStatusChangesByBillNumberHttpPostIn" />
+      <wsdl:output name="GetLegislativeStatusChangesByBillNumber" message="tns:GetLegislativeStatusChangesByBillNumberHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislativeStatusChanges">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns all changes to the status of the bill that occurred in the date range. &lt;BR&gt;Exception thrown for invalid biennium, billId or date range. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input name="GetLegislativeStatusChangesByBillId" message="tns:GetLegislativeStatusChangesByBillIdHttpPostIn" />
+      <wsdl:output name="GetLegislativeStatusChangesByBillId" message="tns:GetLegislativeStatusChangesByBillIdHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationHistoricalRecapCategoriesByLegislationNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the legislation historical recap (status) categories for the given bill number. &lt;BR&gt;Exception thrown for invalid biennium or date range. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationHistoricalRecapCategoriesByLegislationNumberHttpPostIn" />
+      <wsdl:output message="tns:GetLegislationHistoricalRecapCategoriesByLegislationNumberHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislativeStatusChanges">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns all changes to the legislation status that occurred in the date range. &lt;BR&gt;Exception thrown for invalid biennium or date range. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input name="GetLegislativeStatusChangesByDateRange" message="tns:GetLegislativeStatusChangesByDateRangeHttpPostIn" />
+      <wsdl:output name="GetLegislativeStatusChangesByDateRange" message="tns:GetLegislativeStatusChangesByDateRangeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationByYear">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills active during the year.  If substitutes to the bill have been proposed, they will be listed separately.  The active flag is true for versions that can be passed on the floor. &lt;BR&gt;Exception thrown for invalid year. &lt;BR&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationByYearHttpPostIn" />
+      <wsdl:output message="tns:GetLegislationByYearHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationInfoIntroducedSince">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills introduced since the date given.  If substitutes to the bill have been proposed, they will be listed separately.  The active flag is true for versions that can be passed on the floor.</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationInfoIntroducedSinceHttpPostIn" />
+      <wsdl:output message="tns:GetLegislationInfoIntroducedSinceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPreFiledLegislationInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all prefiled bills (currently in prefiled status). &lt;BR&gt;Once a bill is formally introduced, its information can be obtained by calling the GetLegislation method.</wsdl:documentation>
+      <wsdl:input message="tns:GetPreFiledLegislationInfoHttpPostIn" />
+      <wsdl:output message="tns:GetPreFiledLegislationInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHouseLegislationPassedHouse">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all House bills that have passed the House.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetHouseLegislationPassedHouseHttpPostIn" />
+      <wsdl:output message="tns:GetHouseLegislationPassedHouseHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHouseLegislationPassedSenate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all House bills that have passed the Senate.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetHouseLegislationPassedSenateHttpPostIn" />
+      <wsdl:output message="tns:GetHouseLegislationPassedSenateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSenateLegislationPassedSenate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all Senate bills that have passed the Senate.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetSenateLegislationPassedSenateHttpPostIn" />
+      <wsdl:output message="tns:GetSenateLegislationPassedSenateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSenateLegislationPassedHouse">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all Senate bills that have passed the House.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetSenateLegislationPassedHouseHttpPostIn" />
+      <wsdl:output message="tns:GetSenateLegislationPassedHouseHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedLegislature">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have passed the legislature.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationPassedLegislatureHttpPostIn" />
+      <wsdl:output message="tns:GetLegislationPassedLegislatureHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedLegislatureWithinTimeFrame">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have passed the legislature within the begin and end date.</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationPassedLegislatureWithinTimeFrameHttpPostIn" />
+      <wsdl:output message="tns:GetLegislationPassedLegislatureWithinTimeFrameHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedHouse">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have passed the House.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationPassedHouseHttpPostIn" />
+      <wsdl:output message="tns:GetLegislationPassedHouseHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedSenate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have passed the Senate.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationPassedSenateHttpPostIn" />
+      <wsdl:output message="tns:GetLegislationPassedSenateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationGovernorSigned">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have been signed by the governor.&lt;br/&gt;Exception thrown for invalid agency or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationGovernorSignedHttpPostIn" />
+      <wsdl:output message="tns:GetLegislationGovernorSignedHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationGovernorVeto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have been vetoed by the governor.&lt;br/&gt;Exception thrown for invalid agency or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationGovernorVetoHttpPostIn" />
+      <wsdl:output message="tns:GetLegislationGovernorVetoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationGovernorPartialVeto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have been partially vetoed by the governor.&lt;br/&gt;Exception thrown for invalid agency or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationGovernorPartialVetoHttpPostIn" />
+      <wsdl:output message="tns:GetLegislationGovernorPartialVetoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPublishedEnrolledLegislation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have been enrolled and published by the legislature.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetPublishedEnrolledLegislationHttpPostIn" />
+      <wsdl:output message="tns:GetPublishedEnrolledLegislationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedHouseWithinTimeFrame">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that House passed off the floor for the first time between the begin and end date (even if the bill is not currently passed the House - For example, a House bill that the House passed may have been amended in the Senate and the House has not passed the amended version of the bill.  This bill would still be returned in this method.  If you don't want that bill, use the GetLegislationPassedHouse.).</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationPassedHouseWithinTimeFrameHttpPostIn" />
+      <wsdl:output message="tns:GetLegislationPassedHouseWithinTimeFrameHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedSenateWithinTimeFrame">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that Senate passed off the floor for the first time between the begin and end date (even if the bill is not currently passed the House - For example, a Senate bill that the Senate passed may have been amended in the House and the Senate has not passed the amended version of the bill.  This bill would still be returned in this method.  If you don't want that bill, use the GetLegislationPassedSenate.).</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationPassedSenateWithinTimeFrameHttpPostIn" />
+      <wsdl:output message="tns:GetLegislationPassedSenateWithinTimeFrameHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationNotYetIntroducedInHouseOfOrigin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on bills that are active, have available bill text, and have not yet been introduced in the house of origin.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationNotYetIntroducedInHouseOfOriginHttpPostIn" />
+      <wsdl:output message="tns:GetLegislationNotYetIntroducedInHouseOfOriginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedOriginalBodyAndNotIntroducedInOppositeBody">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on bills that have passed the originating body and not yet introduced in opposite body.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationPassedOriginalBodyAndNotIntroducedInOppositeBodyHttpPostIn" />
+      <wsdl:output message="tns:GetLegislationPassedOriginalBodyAndNotIntroducedInOppositeBodyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislativeBillListFeatureData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a .net DataTable for the LegislativeBillList SharePoint Feature</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislativeBillListFeatureDataHttpPostIn" />
+      <wsdl:output message="tns:GetLegislativeBillListFeatureDataHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LegislationServiceSoap" type="tns:LegislationServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAmendmentsForYear">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetAmendmentsForYear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAmendmentsForBiennium">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetAmendmentsForBiennium" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHearings">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetHearings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationByRequestNumber">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationByRequestNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRcwCitesAffected">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetRcwCitesAffected" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionLawChapter">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetSessionLawChapter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSponsors">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetSponsors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRollCalls">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetRollCalls" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentStatus">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetCurrentStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationTypes">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalLegislationIntroducedByDateRange">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetTotalLegislationIntroducedByDateRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislation">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationIntroducedSince">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationIntroducedSince" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrefiledLegislation">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetPrefiledLegislation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislativeStatusChanges">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislativeStatusChangesByBillNumber" style="document" />
+      <wsdl:input name="GetLegislativeStatusChangesByBillNumber">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetLegislativeStatusChangesByBillNumber">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislativeStatusChanges">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislativeStatusChangesByBillId" style="document" />
+      <wsdl:input name="GetLegislativeStatusChangesByBillId">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetLegislativeStatusChangesByBillId">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationHistoricalRecapCategoriesByLegislationNumber">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationHistoricalRecapCategoriesByLegislationNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislativeStatusChanges">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislativeStatusChangesByDateRange" style="document" />
+      <wsdl:input name="GetLegislativeStatusChangesByDateRange">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetLegislativeStatusChangesByDateRange">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationByYear">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationByYear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationInfoIntroducedSince">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationInfoIntroducedSince" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPreFiledLegislationInfo">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetPreFiledLegislationInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHouseLegislationPassedHouse">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetHouseLegislationPassedHouse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHouseLegislationPassedSenate">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetHouseLegislationPassedSenate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSenateLegislationPassedSenate">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetSenateLegislationPassedSenate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSenateLegislationPassedHouse">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetSenateLegislationPassedHouse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedLegislature">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationPassedLegislature" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedLegislatureWithinTimeFrame">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationPassedLegislatureWithinTimeFrame" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedHouse">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationPassedHouse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedSenate">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationPassedSenate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationGovernorSigned">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationGovernorSigned" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationGovernorVeto">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationGovernorVeto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationGovernorPartialVeto">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationGovernorPartialVeto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPublishedEnrolledLegislation">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetPublishedEnrolledLegislation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedHouseWithinTimeFrame">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationPassedHouseWithinTimeFrame" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedSenateWithinTimeFrame">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationPassedSenateWithinTimeFrame" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationNotYetIntroducedInHouseOfOrigin">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationNotYetIntroducedInHouseOfOrigin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedOriginalBodyAndNotIntroducedInOppositeBody">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationPassedOriginalBodyAndNotIntroducedInOppositeBody" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislativeBillListFeatureData">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislativeBillListFeatureData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LegislationServiceSoap12" type="tns:LegislationServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAmendmentsForYear">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetAmendmentsForYear" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAmendmentsForBiennium">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetAmendmentsForBiennium" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHearings">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetHearings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationByRequestNumber">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationByRequestNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRcwCitesAffected">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetRcwCitesAffected" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionLawChapter">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetSessionLawChapter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSponsors">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetSponsors" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRollCalls">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetRollCalls" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentStatus">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetCurrentStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationTypes">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationTypes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalLegislationIntroducedByDateRange">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetTotalLegislationIntroducedByDateRange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislation">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationIntroducedSince">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationIntroducedSince" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrefiledLegislation">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetPrefiledLegislation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislativeStatusChanges">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislativeStatusChangesByBillNumber" style="document" />
+      <wsdl:input name="GetLegislativeStatusChangesByBillNumber">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetLegislativeStatusChangesByBillNumber">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislativeStatusChanges">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislativeStatusChangesByBillId" style="document" />
+      <wsdl:input name="GetLegislativeStatusChangesByBillId">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetLegislativeStatusChangesByBillId">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationHistoricalRecapCategoriesByLegislationNumber">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationHistoricalRecapCategoriesByLegislationNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislativeStatusChanges">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislativeStatusChangesByDateRange" style="document" />
+      <wsdl:input name="GetLegislativeStatusChangesByDateRange">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetLegislativeStatusChangesByDateRange">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationByYear">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationByYear" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationInfoIntroducedSince">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationInfoIntroducedSince" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPreFiledLegislationInfo">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetPreFiledLegislationInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHouseLegislationPassedHouse">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetHouseLegislationPassedHouse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHouseLegislationPassedSenate">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetHouseLegislationPassedSenate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSenateLegislationPassedSenate">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetSenateLegislationPassedSenate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSenateLegislationPassedHouse">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetSenateLegislationPassedHouse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedLegislature">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationPassedLegislature" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedLegislatureWithinTimeFrame">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationPassedLegislatureWithinTimeFrame" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedHouse">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationPassedHouse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedSenate">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationPassedSenate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationGovernorSigned">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationGovernorSigned" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationGovernorVeto">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationGovernorVeto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationGovernorPartialVeto">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationGovernorPartialVeto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPublishedEnrolledLegislation">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetPublishedEnrolledLegislation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedHouseWithinTimeFrame">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationPassedHouseWithinTimeFrame" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedSenateWithinTimeFrame">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationPassedSenateWithinTimeFrame" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationNotYetIntroducedInHouseOfOrigin">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationNotYetIntroducedInHouseOfOrigin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedOriginalBodyAndNotIntroducedInOppositeBody">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationPassedOriginalBodyAndNotIntroducedInOppositeBody" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislativeBillListFeatureData">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislativeBillListFeatureData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LegislationServiceHttpGet" type="tns:LegislationServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetAmendmentsForYear">
+      <http:operation location="/GetAmendmentsForYear" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAmendmentsForBiennium">
+      <http:operation location="/GetAmendmentsForBiennium" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHearings">
+      <http:operation location="/GetHearings" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationByRequestNumber">
+      <http:operation location="/GetLegislationByRequestNumber" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRcwCitesAffected">
+      <http:operation location="/GetRcwCitesAffected" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionLawChapter">
+      <http:operation location="/GetSessionLawChapter" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSponsors">
+      <http:operation location="/GetSponsors" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRollCalls">
+      <http:operation location="/GetRollCalls" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentStatus">
+      <http:operation location="/GetCurrentStatus" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationTypes">
+      <http:operation location="/GetLegislationTypes" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalLegislationIntroducedByDateRange">
+      <http:operation location="/GetTotalLegislationIntroducedByDateRange" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislation">
+      <http:operation location="/GetLegislation" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationIntroducedSince">
+      <http:operation location="/GetLegislationIntroducedSince" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrefiledLegislation">
+      <http:operation location="/GetPrefiledLegislation" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislativeStatusChanges">
+      <http:operation location="/GetLegislativeStatusChangesByBillNumber" />
+      <wsdl:input name="GetLegislativeStatusChangesByBillNumber">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="GetLegislativeStatusChangesByBillNumber">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislativeStatusChanges">
+      <http:operation location="/GetLegislativeStatusChangesByBillId" />
+      <wsdl:input name="GetLegislativeStatusChangesByBillId">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="GetLegislativeStatusChangesByBillId">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationHistoricalRecapCategoriesByLegislationNumber">
+      <http:operation location="/GetLegislationHistoricalRecapCategoriesByLegislationNumber" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislativeStatusChanges">
+      <http:operation location="/GetLegislativeStatusChangesByDateRange" />
+      <wsdl:input name="GetLegislativeStatusChangesByDateRange">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="GetLegislativeStatusChangesByDateRange">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationByYear">
+      <http:operation location="/GetLegislationByYear" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationInfoIntroducedSince">
+      <http:operation location="/GetLegislationInfoIntroducedSince" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPreFiledLegislationInfo">
+      <http:operation location="/GetPreFiledLegislationInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHouseLegislationPassedHouse">
+      <http:operation location="/GetHouseLegislationPassedHouse" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHouseLegislationPassedSenate">
+      <http:operation location="/GetHouseLegislationPassedSenate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSenateLegislationPassedSenate">
+      <http:operation location="/GetSenateLegislationPassedSenate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSenateLegislationPassedHouse">
+      <http:operation location="/GetSenateLegislationPassedHouse" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedLegislature">
+      <http:operation location="/GetLegislationPassedLegislature" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedLegislatureWithinTimeFrame">
+      <http:operation location="/GetLegislationPassedLegislatureWithinTimeFrame" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedHouse">
+      <http:operation location="/GetLegislationPassedHouse" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedSenate">
+      <http:operation location="/GetLegislationPassedSenate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationGovernorSigned">
+      <http:operation location="/GetLegislationGovernorSigned" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationGovernorVeto">
+      <http:operation location="/GetLegislationGovernorVeto" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationGovernorPartialVeto">
+      <http:operation location="/GetLegislationGovernorPartialVeto" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPublishedEnrolledLegislation">
+      <http:operation location="/GetPublishedEnrolledLegislation" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedHouseWithinTimeFrame">
+      <http:operation location="/GetLegislationPassedHouseWithinTimeFrame" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedSenateWithinTimeFrame">
+      <http:operation location="/GetLegislationPassedSenateWithinTimeFrame" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationNotYetIntroducedInHouseOfOrigin">
+      <http:operation location="/GetLegislationNotYetIntroducedInHouseOfOrigin" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedOriginalBodyAndNotIntroducedInOppositeBody">
+      <http:operation location="/GetLegislationPassedOriginalBodyAndNotIntroducedInOppositeBody" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislativeBillListFeatureData">
+      <http:operation location="/GetLegislativeBillListFeatureData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LegislationServiceHttpPost" type="tns:LegislationServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetAmendmentsForYear">
+      <http:operation location="/GetAmendmentsForYear" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAmendmentsForBiennium">
+      <http:operation location="/GetAmendmentsForBiennium" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHearings">
+      <http:operation location="/GetHearings" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationByRequestNumber">
+      <http:operation location="/GetLegislationByRequestNumber" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRcwCitesAffected">
+      <http:operation location="/GetRcwCitesAffected" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionLawChapter">
+      <http:operation location="/GetSessionLawChapter" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSponsors">
+      <http:operation location="/GetSponsors" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRollCalls">
+      <http:operation location="/GetRollCalls" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentStatus">
+      <http:operation location="/GetCurrentStatus" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationTypes">
+      <http:operation location="/GetLegislationTypes" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalLegislationIntroducedByDateRange">
+      <http:operation location="/GetTotalLegislationIntroducedByDateRange" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislation">
+      <http:operation location="/GetLegislation" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationIntroducedSince">
+      <http:operation location="/GetLegislationIntroducedSince" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrefiledLegislation">
+      <http:operation location="/GetPrefiledLegislation" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislativeStatusChanges">
+      <http:operation location="/GetLegislativeStatusChangesByBillNumber" />
+      <wsdl:input name="GetLegislativeStatusChangesByBillNumber">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="GetLegislativeStatusChangesByBillNumber">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislativeStatusChanges">
+      <http:operation location="/GetLegislativeStatusChangesByBillId" />
+      <wsdl:input name="GetLegislativeStatusChangesByBillId">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="GetLegislativeStatusChangesByBillId">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationHistoricalRecapCategoriesByLegislationNumber">
+      <http:operation location="/GetLegislationHistoricalRecapCategoriesByLegislationNumber" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislativeStatusChanges">
+      <http:operation location="/GetLegislativeStatusChangesByDateRange" />
+      <wsdl:input name="GetLegislativeStatusChangesByDateRange">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="GetLegislativeStatusChangesByDateRange">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationByYear">
+      <http:operation location="/GetLegislationByYear" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationInfoIntroducedSince">
+      <http:operation location="/GetLegislationInfoIntroducedSince" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPreFiledLegislationInfo">
+      <http:operation location="/GetPreFiledLegislationInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHouseLegislationPassedHouse">
+      <http:operation location="/GetHouseLegislationPassedHouse" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHouseLegislationPassedSenate">
+      <http:operation location="/GetHouseLegislationPassedSenate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSenateLegislationPassedSenate">
+      <http:operation location="/GetSenateLegislationPassedSenate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSenateLegislationPassedHouse">
+      <http:operation location="/GetSenateLegislationPassedHouse" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedLegislature">
+      <http:operation location="/GetLegislationPassedLegislature" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedLegislatureWithinTimeFrame">
+      <http:operation location="/GetLegislationPassedLegislatureWithinTimeFrame" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedHouse">
+      <http:operation location="/GetLegislationPassedHouse" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedSenate">
+      <http:operation location="/GetLegislationPassedSenate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationGovernorSigned">
+      <http:operation location="/GetLegislationGovernorSigned" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationGovernorVeto">
+      <http:operation location="/GetLegislationGovernorVeto" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationGovernorPartialVeto">
+      <http:operation location="/GetLegislationGovernorPartialVeto" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPublishedEnrolledLegislation">
+      <http:operation location="/GetPublishedEnrolledLegislation" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedHouseWithinTimeFrame">
+      <http:operation location="/GetLegislationPassedHouseWithinTimeFrame" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedSenateWithinTimeFrame">
+      <http:operation location="/GetLegislationPassedSenateWithinTimeFrame" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationNotYetIntroducedInHouseOfOrigin">
+      <http:operation location="/GetLegislationNotYetIntroducedInHouseOfOrigin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationPassedOriginalBodyAndNotIntroducedInOppositeBody">
+      <http:operation location="/GetLegislationPassedOriginalBodyAndNotIntroducedInOppositeBody" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislativeBillListFeatureData">
+      <http:operation location="/GetLegislativeBillListFeatureData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LegislationService">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Information on legislation being considered by the Washington State Legislature.</wsdl:documentation>
+    <wsdl:port name="LegislationServiceSoap" binding="tns:LegislationServiceSoap">
+      <soap:address location="https://wslwebservices.leg.wa.gov/LegislationService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LegislationServiceSoap12" binding="tns:LegislationServiceSoap12">
+      <soap12:address location="https://wslwebservices.leg.wa.gov/LegislationService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LegislationServiceHttpGet" binding="tns:LegislationServiceHttpGet">
+      <http:address location="https://wslwebservices.leg.wa.gov/LegislationService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LegislationServiceHttpPost" binding="tns:LegislationServiceHttpPost">
+      <http:address location="https://wslwebservices.leg.wa.gov/LegislationService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

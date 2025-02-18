@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://WSLWebServices.leg.wa.gov/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://WSLWebServices.leg.wa.gov/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Information on documents relating to legislation of the Washington State Legislature.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://WSLWebServices.leg.wa.gov/">
+      <s:element name="GetDocumentsByClass">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documentClass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="namedLike" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocumentsByClassResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDocumentsByClassResult" type="tns:ArrayOfLegislativeDocument" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLegislativeDocument">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LegislativeDocument" nillable="true" type="tns:LegislativeDocument" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LegislativeDocument">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShortFriendlyName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Biennium" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LongFriendlyName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Class" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HtmUrl" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="HtmCreateDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="HtmLastModifiedDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="PdfUrl" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PdfCreateDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="PdfLastModifiedDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDocuments">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="namedLike" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocumentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDocumentsResult" type="tns:ArrayOfLegislativeDocument" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocumentClasses">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocumentClassesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDocumentClassesResult" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllDocumentsByClass">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documentClass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllDocumentsByClassResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllDocumentsByClassResult" type="tns:ArrayOfLegislativeDocument" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArrayOfLegislativeDocument" nillable="true" type="tns:ArrayOfLegislativeDocument" />
+      <s:element name="ArrayOfAnyType" nillable="true" type="tns:ArrayOfAnyType" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetDocumentsByClassSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDocumentsByClass" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentsByClassSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDocumentsByClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDocuments" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentClassesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDocumentClasses" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentClassesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDocumentClassesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDocumentsByClassSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllDocumentsByClass" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDocumentsByClassSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllDocumentsByClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentsByClassHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="documentClass" type="s:string" />
+    <wsdl:part name="namedLike" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentsByClassHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislativeDocument" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentsHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="namedLike" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislativeDocument" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentClassesHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentClassesHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfAnyType" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDocumentsByClassHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="documentClass" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDocumentsByClassHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislativeDocument" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentsByClassHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="documentClass" type="s:string" />
+    <wsdl:part name="namedLike" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentsByClassHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislativeDocument" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentsHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="namedLike" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislativeDocument" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentClassesHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentClassesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfAnyType" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDocumentsByClassHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="documentClass" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDocumentsByClassHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislativeDocument" />
+  </wsdl:message>
+  <wsdl:portType name="LegislativeDocumentServiceSoap">
+    <wsdl:operation name="GetDocumentsByClass">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lists legislative documents of the given document class with names starting with the namedlike value. &lt;BR&gt;Exception thrown for invalid biennium, documentClass or namedLike or when no documents found. &lt;BR&gt;Expects the biennium in the format: 2005-06.  Information is available back to 1991-92. For Initiatives to the Legislature, enter the following in namedLike: Initiative. &lt;BR&gt;The results will include URLs to PDF and HTM versions of each document.</wsdl:documentation>
+      <wsdl:input message="tns:GetDocumentsByClassSoapIn" />
+      <wsdl:output message="tns:GetDocumentsByClassSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocuments">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lists legislative documents with names starting with the namedlike value. &lt;BR&gt;Exception thrown for invalid biennium or namedLike or when no documents found. &lt;BR&gt;Expects the biennium in the format: 2005-06. Information is available back to 1991-92.For Initiatives to the Legislature, enter the following in namedLike: Initiative.&lt;br&gt;The results will include URLs to PDF and HTM versions of each document.</wsdl:documentation>
+      <wsdl:input message="tns:GetDocumentsSoapIn" />
+      <wsdl:output message="tns:GetDocumentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentClasses">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns available bill family document types for the given biennium. &lt;BR&gt;Exception thrown for invalid biennium. &lt;BR&gt;Expects biennium to be in the format: 2005-06.  Information is available back to 1991-92.</wsdl:documentation>
+      <wsdl:input message="tns:GetDocumentClassesSoapIn" />
+      <wsdl:output message="tns:GetDocumentClassesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDocumentsByClass">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lists all legislative documents of the given document class. &lt;BR&gt;Exception thrown for invalid biennium or documentClass. &lt;BR&gt;Expects the biennium in the format: 2005-06.  Information is available back to 1991-92. &lt;BR&gt;The results will include URLs to PDF and HTM versions of each document.</wsdl:documentation>
+      <wsdl:input message="tns:GetAllDocumentsByClassSoapIn" />
+      <wsdl:output message="tns:GetAllDocumentsByClassSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="LegislativeDocumentServiceHttpGet">
+    <wsdl:operation name="GetDocumentsByClass">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lists legislative documents of the given document class with names starting with the namedlike value. &lt;BR&gt;Exception thrown for invalid biennium, documentClass or namedLike or when no documents found. &lt;BR&gt;Expects the biennium in the format: 2005-06.  Information is available back to 1991-92. For Initiatives to the Legislature, enter the following in namedLike: Initiative. &lt;BR&gt;The results will include URLs to PDF and HTM versions of each document.</wsdl:documentation>
+      <wsdl:input message="tns:GetDocumentsByClassHttpGetIn" />
+      <wsdl:output message="tns:GetDocumentsByClassHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocuments">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lists legislative documents with names starting with the namedlike value. &lt;BR&gt;Exception thrown for invalid biennium or namedLike or when no documents found. &lt;BR&gt;Expects the biennium in the format: 2005-06. Information is available back to 1991-92.For Initiatives to the Legislature, enter the following in namedLike: Initiative.&lt;br&gt;The results will include URLs to PDF and HTM versions of each document.</wsdl:documentation>
+      <wsdl:input message="tns:GetDocumentsHttpGetIn" />
+      <wsdl:output message="tns:GetDocumentsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentClasses">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns available bill family document types for the given biennium. &lt;BR&gt;Exception thrown for invalid biennium. &lt;BR&gt;Expects biennium to be in the format: 2005-06.  Information is available back to 1991-92.</wsdl:documentation>
+      <wsdl:input message="tns:GetDocumentClassesHttpGetIn" />
+      <wsdl:output message="tns:GetDocumentClassesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDocumentsByClass">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lists all legislative documents of the given document class. &lt;BR&gt;Exception thrown for invalid biennium or documentClass. &lt;BR&gt;Expects the biennium in the format: 2005-06.  Information is available back to 1991-92. &lt;BR&gt;The results will include URLs to PDF and HTM versions of each document.</wsdl:documentation>
+      <wsdl:input message="tns:GetAllDocumentsByClassHttpGetIn" />
+      <wsdl:output message="tns:GetAllDocumentsByClassHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="LegislativeDocumentServiceHttpPost">
+    <wsdl:operation name="GetDocumentsByClass">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lists legislative documents of the given document class with names starting with the namedlike value. &lt;BR&gt;Exception thrown for invalid biennium, documentClass or namedLike or when no documents found. &lt;BR&gt;Expects the biennium in the format: 2005-06.  Information is available back to 1991-92. For Initiatives to the Legislature, enter the following in namedLike: Initiative. &lt;BR&gt;The results will include URLs to PDF and HTM versions of each document.</wsdl:documentation>
+      <wsdl:input message="tns:GetDocumentsByClassHttpPostIn" />
+      <wsdl:output message="tns:GetDocumentsByClassHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocuments">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lists legislative documents with names starting with the namedlike value. &lt;BR&gt;Exception thrown for invalid biennium or namedLike or when no documents found. &lt;BR&gt;Expects the biennium in the format: 2005-06. Information is available back to 1991-92.For Initiatives to the Legislature, enter the following in namedLike: Initiative.&lt;br&gt;The results will include URLs to PDF and HTM versions of each document.</wsdl:documentation>
+      <wsdl:input message="tns:GetDocumentsHttpPostIn" />
+      <wsdl:output message="tns:GetDocumentsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentClasses">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns available bill family document types for the given biennium. &lt;BR&gt;Exception thrown for invalid biennium. &lt;BR&gt;Expects biennium to be in the format: 2005-06.  Information is available back to 1991-92.</wsdl:documentation>
+      <wsdl:input message="tns:GetDocumentClassesHttpPostIn" />
+      <wsdl:output message="tns:GetDocumentClassesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDocumentsByClass">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lists all legislative documents of the given document class. &lt;BR&gt;Exception thrown for invalid biennium or documentClass. &lt;BR&gt;Expects the biennium in the format: 2005-06.  Information is available back to 1991-92. &lt;BR&gt;The results will include URLs to PDF and HTM versions of each document.</wsdl:documentation>
+      <wsdl:input message="tns:GetAllDocumentsByClassHttpPostIn" />
+      <wsdl:output message="tns:GetAllDocumentsByClassHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LegislativeDocumentServiceSoap" type="tns:LegislativeDocumentServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDocumentsByClass">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetDocumentsByClass" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocuments">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentClasses">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetDocumentClasses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDocumentsByClass">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetAllDocumentsByClass" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LegislativeDocumentServiceSoap12" type="tns:LegislativeDocumentServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDocumentsByClass">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetDocumentsByClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocuments">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentClasses">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetDocumentClasses" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDocumentsByClass">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetAllDocumentsByClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LegislativeDocumentServiceHttpGet" type="tns:LegislativeDocumentServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetDocumentsByClass">
+      <http:operation location="/GetDocumentsByClass" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocuments">
+      <http:operation location="/GetDocuments" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentClasses">
+      <http:operation location="/GetDocumentClasses" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDocumentsByClass">
+      <http:operation location="/GetAllDocumentsByClass" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LegislativeDocumentServiceHttpPost" type="tns:LegislativeDocumentServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetDocumentsByClass">
+      <http:operation location="/GetDocumentsByClass" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocuments">
+      <http:operation location="/GetDocuments" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentClasses">
+      <http:operation location="/GetDocumentClasses" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDocumentsByClass">
+      <http:operation location="/GetAllDocumentsByClass" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LegislativeDocumentService">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Information on documents relating to legislation of the Washington State Legislature.</wsdl:documentation>
+    <wsdl:port name="LegislativeDocumentServiceSoap" binding="tns:LegislativeDocumentServiceSoap">
+      <soap:address location="https://wslwebservices.leg.wa.gov/LegislativeDocumentService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LegislativeDocumentServiceSoap12" binding="tns:LegislativeDocumentServiceSoap12">
+      <soap12:address location="https://wslwebservices.leg.wa.gov/LegislativeDocumentService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LegislativeDocumentServiceHttpGet" binding="tns:LegislativeDocumentServiceHttpGet">
+      <http:address location="https://wslwebservices.leg.wa.gov/LegislativeDocumentService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LegislativeDocumentServiceHttpPost" binding="tns:LegislativeDocumentServiceHttpPost">
+      <http:address location="https://wslwebservices.leg.wa.gov/LegislativeDocumentService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

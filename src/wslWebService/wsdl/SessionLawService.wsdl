@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://WSLWebServices.leg.wa.gov/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://WSLWebServices.leg.wa.gov/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Information on legislation relating to session laws of the Washington State Legislature.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://WSLWebServices.leg.wa.gov/">
+      <s:element name="GetSessionLawByBill">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="billNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSessionLawByBillResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSessionLawByBillResult" type="tns:SessionLaw" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SessionLaw">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ChapterNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Year" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="LegislativeSession" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LegislatureNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EffectiveDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="MultipleEffectiveDates" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Biennium" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillTitle" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PartialVeto" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Veto" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="LegTypeId" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetBillByChapterNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="session" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="chapterNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBillByChapterNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBillByChapterNumberResult" type="tns:Legislation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Legislation">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:LegislationInfo">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="StateFiscalNote" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="LocalFiscalNote" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="Appropriations" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="RequestedByGovernor" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="RequestedByBudgetCommittee" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="RequestedByDepartment" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="RequestedByOther" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShortDescription" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Request" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IntroducedDate" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="CurrentStatus" type="tns:LegislativeStatus" />
+              <s:element minOccurs="0" maxOccurs="1" name="Sponsor" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="PrimeSponsorID" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="LongDescription" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LegalTitle" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Companions" type="tns:ArrayOfCompanion" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="LegislationInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Biennium" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BillNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubstituteVersion" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EngrossedVersion" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShortLegislationType" type="tns:LegislationType" />
+          <s:element minOccurs="0" maxOccurs="1" name="OriginalAgency" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Active" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayNumber" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LegislationType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ShortLegislationType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LongLegislationType" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LegislativeStatus">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BillId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HistoryLine" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ActionDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="AmendedByOppositeBody" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="PartialVeto" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Veto" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="AmendmentsExist" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCompanion">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Companion" nillable="true" type="tns:Companion" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Companion">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Biennium" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetChapterNumbersByYear">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChapterNumbersByYearResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetChapterNumbersByYearResult" type="tns:ArrayOfSessionLaw" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSessionLaw">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SessionLaw" nillable="true" type="tns:SessionLaw" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSessionLawByBillId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="billId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSessionLawByBillIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSessionLawByBillIdResult" type="tns:SessionLaw" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSessionLawByInitiativeNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="initiativeNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSessionLawByInitiativeNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSessionLawByInitiativeNumberResult" type="tns:SessionLaw" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SessionLaw" nillable="true" type="tns:SessionLaw" />
+      <s:element name="Legislation" nillable="true" type="tns:Legislation" />
+      <s:element name="ArrayOfSessionLaw" nillable="true" type="tns:ArrayOfSessionLaw" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetSessionLawByBillSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSessionLawByBill" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionLawByBillSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSessionLawByBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBillByChapterNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBillByChapterNumber" />
+  </wsdl:message>
+  <wsdl:message name="GetBillByChapterNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBillByChapterNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetChapterNumbersByYearSoapIn">
+    <wsdl:part name="parameters" element="tns:GetChapterNumbersByYear" />
+  </wsdl:message>
+  <wsdl:message name="GetChapterNumbersByYearSoapOut">
+    <wsdl:part name="parameters" element="tns:GetChapterNumbersByYearResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionLawByBillIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSessionLawByBillId" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionLawByBillIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSessionLawByBillIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionLawByInitiativeNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSessionLawByInitiativeNumber" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionLawByInitiativeNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSessionLawByInitiativeNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionLawByBillHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionLawByBillHttpGetOut">
+    <wsdl:part name="Body" element="tns:SessionLaw" />
+  </wsdl:message>
+  <wsdl:message name="GetBillByChapterNumberHttpGetIn">
+    <wsdl:part name="year" type="s:string" />
+    <wsdl:part name="session" type="s:string" />
+    <wsdl:part name="chapterNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBillByChapterNumberHttpGetOut">
+    <wsdl:part name="Body" element="tns:Legislation" />
+  </wsdl:message>
+  <wsdl:message name="GetChapterNumbersByYearHttpGetIn">
+    <wsdl:part name="year" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetChapterNumbersByYearHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfSessionLaw" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionLawByBillIdHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionLawByBillIdHttpGetOut">
+    <wsdl:part name="Body" element="tns:SessionLaw" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionLawByInitiativeNumberHttpGetIn">
+    <wsdl:part name="initiativeNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionLawByInitiativeNumberHttpGetOut">
+    <wsdl:part name="Body" element="tns:SessionLaw" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionLawByBillHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionLawByBillHttpPostOut">
+    <wsdl:part name="Body" element="tns:SessionLaw" />
+  </wsdl:message>
+  <wsdl:message name="GetBillByChapterNumberHttpPostIn">
+    <wsdl:part name="year" type="s:string" />
+    <wsdl:part name="session" type="s:string" />
+    <wsdl:part name="chapterNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBillByChapterNumberHttpPostOut">
+    <wsdl:part name="Body" element="tns:Legislation" />
+  </wsdl:message>
+  <wsdl:message name="GetChapterNumbersByYearHttpPostIn">
+    <wsdl:part name="year" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetChapterNumbersByYearHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfSessionLaw" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionLawByBillIdHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionLawByBillIdHttpPostOut">
+    <wsdl:part name="Body" element="tns:SessionLaw" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionLawByInitiativeNumberHttpPostIn">
+    <wsdl:part name="initiativeNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionLawByInitiativeNumberHttpPostOut">
+    <wsdl:part name="Body" element="tns:SessionLaw" />
+  </wsdl:message>
+  <wsdl:portType name="SessionLawServiceSoap">
+    <wsdl:operation name="GetSessionLawByBill">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns session law information for a bill. Note: This will not return information on Initiatives to the Legislature. &lt;BR&gt;Exception thrown for invalid biennium or when no session law found. &lt;BR&gt;Expects biennium to be in the format: 2005-06.</wsdl:documentation>
+      <wsdl:input message="tns:GetSessionLawByBillSoapIn" />
+      <wsdl:output message="tns:GetSessionLawByBillSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBillByChapterNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns Bill information for a chapter. &lt;BR&gt;Exception thrown for invalid year or when no legislation found. &lt;BR&gt;Expects year in the format: YYYY. Session is the SessionCode (0=Regular Session, 1=1st Special Session, etc.).</wsdl:documentation>
+      <wsdl:input message="tns:GetBillByChapterNumberSoapIn" />
+      <wsdl:output message="tns:GetBillByChapterNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChapterNumbersByYear">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns all Chapters for a year. &lt;BR&gt;Exception thrown for invalid year. &lt;BR&gt;Expects year in the format: YYYY.</wsdl:documentation>
+      <wsdl:input message="tns:GetChapterNumbersByYearSoapIn" />
+      <wsdl:output message="tns:GetChapterNumbersByYearSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionLawByBillId">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns session law information for a billId. &lt;BR&gt;Exception thrown for invalid biennium or when no session law found. &lt;BR&gt;Expects biennium to be in the format: 2005-06.</wsdl:documentation>
+      <wsdl:input message="tns:GetSessionLawByBillIdSoapIn" />
+      <wsdl:output message="tns:GetSessionLawByBillIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionLawByInitiativeNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns session law information for an Initiative to the Legislature. &lt;BR&gt;Exception thrown when no session law found.</wsdl:documentation>
+      <wsdl:input message="tns:GetSessionLawByInitiativeNumberSoapIn" />
+      <wsdl:output message="tns:GetSessionLawByInitiativeNumberSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SessionLawServiceHttpGet">
+    <wsdl:operation name="GetSessionLawByBill">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns session law information for a bill. Note: This will not return information on Initiatives to the Legislature. &lt;BR&gt;Exception thrown for invalid biennium or when no session law found. &lt;BR&gt;Expects biennium to be in the format: 2005-06.</wsdl:documentation>
+      <wsdl:input message="tns:GetSessionLawByBillHttpGetIn" />
+      <wsdl:output message="tns:GetSessionLawByBillHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBillByChapterNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns Bill information for a chapter. &lt;BR&gt;Exception thrown for invalid year or when no legislation found. &lt;BR&gt;Expects year in the format: YYYY. Session is the SessionCode (0=Regular Session, 1=1st Special Session, etc.).</wsdl:documentation>
+      <wsdl:input message="tns:GetBillByChapterNumberHttpGetIn" />
+      <wsdl:output message="tns:GetBillByChapterNumberHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChapterNumbersByYear">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns all Chapters for a year. &lt;BR&gt;Exception thrown for invalid year. &lt;BR&gt;Expects year in the format: YYYY.</wsdl:documentation>
+      <wsdl:input message="tns:GetChapterNumbersByYearHttpGetIn" />
+      <wsdl:output message="tns:GetChapterNumbersByYearHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionLawByBillId">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns session law information for a billId. &lt;BR&gt;Exception thrown for invalid biennium or when no session law found. &lt;BR&gt;Expects biennium to be in the format: 2005-06.</wsdl:documentation>
+      <wsdl:input message="tns:GetSessionLawByBillIdHttpGetIn" />
+      <wsdl:output message="tns:GetSessionLawByBillIdHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionLawByInitiativeNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns session law information for an Initiative to the Legislature. &lt;BR&gt;Exception thrown when no session law found.</wsdl:documentation>
+      <wsdl:input message="tns:GetSessionLawByInitiativeNumberHttpGetIn" />
+      <wsdl:output message="tns:GetSessionLawByInitiativeNumberHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SessionLawServiceHttpPost">
+    <wsdl:operation name="GetSessionLawByBill">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns session law information for a bill. Note: This will not return information on Initiatives to the Legislature. &lt;BR&gt;Exception thrown for invalid biennium or when no session law found. &lt;BR&gt;Expects biennium to be in the format: 2005-06.</wsdl:documentation>
+      <wsdl:input message="tns:GetSessionLawByBillHttpPostIn" />
+      <wsdl:output message="tns:GetSessionLawByBillHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBillByChapterNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns Bill information for a chapter. &lt;BR&gt;Exception thrown for invalid year or when no legislation found. &lt;BR&gt;Expects year in the format: YYYY. Session is the SessionCode (0=Regular Session, 1=1st Special Session, etc.).</wsdl:documentation>
+      <wsdl:input message="tns:GetBillByChapterNumberHttpPostIn" />
+      <wsdl:output message="tns:GetBillByChapterNumberHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChapterNumbersByYear">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns all Chapters for a year. &lt;BR&gt;Exception thrown for invalid year. &lt;BR&gt;Expects year in the format: YYYY.</wsdl:documentation>
+      <wsdl:input message="tns:GetChapterNumbersByYearHttpPostIn" />
+      <wsdl:output message="tns:GetChapterNumbersByYearHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionLawByBillId">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns session law information for a billId. &lt;BR&gt;Exception thrown for invalid biennium or when no session law found. &lt;BR&gt;Expects biennium to be in the format: 2005-06.</wsdl:documentation>
+      <wsdl:input message="tns:GetSessionLawByBillIdHttpPostIn" />
+      <wsdl:output message="tns:GetSessionLawByBillIdHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionLawByInitiativeNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns session law information for an Initiative to the Legislature. &lt;BR&gt;Exception thrown when no session law found.</wsdl:documentation>
+      <wsdl:input message="tns:GetSessionLawByInitiativeNumberHttpPostIn" />
+      <wsdl:output message="tns:GetSessionLawByInitiativeNumberHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SessionLawServiceSoap" type="tns:SessionLawServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSessionLawByBill">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetSessionLawByBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBillByChapterNumber">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetBillByChapterNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChapterNumbersByYear">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetChapterNumbersByYear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionLawByBillId">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetSessionLawByBillId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionLawByInitiativeNumber">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetSessionLawByInitiativeNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SessionLawServiceSoap12" type="tns:SessionLawServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSessionLawByBill">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetSessionLawByBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBillByChapterNumber">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetBillByChapterNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChapterNumbersByYear">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetChapterNumbersByYear" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionLawByBillId">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetSessionLawByBillId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionLawByInitiativeNumber">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetSessionLawByInitiativeNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SessionLawServiceHttpGet" type="tns:SessionLawServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetSessionLawByBill">
+      <http:operation location="/GetSessionLawByBill" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBillByChapterNumber">
+      <http:operation location="/GetBillByChapterNumber" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChapterNumbersByYear">
+      <http:operation location="/GetChapterNumbersByYear" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionLawByBillId">
+      <http:operation location="/GetSessionLawByBillId" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionLawByInitiativeNumber">
+      <http:operation location="/GetSessionLawByInitiativeNumber" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SessionLawServiceHttpPost" type="tns:SessionLawServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetSessionLawByBill">
+      <http:operation location="/GetSessionLawByBill" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBillByChapterNumber">
+      <http:operation location="/GetBillByChapterNumber" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChapterNumbersByYear">
+      <http:operation location="/GetChapterNumbersByYear" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionLawByBillId">
+      <http:operation location="/GetSessionLawByBillId" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionLawByInitiativeNumber">
+      <http:operation location="/GetSessionLawByInitiativeNumber" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SessionLawService">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Information on legislation relating to session laws of the Washington State Legislature.</wsdl:documentation>
+    <wsdl:port name="SessionLawServiceSoap" binding="tns:SessionLawServiceSoap">
+      <soap:address location="https://wslwebservices.leg.wa.gov/SessionLawService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SessionLawServiceSoap12" binding="tns:SessionLawServiceSoap12">
+      <soap12:address location="https://wslwebservices.leg.wa.gov/SessionLawService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SessionLawServiceHttpGet" binding="tns:SessionLawServiceHttpGet">
+      <http:address location="https://wslwebservices.leg.wa.gov/SessionLawService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SessionLawServiceHttpPost" binding="tns:SessionLawServiceHttpPost">
+      <http:address location="https://wslwebservices.leg.wa.gov/SessionLawService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

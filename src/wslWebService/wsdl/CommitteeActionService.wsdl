@@ -1,0 +1,1688 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://WSLWebServices.leg.wa.gov/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://WSLWebServices.leg.wa.gov/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Information on committee actions by the Washington State Legislature.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://WSLWebServices.leg.wa.gov/">
+      <s:element name="GetDoPassByCommittee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="committeeName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDoPassByCommitteeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDoPassByCommitteeResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLegislationInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LegislationInfo" nillable="true" type="tns:LegislationInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LegislationInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Biennium" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BillNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubstituteVersion" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EngrossedVersion" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShortLegislationType" type="tns:LegislationType" />
+          <s:element minOccurs="0" maxOccurs="1" name="OriginalAgency" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Active" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayNumber" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LegislationType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ShortLegislationType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LongLegislationType" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDoPassWithAmendmentsByCommittee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="committeeName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDoPassWithAmendmentsByCommitteeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDoPassWithAmendmentsByCommitteeResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDoPassWithAmendmentsToSubByCommittee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="committeeName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDoPassWithAmendmentsToSubByCommitteeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDoPassWithAmendmentsToSubByCommitteeResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInCommittee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="committeeName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInCommitteeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInCommitteeResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMajorityReportByCommittee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="committeeName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMajorityReportByCommitteeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMajorityReportByCommitteeResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMinorityReportByCommittee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="committeeName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMinorityReportByCommitteeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMinorityReportByCommitteeResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReReferralByCommittee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="committeeName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReReferralByCommitteeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReReferralByCommitteeResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReferredToAnotherCommitteeByCommittee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="committeeName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReferredToAnotherCommitteeByCommitteeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReferredToAnotherCommitteeByCommitteeResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReferredToCommittee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="committeeName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReferredToCommitteeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReferredToCommitteeResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCommitteeReferralsByCommittee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="committeeName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCommitteeReferralsByCommitteeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCommitteeReferralsByCommitteeResult" type="tns:ArrayOfCommitteeReferral" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCommitteeReferral">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CommitteeReferral" nillable="true" type="tns:CommitteeReferral" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CommitteeReferral">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LegislationInfo" type="tns:LegislationInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="Committee" type="tns:Committee" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReferredDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Committee">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:LegislativeEntity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="LegislativeEntity">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LongName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Agency" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Acronym" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCommitteeReferralsByBill">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="billNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCommitteeReferralsByBillResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCommitteeReferralsByBillResult" type="tns:ArrayOfCommitteeReferral" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRemovedFromCommittee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="committeeName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRemovedFromCommitteeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRemovedFromCommitteeResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDoPassSubstituteByCommittee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="committeeName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDoPassSubstituteByCommitteeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDoPassSubstituteByCommitteeResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWithoutRecommendationByCommittee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="committeeName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWithoutRecommendationByCommitteeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWithoutRecommendationByCommitteeResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCommitteeExecutiveActionsByBill">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="billNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCommitteeExecutiveActionsByBillResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCommitteeExecutiveActionsByBillResult" type="tns:ArrayOfCommitteeAction" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCommitteeAction">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CommitteeAction" nillable="true" type="tns:CommitteeAction" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CommitteeAction">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AgendaId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="HearingDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="LegislationInfo" type="tns:LegislationInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="Committee" type="tns:Committee" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReferredToCommittee" type="tns:Committee" />
+          <s:element minOccurs="0" maxOccurs="1" name="CommitteeRecommendations" type="tns:ArrayOfCommitteeRecommendation" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCommitteeRecommendation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CommitteeRecommendation" nillable="true" type="tns:CommitteeRecommendation" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CommitteeRecommendation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Recommendation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LongRecommendation" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RecommendationType" type="tns:RecommendationType" />
+          <s:element minOccurs="0" maxOccurs="1" name="MembersSigned" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Signatures" type="tns:ArrayOfSignature" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="RecommendationType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Majority" />
+          <s:enumeration value="Minority" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfSignature">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Signature" nillable="true" type="tns:Signature" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Signature">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MemberId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Position" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PositionSort" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetLegislationReportedOutOfCommittee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="committeeName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agency" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="beginDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationReportedOutOfCommitteeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLegislationReportedOutOfCommitteeResult" type="tns:ArrayOfLegislationInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationScheduledHearingsByCommittee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="biennium" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="committeeName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLegislationScheduledHearingsByCommitteeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLegislationScheduledHearingsByCommitteeResult" type="tns:ArrayOfLegislationFamily" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLegislationFamily">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LegislationFamily" nillable="true" type="tns:LegislationFamily" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LegislationFamily">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Biennium" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LegislationNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="LegislationType" type="tns:LegislationType" />
+          <s:element minOccurs="0" maxOccurs="1" name="OriginalAgency" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScheduledMeetings" type="tns:ArrayOfLegislationFamilyMeeting" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfLegislationFamilyMeeting">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LegislationFamilyMeeting" nillable="true" type="tns:LegislationFamilyMeeting" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LegislationFamilyMeeting">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MeetingTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Committees" type="tns:ArrayOfCommittee" />
+          <s:element minOccurs="0" maxOccurs="1" name="HearingType" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCommittee">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Committee" nillable="true" type="tns:Committee" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ArrayOfLegislationInfo" nillable="true" type="tns:ArrayOfLegislationInfo" />
+      <s:element name="ArrayOfCommitteeReferral" nillable="true" type="tns:ArrayOfCommitteeReferral" />
+      <s:element name="ArrayOfCommitteeAction" nillable="true" type="tns:ArrayOfCommitteeAction" />
+      <s:element name="ArrayOfLegislationFamily" nillable="true" type="tns:ArrayOfLegislationFamily" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetDoPassByCommitteeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDoPassByCommittee" />
+  </wsdl:message>
+  <wsdl:message name="GetDoPassByCommitteeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDoPassByCommitteeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDoPassWithAmendmentsByCommitteeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDoPassWithAmendmentsByCommittee" />
+  </wsdl:message>
+  <wsdl:message name="GetDoPassWithAmendmentsByCommitteeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDoPassWithAmendmentsByCommitteeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDoPassWithAmendmentsToSubByCommitteeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDoPassWithAmendmentsToSubByCommittee" />
+  </wsdl:message>
+  <wsdl:message name="GetDoPassWithAmendmentsToSubByCommitteeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDoPassWithAmendmentsToSubByCommitteeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInCommitteeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInCommittee" />
+  </wsdl:message>
+  <wsdl:message name="GetInCommitteeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInCommitteeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMajorityReportByCommitteeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMajorityReportByCommittee" />
+  </wsdl:message>
+  <wsdl:message name="GetMajorityReportByCommitteeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMajorityReportByCommitteeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMinorityReportByCommitteeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMinorityReportByCommittee" />
+  </wsdl:message>
+  <wsdl:message name="GetMinorityReportByCommitteeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMinorityReportByCommitteeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReReferralByCommitteeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReReferralByCommittee" />
+  </wsdl:message>
+  <wsdl:message name="GetReReferralByCommitteeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReReferralByCommitteeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReferredToAnotherCommitteeByCommitteeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReferredToAnotherCommitteeByCommittee" />
+  </wsdl:message>
+  <wsdl:message name="GetReferredToAnotherCommitteeByCommitteeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReferredToAnotherCommitteeByCommitteeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReferredToCommitteeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReferredToCommittee" />
+  </wsdl:message>
+  <wsdl:message name="GetReferredToCommitteeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReferredToCommitteeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCommitteeReferralsByCommitteeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCommitteeReferralsByCommittee" />
+  </wsdl:message>
+  <wsdl:message name="GetCommitteeReferralsByCommitteeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCommitteeReferralsByCommitteeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCommitteeReferralsByBillSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCommitteeReferralsByBill" />
+  </wsdl:message>
+  <wsdl:message name="GetCommitteeReferralsByBillSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCommitteeReferralsByBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRemovedFromCommitteeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRemovedFromCommittee" />
+  </wsdl:message>
+  <wsdl:message name="GetRemovedFromCommitteeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRemovedFromCommitteeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDoPassSubstituteByCommitteeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDoPassSubstituteByCommittee" />
+  </wsdl:message>
+  <wsdl:message name="GetDoPassSubstituteByCommitteeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDoPassSubstituteByCommitteeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWithoutRecommendationByCommitteeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWithoutRecommendationByCommittee" />
+  </wsdl:message>
+  <wsdl:message name="GetWithoutRecommendationByCommitteeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWithoutRecommendationByCommitteeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCommitteeExecutiveActionsByBillSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCommitteeExecutiveActionsByBill" />
+  </wsdl:message>
+  <wsdl:message name="GetCommitteeExecutiveActionsByBillSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCommitteeExecutiveActionsByBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationReportedOutOfCommitteeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLegislationReportedOutOfCommittee" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationReportedOutOfCommitteeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLegislationReportedOutOfCommitteeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationScheduledHearingsByCommitteeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLegislationScheduledHearingsByCommittee" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationScheduledHearingsByCommitteeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLegislationScheduledHearingsByCommitteeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDoPassByCommitteeHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="committeeName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDoPassByCommitteeHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetDoPassWithAmendmentsByCommitteeHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="committeeName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDoPassWithAmendmentsByCommitteeHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetDoPassWithAmendmentsToSubByCommitteeHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="committeeName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDoPassWithAmendmentsToSubByCommitteeHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetInCommitteeHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="committeeName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetInCommitteeHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetMajorityReportByCommitteeHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="committeeName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMajorityReportByCommitteeHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetMinorityReportByCommitteeHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="committeeName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMinorityReportByCommitteeHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetReReferralByCommitteeHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="committeeName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetReReferralByCommitteeHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetReferredToAnotherCommitteeByCommitteeHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="committeeName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetReferredToAnotherCommitteeByCommitteeHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetReferredToCommitteeHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="committeeName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetReferredToCommitteeHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetCommitteeReferralsByCommitteeHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="committeeName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCommitteeReferralsByCommitteeHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCommitteeReferral" />
+  </wsdl:message>
+  <wsdl:message name="GetCommitteeReferralsByBillHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCommitteeReferralsByBillHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCommitteeReferral" />
+  </wsdl:message>
+  <wsdl:message name="GetRemovedFromCommitteeHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="committeeName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRemovedFromCommitteeHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetDoPassSubstituteByCommitteeHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="committeeName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDoPassSubstituteByCommitteeHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetWithoutRecommendationByCommitteeHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="committeeName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetWithoutRecommendationByCommitteeHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetCommitteeExecutiveActionsByBillHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCommitteeExecutiveActionsByBillHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCommitteeAction" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationReportedOutOfCommitteeHttpGetIn">
+    <wsdl:part name="committeeName" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="beginDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationReportedOutOfCommitteeHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationScheduledHearingsByCommitteeHttpGetIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="committeeName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationScheduledHearingsByCommitteeHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationFamily" />
+  </wsdl:message>
+  <wsdl:message name="GetDoPassByCommitteeHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="committeeName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDoPassByCommitteeHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetDoPassWithAmendmentsByCommitteeHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="committeeName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDoPassWithAmendmentsByCommitteeHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetDoPassWithAmendmentsToSubByCommitteeHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="committeeName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDoPassWithAmendmentsToSubByCommitteeHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetInCommitteeHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="committeeName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetInCommitteeHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetMajorityReportByCommitteeHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="committeeName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMajorityReportByCommitteeHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetMinorityReportByCommitteeHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="committeeName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMinorityReportByCommitteeHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetReReferralByCommitteeHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="committeeName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetReReferralByCommitteeHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetReferredToAnotherCommitteeByCommitteeHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="committeeName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetReferredToAnotherCommitteeByCommitteeHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetReferredToCommitteeHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="committeeName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetReferredToCommitteeHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetCommitteeReferralsByCommitteeHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="committeeName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCommitteeReferralsByCommitteeHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCommitteeReferral" />
+  </wsdl:message>
+  <wsdl:message name="GetCommitteeReferralsByBillHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCommitteeReferralsByBillHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCommitteeReferral" />
+  </wsdl:message>
+  <wsdl:message name="GetRemovedFromCommitteeHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="committeeName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRemovedFromCommitteeHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetDoPassSubstituteByCommitteeHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="committeeName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDoPassSubstituteByCommitteeHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetWithoutRecommendationByCommitteeHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="committeeName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetWithoutRecommendationByCommitteeHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetCommitteeExecutiveActionsByBillHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="billNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCommitteeExecutiveActionsByBillHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCommitteeAction" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationReportedOutOfCommitteeHttpPostIn">
+    <wsdl:part name="committeeName" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="beginDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationReportedOutOfCommitteeHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationScheduledHearingsByCommitteeHttpPostIn">
+    <wsdl:part name="biennium" type="s:string" />
+    <wsdl:part name="agency" type="s:string" />
+    <wsdl:part name="committeeName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLegislationScheduledHearingsByCommitteeHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLegislationFamily" />
+  </wsdl:message>
+  <wsdl:portType name="CommitteeActionServiceSoap">
+    <wsdl:operation name="GetDoPassByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status do pass by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetDoPassByCommitteeSoapIn" />
+      <wsdl:output message="tns:GetDoPassByCommitteeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoPassWithAmendmentsByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status do pass with amendments by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetDoPassWithAmendmentsByCommitteeSoapIn" />
+      <wsdl:output message="tns:GetDoPassWithAmendmentsByCommitteeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoPassWithAmendmentsToSubByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status do pass with amendments to sub by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetDoPassWithAmendmentsToSubByCommitteeSoapIn" />
+      <wsdl:output message="tns:GetDoPassWithAmendmentsToSubByCommitteeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status in committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetInCommitteeSoapIn" />
+      <wsdl:output message="tns:GetInCommitteeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMajorityReportByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status majority report by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetMajorityReportByCommitteeSoapIn" />
+      <wsdl:output message="tns:GetMajorityReportByCommitteeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMinorityReportByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status minority report by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetMinorityReportByCommitteeSoapIn" />
+      <wsdl:output message="tns:GetMinorityReportByCommitteeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReReferralByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status re-referral by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetReReferralByCommitteeSoapIn" />
+      <wsdl:output message="tns:GetReReferralByCommitteeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReferredToAnotherCommitteeByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status referred to another committee by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetReferredToAnotherCommitteeByCommitteeSoapIn" />
+      <wsdl:output message="tns:GetReferredToAnotherCommitteeByCommitteeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReferredToCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status referred to committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetReferredToCommitteeSoapIn" />
+      <wsdl:output message="tns:GetReferredToCommitteeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommitteeReferralsByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have been referred to the committee by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetCommitteeReferralsByCommitteeSoapIn" />
+      <wsdl:output message="tns:GetCommitteeReferralsByCommitteeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommitteeReferralsByBill">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have been referred to the committee by bill.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetCommitteeReferralsByBillSoapIn" />
+      <wsdl:output message="tns:GetCommitteeReferralsByBillSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRemovedFromCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status removed by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetRemovedFromCommitteeSoapIn" />
+      <wsdl:output message="tns:GetRemovedFromCommitteeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoPassSubstituteByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status substitute do pass by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetDoPassSubstituteByCommitteeSoapIn" />
+      <wsdl:output message="tns:GetDoPassSubstituteByCommitteeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWithoutRecommendationByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status without recommendation by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetWithoutRecommendationByCommitteeSoapIn" />
+      <wsdl:output message="tns:GetWithoutRecommendationByCommitteeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommitteeExecutiveActionsByBill">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns executive committee executive actions by bill.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetCommitteeExecutiveActionsByBillSoapIn" />
+      <wsdl:output message="tns:GetCommitteeExecutiveActionsByBillSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationReportedOutOfCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that were reported out of the given committee between the begin and end date.</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationReportedOutOfCommitteeSoapIn" />
+      <wsdl:output message="tns:GetLegislationReportedOutOfCommitteeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationScheduledHearingsByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns bills that have had a hearing scheduled in the committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationScheduledHearingsByCommitteeSoapIn" />
+      <wsdl:output message="tns:GetLegislationScheduledHearingsByCommitteeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CommitteeActionServiceHttpGet">
+    <wsdl:operation name="GetDoPassByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status do pass by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetDoPassByCommitteeHttpGetIn" />
+      <wsdl:output message="tns:GetDoPassByCommitteeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoPassWithAmendmentsByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status do pass with amendments by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetDoPassWithAmendmentsByCommitteeHttpGetIn" />
+      <wsdl:output message="tns:GetDoPassWithAmendmentsByCommitteeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoPassWithAmendmentsToSubByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status do pass with amendments to sub by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetDoPassWithAmendmentsToSubByCommitteeHttpGetIn" />
+      <wsdl:output message="tns:GetDoPassWithAmendmentsToSubByCommitteeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status in committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetInCommitteeHttpGetIn" />
+      <wsdl:output message="tns:GetInCommitteeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMajorityReportByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status majority report by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetMajorityReportByCommitteeHttpGetIn" />
+      <wsdl:output message="tns:GetMajorityReportByCommitteeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMinorityReportByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status minority report by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetMinorityReportByCommitteeHttpGetIn" />
+      <wsdl:output message="tns:GetMinorityReportByCommitteeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReReferralByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status re-referral by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetReReferralByCommitteeHttpGetIn" />
+      <wsdl:output message="tns:GetReReferralByCommitteeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReferredToAnotherCommitteeByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status referred to another committee by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetReferredToAnotherCommitteeByCommitteeHttpGetIn" />
+      <wsdl:output message="tns:GetReferredToAnotherCommitteeByCommitteeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReferredToCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status referred to committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetReferredToCommitteeHttpGetIn" />
+      <wsdl:output message="tns:GetReferredToCommitteeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommitteeReferralsByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have been referred to the committee by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetCommitteeReferralsByCommitteeHttpGetIn" />
+      <wsdl:output message="tns:GetCommitteeReferralsByCommitteeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommitteeReferralsByBill">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have been referred to the committee by bill.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetCommitteeReferralsByBillHttpGetIn" />
+      <wsdl:output message="tns:GetCommitteeReferralsByBillHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRemovedFromCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status removed by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetRemovedFromCommitteeHttpGetIn" />
+      <wsdl:output message="tns:GetRemovedFromCommitteeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoPassSubstituteByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status substitute do pass by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetDoPassSubstituteByCommitteeHttpGetIn" />
+      <wsdl:output message="tns:GetDoPassSubstituteByCommitteeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWithoutRecommendationByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status without recommendation by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetWithoutRecommendationByCommitteeHttpGetIn" />
+      <wsdl:output message="tns:GetWithoutRecommendationByCommitteeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommitteeExecutiveActionsByBill">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns executive committee executive actions by bill.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetCommitteeExecutiveActionsByBillHttpGetIn" />
+      <wsdl:output message="tns:GetCommitteeExecutiveActionsByBillHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationReportedOutOfCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that were reported out of the given committee between the begin and end date.</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationReportedOutOfCommitteeHttpGetIn" />
+      <wsdl:output message="tns:GetLegislationReportedOutOfCommitteeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationScheduledHearingsByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns bills that have had a hearing scheduled in the committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationScheduledHearingsByCommitteeHttpGetIn" />
+      <wsdl:output message="tns:GetLegislationScheduledHearingsByCommitteeHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CommitteeActionServiceHttpPost">
+    <wsdl:operation name="GetDoPassByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status do pass by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetDoPassByCommitteeHttpPostIn" />
+      <wsdl:output message="tns:GetDoPassByCommitteeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoPassWithAmendmentsByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status do pass with amendments by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetDoPassWithAmendmentsByCommitteeHttpPostIn" />
+      <wsdl:output message="tns:GetDoPassWithAmendmentsByCommitteeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoPassWithAmendmentsToSubByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status do pass with amendments to sub by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetDoPassWithAmendmentsToSubByCommitteeHttpPostIn" />
+      <wsdl:output message="tns:GetDoPassWithAmendmentsToSubByCommitteeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status in committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetInCommitteeHttpPostIn" />
+      <wsdl:output message="tns:GetInCommitteeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMajorityReportByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status majority report by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetMajorityReportByCommitteeHttpPostIn" />
+      <wsdl:output message="tns:GetMajorityReportByCommitteeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMinorityReportByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status minority report by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetMinorityReportByCommitteeHttpPostIn" />
+      <wsdl:output message="tns:GetMinorityReportByCommitteeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReReferralByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status re-referral by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetReReferralByCommitteeHttpPostIn" />
+      <wsdl:output message="tns:GetReReferralByCommitteeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReferredToAnotherCommitteeByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status referred to another committee by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetReferredToAnotherCommitteeByCommitteeHttpPostIn" />
+      <wsdl:output message="tns:GetReferredToAnotherCommitteeByCommitteeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReferredToCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status referred to committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetReferredToCommitteeHttpPostIn" />
+      <wsdl:output message="tns:GetReferredToCommitteeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommitteeReferralsByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have been referred to the committee by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetCommitteeReferralsByCommitteeHttpPostIn" />
+      <wsdl:output message="tns:GetCommitteeReferralsByCommitteeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommitteeReferralsByBill">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that have been referred to the committee by bill.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetCommitteeReferralsByBillHttpPostIn" />
+      <wsdl:output message="tns:GetCommitteeReferralsByBillHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRemovedFromCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status removed by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetRemovedFromCommitteeHttpPostIn" />
+      <wsdl:output message="tns:GetRemovedFromCommitteeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoPassSubstituteByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status substitute do pass by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetDoPassSubstituteByCommitteeHttpPostIn" />
+      <wsdl:output message="tns:GetDoPassSubstituteByCommitteeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWithoutRecommendationByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills with status without recommendation by committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetWithoutRecommendationByCommitteeHttpPostIn" />
+      <wsdl:output message="tns:GetWithoutRecommendationByCommitteeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommitteeExecutiveActionsByBill">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns executive committee executive actions by bill.&lt;br/&gt;Exception thrown for invalid biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06</wsdl:documentation>
+      <wsdl:input message="tns:GetCommitteeExecutiveActionsByBillHttpPostIn" />
+      <wsdl:output message="tns:GetCommitteeExecutiveActionsByBillHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationReportedOutOfCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns summary legislation information on all bills that were reported out of the given committee between the begin and end date.</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationReportedOutOfCommitteeHttpPostIn" />
+      <wsdl:output message="tns:GetLegislationReportedOutOfCommitteeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationScheduledHearingsByCommittee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns bills that have had a hearing scheduled in the committee.&lt;br/&gt;Exception thrown for invalid agency or committee name or biennium.&lt;br/&gt;Expects biennium to be in the format: 2005-06&lt;br/&gt;Agency should be House or Senate.&lt;br/&gt;CommitteeName is the Name Property returned in GetActiveHouseCommittees/GetActiveSenateCommittees.</wsdl:documentation>
+      <wsdl:input message="tns:GetLegislationScheduledHearingsByCommitteeHttpPostIn" />
+      <wsdl:output message="tns:GetLegislationScheduledHearingsByCommitteeHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CommitteeActionServiceSoap" type="tns:CommitteeActionServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDoPassByCommittee">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetDoPassByCommittee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoPassWithAmendmentsByCommittee">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetDoPassWithAmendmentsByCommittee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoPassWithAmendmentsToSubByCommittee">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetDoPassWithAmendmentsToSubByCommittee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInCommittee">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetInCommittee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMajorityReportByCommittee">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetMajorityReportByCommittee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMinorityReportByCommittee">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetMinorityReportByCommittee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReReferralByCommittee">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetReReferralByCommittee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReferredToAnotherCommitteeByCommittee">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetReferredToAnotherCommitteeByCommittee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReferredToCommittee">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetReferredToCommittee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommitteeReferralsByCommittee">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetCommitteeReferralsByCommittee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommitteeReferralsByBill">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetCommitteeReferralsByBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemovedFromCommittee">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetRemovedFromCommittee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoPassSubstituteByCommittee">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetDoPassSubstituteByCommittee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWithoutRecommendationByCommittee">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetWithoutRecommendationByCommittee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommitteeExecutiveActionsByBill">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetCommitteeExecutiveActionsByBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationReportedOutOfCommittee">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationReportedOutOfCommittee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationScheduledHearingsByCommittee">
+      <soap:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationScheduledHearingsByCommittee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CommitteeActionServiceSoap12" type="tns:CommitteeActionServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDoPassByCommittee">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetDoPassByCommittee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoPassWithAmendmentsByCommittee">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetDoPassWithAmendmentsByCommittee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoPassWithAmendmentsToSubByCommittee">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetDoPassWithAmendmentsToSubByCommittee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInCommittee">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetInCommittee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMajorityReportByCommittee">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetMajorityReportByCommittee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMinorityReportByCommittee">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetMinorityReportByCommittee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReReferralByCommittee">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetReReferralByCommittee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReferredToAnotherCommitteeByCommittee">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetReferredToAnotherCommitteeByCommittee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReferredToCommittee">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetReferredToCommittee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommitteeReferralsByCommittee">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetCommitteeReferralsByCommittee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommitteeReferralsByBill">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetCommitteeReferralsByBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemovedFromCommittee">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetRemovedFromCommittee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoPassSubstituteByCommittee">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetDoPassSubstituteByCommittee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWithoutRecommendationByCommittee">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetWithoutRecommendationByCommittee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommitteeExecutiveActionsByBill">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetCommitteeExecutiveActionsByBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationReportedOutOfCommittee">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationReportedOutOfCommittee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationScheduledHearingsByCommittee">
+      <soap12:operation soapAction="http://WSLWebServices.leg.wa.gov/GetLegislationScheduledHearingsByCommittee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CommitteeActionServiceHttpGet" type="tns:CommitteeActionServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetDoPassByCommittee">
+      <http:operation location="/GetDoPassByCommittee" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoPassWithAmendmentsByCommittee">
+      <http:operation location="/GetDoPassWithAmendmentsByCommittee" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoPassWithAmendmentsToSubByCommittee">
+      <http:operation location="/GetDoPassWithAmendmentsToSubByCommittee" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInCommittee">
+      <http:operation location="/GetInCommittee" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMajorityReportByCommittee">
+      <http:operation location="/GetMajorityReportByCommittee" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMinorityReportByCommittee">
+      <http:operation location="/GetMinorityReportByCommittee" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReReferralByCommittee">
+      <http:operation location="/GetReReferralByCommittee" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReferredToAnotherCommitteeByCommittee">
+      <http:operation location="/GetReferredToAnotherCommitteeByCommittee" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReferredToCommittee">
+      <http:operation location="/GetReferredToCommittee" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommitteeReferralsByCommittee">
+      <http:operation location="/GetCommitteeReferralsByCommittee" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommitteeReferralsByBill">
+      <http:operation location="/GetCommitteeReferralsByBill" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemovedFromCommittee">
+      <http:operation location="/GetRemovedFromCommittee" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoPassSubstituteByCommittee">
+      <http:operation location="/GetDoPassSubstituteByCommittee" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWithoutRecommendationByCommittee">
+      <http:operation location="/GetWithoutRecommendationByCommittee" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommitteeExecutiveActionsByBill">
+      <http:operation location="/GetCommitteeExecutiveActionsByBill" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationReportedOutOfCommittee">
+      <http:operation location="/GetLegislationReportedOutOfCommittee" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationScheduledHearingsByCommittee">
+      <http:operation location="/GetLegislationScheduledHearingsByCommittee" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CommitteeActionServiceHttpPost" type="tns:CommitteeActionServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetDoPassByCommittee">
+      <http:operation location="/GetDoPassByCommittee" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoPassWithAmendmentsByCommittee">
+      <http:operation location="/GetDoPassWithAmendmentsByCommittee" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoPassWithAmendmentsToSubByCommittee">
+      <http:operation location="/GetDoPassWithAmendmentsToSubByCommittee" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInCommittee">
+      <http:operation location="/GetInCommittee" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMajorityReportByCommittee">
+      <http:operation location="/GetMajorityReportByCommittee" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMinorityReportByCommittee">
+      <http:operation location="/GetMinorityReportByCommittee" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReReferralByCommittee">
+      <http:operation location="/GetReReferralByCommittee" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReferredToAnotherCommitteeByCommittee">
+      <http:operation location="/GetReferredToAnotherCommitteeByCommittee" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReferredToCommittee">
+      <http:operation location="/GetReferredToCommittee" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommitteeReferralsByCommittee">
+      <http:operation location="/GetCommitteeReferralsByCommittee" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommitteeReferralsByBill">
+      <http:operation location="/GetCommitteeReferralsByBill" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemovedFromCommittee">
+      <http:operation location="/GetRemovedFromCommittee" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoPassSubstituteByCommittee">
+      <http:operation location="/GetDoPassSubstituteByCommittee" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWithoutRecommendationByCommittee">
+      <http:operation location="/GetWithoutRecommendationByCommittee" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommitteeExecutiveActionsByBill">
+      <http:operation location="/GetCommitteeExecutiveActionsByBill" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationReportedOutOfCommittee">
+      <http:operation location="/GetLegislationReportedOutOfCommittee" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLegislationScheduledHearingsByCommittee">
+      <http:operation location="/GetLegislationScheduledHearingsByCommittee" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CommitteeActionService">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Information on committee actions by the Washington State Legislature.</wsdl:documentation>
+    <wsdl:port name="CommitteeActionServiceSoap" binding="tns:CommitteeActionServiceSoap">
+      <soap:address location="https://wslwebservices.leg.wa.gov/CommitteeActionService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CommitteeActionServiceSoap12" binding="tns:CommitteeActionServiceSoap12">
+      <soap12:address location="https://wslwebservices.leg.wa.gov/CommitteeActionService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CommitteeActionServiceHttpGet" binding="tns:CommitteeActionServiceHttpGet">
+      <http:address location="https://wslwebservices.leg.wa.gov/CommitteeActionService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CommitteeActionServiceHttpPost" binding="tns:CommitteeActionServiceHttpPost">
+      <http:address location="https://wslwebservices.leg.wa.gov/CommitteeActionService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
