@@ -1,5 +1,5 @@
 import { legislativeDocumentService } from "./services/legislativeDocumentService";
-import { Biennium } from "./types/models";
+import { Biennium, DocumentClass } from "./types/models";
 
 class WSLWebService {
   constructor() {}
@@ -25,7 +25,7 @@ class WSLWebService {
 
   async getDocuments(
     biennium: Biennium,
-    documentClass?: string,
+    documentClass?: DocumentClass,
     namedLike?: string
   ) {
     if (documentClass && namedLike) {

@@ -1,4 +1,4 @@
-// Basic Types
+// All currently existing biennia as of this commit
 export type Biennium =
   | "1991-92"
   | "1993-94"
@@ -17,9 +17,18 @@ export type Biennium =
   | "2019-20"
   | "2021-22"
   | "2023-24"
-  | "2025-26"
-  | "2027-28"
-  | "2029-30";
+  | "2025-26";
+
+// All currently existing document classes from 1991-2026
+export type DocumentClass =
+  | "Amendments"
+  | "Bill Reports"
+  | "Bills"
+  | "Digests"
+  | "Initiatives"
+  | "Reports"
+  | "Workroom Reports";
+
 export type VoteType = "Yea" | "Nay" | "Absent" | "Excused";
 export type RecommendationType = "Majority" | "Minority";
 export type Agency = "House" | "Senate";
@@ -270,7 +279,7 @@ export interface LegislativeDocument {
   LongFriendlyName?: string;
   Description?: string;
   Type?: string;
-  Class?: string;
+  Class?: DocumentClass;
   HtmUrl?: string;
   HtmCreateDate: string;
   HtmLastModifiedDate: string;

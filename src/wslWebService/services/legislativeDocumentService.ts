@@ -1,5 +1,9 @@
 import * as soap from "soap";
-import type { Biennium, LegislativeDocument } from "../types/models";
+import type {
+  Biennium,
+  DocumentClass,
+  LegislativeDocument,
+} from "../types/models";
 
 class LegislativeDocumentService {
   // TBD: Make pathing work
@@ -18,7 +22,7 @@ class LegislativeDocumentService {
 
   async getDocumentsByClass(options: {
     biennium: Biennium;
-    documentClass: string;
+    documentClass: DocumentClass;
     namedLike: string;
   }): Promise<LegislativeDocument[]> {
     const result = await this.soapCall("GetDocumentsByClass", options);
@@ -35,13 +39,13 @@ class LegislativeDocumentService {
 
   async getAllDocumentsByClass(options: {
     biennium: Biennium;
-    documentClass: string;
+    documentClass: DocumentClass;
   }): Promise<LegislativeDocument[]> {
     const result = await this.soapCall("GetAllDocumentsByClass", options);
     return result?.LegislativeDocument || [];
   }
 
-  async getDocumentClasses(biennium: Biennium): Promise<string[]> {
+  async getDocumentClasses(biennium: Biennium): Promise<DocumentClass[]> {
     const result = await this.soapCall("GetDocumentClasses", { biennium });
     const awkwardArray = result?.anyType || [];
     return awkwardArray.map((awkward: any) => String(awkward["$value"]));
