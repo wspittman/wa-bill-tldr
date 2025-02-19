@@ -1,24 +1,13 @@
-import * as soap from "soap";
 import type {
   Biennium,
   DocumentClass,
   LegislativeDocument,
 } from "../types/models";
+import { BaseService } from "./baseService";
 
-class LegislativeDocumentService {
-  // TBD: Make pathing work
-  private readonly wsdlPath =
+class LegislativeDocumentService extends BaseService {
+  protected readonly wsdlPath =
     "src/wslWebService/wsdl/LegislativeDocumentService.wsdl";
-  private client?: soap.Client = undefined;
-
-  constructor() {}
-
-  private async ensureClient(): Promise<soap.Client> {
-    if (!this.client) {
-      this.client = await soap.createClientAsync(this.wsdlPath);
-    }
-    return this.client;
-  }
 
   async getDocumentsByClass(options: {
     biennium: Biennium;
@@ -49,15 +38,6 @@ class LegislativeDocumentService {
     const result = await this.soapCall("GetDocumentClasses", { biennium });
     const awkwardArray = result?.anyType || [];
     return awkwardArray.map((awkward: any) => String(awkward["$value"]));
-  }
-
-  private async soapCall(
-    methodName: string,
-    args: Record<string, unknown>
-  ): Promise<any> {
-    const client = await this.ensureClient();
-    const [result] = await client[`${methodName}Async`](args);
-    return result?.[`${methodName}Result`];
   }
 }
 
