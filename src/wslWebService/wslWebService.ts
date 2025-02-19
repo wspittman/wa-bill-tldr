@@ -19,16 +19,38 @@ class WSLWebService {
     throw new Error("Not implemented");
   }
 
-  async getDocClasses(biennium: Biennium) {
-    return legislativeDocumentService.GetDocumentClasses(biennium);
+  async getDocumentClasses(biennium: Biennium) {
+    return legislativeDocumentService.getDocumentClasses(biennium);
   }
 
-  async getDocuments(biennium: Biennium, billNumber: string) {
-    return legislativeDocumentService.GetDocumentsByClass(
-      biennium,
-      "Bills",
-      billNumber
-    );
+  async getDocuments(
+    biennium: Biennium,
+    documentClass?: string,
+    namedLike?: string
+  ) {
+    if (documentClass && namedLike) {
+      return legislativeDocumentService.getDocumentsByClass({
+        biennium,
+        documentClass,
+        namedLike,
+      });
+    }
+
+    if (documentClass) {
+      return legislativeDocumentService.getAllDocumentsByClass({
+        biennium,
+        documentClass,
+      });
+    }
+
+    if (namedLike) {
+      return legislativeDocumentService.getDocuments({
+        biennium,
+        namedLike,
+      });
+    }
+
+    throw new Error("Must provide either documentClass or namedLike");
   }
 }
 

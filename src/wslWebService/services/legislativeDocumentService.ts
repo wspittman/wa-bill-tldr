@@ -16,50 +16,44 @@ class LegislativeDocumentService {
     return this.client;
   }
 
-  async GetDocumentsByClass(
-    biennium: string,
-    documentClass: string,
-    namedLike: string
-  ): Promise<LegislativeDocument[]> {
-    const client = await this.ensureClient();
-    const [result] = await client.GetDocumentsByClassAsync({
-      biennium,
-      documentClass,
-      namedLike,
-    });
-    return result.GetDocumentsByClassResult.LegislativeDocument || [];
+  async getDocumentsByClass(options: {
+    biennium: Biennium;
+    documentClass: string;
+    namedLike: string;
+  }): Promise<LegislativeDocument[]> {
+    const result = await this.soapCall("GetDocumentsByClass", options);
+    return result?.LegislativeDocument || [];
   }
 
-  async GetDocuments(
-    biennium: string,
-    namedLike: string
-  ): Promise<LegislativeDocument[]> {
-    const client = await this.ensureClient();
-    const [result] = await client.GetDocumentsAsync({
-      biennium,
-      namedLike,
-    });
-    return result.GetDocumentsResult.LegislativeDocument || [];
+  async getDocuments(options: {
+    biennium: Biennium;
+    namedLike: string;
+  }): Promise<LegislativeDocument[]> {
+    const result = await this.soapCall("GetDocuments", options);
+    return result?.LegislativeDocument || [];
   }
 
-  async GetAllDocumentsByClass(
-    biennium: Biennium,
-    documentClass: string
-  ): Promise<LegislativeDocument[]> {
-    const client = await this.ensureClient();
-    const [result] = await client.GetAllDocumentsByClassAsync({
-      biennium,
-      documentClass,
-    });
-    return result?.GetAllDocumentsByClassResult?.LegislativeDocument || [];
+  async getAllDocumentsByClass(options: {
+    biennium: Biennium;
+    documentClass: string;
+  }): Promise<LegislativeDocument[]> {
+    const result = await this.soapCall("GetAllDocumentsByClass", options);
+    return result?.LegislativeDocument || [];
   }
 
-  async GetDocumentClasses(biennium: Biennium): Promise<string[]> {
-    const client = await this.ensureClient();
-    const [result] = await client.GetDocumentClassesAsync({ biennium });
-    // The anyType makes this a bit awkward
-    const awkwardArray = result?.GetDocumentClassesResult?.anyType || [];
+  async getDocumentClasses(biennium: Biennium): Promise<string[]> {
+    const result = await this.soapCall("GetDocumentClasses", { biennium });
+    const awkwardArray = result?.anyType || [];
     return awkwardArray.map((awkward: any) => String(awkward["$value"]));
+  }
+
+  private async soapCall(
+    methodName: string,
+    args: Record<string, unknown>
+  ): Promise<any> {
+    const client = await this.ensureClient();
+    const [result] = await client[`${methodName}Async`](args);
+    return result?.[`${methodName}Result`];
   }
 }
 
