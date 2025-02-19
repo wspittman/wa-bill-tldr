@@ -12,8 +12,7 @@ import type {
 import { BaseService } from "./baseService";
 
 class LegislationService extends BaseService {
-  protected readonly wsdlPath =
-    "src/wslWebService/wsdl/LegislationService.wsdl";
+  protected readonly wsdlFileName = "LegislationService.wsdl";
 
   async getLegislation(options: {
     biennium: Biennium;

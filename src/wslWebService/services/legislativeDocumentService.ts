@@ -6,8 +6,7 @@ import type {
 import { BaseService } from "./baseService";
 
 class LegislativeDocumentService extends BaseService {
-  protected readonly wsdlPath =
-    "src/wslWebService/wsdl/LegislativeDocumentService.wsdl";
+  protected readonly wsdlFileName = "LegislativeDocumentService.wsdl";
 
   async getDocumentsByClass(options: {
     biennium: Biennium;
