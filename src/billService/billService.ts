@@ -6,7 +6,7 @@ import type {
 import { getBills, setBills } from "./billData";
 import type { Bill } from "./types";
 
-class BillManager {
+class BillService {
   private bills: Map<number, Bill>;
   private initialized: boolean;
 
@@ -44,4 +44,4 @@ class BillManager {
   }
 }
 
-export const billManager = new BillManager();
+export const billService = new BillService();

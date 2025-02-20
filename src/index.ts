@@ -1,11 +1,11 @@
-import { billManager } from "./billManager/billManager";
+import { billService } from "./billService/billService";
 import { wslWebService } from "./wslWebService/wslWebService";
 
 const biennium = "2025-26";
 const year = "2025";
 
 async function main() {
-  await billManager.initialize();
+  await billService.initialize();
   const billsToUpdate = await findChangedBills();
   console.log("Bills needing updates:", billsToUpdate);
   billsToUpdate.forEach(updateBill);
@@ -21,7 +21,7 @@ async function findChangedBills() {
 
   // Check each current bill
   for (const { BillNumber } of wslBills) {
-    const knownDate = billManager.getLastUpdated(BillNumber);
+    const knownDate = billService.getLastUpdated(BillNumber);
 
     if (!knownDate) {
       // Bill is not in our known list
