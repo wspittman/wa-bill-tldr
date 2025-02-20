@@ -4,39 +4,35 @@ export interface Bill {
   id: number;
   lastUpdated: string;
 
-  // From LegislationInfo
+  // From LegislationInfo section of Legislation
   agency: Agency;
 
   // From Legislation
   description: string;
   introducedDate: string;
 
-  // From LegislativeStatus
+  // From LegislativeStatus section of Legislation
   status: string;
   actionDate: string;
 
   // From Sponsors
-  sponsors: {
-    name: string;
-    isPrimary?: boolean;
-  }[];
+  sponsors: BillSponsor[];
 }
 
 export interface BillFull extends Bill {
   // From Documents
-  billDocuments: {
-    name: string;
-    url: string;
-    createdDate: string;
-  }[];
-  billReports: {
-    name: string;
-    url: string;
-    createdDate: string;
-  }[];
-  billAmendments: {
-    name: string;
-    url: string;
-    createdDate: string;
-  }[];
+  billDocuments: BillDoc[];
+  billReports: BillDoc[];
+  billAmendments: BillDoc[];
+}
+
+export interface BillSponsor {
+  name: string;
+  isPrimary?: boolean;
+}
+
+export interface BillDoc {
+  name: string;
+  url: string;
+  createdDate: string;
 }

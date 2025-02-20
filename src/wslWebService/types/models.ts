@@ -75,13 +75,13 @@ export interface Sponsor extends LegislativeEntity {
 // Legislation Related
 
 export interface LegislationInfo {
-  Biennium?: Biennium;
-  BillId?: string;
+  Biennium: Biennium;
+  BillId: string;
   BillNumber: number;
   SubstituteVersion: number;
   EngrossedVersion: number;
   ShortLegislationType?: LegislationType;
-  OriginalAgency?: string;
+  OriginalAgency: Agency;
   Active: boolean;
   DisplayNumber?: string;
 }
@@ -126,7 +126,7 @@ export interface LegislationFamily {
   Biennium?: Biennium;
   LegislationNumber: number;
   LegislationType?: LegislationType;
-  OriginalAgency?: string;
+  OriginalAgency?: Agency;
   ScheduledMeetings?: LegislationFamilyMeeting[];
 }
 

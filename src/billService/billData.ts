@@ -15,12 +15,12 @@ export async function setBills(bills: Bill[]): Promise<void> {
   return writeJsonFile(BILLS_FILE, bills);
 }
 
-export async function getBill(id: string): Promise<Bill | undefined> {
-  return readJsonFile<Bill>(billPath(id));
+export async function getBill(id: number): Promise<Bill | undefined> {
+  return readJsonFile<Bill>(billPath(id.toString()));
 }
 
-export async function setBill(id: string, bill: Bill): Promise<void> {
-  return writeJsonFile(billPath(id), bill);
+export async function setBill(id: number, bill: Bill): Promise<void> {
+  return writeJsonFile(billPath(id.toString()), bill);
 }
 
 async function readJsonFile<T>(filePath: string): Promise<T | undefined> {
