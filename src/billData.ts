@@ -1,8 +1,6 @@
 import { promises as fs } from "fs";
 import path from "path";
-
-// Placeholder type
-type Bill = Record<string, unknown>;
+import type { Bill } from "./types";
 
 const DATA_DIR = path.join(process.cwd(), "docs", "data");
 const BILLS_FILE = path.join(DATA_DIR, "bills.json");

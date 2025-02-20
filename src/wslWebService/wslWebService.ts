@@ -106,6 +106,13 @@ class WSLWebService {
     throw new Error("Invalid Request");
   }
 
+  async getLegislationStatus(biennium: Biennium, billNumber: string | number) {
+    return legislationService.getCurrentStatus({
+      biennium,
+      billNumber: String(billNumber),
+    });
+  }
+
   async getLegislation(options: {
     biennium?: Biennium;
     billNumber?: string;
@@ -128,9 +135,8 @@ class WSLWebService {
     throw new Error("Not implemented");
   }
 
-  async getSponsors(biennium: Biennium, billNumber: string) {
-    // TODO: Implement getting bill sponsors
-    throw new Error("Not implemented");
+  async getSponsors(biennium: Biennium, billId: string) {
+    return legislationService.getSponsors({ biennium, billId });
   }
 
   async getDocumentClasses(biennium: Biennium) {

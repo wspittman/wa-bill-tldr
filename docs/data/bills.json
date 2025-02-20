@@ -1,10 +1,14 @@
 [
   {
-    "id": 1,
-    "name": "Bill 1"
+    "id": 1000,
+    "lastUpdated": "2025-02-19T22:57:41.319Z",
+    "agency": "House",
+    "status": "test"
   },
   {
-    "id": 2,
-    "name": "Bill 2"
+    "id": 5000,
+    "lastUpdated": "2024-02-19T22:57:41.319Z",
+    "agency": "Senate",
+    "status": "test"
   }
 ]

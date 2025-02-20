@@ -108,7 +108,7 @@ export interface Legislation extends LegislationInfo {
 export interface LegislativeStatus {
   BillId?: string;
   HistoryLine?: string;
-  ActionDate: string;
+  ActionDate: Date;
   AmendedByOppositeBody: boolean;
   PartialVeto: boolean;
   Veto: boolean;
