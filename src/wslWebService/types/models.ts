@@ -281,11 +281,11 @@ export interface LegislativeDocument {
   Type?: string;
   Class?: DocumentClass;
   HtmUrl?: string;
-  HtmCreateDate: string;
-  HtmLastModifiedDate: string;
+  HtmCreateDate: Date;
+  HtmLastModifiedDate: Date;
   PdfUrl?: string;
-  PdfCreateDate: string;
-  PdfLastModifiedDate: string;
+  PdfCreateDate: Date;
+  PdfLastModifiedDate: Date;
   BillId?: string;
 }
 

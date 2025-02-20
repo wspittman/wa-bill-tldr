@@ -1,31 +1,27 @@
-import { getBills } from "./billData";
-import type { Bill } from "./types";
+import { billManager } from "./billManager/billManager";
 import { wslWebService } from "./wslWebService/wslWebService";
 
 const biennium = "2025-26";
 const year = "2025";
 
 async function main() {
-  const knownBills = await getBills();
-  const billsToUpdate = await findChangedBills(knownBills);
+  await billManager.initialize();
+  const billsToUpdate = await findChangedBills();
   console.log("Bills needing updates:", billsToUpdate);
+  billsToUpdate.forEach(updateBill);
 }
 
-async function findChangedBills(knownBills: Bill[]) {
+async function findChangedBills() {
   const toUpdate = new Set<number>();
   const wslBills = (await wslWebService.getLegislationMetaByYear(year)).slice(
     0,
-    5
+    2
   );
-
-  // Create map of known bills for faster lookup
-  const lastUpdatedMap = new Map(
-    knownBills.map(({ id, lastUpdated }) => [id, new Date(lastUpdated)])
-  );
+  //const wslBills = [{ BillNumber: 1550 }];
 
   // Check each current bill
   for (const { BillNumber } of wslBills) {
-    const knownDate = lastUpdatedMap.get(BillNumber);
+    const knownDate = billManager.getLastUpdated(BillNumber);
 
     if (!knownDate) {
       // Bill is not in our known list
@@ -44,6 +40,38 @@ async function findChangedBills(knownBills: Bill[]) {
   }
 
   return toUpdate;
+}
+
+async function updateBill(billNumber: number) {
+  // This might be multiple: original, senate version, v2, etc.
+  // agency and description should be the same, take the earliest introduced date
+  const bill = await wslWebService.getLegislation(biennium, billNumber);
+  console.dir(bill, { depth: null });
+  const sponsors = await wslWebService.getSponsors(biennium, bill[0].BillId!);
+  console.dir(sponsors, { depth: null });
+
+  // For now, just start with the one with ShortFriendlyName === "Original Bill"
+  // There are a bunch and things move through the system
+  const billDoc = await wslWebService.getDocuments(
+    biennium,
+    "Bills",
+    billNumber
+  );
+  console.dir(billDoc, { depth: null });
+
+  const billRepDoc = await wslWebService.getDocuments(
+    biennium,
+    "Bill Reports",
+    billNumber
+  );
+  console.dir(billRepDoc, { depth: null });
+
+  const amendmentsDoc = await wslWebService.getDocuments(
+    biennium,
+    "Amendments",
+    billNumber
+  );
+  console.dir(amendmentsDoc, { depth: null });
 }
 
 main().catch(console.error);
