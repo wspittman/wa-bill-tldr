@@ -16,7 +16,7 @@ export interface Bill {
   actionDate: string;
 
   // From Sponsors
-  sponsors: BillSponsor[];
+  sponsors: string[];
 }
 
 export interface BillFull extends Bill {
@@ -24,11 +24,6 @@ export interface BillFull extends Bill {
   billDocuments: BillDoc[];
   billReports: BillDoc[];
   billAmendments: BillDoc[];
-}
-
-export interface BillSponsor {
-  name: string;
-  isPrimary?: boolean;
 }
 
 export interface BillDoc {

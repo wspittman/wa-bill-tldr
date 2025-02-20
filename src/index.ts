@@ -5,73 +5,82 @@ const biennium = "2025-26";
 const year = "2025";
 
 async function main() {
+  logHeader("WA-Bill-TLDR Update");
+
+  logHeader("Outdated Bill Check");
   await billService.initialize();
-  const billsToUpdate = await findChangedBills();
-  console.log("Bills needing updates:", billsToUpdate);
-  billsToUpdate.forEach(updateBill);
+  const outdatedIds = await getOutdatedIds();
+  logArray("Bills needing updates", outdatedIds);
+
+  logHeader("Bill Updates");
+  // Sequential execution with for...of (be kind to WSL's servers)
+  for (const id of outdatedIds) {
+    await updateBill(id);
+  }
+
+  logHeader("Saving Updated Bills");
+  await billService.save();
+
+  logHeader("WA-Bill-TLDR Update Complete");
 }
 
-async function findChangedBills() {
-  const toUpdate = new Set<number>();
-  const wslBills = (await wslWebService.getLegislationMetaByYear(year)).slice(
-    0,
-    2
-  );
-  //const wslBills = [{ BillNumber: 1550 }];
+async function getOutdatedIds(): Promise<number[]> {
+  const unknownIds: number[] = [];
+  const outdatedIds: number[] = [];
+  let wslBills = await wslWebService.getLegislationMetaByYear(year);
 
-  // Check each current bill
-  for (const { BillNumber } of wslBills) {
-    const knownDate = billService.getLastUpdated(BillNumber);
+  // Cut down during development
+  wslBills = wslBills.slice(0, 1);
+
+  console.log("Bills to check:", wslBills.length);
+
+  // Sequential execution with for...of (be kind to WSL's servers)
+  for (const { BillNumber: id } of wslBills) {
+    const knownDate = billService.getLastUpdated(id);
 
     if (!knownDate) {
-      // Bill is not in our known list
-      toUpdate.add(BillNumber);
+      unknownIds.push(id);
     } else {
-      // Check if bill status has been updated
-      const { ActionDate } = await wslWebService.getLegislationStatus(
-        biennium,
-        BillNumber
-      );
+      const { ActionDate: actionDate } =
+        await wslWebService.getLegislationStatus(biennium, id);
 
-      if (ActionDate > knownDate) {
-        toUpdate.add(BillNumber);
+      if (actionDate > knownDate) {
+        outdatedIds.push(id);
       }
     }
   }
 
-  return toUpdate;
+  logArray("Unknown bills", unknownIds);
+  logArray("Outdated bills", outdatedIds);
+
+  return [...unknownIds, ...outdatedIds];
 }
 
-async function updateBill(billNumber: number) {
-  // This might be multiple: original, senate version, v2, etc.
-  // agency and description should be the same, take the earliest introduced date
-  const bill = await wslWebService.getLegislation(biennium, billNumber);
-  console.dir(bill, { depth: null });
-  const sponsors = await wslWebService.getSponsors(biennium, bill[0].BillId!);
-  console.dir(sponsors, { depth: null });
-
-  // For now, just start with the one with ShortFriendlyName === "Original Bill"
-  // There are a bunch and things move through the system
-  const billDoc = await wslWebService.getDocuments(
-    biennium,
-    "Bills",
-    billNumber
-  );
-  console.dir(billDoc, { depth: null });
-
+async function updateBill(id: number) {
+  console.log(`Updating bill ${id}`);
+  const bill = await wslWebService.getLegislation(biennium, id);
+  const sponsors = await wslWebService.getSponsors(biennium, bill[0].BillId);
+  const billDoc = await wslWebService.getDocuments(biennium, "Bills", id);
   const billRepDoc = await wslWebService.getDocuments(
     biennium,
     "Bill Reports",
-    billNumber
+    id
   );
-  console.dir(billRepDoc, { depth: null });
-
   const amendmentsDoc = await wslWebService.getDocuments(
     biennium,
     "Amendments",
-    billNumber
+    id
   );
-  console.dir(amendmentsDoc, { depth: null });
+
+  billService.updateBill(bill, sponsors, billDoc, billRepDoc, amendmentsDoc);
+}
+
+function logHeader(msg: string) {
+  console.log(`\n== ${msg} ==`);
+}
+
+function logArray(msg: string, arr: any[]) {
+  console.log(`${msg}: `, arr.length > 10 ? arr.length : arr);
 }
 
 main().catch(console.error);

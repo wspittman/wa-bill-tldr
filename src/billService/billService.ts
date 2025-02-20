@@ -4,7 +4,7 @@ import type {
   Sponsor,
 } from "../wslWebService/types/models";
 import { getBills, setBill, setBills } from "./billData";
-import type { Bill, BillDoc, BillFull, BillSponsor } from "./types";
+import type { Bill, BillDoc, BillFull } from "./types";
 
 class BillService {
   private bills: Map<number, Bill>;
@@ -59,7 +59,7 @@ class BillService {
       introducedDate: leg.IntroducedDate.toISOString(),
       status: leg.CurrentStatus?.Status ?? "",
       actionDate: leg.CurrentStatus?.ActionDate.toISOString() ?? "",
-      sponsors: sponsors.map(formBillSponsor),
+      sponsors: sponsors.map((s) => s.Name ?? String(s.Id)),
     };
 
     const newBill: BillFull = {
@@ -95,15 +95,6 @@ class BillService {
 }
 
 export const billService = new BillService();
-
-function formBillSponsor({
-  Name: name = "",
-  Type: type,
-}: Sponsor): BillSponsor {
-  const result: BillSponsor = { name };
-  if (type === "Primary") result.isPrimary = true;
-  return result;
-}
 
 function formBillDoc({
   Name: name = "",
