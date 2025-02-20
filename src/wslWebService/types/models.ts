@@ -96,7 +96,7 @@ export interface Legislation extends LegislationInfo {
   RequestedByOther: boolean;
   ShortDescription?: string;
   Request?: string;
-  IntroducedDate: string;
+  IntroducedDate: Date;
   CurrentStatus?: LegislativeStatus;
   Sponsor?: string;
   PrimeSponsorID: number;

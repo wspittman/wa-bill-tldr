@@ -113,26 +113,14 @@ class WSLWebService {
     });
   }
 
-  async getLegislation(options: {
-    biennium?: Biennium;
-    billNumber?: string;
-    requestNumber?: string;
-    sinceDate?: string;
-  }): Promise<Legislation[]> {
-    /*
-    B/requestNumber -> single
-    B/billNumber <-- this is ours
-    sinceDate
-    */
-    if (options.sinceDate) {
-      return legislationService.getLegislationIntroducedSince(
-        options.sinceDate
-      );
-    }
-    // HERE: filling this out
-
-    // TODO: Implement getting full bill text
-    throw new Error("Not implemented");
+  async getLegislation(
+    biennium: Biennium,
+    billNumber: string | number
+  ): Promise<Legislation[]> {
+    return legislationService.getLegislation({
+      biennium,
+      billNumber: String(billNumber),
+    });
   }
 
   async getSponsors(biennium: Biennium, billId: string) {
@@ -146,14 +134,32 @@ class WSLWebService {
   async getDocuments(
     biennium: Biennium,
     documentClass?: DocumentClass,
-    namedLike?: string
+    namedLike?: string | number
   ): Promise<LegislativeDocument[]> {
-    if (documentClass && namedLike) {
-      return legislativeDocumentService.getDocumentsByClass({
-        biennium,
-        documentClass,
-        namedLike,
-      });
+    if (namedLike) {
+      namedLike = String(namedLike);
+
+      // These throw errors if no results are found
+      // We need the awaits to happen explicitly here to replace errors with empty arrays
+      try {
+        if (documentClass) {
+          return await legislativeDocumentService.getDocumentsByClass({
+            biennium,
+            documentClass,
+            namedLike,
+          });
+        } else {
+          return await legislativeDocumentService.getDocuments({
+            biennium,
+            namedLike,
+          });
+        }
+      } catch (error) {
+        if (errorHas(error, "No legislative documents found")) {
+          return [];
+        }
+        throw error;
+      }
     }
 
     if (documentClass) {
@@ -163,15 +169,11 @@ class WSLWebService {
       });
     }
 
-    if (namedLike) {
-      return legislativeDocumentService.getDocuments({
-        biennium,
-        namedLike,
-      });
-    }
-
     throw new Error("Must provide either documentClass or namedLike");
   }
 }
+
+const errorHas = (error: unknown, msg: string) =>
+  error instanceof Error && error.message.includes(msg);
 
 export const wslWebService = new WSLWebService();
