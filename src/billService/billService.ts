@@ -7,19 +7,12 @@ import { getBills, setBill, setBills } from "./billData";
 import type { Bill, BillDoc, BillFull } from "./types";
 
 class BillService {
-  private bills: Map<number, Bill>;
-  private modified: boolean;
-  private fullBills: Map<number, BillFull>;
-  private modifiedFullBills: Set<number>;
-  private initialized: boolean;
+  private bills: Map<number, Bill> = new Map();
+  private fullBillCache: Map<number, BillFull> = new Map();
+  private modified: boolean = false;
+  private initialized: boolean = false;
 
-  constructor() {
-    this.bills = new Map();
-    this.modified = false;
-    this.fullBills = new Map();
-    this.modifiedFullBills = new Set();
-    this.initialized = false;
-  }
+  constructor() {}
 
   async initialize(): Promise<void> {
     if (this.initialized) return;
@@ -35,13 +28,13 @@ class BillService {
     return bill ? new Date(bill.lastUpdated) : undefined;
   }
 
-  updateBill(
+  async updateBill(
     legislation: Legislation[],
     sponsors: Sponsor[],
     documents: LegislativeDocument[],
     billReports: LegislativeDocument[],
     amendments: LegislativeDocument[]
-  ): void {
+  ): Promise<void> {
     if (!this.initialized) throw new Error("Service not initialized");
     if (!legislation.length) return;
 
@@ -70,9 +63,9 @@ class BillService {
     };
 
     this.bills.set(id, bill);
-    this.fullBills.set(id, newBill);
-    this.modifiedFullBills.add(id);
+    this.fullBillCache.set(id, newBill);
     this.modified = true;
+    return setBill(id, newBill);
   }
 
   async save(): Promise<void> {
@@ -82,15 +75,7 @@ class BillService {
     const bills = Array.from(this.bills.values());
     await setBills(bills);
 
-    for (const id of this.modifiedFullBills.keys()) {
-      const fullBill = this.fullBills.get(id);
-      if (fullBill) {
-        await setBill(id, fullBill);
-      }
-    }
-
     this.modified = false;
-    this.modifiedFullBills.clear();
   }
 }
 

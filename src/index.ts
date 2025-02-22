@@ -6,21 +6,23 @@ const biennium = "2025-26";
 const year = "2025";
 
 async function main() {
-  logHeader("WA-Bill-TLDR Update");
+  try {
+    logHeader("WA-Bill-TLDR Update");
 
-  logHeader("Outdated Bill Check");
-  await billService.initialize();
-  const outdatedIds = await getOutdatedIds();
-  logger.info("Bills needing updates", outdatedIds);
+    logHeader("Outdated Bill Check");
+    await billService.initialize();
+    const outdatedIds = await getOutdatedIds();
+    logger.info("Bills needing updates", outdatedIds);
 
-  logHeader("Bill Updates");
-  // Sequential execution with for...of (be kind to WSL's servers)
-  for (const id of outdatedIds) {
-    await updateBill(id);
+    logHeader("Bill Updates");
+    // Sequential execution with for...of (be kind to WSL's servers)
+    for (const id of outdatedIds) {
+      await updateBill(id);
+    }
+  } finally {
+    logHeader("Saving Updated Bills");
+    await billService.save();
   }
-
-  logHeader("Saving Updated Bills");
-  await billService.save();
 
   logHeader("WA-Bill-TLDR Update Complete");
 }
@@ -61,8 +63,11 @@ async function getOutdatedIds(): Promise<number[]> {
 
 async function updateBill(id: number) {
   logger.info(`Updating bill ${id}`);
-  const bill = await wslWebService.getLegislation(biennium, id);
-  const sponsors = await wslWebService.getSponsors(biennium, bill[0].BillId);
+  const legislation = await wslWebService.getLegislation(biennium, id);
+  const sponsors = await wslWebService.getSponsors(
+    biennium,
+    legislation[0].BillId
+  );
   const billDoc = await wslWebService.getDocuments(biennium, "Bills", id);
   const billRepDoc = await wslWebService.getDocuments(
     biennium,
@@ -75,7 +80,13 @@ async function updateBill(id: number) {
     id
   );
 
-  billService.updateBill(bill, sponsors, billDoc, billRepDoc, amendmentsDoc);
+  return billService.updateBill(
+    legislation,
+    sponsors,
+    billDoc,
+    billRepDoc,
+    amendmentsDoc
+  );
 }
 
 function logHeader(msg: string) {
