@@ -56,7 +56,7 @@ async function proseComplete(
   });
   const duration = Date.now() - start;
 
-  const message = completion.choices[0].message;
+  const message = completion.choices[0].message.content ?? undefined;
 
   logLLMAction(action, input, duration, completion, message);
 
