@@ -31,3 +31,15 @@ export interface BillDoc {
   url: string;
   createdDate: string;
 }
+
+export interface BillSummary {
+  id: number;
+  documents: Record<string, DocSummary>;
+  reports: Record<string, DocSummary>;
+  amendments: Record<string, DocSummary>;
+}
+
+export interface DocSummary {
+  createdDate: string;
+  summary: string;
+}

@@ -1,10 +1,11 @@
 import { promises as fs } from "fs";
 import path from "path";
-import type { Bill } from "./types";
+import type { Bill, BillFull, BillSummary } from "./types";
 
 const DATA_DIR = path.join(process.cwd(), "docs", "data");
 const BILLS_FILE = path.join(DATA_DIR, "bills.json");
-const billPath = (id: string) => path.join(DATA_DIR, `${id}.json`);
+const billPath = (id: number) => path.join(DATA_DIR, `${id}.json`);
+const summaryPath = (id: number) => path.join(DATA_DIR, `${id}_Summary.json`);
 
 export async function getBills(): Promise<Bill[]> {
   const bills = await readJsonFile<Bill[]>(BILLS_FILE);
@@ -15,12 +16,23 @@ export async function setBills(bills: Bill[]): Promise<void> {
   return writeJsonFile(BILLS_FILE, bills);
 }
 
-export async function getBill(id: number): Promise<Bill | undefined> {
-  return readJsonFile<Bill>(billPath(id.toString()));
+export async function getBill(id: number): Promise<BillFull | undefined> {
+  return readJsonFile<BillFull>(billPath(id));
 }
 
-export async function setBill(id: number, bill: Bill): Promise<void> {
-  return writeJsonFile(billPath(id.toString()), bill);
+export async function setBill(id: number, bill: BillFull): Promise<void> {
+  return writeJsonFile(billPath(id), bill);
+}
+
+export async function getSummary(id: number): Promise<BillSummary | undefined> {
+  return readJsonFile<BillSummary>(summaryPath(id));
+}
+
+export async function setSummary(
+  id: number,
+  summary: BillSummary
+): Promise<void> {
+  return writeJsonFile(summaryPath(id), summary);
 }
 
 async function readJsonFile<T>(filePath: string): Promise<T | undefined> {
