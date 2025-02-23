@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WA Bill TL;DR</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html" style="text-decoration: none; color: inherit">
+        <h1 style="display: inline">WA Bill TL;DR</h1>
+      </a>
+      <div class="search-container">
+        <input type="text" id="billId" placeholder="Enter Bill ID" />
+        <button onclick="findBill()">Find</button>
+      </div>
+    </header>
+
+    <main>
+      <h2>Bill Details</h2>
+      <p>Viewing bill <span id="currentBillId"></span></p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Details about the
+        bill will be displayed here.
+      </p>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="bill.js"></script>
+  </body>
+</html>
