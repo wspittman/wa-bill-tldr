@@ -3,12 +3,17 @@ import type {
   LegislativeDocument,
   Sponsor,
 } from "../wslWebService/types/models";
-import { getBills, setBill, setBills } from "./billData";
-import type { Bill, BillDoc, BillFull } from "./types";
+import {
+  readBills,
+  readBillSummary,
+  writeBillFull,
+  writeBills,
+  writeBillSummary,
+} from "./billData";
+import type { Bill, BillDoc, BillFull, BillSummary } from "./types";
 
 class BillService {
   private bills: Map<number, Bill> = new Map();
-  private fullBillCache: Map<number, BillFull> = new Map();
   private modified: boolean = false;
   private initialized: boolean = false;
 
@@ -17,7 +22,7 @@ class BillService {
   async initialize(): Promise<void> {
     if (this.initialized) return;
 
-    const bills = await getBills();
+    const bills = await readBills();
     this.bills = new Map(bills.map((bill) => [bill.id, bill]));
     this.initialized = true;
   }
@@ -28,13 +33,13 @@ class BillService {
     return bill ? new Date(bill.lastUpdated) : undefined;
   }
 
-  async updateBill(
+  async upsertBill(
     legislation: Legislation[],
     sponsors: Sponsor[],
     documents: LegislativeDocument[],
     billReports: LegislativeDocument[],
     amendments: LegislativeDocument[]
-  ): Promise<void> {
+  ): Promise<BillFull | undefined> {
     if (!this.initialized) throw new Error("Service not initialized");
     if (!legislation.length) return;
 
@@ -63,17 +68,34 @@ class BillService {
     };
 
     this.bills.set(id, bill);
-    this.fullBillCache.set(id, newBill);
     this.modified = true;
-    return setBill(id, newBill);
+    await writeBillFull(id, newBill);
+
+    return newBill;
   }
 
-  async save(): Promise<void> {
+  async getBillSummary(id: number): Promise<BillSummary> {
+    const summary = await readBillSummary(id);
+    return (
+      summary ?? {
+        id,
+        documents: {},
+        reports: {},
+        amendments: {},
+      }
+    );
+  }
+
+  async saveBillSummary(billSummary: BillSummary): Promise<void> {
+    return writeBillSummary(billSummary.id, billSummary);
+  }
+
+  async saveBills(): Promise<void> {
     if (!this.initialized) throw new Error("Service not initialized");
     if (!this.modified) return;
 
     const bills = Array.from(this.bills.values());
-    await setBills(bills);
+    await writeBills(bills);
 
     this.modified = false;
   }

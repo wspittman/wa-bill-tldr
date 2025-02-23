@@ -1,4 +1,5 @@
 import { billService } from "./billService/billService";
+import type { BillDoc, BillFull, DocSummary } from "./billService/types";
 import { logger } from "./utils/logger";
 import { wslWebService } from "./wslWebService/wslWebService";
 
@@ -17,11 +18,14 @@ async function main() {
     logHeader("Bill Updates");
     // Sequential execution with for...of (be kind to WSL's servers)
     for (const id of outdatedIds) {
-      await updateBill(id);
+      const bill = await updateBill(id);
+      if (bill) {
+        await summarizeBill(bill);
+      }
     }
   } finally {
     logHeader("Saving Updated Bills");
-    await billService.save();
+    await billService.saveBills();
   }
 
   logHeader("WA-Bill-TLDR Update Complete");
@@ -80,13 +84,46 @@ async function updateBill(id: number) {
     id
   );
 
-  return billService.updateBill(
+  return billService.upsertBill(
     legislation,
     sponsors,
     billDoc,
     billRepDoc,
     amendmentsDoc
   );
+}
+
+async function summarizeBill(bill: BillFull) {
+  logger.info(`Summarizing bill ${bill.id}`);
+  const billSummary = await billService.getBillSummary(bill.id);
+
+  await Promise.all([
+    addSummaries(bill.billDocuments, billSummary.documents),
+    addSummaries(bill.billReports, billSummary.reports),
+    addSummaries(bill.billAmendments, billSummary.amendments),
+  ]);
+
+  await billService.saveBillSummary(billSummary);
+}
+
+async function addSummaries(
+  documents: BillDoc[],
+  docSummaries: Record<string, DocSummary>
+) {
+  for (const { createdDate, url, name } of documents) {
+    const docSummary = docSummaries[name];
+    if (!docSummary || createdDate > docSummary.createdDate) {
+      // fetch html text from url
+      //const text = await wslWebService.getDocumentText(url);
+      // run it through llm
+      //const summary = await summarizeText(text);
+      const summary = "PLACEHOLDER";
+      docSummaries[name] = {
+        createdDate,
+        summary,
+      };
+    }
+  }
 }
 
 function logHeader(msg: string) {
