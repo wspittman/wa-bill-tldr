@@ -1,3 +1,4 @@
+import { aiService } from "./aiService/aiService";
 import { billService } from "./billService/billService";
 import type { BillDoc, BillFull, DocSummary } from "./billService/types";
 import { logger } from "./utils/logger";
@@ -113,15 +114,14 @@ async function addSummaries(
   for (const { createdDate, url, name } of documents) {
     const docSummary = docSummaries[name];
     if (!docSummary || createdDate > docSummary.createdDate) {
-      // fetch html text from url
-      //const text = await wslWebService.getDocumentText(url);
-      // run it through llm
-      //const summary = await summarizeText(text);
-      const summary = "PLACEHOLDER";
-      docSummaries[name] = {
-        createdDate,
-        summary,
-      };
+      const html = await (await fetch(url)).text();
+      const summary = await aiService.summarize(html);
+      if (summary) {
+        docSummaries[name] = {
+          createdDate,
+          summary,
+        };
+      }
     }
   }
 }

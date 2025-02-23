@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx tsx src/index.ts"
+    "start": "npx tsx --env-file=.env src/index.ts"
   },
   "devDependencies": {
     "tsx": "^4.19.2",

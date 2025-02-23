@@ -1,1 +1,21 @@
-[]
+[
+  {
+    "id": 1000,
+    "lastUpdated": "2025-02-23T00:57:16.174Z",
+    "agency": "House",
+    "description": "Expanding the circumstances that may constitute a major violation of the uniform controlled substances act.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": "H Community Safe",
+    "actionDate": "2025-01-13T08:00:00.000Z",
+    "sponsors": [
+      "Walsh",
+      "Marshall",
+      "Jacobsen",
+      "Couture",
+      "McClintock",
+      "Keaton",
+      "Caldier",
+      "Barnard"
+    ]
+  }
+]
