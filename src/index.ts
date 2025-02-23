@@ -27,6 +27,7 @@ async function main() {
   } finally {
     logHeader("Saving Updated Bills");
     await billService.saveBills();
+    aiService.logAggregation();
   }
 
   logHeader("WA-Bill-TLDR Update Complete");

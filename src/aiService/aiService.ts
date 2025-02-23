@@ -1,4 +1,4 @@
-import { proseCompletion } from "./openai";
+import { logAggregation, proseCompletion } from "./openai";
 
 const summarizePrompt = `
 You are an AI assistant specialized in analyzing government documents.
@@ -24,6 +24,10 @@ class AIService {
 
   async summarize(html: string): Promise<string | undefined> {
     return proseCompletion("Summarize", summarizePrompt, html);
+  }
+
+  logAggregation() {
+    logAggregation();
   }
 }
 
