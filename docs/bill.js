@@ -5,7 +5,12 @@ window.onload = function () {
     document.getElementById("currentBillId").textContent = billId;
 
     fetch(`data/${billId}.json`)
-      .then((response) => response.json())
+      .then((response) => {
+        if (response.status === 404) {
+          throw new Error("Bill not found");
+        }
+        return response.json();
+      })
       .then((bill) => {
         const main = document.querySelector("main");
         main.innerHTML = `
@@ -33,9 +38,15 @@ window.onload = function () {
                 `;
       })
       .catch((error) => {
+        const message =
+          error.message === "Bill not found"
+            ? `Bill ${billId} was not found.`
+            : `Failed to load bill ${billId}: ${error.message}`;
+
         document.querySelector("main").innerHTML = `
                     <h2>Error</h2>
-                    <p>Failed to load bill ${billId}: ${error.message}</p>
+                    <p>${message}</p>
+                    <p><a href="index.html">Return to bill list</a></p>
                 `;
       });
   }
