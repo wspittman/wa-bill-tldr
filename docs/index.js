@@ -11,6 +11,9 @@ fetch("data/bills.json")
                 <td>${bill.agency}</td>
                 <td>${bill.sponsors.join(", ")}</td>
                 <td>${bill.status}</td>
+                <td><a href="https://app.leg.wa.gov/billsummary?BillNumber=${
+                  bill.id
+                }&Initiative=False&Year=2025" target="_blank">Official Site↗</a></td>
             </tr>
         `
       )
@@ -19,7 +22,7 @@ fetch("data/bills.json")
   .catch((error) => {
     document.getElementById("billsTableBody").innerHTML = `
             <tr>
-                <td colspan="5">Error loading bills: ${error.message}</td>
+                <td colspan="6">Error loading bills: ${error.message}</td>
             </tr>
         `;
   });
