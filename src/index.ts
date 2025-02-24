@@ -1,6 +1,7 @@
 import { aiService } from "./aiService/aiService";
 import { billService } from "./billService/billService";
 import type { BillDoc, BillFull, DocSummary } from "./billService/types";
+import { markdownToHtml } from "./utils/html";
 import { logger } from "./utils/logger";
 import { wslWebService } from "./wslWebService/wslWebService";
 
@@ -118,9 +119,11 @@ async function addSummaries(
       const html = await (await fetch(url)).text();
       const summary = await aiService.summarize(html);
       if (summary) {
+        const summaryHtml = markdownToHtml(summary);
         docSummaries[name] = {
           createdDate,
-          summary,
+          original: html,
+          summary: summaryHtml,
         };
       }
     }

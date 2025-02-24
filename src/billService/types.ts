@@ -41,5 +41,6 @@ export interface BillSummary {
 
 export interface DocSummary {
   createdDate: string;
+  original: string;
   summary: string;
 }

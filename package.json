@@ -11,7 +11,11 @@
   },
   "dependencies": {
     "@types/node": "^22.13.4",
+    "@types/sanitize-html": "^2.13.0",
+    "@types/showdown": "^2.0.6",
     "openai": "^4.85.3",
+    "sanitize-html": "^2.14.0",
+    "showdown": "^2.1.0",
     "soap": "^1.1.8",
     "winston": "^3.17.0"
   }
