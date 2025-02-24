@@ -20,22 +20,27 @@
     <main>
       <h2>Welcome to WA Bill TL;DR</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
+        WA Bill TL;DR provides simplified summaries of Washington State Legislature bills, 
+        making it easier for citizens to understand proposed legislation. Each bill is 
+        presented with both its original text and an AI-generated summary in plain English.
       </p>
       <p>
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        To find a bill, you can:
+        <ul>
+          <li>Use the search box above to directly enter a bill number</li>
+          <li>Browse the table below and click on any bill number to view details</li>
+        </ul>
+      </p>
+      <p>
+        <strong>Disclaimer: </strong>
+        This site is not an official government website. Bill information is sourced from the <a href="https://leg.wa.gov/" target="_blank">Washington State Legislature</a>, with a delay. AI-generated summaries may not be fully accurate. If you require the absolute latest or 100% accurate details, verify with official sources.
       </p>
       <h2>Bills</h2>
       <div class="filter-container">
         <input
           type="text"
           id="filterInput"
-          placeholder="Filter bills..."
+          placeholder="Filter bills by description, sponsors, or status..."
           oninput="filterBills()"
         />
       </div>

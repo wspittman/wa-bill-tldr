@@ -37,16 +37,17 @@ window.onload = function () {
           ).toLocaleDateString()}</p>
         <p><strong>Status:</strong> ${bill.status}</p>
         <div class="view-toggle">
-          <button onclick="toggleView('original')" class="active" id="originalBtn">Original</button>
-          <button onclick="toggleView('summary')" id="summaryBtn">Summary</button>
+        <button onclick="toggleView('summary')" class="active" id="summaryBtn">Summary</button>
+          <button onclick="toggleView('original')" id="originalBtn">Original</button>
         </div>
-        <div id="originalView">
+        <div id="summaryView">
+          <h2>${bill.agency} Bill ${bill.id} - Summary</h2>
+          <i>AI-Generated Summary - May Contain Errors. Check Official Text.</i>
+          ${summary.documents[bill.id].summary}
+        </div>
+        <div id="originalView" style="display: none;">
           <h2>${bill.agency} Bill ${bill.id} - Original</h2>
           ${summary.documents[bill.id].original}
-        </div>
-        <div id="summaryView" style="display: none;">
-          <h2>${bill.agency} Bill ${bill.id} - Summary</h2>
-          ${summary.documents[bill.id].summary}
         </div>
       `;
       })
