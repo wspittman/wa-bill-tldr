@@ -55,7 +55,7 @@ class BillService {
       agency: leg.OriginalAgency,
       description: leg.LongDescription ?? "",
       introducedDate: leg.IntroducedDate.toISOString(),
-      status: leg.CurrentStatus?.Status ?? "",
+      status: leg.CurrentStatus?.HistoryLine ?? "",
       actionDate: leg.CurrentStatus?.ActionDate.toISOString() ?? "",
       sponsors: sponsors.map((s) => s.Name ?? String(s.Id)),
     };

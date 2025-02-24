@@ -1,0 +1,32 @@
+{
+  "id": 1001,
+  "lastUpdated": "2025-02-24T17:47:21.822Z",
+  "agency": "House",
+  "description": "Concerning capital projects for the provision of fire protection services.",
+  "introducedDate": "2025-01-13T08:00:00.000Z",
+  "status": "First reading, referred to Capital Budget.",
+  "actionDate": "2025-01-13T08:00:00.000Z",
+  "sponsors": [
+    "Abbarno",
+    "Waters",
+    "Barnard",
+    "Orcutt",
+    "Bronoske",
+    "Caldier"
+  ],
+  "billDocuments": [
+    {
+      "name": "1001",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1001.htm",
+      "createdDate": "2024-12-02T22:22:44.507Z"
+    }
+  ],
+  "billReports": [
+    {
+      "name": "1001 HBA CB 25",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bill Reports/House/1001 HBA CB 25.htm",
+      "createdDate": "2025-01-30T08:00:00.000Z"
+    }
+  ],
+  "billAmendments": []
+}

@@ -1,0 +1,41 @@
+{
+  "id": 1002,
+  "lastUpdated": "2025-02-24T17:47:30.891Z",
+  "agency": "House",
+  "description": "Recognizing posttraumatic stress disorder as an occupational disease for county coroners, examiners, and investigative personnel.",
+  "introducedDate": "2025-01-13T08:00:00.000Z",
+  "status": "Referred to Rules 2 Review.",
+  "actionDate": "2025-02-04T08:00:00.000Z",
+  "sponsors": [
+    "Abbarno",
+    "Rude",
+    "Marshall",
+    "Callan",
+    "Doglio",
+    "Timmons",
+    "Goodman",
+    "Pollet",
+    "Davis",
+    "Scott"
+  ],
+  "billDocuments": [
+    {
+      "name": "1002",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1002.htm",
+      "createdDate": "2024-12-02T22:22:45.193Z"
+    }
+  ],
+  "billReports": [
+    {
+      "name": "1002 HBA LAWS 25",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bill Reports/House/1002 HBA LAWS 25.htm",
+      "createdDate": "2025-01-17T08:00:00.000Z"
+    },
+    {
+      "name": "1002 HBR LAWS 25",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bill Reports/House/1002 HBR LAWS 25.htm",
+      "createdDate": "2025-01-31T08:00:00.000Z"
+    }
+  ],
+  "billAmendments": []
+}

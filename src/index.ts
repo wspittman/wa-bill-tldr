@@ -40,7 +40,7 @@ async function getOutdatedIds(): Promise<number[]> {
   let wslBills = await wslWebService.getLegislationMetaByYear(year);
 
   // Cut down during development
-  wslBills = wslBills.slice(0, 1);
+  wslBills = wslBills.slice(0, 3);
 
   logger.info("Bills to check", wslBills.length);
 
@@ -102,8 +102,8 @@ async function summarizeBill(bill: BillFull) {
 
   await Promise.all([
     addSummaries(bill.billDocuments, billSummary.documents),
-    addSummaries(bill.billReports, billSummary.reports),
-    addSummaries(bill.billAmendments, billSummary.amendments),
+    //addSummaries(bill.billReports, billSummary.reports),
+    //addSummaries(bill.billAmendments, billSummary.amendments),
   ]);
 
   await billService.saveBillSummary(billSummary);

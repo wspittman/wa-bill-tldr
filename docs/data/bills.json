@@ -17,5 +17,43 @@
       "Caldier",
       "Barnard"
     ]
+  },
+  {
+    "id": 1001,
+    "lastUpdated": "2025-02-24T17:47:21.822Z",
+    "agency": "House",
+    "description": "Concerning capital projects for the provision of fire protection services.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": "First reading, referred to Capital Budget.",
+    "actionDate": "2025-01-13T08:00:00.000Z",
+    "sponsors": [
+      "Abbarno",
+      "Waters",
+      "Barnard",
+      "Orcutt",
+      "Bronoske",
+      "Caldier"
+    ]
+  },
+  {
+    "id": 1002,
+    "lastUpdated": "2025-02-24T17:47:30.891Z",
+    "agency": "House",
+    "description": "Recognizing posttraumatic stress disorder as an occupational disease for county coroners, examiners, and investigative personnel.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": "Referred to Rules 2 Review.",
+    "actionDate": "2025-02-04T08:00:00.000Z",
+    "sponsors": [
+      "Abbarno",
+      "Rude",
+      "Marshall",
+      "Callan",
+      "Doglio",
+      "Timmons",
+      "Goodman",
+      "Pollet",
+      "Davis",
+      "Scott"
+    ]
   }
 ]
