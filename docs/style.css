@@ -9,6 +9,22 @@ header {
   margin-left: 2rem;
 }
 
+.filter-container {
+  margin-bottom: 1rem;
+}
+
+.filter-container input {
+  padding: 0.5rem;
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.filter-container input:focus {
+  outline: none;
+  border-color: #666;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;

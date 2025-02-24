@@ -31,6 +31,14 @@
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
       <h2>Bills</h2>
+      <div class="filter-container">
+        <input
+          type="text"
+          id="filterInput"
+          placeholder="Filter bills..."
+          oninput="filterBills()"
+        />
+      </div>
       <table id="billsTable">
         <thead>
           <tr>

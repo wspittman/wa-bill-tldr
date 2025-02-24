@@ -1,6 +1,7 @@
 let billsData = [];
 let currentSortColumn = "";
 let isAscending = true;
+let filterText = "";
 
 function sortBills(column) {
   const sortingFunctions = {
@@ -27,11 +28,28 @@ function sortBills(column) {
   updateTableDisplay();
 }
 
+function filterBills() {
+  filterText = document.getElementById("filterInput").value.toLowerCase();
+  updateTableDisplay();
+}
+
+function matchesFilter(bill) {
+  if (!filterText) return true;
+  return (
+    bill.description.toLowerCase().includes(filterText) ||
+    bill.sponsors.join(", ").toLowerCase().includes(filterText) ||
+    bill.status.toLowerCase().includes(filterText)
+  );
+}
+
 function updateTableDisplay() {
   const tbody = document.getElementById("billsTableBody");
-  tbody.innerHTML = billsData
-    .map(
-      (bill) => `
+  const filteredBills = billsData.filter(matchesFilter);
+
+  tbody.innerHTML = filteredBills.length
+    ? filteredBills
+        .map(
+          (bill) => `
             <tr>
                 <td><a href="bill.html?id=${bill.id}">${bill.id}</a></td>
                 <td>${bill.description}</td>
@@ -43,8 +61,9 @@ function updateTableDisplay() {
                 }&Initiative=False&Year=2025" target="_blank">Official Site↗</a></td>
             </tr>
         `
-    )
-    .join("");
+        )
+        .join("")
+    : `<tr><td colspan="6">No matching bills found</td></tr>`;
 
   // Update sort indicators
   document.querySelectorAll("#billsTable th").forEach((th) => {
