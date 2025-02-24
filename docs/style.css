@@ -25,3 +25,20 @@ td {
 th {
   background-color: #f5f5f5;
 }
+
+#billsTable th {
+  cursor: pointer;
+  position: relative;
+}
+
+#billsTable th:not(:last-child):hover {
+  background-color: #f0f0f0;
+}
+
+#billsTable th.sort-asc::after {
+  content: " ↑";
+}
+
+#billsTable th.sort-desc::after {
+  content: " ↓";
+}
