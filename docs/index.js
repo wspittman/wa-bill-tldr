@@ -5,10 +5,9 @@ let filterText = "";
 
 function sortBills(column) {
   const sortingFunctions = {
-    "Bill Number": (a, b) => a.id - b.id,
+    Bill: (a, b) => a.id - b.id,
     Description: (a, b) => a.description.localeCompare(b.description),
-    Chamber: (a, b) => a.agency.localeCompare(b.agency),
-    Sponsor: (a, b) =>
+    Sponsors: (a, b) =>
       a.sponsors.join(", ").localeCompare(b.sponsors.join(", ")),
     Status: (a, b) => a.status.localeCompare(b.status),
   };
@@ -51,14 +50,12 @@ function updateTableDisplay() {
         .map(
           (bill) => `
             <tr>
-                <td><a href="bill.html?id=${bill.id}">${bill.id}</a></td>
+                <td><a href="bill.html?id=${bill.id}">${bill.id}</a> (${
+            bill.agency
+          })</td>
                 <td>${bill.description}</td>
-                <td>${bill.agency}</td>
                 <td>${bill.sponsors.join(", ")}</td>
                 <td>${bill.status}</td>
-                <td><a href="https://app.leg.wa.gov/billsummary?BillNumber=${
-                  bill.id
-                }&Initiative=False&Year=2025" target="_blank">Official Site↗</a></td>
             </tr>
         `
         )

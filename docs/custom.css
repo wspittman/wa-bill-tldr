@@ -1,0 +1,55 @@
+#header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+
+  h1 {
+    white-space: nowrap;
+    span {
+      vertical-align: text-top;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.search-container {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+#filterInput {
+  width: 100%;
+}
+
+#billsTable {
+  overflow-x: auto;
+}
+
+@media (min-width: 768px) {
+  #billsTable {
+    width: 90vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+#billsTable th {
+  cursor: pointer;
+}
+
+#billsTable th.sort-asc::after {
+  content: " ↑";
+}
+
+#billsTable th.sort-desc::after {
+  content: " ↓";
+}
