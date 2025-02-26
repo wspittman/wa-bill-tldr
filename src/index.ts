@@ -1,6 +1,7 @@
 import { aiService } from "./aiService/aiService";
 import { billService } from "./billService/billService";
 import type { BillDoc, BillFull, DocSummary } from "./billService/types";
+import { asyncBatch } from "./utils/asyncBatch";
 import { markdownToHtml } from "./utils/html";
 import { logger } from "./utils/logger";
 import { wslWebService } from "./wslWebService/wslWebService";
@@ -18,13 +19,12 @@ async function main() {
     logger.info("Bills needing updates", outdatedIds);
 
     logHeader("Bill Updates");
-    // Sequential execution with for...of (be kind to WSL's servers)
-    for (const id of outdatedIds) {
+    await asyncBatch("BillUpdate", outdatedIds, async (id) => {
       const bill = await updateBill(id);
       if (bill) {
         await summarizeBill(bill);
       }
-    }
+    });
   } finally {
     logHeader("Saving Updated Bills");
     await billService.saveBills();
@@ -40,7 +40,7 @@ async function getOutdatedIds(): Promise<number[]> {
   let wslBills = await wslWebService.getLegislationMetaByYear(year);
 
   // Cut down during development
-  wslBills = wslBills.slice(0, 10);
+  wslBills = wslBills.slice(0, 20);
 
   logger.info("Bills to check", wslBills.length);
 
@@ -76,7 +76,9 @@ async function updateBill(id: number) {
     legislation[0].BillId
   );
   const billDoc = await wslWebService.getDocuments(biennium, "Bills", id);
-  const billRepDoc = await wslWebService.getDocuments(
+
+  // Ignore bill reports and amendments for now
+  /*const billRepDoc = await wslWebService.getDocuments(
     biennium,
     "Bill Reports",
     id
@@ -85,14 +87,14 @@ async function updateBill(id: number) {
     biennium,
     "Amendments",
     id
-  );
+  );*/
 
   return billService.upsertBill(
     legislation,
     sponsors,
     billDoc,
-    billRepDoc,
-    amendmentsDoc
+    [], //billRepDoc,
+    [] //amendmentsDoc
   );
 }
 

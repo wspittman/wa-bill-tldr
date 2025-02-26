@@ -30,10 +30,15 @@ export async function proseCompletion(
     try {
       return await proseComplete(action, prompt, input, history);
     } catch (error) {
-      if (!(await backoff(action, attempt, error))) {
+      const errorType = getErrorType(error);
+      if (errorType === "Too Long") {
+        logger.error("OpenAI Context Too Long", error);
+        return "The input is too long for the AI to process.";
+      } else if (errorType !== "429") {
         logger.error("OpenAI Non-Backoff Error", error);
-        return;
+        return "An error occurred while processing.";
       }
+      await backoff(action, attempt);
       attempt++;
     }
   }
@@ -130,19 +135,21 @@ function logLLMAction(
 
 // #endregion
 
-async function backoff(action: string, attempt: number, error: unknown) {
-  if (
-    error instanceof OpenAI.APIError &&
-    error.status === 429 &&
-    attempt < MAX_RETRIES
-  ) {
-    logger.debug(`OpenAI ${action} backoff attempt ${attempt}`);
-    return setTimeout(getBackoffDelay(attempt), true);
-  }
+async function backoff(action: string, attempt: number) {
+  logger.debug(`OpenAI ${action} backoff attempt ${attempt}`);
+  return setTimeout(getBackoffDelay(attempt), true);
 }
 
 function getBackoffDelay(attempt: number) {
   const backoff = INITIAL_BACKOFF * Math.pow(2, attempt);
   const jitter = Math.random() * 0.1 * backoff;
   return backoff + jitter;
+}
+
+function getErrorType(error: unknown): "429" | "Too Long" | "Other" {
+  if (error instanceof OpenAI.APIError) {
+    if (error.status === 429) return "429";
+    if (error.code === "context_length_exceeded") return "Too Long";
+  }
+  return "Other";
 }

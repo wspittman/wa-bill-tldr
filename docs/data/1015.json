@@ -1,0 +1,38 @@
+{
+  "id": 1015,
+  "lastUpdated": "2025-02-26T18:09:55.747Z",
+  "agency": "House",
+  "description": "Concerning energy labeling of residential buildings.",
+  "introducedDate": "2025-01-13T08:00:00.000Z",
+  "status": "Referred to Rules 2 Review.",
+  "actionDate": "2025-01-28T08:00:00.000Z",
+  "sponsors": [
+    "Duerr",
+    "Ramel",
+    "Ryu",
+    "Berry",
+    "Reed",
+    "Fitzgibbon",
+    "Macri",
+    "Doglio",
+    "Simmons",
+    "Peterson",
+    "Pollet",
+    "Kloba",
+    "Parshley"
+  ],
+  "billDocuments": [
+    {
+      "name": "1015",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1015.htm",
+      "createdDate": "2024-12-05T22:48:21.450Z"
+    },
+    {
+      "name": "1015-S",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1015-S.htm",
+      "createdDate": "2025-01-27T16:50:17.137Z"
+    }
+  ],
+  "billReports": [],
+  "billAmendments": []
+}

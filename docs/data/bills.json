@@ -169,5 +169,205 @@
       "Ramel",
       "Eslick"
     ]
+  },
+  {
+    "id": 1011,
+    "lastUpdated": "2025-02-26T18:09:48.831Z",
+    "agency": "House",
+    "description": "Creating a school safety capital grant program.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": "First reading, referred to Capital Budget.",
+    "actionDate": "2025-01-13T08:00:00.000Z",
+    "sponsors": [
+      "Jacobsen",
+      "Barkis",
+      "Eslick",
+      "McClintock",
+      "Caldier",
+      "Pollet"
+    ]
+  },
+  {
+    "id": 1010,
+    "lastUpdated": "2025-02-26T18:09:48.861Z",
+    "agency": "House",
+    "description": "Authorizing accessory dwelling units in rural areas.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": "First reading, referred to Housing.",
+    "actionDate": "2025-01-13T08:00:00.000Z",
+    "sponsors": [
+      "Low",
+      "Leavitt",
+      "Barkis",
+      "Connors",
+      "Jacobsen",
+      "Couture",
+      "Paul",
+      "Timmons",
+      "Wylie",
+      "Ormsby",
+      "Bernbaum",
+      "Hill"
+    ]
+  },
+  {
+    "id": 1012,
+    "lastUpdated": "2025-02-26T18:09:48.864Z",
+    "agency": "House",
+    "description": "Authorizing the women's commission to solicit gifts, grants, and endowments from public or private sources.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": "First reading, referred to State Government, Tribal Affairs & Elections.",
+    "actionDate": "2025-01-31T08:00:00.000Z",
+    "sponsors": [
+      "Taylor",
+      "Mena",
+      "Ryu",
+      "Reed",
+      "Macri",
+      "Cortes",
+      "Doglio",
+      "Gregerson",
+      "Ortiz-Self",
+      "Simmons",
+      "Street",
+      "Pollet",
+      "Fey",
+      "Duerr",
+      "Berg",
+      "Ormsby",
+      "Lekanoff",
+      "Parshley",
+      "Reeves",
+      "Hill"
+    ]
+  },
+  {
+    "id": 1014,
+    "lastUpdated": "2025-02-26T18:55:22.563Z",
+    "agency": "House",
+    "description": "Implementing recommendations of the 2023 child support schedule work group.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": "Referred to Rules 2 Review.",
+    "actionDate": "2025-01-23T08:00:00.000Z",
+    "sponsors": [
+      "Schmidt",
+      "Walen",
+      "Timmons",
+      "Fey",
+      "Ormsby",
+      "Hill"
+    ]
+  },
+  {
+    "id": 1013,
+    "lastUpdated": "2025-02-26T18:09:48.903Z",
+    "agency": "House",
+    "description": "Concerning exemption of certain personnel of the department of social and health services from civil service.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": "First reading, referred to State Government, Tribal Affairs & Elections.",
+    "actionDate": "2025-01-31T08:00:00.000Z",
+    "sponsors": [
+      "Schmidt",
+      "Fosse",
+      "Berry",
+      "Reeves"
+    ]
+  },
+  {
+    "id": 1015,
+    "lastUpdated": "2025-02-26T18:09:55.747Z",
+    "agency": "House",
+    "description": "Concerning energy labeling of residential buildings.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": "Referred to Rules 2 Review.",
+    "actionDate": "2025-01-28T08:00:00.000Z",
+    "sponsors": [
+      "Duerr",
+      "Ramel",
+      "Ryu",
+      "Berry",
+      "Reed",
+      "Fitzgibbon",
+      "Macri",
+      "Doglio",
+      "Simmons",
+      "Peterson",
+      "Pollet",
+      "Kloba",
+      "Parshley"
+    ]
+  },
+  {
+    "id": 1017,
+    "lastUpdated": "2025-02-26T18:09:55.779Z",
+    "agency": "House",
+    "description": "Designating kimchi day.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": "Referred to Rules 2 Review.",
+    "actionDate": "2025-01-20T08:00:00.000Z",
+    "sponsors": [
+      "Ryu",
+      "Mena",
+      "Leavitt",
+      "Berry",
+      "Morgan",
+      "Reed",
+      "Cortes",
+      "Tharinger",
+      "Ortiz-Self",
+      "Simmons",
+      "Peterson",
+      "Duerr",
+      "Gregerson",
+      "Berg",
+      "Ormsby",
+      "Scott",
+      "Reeves",
+      "Donaghy",
+      "Hill"
+    ]
+  },
+  {
+    "id": 1016,
+    "lastUpdated": "2025-02-26T18:09:55.783Z",
+    "agency": "House",
+    "description": "Providing employer tax incentives for the support of veterans and military families.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": "First reading, referred to Finance.",
+    "actionDate": "2025-01-13T08:00:00.000Z",
+    "sponsors": [
+      "Abbarno",
+      "Shavers",
+      "Leavitt",
+      "Marshall",
+      "Jacobsen",
+      "Eslick",
+      "McClintock",
+      "Callan",
+      "Orcutt",
+      "Caldier"
+    ]
+  },
+  {
+    "id": 1018,
+    "lastUpdated": "2025-02-26T18:09:55.956Z",
+    "agency": "House",
+    "description": "Adding fusion energy to facilities that may obtain site certification for the purposes of chapter 80.50 RCW.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": "First reading, referred to Environment, Energy & Technology.",
+    "actionDate": "2025-02-07T08:00:00.000Z",
+    "sponsors": [
+      "Shavers",
+      "Ryu",
+      "Barnard",
+      "Reed",
+      "Fitzgibbon",
+      "Leavitt",
+      "Bronoske",
+      "Tharinger",
+      "Gregerson",
+      "Peterson",
+      "Wylie"
+    ]
   }
 ]
