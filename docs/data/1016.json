@@ -1,6 +1,6 @@
 {
   "id": 1016,
-  "lastUpdated": "2025-02-26T18:09:55.783Z",
+  "lastUpdated": "2025-02-26T19:53:50.847Z",
   "agency": "House",
   "description": "Providing employer tax incentives for the support of veterans and military families.",
   "introducedDate": "2025-01-13T08:00:00.000Z",
@@ -21,6 +21,7 @@
   "billDocuments": [
     {
       "name": "1016",
+      "description": "House Bill 1016",
       "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1016.htm",
       "createdDate": "2024-12-05T22:48:22.537Z"
     }

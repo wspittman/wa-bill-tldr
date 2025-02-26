@@ -1,6 +1,6 @@
 {
   "id": 1009,
-  "lastUpdated": "2025-02-26T17:39:01.875Z",
+  "lastUpdated": "2025-02-26T19:53:49.888Z",
   "agency": "House",
   "description": "Adjusting the membership of the pharmacy quality assurance commission.",
   "introducedDate": "2025-01-13T08:00:00.000Z",
@@ -14,26 +14,11 @@
   "billDocuments": [
     {
       "name": "1009",
+      "description": "House Bill 1009",
       "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1009.htm",
       "createdDate": "2024-12-04T19:42:48.650Z"
     }
   ],
-  "billReports": [
-    {
-      "name": "1009 HBA HCW 25",
-      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bill Reports/House/1009 HBA HCW 25.htm",
-      "createdDate": "2025-01-15T08:00:00.000Z"
-    },
-    {
-      "name": "1009 HBR APH 25",
-      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bill Reports/House/1009 HBR APH 25.htm",
-      "createdDate": "2025-01-30T08:00:00.000Z"
-    },
-    {
-      "name": "1009 HBR HCW 25",
-      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bill Reports/House/1009 HBR HCW 25.htm",
-      "createdDate": "2025-01-17T08:00:00.000Z"
-    }
-  ],
+  "billReports": [],
   "billAmendments": []
 }

@@ -35,8 +35,8 @@ async function main() {
 }
 
 async function getOutdatedIds(): Promise<number[]> {
-  const unknownIds: number[] = [];
-  const outdatedIds: number[] = [];
+  const unknownIds = new Set<number>();
+  const outdatedIds = new Set<number>();
   let wslBills = await wslWebService.getLegislationMetaByYear(year);
 
   // Cut down during development
@@ -46,26 +46,32 @@ async function getOutdatedIds(): Promise<number[]> {
 
   // Sequential execution with for...of (be kind to WSL's servers)
   for (const { BillNumber: id } of wslBills) {
+    // Sometimes there are duplicates for reasons I don't understand
+    // eg. "HB 1015" vs "SHB 1015"
+    if (unknownIds.has(id) || outdatedIds.has(id)) continue;
+
     const knownDate = billService.getLastUpdated(id);
 
     if (!knownDate) {
       logger.debug(`Unknown bill ${id}`);
-      unknownIds.push(id);
+      unknownIds.add(id);
     } else {
       const { ActionDate: actionDate } =
         await wslWebService.getLegislationStatus(biennium, id);
 
       if (actionDate > knownDate) {
         logger.debug(`Outdated bill ${id}`, knownDate);
-        outdatedIds.push(id);
+        outdatedIds.add(id);
       }
     }
   }
 
-  logger.info("Unknown bills", unknownIds);
-  logger.info("Outdated bills", outdatedIds);
+  const unknownIdAr = Array.from(unknownIds);
+  const outdatedIdAr = Array.from(outdatedIds);
+  logger.info("Unknown bills", unknownIdAr);
+  logger.info("Outdated bills", outdatedIdAr);
 
-  return [...unknownIds, ...outdatedIds];
+  return [...unknownIdAr, ...outdatedIdAr];
 }
 
 async function updateBill(id: number) {
@@ -103,7 +109,7 @@ async function summarizeBill(bill: BillFull) {
   const billSummary = await billService.getBillSummary(bill.id);
 
   await Promise.all([
-    addSummaries(bill.billDocuments, billSummary.documents),
+    addSummaries(bill.id, bill.billDocuments, billSummary.documents),
     //addSummaries(bill.billReports, billSummary.reports),
     //addSummaries(bill.billAmendments, billSummary.amendments),
   ]);
@@ -112,22 +118,48 @@ async function summarizeBill(bill: BillFull) {
 }
 
 async function addSummaries(
+  id: number,
   documents: BillDoc[],
   docSummaries: Record<string, DocSummary>
 ) {
-  for (const { createdDate, url, name } of documents) {
-    const docSummary = docSummaries[name];
-    if (!docSummary || createdDate > docSummary.createdDate) {
-      const html = await (await fetch(url)).text();
-      const summary = await aiService.summarize(html);
-      if (summary) {
-        const summaryHtml = markdownToHtml(summary);
-        docSummaries[name] = {
-          createdDate,
-          original: html,
-          summary: summaryHtml,
-        };
+  const idString = String(id);
+
+  const primary = documents.find((doc) => doc.name === idString);
+
+  if (primary) {
+    await addSummary(docSummaries, primary, (html) =>
+      aiService.summarize(html)
+    );
+
+    const original = docSummaries[primary.name].original;
+
+    for (const doc of documents) {
+      if (doc.name !== primary.name) {
+        await addSummary(docSummaries, doc, (html) =>
+          aiService.compare(html, original)
+        );
       }
+    }
+  }
+}
+
+async function addSummary(
+  docSummaries: Record<string, DocSummary>,
+  { createdDate, url, name }: BillDoc,
+  fn: (html: string) => Promise<string | undefined>
+) {
+  const docSummary = docSummaries[name];
+  if (!docSummary || createdDate > docSummary.createdDate) {
+    const html = await (await fetch(url)).text();
+    const summary = await fn(html);
+
+    if (summary) {
+      const summaryHtml = markdownToHtml(summary);
+      docSummaries[name] = {
+        createdDate,
+        original: html,
+        summary: summaryHtml,
+      };
     }
   }
 }

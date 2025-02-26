@@ -1,6 +1,6 @@
 {
   "id": 1006,
-  "lastUpdated": "2025-02-26T17:38:39.705Z",
+  "lastUpdated": "2025-02-26T19:53:49.955Z",
   "agency": "House",
   "description": "Regulating service contracts and protection product guarantees.",
   "introducedDate": "2025-01-13T08:00:00.000Z",
@@ -14,26 +14,11 @@
   "billDocuments": [
     {
       "name": "1006",
+      "description": "House Bill 1006",
       "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1006.htm",
       "createdDate": "2024-12-03T20:20:56.797Z"
     }
   ],
-  "billReports": [
-    {
-      "name": "1006 HBA CPB 25",
-      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bill Reports/House/1006 HBA CPB 25.htm",
-      "createdDate": "2025-01-14T08:00:00.000Z"
-    },
-    {
-      "name": "1006 HBR APH 25",
-      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bill Reports/House/1006 HBR APH 25.htm",
-      "createdDate": "2025-01-30T08:00:00.000Z"
-    },
-    {
-      "name": "1006 HBR CPB 25",
-      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bill Reports/House/1006 HBR CPB 25.htm",
-      "createdDate": "2025-01-21T08:00:00.000Z"
-    }
-  ],
+  "billReports": [],
   "billAmendments": []
 }

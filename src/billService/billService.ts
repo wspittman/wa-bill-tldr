@@ -94,7 +94,7 @@ class BillService {
     if (!this.initialized) throw new Error("Service not initialized");
     if (!this.modified) return;
 
-    const bills = Array.from(this.bills.values());
+    const bills = Array.from(this.bills.values()).sort((a, b) => a.id - b.id);
     await writeBills(bills);
 
     this.modified = false;
@@ -105,11 +105,13 @@ export const billService = new BillService();
 
 function formBillDoc({
   Name: name = "",
+  LongFriendlyName: description = "",
   HtmUrl: url = "",
   HtmCreateDate: createdDate,
 }: LegislativeDocument): BillDoc {
   return {
     name,
+    description,
     url,
     createdDate: createdDate.toISOString(),
   };

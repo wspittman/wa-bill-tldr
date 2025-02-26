@@ -1,6 +1,6 @@
 {
   "id": 1004,
-  "lastUpdated": "2025-02-26T17:38:25.479Z",
+  "lastUpdated": "2025-02-26T19:53:49.365Z",
   "agency": "House",
   "description": "Increasing the personal property tax exemption.",
   "introducedDate": "2025-01-13T08:00:00.000Z",
@@ -25,21 +25,11 @@
   "billDocuments": [
     {
       "name": "1004",
+      "description": "House Bill 1004",
       "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1004.htm",
       "createdDate": "2024-12-03T20:20:54.857Z"
     }
   ],
-  "billReports": [
-    {
-      "name": "1004 HBA FIN 25",
-      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bill Reports/House/1004 HBA FIN 25.htm",
-      "createdDate": "2025-01-16T08:00:00.000Z"
-    },
-    {
-      "name": "1004 HBR FIN 25",
-      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bill Reports/House/1004 HBR FIN 25.htm",
-      "createdDate": "2025-01-23T08:00:00.000Z"
-    }
-  ],
+  "billReports": [],
   "billAmendments": []
 }

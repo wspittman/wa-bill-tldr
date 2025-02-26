@@ -1,6 +1,6 @@
 {
   "id": 1000,
-  "lastUpdated": "2025-02-26T17:38:03.494Z",
+  "lastUpdated": "2025-02-26T19:53:49.369Z",
   "agency": "House",
   "description": "Expanding the circumstances that may constitute a major violation of the uniform controlled substances act.",
   "introducedDate": "2025-01-13T08:00:00.000Z",
@@ -19,6 +19,7 @@
   "billDocuments": [
     {
       "name": "1000",
+      "description": "House Bill 1000",
       "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1000.htm",
       "createdDate": "2024-12-02T22:22:43.770Z"
     }

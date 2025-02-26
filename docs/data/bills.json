@@ -1,7 +1,7 @@
 [
   {
     "id": 1000,
-    "lastUpdated": "2025-02-26T17:38:03.494Z",
+    "lastUpdated": "2025-02-26T19:53:49.369Z",
     "agency": "House",
     "description": "Expanding the circumstances that may constitute a major violation of the uniform controlled substances act.",
     "introducedDate": "2025-01-13T08:00:00.000Z",
@@ -20,7 +20,7 @@
   },
   {
     "id": 1001,
-    "lastUpdated": "2025-02-26T17:38:09.908Z",
+    "lastUpdated": "2025-02-26T19:53:49.359Z",
     "agency": "House",
     "description": "Concerning capital projects for the provision of fire protection services.",
     "introducedDate": "2025-01-13T08:00:00.000Z",
@@ -37,7 +37,7 @@
   },
   {
     "id": 1002,
-    "lastUpdated": "2025-02-26T17:38:14.105Z",
+    "lastUpdated": "2025-02-26T19:53:49.367Z",
     "agency": "House",
     "description": "Recognizing posttraumatic stress disorder as an occupational disease for county coroners, examiners, and investigative personnel.",
     "introducedDate": "2025-01-13T08:00:00.000Z",
@@ -58,7 +58,7 @@
   },
   {
     "id": 1003,
-    "lastUpdated": "2025-02-26T17:38:18.763Z",
+    "lastUpdated": "2025-02-26T19:53:49.533Z",
     "agency": "House",
     "description": "Addressing service of notice by mail in cases involving forcible entry and forcible and unlawful detainer.",
     "introducedDate": "2025-01-13T08:00:00.000Z",
@@ -75,7 +75,7 @@
   },
   {
     "id": 1004,
-    "lastUpdated": "2025-02-26T17:38:25.479Z",
+    "lastUpdated": "2025-02-26T19:53:49.365Z",
     "agency": "House",
     "description": "Increasing the personal property tax exemption.",
     "introducedDate": "2025-01-13T08:00:00.000Z",
@@ -100,7 +100,7 @@
   },
   {
     "id": 1005,
-    "lastUpdated": "2025-02-26T17:38:30.668Z",
+    "lastUpdated": "2025-02-26T19:53:49.840Z",
     "agency": "House",
     "description": "Concerning prearrangement funeral services.",
     "introducedDate": "2025-01-13T08:00:00.000Z",
@@ -114,7 +114,7 @@
   },
   {
     "id": 1006,
-    "lastUpdated": "2025-02-26T17:38:39.705Z",
+    "lastUpdated": "2025-02-26T19:53:49.955Z",
     "agency": "House",
     "description": "Regulating service contracts and protection product guarantees.",
     "introducedDate": "2025-01-13T08:00:00.000Z",
@@ -128,7 +128,7 @@
   },
   {
     "id": 1007,
-    "lastUpdated": "2025-02-26T17:38:51.838Z",
+    "lastUpdated": "2025-02-26T19:53:49.832Z",
     "agency": "House",
     "description": "Concerning requisites of notice in small claims actions.",
     "introducedDate": "2025-01-13T08:00:00.000Z",
@@ -144,7 +144,7 @@
   },
   {
     "id": 1008,
-    "lastUpdated": "2025-02-26T17:38:55.547Z",
+    "lastUpdated": "2025-02-26T19:53:49.886Z",
     "agency": "House",
     "description": "Concerning county local roads.",
     "introducedDate": "2025-01-13T08:00:00.000Z",
@@ -158,7 +158,7 @@
   },
   {
     "id": 1009,
-    "lastUpdated": "2025-02-26T17:39:01.875Z",
+    "lastUpdated": "2025-02-26T19:53:49.888Z",
     "agency": "House",
     "description": "Adjusting the membership of the pharmacy quality assurance commission.",
     "introducedDate": "2025-01-13T08:00:00.000Z",
@@ -171,25 +171,8 @@
     ]
   },
   {
-    "id": 1011,
-    "lastUpdated": "2025-02-26T18:09:48.831Z",
-    "agency": "House",
-    "description": "Creating a school safety capital grant program.",
-    "introducedDate": "2025-01-13T08:00:00.000Z",
-    "status": "First reading, referred to Capital Budget.",
-    "actionDate": "2025-01-13T08:00:00.000Z",
-    "sponsors": [
-      "Jacobsen",
-      "Barkis",
-      "Eslick",
-      "McClintock",
-      "Caldier",
-      "Pollet"
-    ]
-  },
-  {
     "id": 1010,
-    "lastUpdated": "2025-02-26T18:09:48.861Z",
+    "lastUpdated": "2025-02-26T19:53:50.371Z",
     "agency": "House",
     "description": "Authorizing accessory dwelling units in rural areas.",
     "introducedDate": "2025-01-13T08:00:00.000Z",
@@ -211,8 +194,25 @@
     ]
   },
   {
+    "id": 1011,
+    "lastUpdated": "2025-02-26T19:53:50.423Z",
+    "agency": "House",
+    "description": "Creating a school safety capital grant program.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": "First reading, referred to Capital Budget.",
+    "actionDate": "2025-01-13T08:00:00.000Z",
+    "sponsors": [
+      "Jacobsen",
+      "Barkis",
+      "Eslick",
+      "McClintock",
+      "Caldier",
+      "Pollet"
+    ]
+  },
+  {
     "id": 1012,
-    "lastUpdated": "2025-02-26T18:09:48.864Z",
+    "lastUpdated": "2025-02-26T19:53:50.376Z",
     "agency": "House",
     "description": "Authorizing the women's commission to solicit gifts, grants, and endowments from public or private sources.",
     "introducedDate": "2025-01-13T08:00:00.000Z",
@@ -242,8 +242,23 @@
     ]
   },
   {
+    "id": 1013,
+    "lastUpdated": "2025-02-26T19:53:50.374Z",
+    "agency": "House",
+    "description": "Concerning exemption of certain personnel of the department of social and health services from civil service.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": "First reading, referred to State Government, Tribal Affairs & Elections.",
+    "actionDate": "2025-01-31T08:00:00.000Z",
+    "sponsors": [
+      "Schmidt",
+      "Fosse",
+      "Berry",
+      "Reeves"
+    ]
+  },
+  {
     "id": 1014,
-    "lastUpdated": "2025-02-26T18:55:22.563Z",
+    "lastUpdated": "2025-02-26T19:53:50.428Z",
     "agency": "House",
     "description": "Implementing recommendations of the 2023 child support schedule work group.",
     "introducedDate": "2025-01-13T08:00:00.000Z",
@@ -259,23 +274,8 @@
     ]
   },
   {
-    "id": 1013,
-    "lastUpdated": "2025-02-26T18:09:48.903Z",
-    "agency": "House",
-    "description": "Concerning exemption of certain personnel of the department of social and health services from civil service.",
-    "introducedDate": "2025-01-13T08:00:00.000Z",
-    "status": "First reading, referred to State Government, Tribal Affairs & Elections.",
-    "actionDate": "2025-01-31T08:00:00.000Z",
-    "sponsors": [
-      "Schmidt",
-      "Fosse",
-      "Berry",
-      "Reeves"
-    ]
-  },
-  {
     "id": 1015,
-    "lastUpdated": "2025-02-26T18:09:55.747Z",
+    "lastUpdated": "2025-02-26T19:53:50.844Z",
     "agency": "House",
     "description": "Concerning energy labeling of residential buildings.",
     "introducedDate": "2025-01-13T08:00:00.000Z",
@@ -298,8 +298,29 @@
     ]
   },
   {
+    "id": 1016,
+    "lastUpdated": "2025-02-26T19:53:50.847Z",
+    "agency": "House",
+    "description": "Providing employer tax incentives for the support of veterans and military families.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": "First reading, referred to Finance.",
+    "actionDate": "2025-01-13T08:00:00.000Z",
+    "sponsors": [
+      "Abbarno",
+      "Shavers",
+      "Leavitt",
+      "Marshall",
+      "Jacobsen",
+      "Eslick",
+      "McClintock",
+      "Callan",
+      "Orcutt",
+      "Caldier"
+    ]
+  },
+  {
     "id": 1017,
-    "lastUpdated": "2025-02-26T18:09:55.779Z",
+    "lastUpdated": "2025-02-26T19:53:50.902Z",
     "agency": "House",
     "description": "Designating kimchi day.",
     "introducedDate": "2025-01-13T08:00:00.000Z",
@@ -328,29 +349,8 @@
     ]
   },
   {
-    "id": 1016,
-    "lastUpdated": "2025-02-26T18:09:55.783Z",
-    "agency": "House",
-    "description": "Providing employer tax incentives for the support of veterans and military families.",
-    "introducedDate": "2025-01-13T08:00:00.000Z",
-    "status": "First reading, referred to Finance.",
-    "actionDate": "2025-01-13T08:00:00.000Z",
-    "sponsors": [
-      "Abbarno",
-      "Shavers",
-      "Leavitt",
-      "Marshall",
-      "Jacobsen",
-      "Eslick",
-      "McClintock",
-      "Callan",
-      "Orcutt",
-      "Caldier"
-    ]
-  },
-  {
     "id": 1018,
-    "lastUpdated": "2025-02-26T18:09:55.956Z",
+    "lastUpdated": "2025-02-26T19:53:50.845Z",
     "agency": "House",
     "description": "Adding fusion energy to facilities that may obtain site certification for the purposes of chapter 80.50 RCW.",
     "introducedDate": "2025-01-13T08:00:00.000Z",

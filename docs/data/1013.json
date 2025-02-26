@@ -1,6 +1,6 @@
 {
   "id": 1013,
-  "lastUpdated": "2025-02-26T18:09:48.903Z",
+  "lastUpdated": "2025-02-26T19:53:50.374Z",
   "agency": "House",
   "description": "Concerning exemption of certain personnel of the department of social and health services from civil service.",
   "introducedDate": "2025-01-13T08:00:00.000Z",
@@ -15,6 +15,7 @@
   "billDocuments": [
     {
       "name": "1013",
+      "description": "House Bill 1013",
       "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1013.htm",
       "createdDate": "2024-12-05T22:48:08.803Z"
     }

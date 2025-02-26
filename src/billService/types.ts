@@ -28,6 +28,7 @@ export interface BillFull extends Bill {
 
 export interface BillDoc {
   name: string;
+  description: string;
   url: string;
   createdDate: string;
 }

@@ -1,6 +1,6 @@
 {
   "id": 1007,
-  "lastUpdated": "2025-02-26T17:38:51.838Z",
+  "lastUpdated": "2025-02-26T19:53:49.832Z",
   "agency": "House",
   "description": "Concerning requisites of notice in small claims actions.",
   "introducedDate": "2025-01-13T08:00:00.000Z",
@@ -16,26 +16,11 @@
   "billDocuments": [
     {
       "name": "1007",
+      "description": "House Bill 1007",
       "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1007.htm",
       "createdDate": "2024-12-03T20:20:57.547Z"
     }
   ],
-  "billReports": [
-    {
-      "name": "1007 HBA CRJ 25",
-      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bill Reports/House/1007 HBA CRJ 25.htm",
-      "createdDate": "2025-01-17T08:00:00.000Z"
-    },
-    {
-      "name": "1007 HBR APH 25",
-      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bill Reports/House/1007 HBR APH 25.htm",
-      "createdDate": "2025-02-13T08:00:00.000Z"
-    },
-    {
-      "name": "1007 HBR CRJ 25",
-      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bill Reports/House/1007 HBR CRJ 25.htm",
-      "createdDate": "2025-02-04T08:00:00.000Z"
-    }
-  ],
+  "billReports": [],
   "billAmendments": []
 }
