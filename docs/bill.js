@@ -1,89 +1,121 @@
-window.onload = function () {
+window.onload = async function () {
   const urlParams = new URLSearchParams(window.location.search);
   const billId = urlParams.get("id");
+
   if (billId) {
-    document.getElementById("currentBillId").textContent = billId;
+    try {
+      document.getElementById("currentBillId").textContent = billId;
 
-    Promise.all([
-      fetch(`data/${billId}.json`).then((response) => {
-        if (response.status === 404) throw new Error("Bill not found");
-        return response.json();
-      }),
-      fetch(`data/${billId}_Summary.json`).then((response) => {
-        if (response.status === 404) throw new Error("Summary not found");
-        return response.json();
-      }),
-    ])
-      .then(([bill, summary]) => {
-        const main = document.querySelector("main");
-        main.innerHTML = `
-        <h2>${bill.agency} Bill ${bill.id}</h2>
-          <p>
-            <a href="https://app.leg.wa.gov/billsummary?BillNumber=${
-              bill.id
-            }&Initiative=False&Year=2025" target="_blank">Official Page↗</a>
-            <br/>
-            <a href="https://app.leg.wa.gov/pbc/bill/${
-              bill.id
-            }" target="_blank">Tell your representative what you think↗</a>
-          </p>
-          <p>${bill.description}</p>
-          <p><strong>Sponsors:</strong> ${bill.sponsors.join(", ")}</p>
-          <p><strong>Introduced:</strong> ${new Date(
-            bill.introducedDate
-          ).toLocaleDateString()}</p>
-          <p><strong>Last Action:</strong> ${new Date(
-            bill.actionDate
-          ).toLocaleDateString()}</p>
-        <p><strong>Status:</strong> ${bill.status}</p>
-        <div class="view-toggle" role="tablist">
-          <button role="tab" aria-selected="true" aria-controls="summaryView" onclick="toggleView('summary')" class="active" id="summaryBtn">Summary</button>
-          <button role="tab" aria-selected="false" aria-controls="originalView" onclick="toggleView('original')" id="originalBtn">Original</button>
-        </div>
-        <div id="summaryView" role="tabpanel" aria-labelledby="summaryBtn">
-          <h2>Summary</h2>
-          <i>AI-Generated Summary - May Contain Errors. Check Official Text.</i>
-          ${summary.documents[bill.id].summary}
-        </div>
-        <div id="originalView" role="tabpanel" aria-labelledby="originalBtn" style="display: none; overflow: auto;">
-          <h2>Original</h2>
-          ${summary.documents[bill.id].original}
-        </div>
-      `;
-      })
-      .catch((error) => {
-        const message = error.message.includes("not found")
-          ? `${error.message} for bill ${billId}.`
-          : `Failed to load bill ${billId}: ${error.message}`;
+      const { bill, summary } = await fetchBill(billId);
 
-        document.querySelector("main").innerHTML = `
-        <h2>Error</h2>
-        <p>${message}</p>
-        <p><a href="index.html">Return to bill list</a></p>
+      const main = document.querySelector("main");
+      main.innerHTML = `
+        ${renderMetaSection(bill)}
+        ${renderViewSection(bill.id, summary.documents)}
       `;
-      });
+    } catch (error) {
+      renderError(billId, error.message);
+    }
   }
 };
 
-function toggleView(view) {
-  const originalView = document.getElementById("originalView");
-  const summaryView = document.getElementById("summaryView");
-  const originalBtn = document.getElementById("originalBtn");
-  const summaryBtn = document.getElementById("summaryBtn");
+async function fetchBill(id) {
+  const [bill, summary] = await Promise.all([
+    fetchJson(`data/${id}.json`),
+    fetchJson(`data/${id}_Summary.json`),
+  ]);
 
-  if (view === "original") {
-    originalView.style.display = "block";
-    summaryView.style.display = "none";
-    originalBtn.classList.add("active");
-    summaryBtn.classList.remove("active");
-    originalBtn.setAttribute("aria-selected", "true");
-    summaryBtn.setAttribute("aria-selected", "false");
-  } else {
-    originalView.style.display = "none";
-    summaryView.style.display = "block";
-    originalBtn.classList.remove("active");
-    summaryBtn.classList.add("active");
-    originalBtn.setAttribute("aria-selected", "false");
-    summaryBtn.setAttribute("aria-selected", "true");
-  }
+  return { bill, summary };
+}
+
+async function fetchJson(url) {
+  const response = await fetch(url);
+  if (!response.ok) throw new Error(response.statusText);
+  return response.json();
+}
+
+function renderError(id, message) {
+  document.querySelector("main").innerHTML = `
+    <h2>Error</h2>
+    <p>Failed to load bill ${id}: ${message}</p>
+    <p><a href="index.html">Return to bill list</a></p>
+  `;
+}
+
+function renderMetaSection(bill) {
+  return `
+    <h2>${bill.agency} Bill ${bill.id}</h2>
+    <p>
+      ${renderExternalLink(
+        `https://app.leg.wa.gov/billsummary?BillNumber=${bill.id}&Initiative=False&Year=2025`,
+        "Official Page"
+      )}
+      <br/>
+      ${renderExternalLink(
+        `https://app.leg.wa.gov/pbc/bill/${bill.id}`,
+        "Tell your representative what you think"
+      )}
+    </p>
+    <p>${bill.description}</p>
+    ${renderMeta("Sponsors", bill.sponsors)}
+    ${renderMeta("Introduced", new Date(bill.introducedDate))}
+    ${renderMeta("Last Action", new Date(bill.actionDate))}
+    ${renderMeta("Status", bill.status)}
+  `;
+}
+
+function renderExternalLink(url, text) {
+  return `<a href="${url}" target="_blank">${text}↗</a>`;
+}
+
+function renderMeta(name, value) {
+  if (Array.isArray(value)) value = value.join(", ");
+  if (value instanceof Date) value = value.toLocaleDateString();
+  return `<p><strong>${name}:</strong> ${value}</p>`;
+}
+
+function renderViewSection(id, documents) {
+  return `
+    <div class="view-toggle" role="tablist">
+      ${renderViewTab("Summary", true)}
+      ${renderViewTab("Original")}
+    </div>
+    ${renderViewContent("Summary", documents[id], true, true)}
+    ${renderViewContent("Original", documents[id])}
+  `;
+}
+
+function renderViewTab(name, isDefault = false) {
+  return `<button id="${name}Btn" role="tab" aria-selected="${isDefault}" aria-controls="${name}View" onclick="toggleView('${name}')" class="view-tab${
+    isDefault ? " active" : ""
+  }">${name}</button>`;
+}
+
+function renderViewContent(name, document, isAI = false, isDefault = false) {
+  const disclaimer = isAI
+    ? "<i>AI-Generated Summary - May Contain Errors. Check Official Text.</i>"
+    : "";
+  return `
+    <div id="${name}View" role="tabpanel" aria-labelledby="${name}Btn" style="display: ${
+    isDefault ? "block" : "none"
+  }; overflow: auto;">
+      <h2>${name}</h2>
+      ${disclaimer}
+      ${document[name.toLowerCase()]}
+    </div>
+  `;
+}
+
+function toggleView(name) {
+  const views = document.querySelectorAll("[role=tabpanel]");
+  views.forEach(
+    (v) => (v.style.display = v.id === `${name}View` ? "block" : "none")
+  );
+
+  const tabs = document.querySelectorAll(".view-tab");
+  tabs.forEach((t) => {
+    const isSelected = t.id === `${name}Btn`;
+    t.classList.toggle("active", isSelected);
+    t.setAttribute("aria-selected", isSelected);
+  });
 }
