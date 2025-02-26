@@ -1,0 +1,34 @@
+{
+  "id": 1005,
+  "lastUpdated": "2025-02-26T17:38:30.668Z",
+  "agency": "House",
+  "description": "Concerning prearrangement funeral services.",
+  "introducedDate": "2025-01-13T08:00:00.000Z",
+  "status": "Referred to Rules 2 Review.",
+  "actionDate": "2025-01-23T08:00:00.000Z",
+  "sponsors": [
+    "Ryu",
+    "Corry",
+    "Reeves"
+  ],
+  "billDocuments": [
+    {
+      "name": "1005",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1005.htm",
+      "createdDate": "2024-12-03T20:20:55.817Z"
+    }
+  ],
+  "billReports": [
+    {
+      "name": "1005 HBA CPB 25",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bill Reports/House/1005 HBA CPB 25.htm",
+      "createdDate": "2025-01-14T08:00:00.000Z"
+    },
+    {
+      "name": "1005 HBR CPB 25",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bill Reports/House/1005 HBR CPB 25.htm",
+      "createdDate": "2025-01-21T08:00:00.000Z"
+    }
+  ],
+  "billAmendments": []
+}

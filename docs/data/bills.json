@@ -1,11 +1,11 @@
 [
   {
     "id": 1000,
-    "lastUpdated": "2025-02-24T04:46:05.416Z",
+    "lastUpdated": "2025-02-26T17:38:03.494Z",
     "agency": "House",
     "description": "Expanding the circumstances that may constitute a major violation of the uniform controlled substances act.",
     "introducedDate": "2025-01-13T08:00:00.000Z",
-    "status": "H Community Safe",
+    "status": "First reading, referred to Community Safety.",
     "actionDate": "2025-01-13T08:00:00.000Z",
     "sponsors": [
       "Walsh",
@@ -20,7 +20,7 @@
   },
   {
     "id": 1001,
-    "lastUpdated": "2025-02-24T17:47:21.822Z",
+    "lastUpdated": "2025-02-26T17:38:09.908Z",
     "agency": "House",
     "description": "Concerning capital projects for the provision of fire protection services.",
     "introducedDate": "2025-01-13T08:00:00.000Z",
@@ -37,7 +37,7 @@
   },
   {
     "id": 1002,
-    "lastUpdated": "2025-02-24T17:47:30.891Z",
+    "lastUpdated": "2025-02-26T17:38:14.105Z",
     "agency": "House",
     "description": "Recognizing posttraumatic stress disorder as an occupational disease for county coroners, examiners, and investigative personnel.",
     "introducedDate": "2025-01-13T08:00:00.000Z",
@@ -54,6 +54,120 @@
       "Pollet",
       "Davis",
       "Scott"
+    ]
+  },
+  {
+    "id": 1003,
+    "lastUpdated": "2025-02-26T17:38:18.763Z",
+    "agency": "House",
+    "description": "Addressing service of notice by mail in cases involving forcible entry and forcible and unlawful detainer.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": "First reading, referred to Housing.",
+    "actionDate": "2025-02-07T08:00:00.000Z",
+    "sponsors": [
+      "Abbarno",
+      "Barkis",
+      "Jacobsen",
+      "Connors",
+      "Peterson",
+      "Hill"
+    ]
+  },
+  {
+    "id": 1004,
+    "lastUpdated": "2025-02-26T17:38:25.479Z",
+    "agency": "House",
+    "description": "Increasing the personal property tax exemption.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": "Referred to Rules 2 Review.",
+    "actionDate": "2025-01-27T08:00:00.000Z",
+    "sponsors": [
+      "Leavitt",
+      "Volz",
+      "Ryu",
+      "Parshley",
+      "Walen",
+      "Schmidt",
+      "Shavers",
+      "Richards",
+      "Paul",
+      "Goodman",
+      "Rule",
+      "Pollet",
+      "Fey",
+      "Reeves"
+    ]
+  },
+  {
+    "id": 1005,
+    "lastUpdated": "2025-02-26T17:38:30.668Z",
+    "agency": "House",
+    "description": "Concerning prearrangement funeral services.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": "Referred to Rules 2 Review.",
+    "actionDate": "2025-01-23T08:00:00.000Z",
+    "sponsors": [
+      "Ryu",
+      "Corry",
+      "Reeves"
+    ]
+  },
+  {
+    "id": 1006,
+    "lastUpdated": "2025-02-26T17:38:39.705Z",
+    "agency": "House",
+    "description": "Regulating service contracts and protection product guarantees.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": "First reading, referred to Business, Financial Services & Trade.",
+    "actionDate": "2025-01-31T08:00:00.000Z",
+    "sponsors": [
+      "Ryu",
+      "McClintock",
+      "Reeves"
+    ]
+  },
+  {
+    "id": 1007,
+    "lastUpdated": "2025-02-26T17:38:51.838Z",
+    "agency": "House",
+    "description": "Concerning requisites of notice in small claims actions.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": "First reading, referred to Law & Justice.",
+    "actionDate": "2025-02-14T08:00:00.000Z",
+    "sponsors": [
+      "Low",
+      "Taylor",
+      "Walen",
+      "Eslick",
+      "Goodman"
+    ]
+  },
+  {
+    "id": 1008,
+    "lastUpdated": "2025-02-26T17:38:55.547Z",
+    "agency": "House",
+    "description": "Concerning county local roads.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": "First reading, referred to Local Government.",
+    "actionDate": "2025-01-13T08:00:00.000Z",
+    "sponsors": [
+      "Low",
+      "Barkis",
+      "Eslick"
+    ]
+  },
+  {
+    "id": 1009,
+    "lastUpdated": "2025-02-26T17:39:01.875Z",
+    "agency": "House",
+    "description": "Adjusting the membership of the pharmacy quality assurance commission.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": "First reading, referred to Health & Long-Term Care.",
+    "actionDate": "2025-01-31T08:00:00.000Z",
+    "sponsors": [
+      "Low",
+      "Ramel",
+      "Eslick"
     ]
   }
 ]
