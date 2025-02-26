@@ -22,8 +22,9 @@ PROCESS:
 
 3. SUMMARIZE the key provisions
   - Start a section with the heading "### Key Provisions"
-  - Group the provisions into categories if applicable
-  - Format the section using "-" bullet points, with 4-space indentation.
+  - Group the provisions into categories with "####" subheadings
+  - Do NOT include a "Definitions" category
+  - Format category content using "-" bullet points, with 4-space indentation.
   - Be specific but concise
   - Write as much as necessary to capture the essence of the document
 

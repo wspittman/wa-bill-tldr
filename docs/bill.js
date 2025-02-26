@@ -21,11 +21,11 @@ window.onload = function () {
           <p>
             <a href="https://app.leg.wa.gov/billsummary?BillNumber=${
               bill.id
-            }&Initiative=False&Year=2025" target="_blank">Official page↗</a>
+            }&Initiative=False&Year=2025" target="_blank">Official Page↗</a>
             <br/>
             <a href="https://app.leg.wa.gov/pbc/bill/${
               bill.id
-            }" target="_blank">Official public comment↗</a>
+            }" target="_blank">Tell your representative what you think↗</a>
           </p>
           <p>${bill.description}</p>
           <p><strong>Sponsors:</strong> ${bill.sponsors.join(", ")}</p>
@@ -41,12 +41,12 @@ window.onload = function () {
           <button onclick="toggleView('original')" id="originalBtn">Original</button>
         </div>
         <div id="summaryView">
-          <h2>${bill.agency} Bill ${bill.id} - Summary</h2>
+          <h2>Summary</h2>
           <i>AI-Generated Summary - May Contain Errors. Check Official Text.</i>
           ${summary.documents[bill.id].summary}
         </div>
         <div id="originalView" style="display: none;">
-          <h2>${bill.agency} Bill ${bill.id} - Original</h2>
+          <h2>Original</h2>
           ${summary.documents[bill.id].original}
         </div>
       `;

@@ -8,15 +8,16 @@
       rel="icon"
       href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 19 19'><text x='0' y='15'>🏛</text></svg>"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" />
+    <link rel="stylesheet" href="custom.css" />
   </head>
   <body>
-    <header>
+    <header id="header">
       <a href="index.html" style="text-decoration: none; color: inherit">
-        <h1 style="display: inline">WA Bill TL;DR</h1>
+        <h1><span>🏛</span> WA Bill TL;DR</h1>
       </a>
       <div class="search-container">
-        <input type="text" id="billId" placeholder="Enter Bill ID" />
+        <input type="text" id="billId" placeholder="Enter Bill Number" />
         <button onclick="findBill()">Find</button>
       </div>
     </header>
