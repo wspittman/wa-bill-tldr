@@ -53,3 +53,26 @@
 #billsTable th.sort-desc::after {
   content: " ↓";
 }
+
+.view-toggle {
+  border-bottom: 2px solid var(--border);
+}
+
+.view-toggle button {
+  background: none;
+  border: 2px solid transparent;
+  border-bottom: none;
+  margin-bottom: -2px;
+  padding: 0.5rem;
+  color: var(--text);
+}
+
+.view-toggle button:hover {
+  background: var(--accent-bg);
+  border-color: var(--border);
+}
+
+.view-toggle button.active {
+  background: var(--bg);
+  border-color: var(--border);
+}

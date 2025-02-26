@@ -36,16 +36,16 @@ window.onload = function () {
             bill.actionDate
           ).toLocaleDateString()}</p>
         <p><strong>Status:</strong> ${bill.status}</p>
-        <div class="view-toggle">
-        <button onclick="toggleView('summary')" class="active" id="summaryBtn">Summary</button>
-          <button onclick="toggleView('original')" id="originalBtn">Original</button>
+        <div class="view-toggle" role="tablist">
+          <button role="tab" aria-selected="true" aria-controls="summaryView" onclick="toggleView('summary')" class="active" id="summaryBtn">Summary</button>
+          <button role="tab" aria-selected="false" aria-controls="originalView" onclick="toggleView('original')" id="originalBtn">Original</button>
         </div>
-        <div id="summaryView">
+        <div id="summaryView" role="tabpanel" aria-labelledby="summaryBtn">
           <h2>Summary</h2>
           <i>AI-Generated Summary - May Contain Errors. Check Official Text.</i>
           ${summary.documents[bill.id].summary}
         </div>
-        <div id="originalView" style="display: none;">
+        <div id="originalView" role="tabpanel" aria-labelledby="originalBtn" style="display: none; overflow: auto;">
           <h2>Original</h2>
           ${summary.documents[bill.id].original}
         </div>
@@ -76,10 +76,14 @@ function toggleView(view) {
     summaryView.style.display = "none";
     originalBtn.classList.add("active");
     summaryBtn.classList.remove("active");
+    originalBtn.setAttribute("aria-selected", "true");
+    summaryBtn.setAttribute("aria-selected", "false");
   } else {
     originalView.style.display = "none";
     summaryView.style.display = "block";
     originalBtn.classList.remove("active");
     summaryBtn.classList.add("active");
+    originalBtn.setAttribute("aria-selected", "false");
+    summaryBtn.setAttribute("aria-selected", "true");
   }
 }
