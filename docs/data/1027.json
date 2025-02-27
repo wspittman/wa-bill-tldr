@@ -1,0 +1,25 @@
+{
+  "id": 1027,
+  "lastUpdated": "2025-02-27T04:08:01.641Z",
+  "agency": "House",
+  "description": "Concerning housing of inmates in state correctional facilities.",
+  "introducedDate": "2025-01-13T08:00:00.000Z",
+  "status": "First reading, referred to Community Safety.",
+  "actionDate": "2025-01-13T08:00:00.000Z",
+  "sponsors": [
+    "Jacobsen",
+    "Marshall",
+    "Burnett",
+    "Couture"
+  ],
+  "billDocuments": [
+    {
+      "name": "1027",
+      "description": "House Bill 1027",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1027.htm",
+      "createdDate": "2024-12-10T19:33:04.340Z"
+    }
+  ],
+  "billReports": [],
+  "billAmendments": []
+}

@@ -40,7 +40,7 @@ async function getOutdatedIds(): Promise<number[]> {
   let wslBills = await wslWebService.getLegislationMetaByYear(year);
 
   // Cut down during development
-  wslBills = wslBills.slice(0, 30);
+  wslBills = wslBills.slice(0, 60);
 
   logger.info("Bills to check", wslBills.length);
 

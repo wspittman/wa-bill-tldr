@@ -1,0 +1,36 @@
+{
+  "id": 1043,
+  "lastUpdated": "2025-02-27T04:08:24.767Z",
+  "agency": "House",
+  "description": "Extending the commute trip reduction tax credit.",
+  "introducedDate": "2025-01-13T08:00:00.000Z",
+  "status": "FIN - Majority; 1st substitute bill be substituted, do pass.",
+  "actionDate": "2025-02-26T08:00:00.000Z",
+  "sponsors": [
+    "Wylie",
+    "Doglio",
+    "Fey",
+    "Ramel",
+    "Shavers",
+    "Fosse",
+    "Salahuddin",
+    "Reeves",
+    "Hill"
+  ],
+  "billDocuments": [
+    {
+      "name": "1043",
+      "description": "House Bill 1043",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1043.htm",
+      "createdDate": "2024-12-11T19:08:03.457Z"
+    },
+    {
+      "name": "1043-S",
+      "description": "Substitute House Bill 1043 as Recommended by Finance",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1043-S.htm",
+      "createdDate": "2025-02-26T22:55:58.087Z"
+    }
+  ],
+  "billReports": [],
+  "billAmendments": []
+}

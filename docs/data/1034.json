@@ -1,0 +1,29 @@
+{
+  "id": 1034,
+  "lastUpdated": "2025-02-27T04:08:07.097Z",
+  "agency": "House",
+  "description": "Concerning nonopioid drugs for the treatment of pain.",
+  "introducedDate": "2025-01-13T08:00:00.000Z",
+  "status": "First reading, referred to Health Care & Wellness.",
+  "actionDate": "2025-01-13T08:00:00.000Z",
+  "sponsors": [
+    "Ortiz-Self",
+    "Peterson",
+    "Simmons",
+    "Kloba",
+    "Ormsby",
+    "Lekanoff",
+    "Donaghy",
+    "Hill"
+  ],
+  "billDocuments": [
+    {
+      "name": "1034",
+      "description": "House Bill 1034",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1034.htm",
+      "createdDate": "2024-12-11T19:07:45.937Z"
+    }
+  ],
+  "billReports": [],
+  "billAmendments": []
+}

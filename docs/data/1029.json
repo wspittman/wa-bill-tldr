@@ -1,0 +1,25 @@
+{
+  "id": 1029,
+  "lastUpdated": "2025-02-27T04:08:01.727Z",
+  "agency": "House",
+  "description": "Concerning 3D-printed building construction.",
+  "introducedDate": "2025-01-13T08:00:00.000Z",
+  "status": "First reading, referred to Local Government.",
+  "actionDate": "2025-01-13T08:00:00.000Z",
+  "sponsors": [
+    "Shavers",
+    "Reed",
+    "Peterson",
+    "Wylie"
+  ],
+  "billDocuments": [
+    {
+      "name": "1029",
+      "description": "House Bill 1029",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1029.htm",
+      "createdDate": "2024-12-10T19:33:06.827Z"
+    }
+  ],
+  "billReports": [],
+  "billAmendments": []
+}
