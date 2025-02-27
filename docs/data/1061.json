@@ -1,0 +1,29 @@
+{
+  "id": 1061,
+  "lastUpdated": "2025-02-27T04:28:16.188Z",
+  "agency": "House",
+  "description": "Providing additional parking flexibility in residential neighborhoods.",
+  "introducedDate": "2025-01-13T08:00:00.000Z",
+  "status": "Placed on second reading by Rules Committee.",
+  "actionDate": "2025-02-18T08:00:00.000Z",
+  "sponsors": [
+    "Low",
+    "Jacobsen"
+  ],
+  "billDocuments": [
+    {
+      "name": "1061",
+      "description": "House Bill 1061",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1061.htm",
+      "createdDate": "2024-12-13T19:36:29.533Z"
+    },
+    {
+      "name": "1061-S",
+      "description": "Substitute House Bill 1061 as Recommended by Transportation",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1061-S.htm",
+      "createdDate": "2025-01-31T17:52:08.830Z"
+    }
+  ],
+  "billReports": [],
+  "billAmendments": []
+}

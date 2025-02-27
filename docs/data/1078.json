@@ -1,0 +1,28 @@
+{
+  "id": 1078,
+  "lastUpdated": "2025-02-27T04:29:17.849Z",
+  "agency": "House",
+  "description": "Concerning pet insurance.",
+  "introducedDate": "2025-01-13T08:00:00.000Z",
+  "status": "First reading, referred to Consumer Protection & Business.",
+  "actionDate": "2025-01-13T08:00:00.000Z",
+  "sponsors": [
+    "Walen",
+    "Ryu",
+    "Leavitt",
+    "Callan",
+    "Farivar",
+    "Berg",
+    "Donaghy"
+  ],
+  "billDocuments": [
+    {
+      "name": "1078",
+      "description": "House Bill 1078",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1078.htm",
+      "createdDate": "2024-12-16T19:42:33.120Z"
+    }
+  ],
+  "billReports": [],
+  "billAmendments": []
+}

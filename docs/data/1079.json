@@ -1,0 +1,38 @@
+{
+  "id": 1079,
+  "lastUpdated": "2025-02-27T04:29:18.207Z",
+  "agency": "House",
+  "description": "Supporting remote testing options for students enrolled in online school programs.",
+  "introducedDate": "2025-01-13T08:00:00.000Z",
+  "status": "Referred to Rules 2 Review.",
+  "actionDate": "2025-02-20T08:00:00.000Z",
+  "sponsors": [
+    "Ortiz-Self",
+    "Rude",
+    "McEntire",
+    "Reed",
+    "Shavers",
+    "Callan",
+    "Simmons",
+    "Rule",
+    "Nance",
+    "Berg",
+    "Reeves"
+  ],
+  "billDocuments": [
+    {
+      "name": "1079",
+      "description": "House Bill 1079",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1079.htm",
+      "createdDate": "2024-12-16T19:42:34.087Z"
+    },
+    {
+      "name": "1079-S",
+      "description": "Substitute House Bill 1079 as Recommended by Education",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1079-S.htm",
+      "createdDate": "2025-02-19T16:36:06.580Z"
+    }
+  ],
+  "billReports": [],
+  "billAmendments": []
+}

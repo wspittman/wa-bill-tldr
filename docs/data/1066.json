@@ -1,0 +1,31 @@
+{
+  "id": 1066,
+  "lastUpdated": "2025-02-27T04:28:36.276Z",
+  "agency": "House",
+  "description": "Creating a data dashboard to track use of regulated substances.",
+  "introducedDate": "2025-01-13T08:00:00.000Z",
+  "status": "1st substitute bill substituted.",
+  "actionDate": "2025-02-12T08:00:00.000Z",
+  "sponsors": [
+    "Reeves",
+    "Morgan",
+    "Wylie",
+    "Davis"
+  ],
+  "billDocuments": [
+    {
+      "name": "1066",
+      "description": "House Bill 1066",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1066.htm",
+      "createdDate": "2024-12-13T19:36:33.810Z"
+    },
+    {
+      "name": "1066-S",
+      "description": "Substitute House Bill 1066 as Recommended by Consumer Protection & Business",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1066-S.htm",
+      "createdDate": "2025-01-31T16:06:18.540Z"
+    }
+  ],
+  "billReports": [],
+  "billAmendments": []
+}

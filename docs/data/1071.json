@@ -1,0 +1,44 @@
+{
+  "id": 1071,
+  "lastUpdated": "2025-02-27T04:28:48.122Z",
+  "agency": "House",
+  "description": "Implementing strategies to achieve higher recycling rates within Washington's existing solid waste management system.",
+  "introducedDate": "2025-01-13T08:00:00.000Z",
+  "status": "Referred to Appropriations.",
+  "actionDate": "2025-02-14T08:00:00.000Z",
+  "sponsors": [
+    "Fey",
+    "Leavitt",
+    "Walen",
+    "Bronoske",
+    "Reeves",
+    "Barkis",
+    "Waters",
+    "Callan",
+    "Thai",
+    "Berg",
+    "Low",
+    "Schmidt",
+    "Rule",
+    "Goodman",
+    "Pollet",
+    "Lekanoff",
+    "Salahuddin"
+  ],
+  "billDocuments": [
+    {
+      "name": "1071",
+      "description": "House Bill 1071",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1071.htm",
+      "createdDate": "2024-12-16T19:42:26.800Z"
+    },
+    {
+      "name": "1071-S",
+      "description": "Substitute House Bill 1071 as Recommended by Environment & Energy",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1071-S.htm",
+      "createdDate": "2025-02-13T20:01:49.620Z"
+    }
+  ],
+  "billReports": [],
+  "billAmendments": []
+}

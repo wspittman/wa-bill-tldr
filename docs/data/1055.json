@@ -1,0 +1,27 @@
+{
+  "id": 1055,
+  "lastUpdated": "2025-02-27T04:27:53.750Z",
+  "agency": "House",
+  "description": "Enhancing access to public records.",
+  "introducedDate": "2025-01-13T08:00:00.000Z",
+  "status": "Referred to Appropriations.",
+  "actionDate": "2025-02-11T08:00:00.000Z",
+  "sponsors": [
+    "Abbarno",
+    "Low",
+    "Leavitt",
+    "Penner",
+    "Marshall",
+    "Pollet"
+  ],
+  "billDocuments": [
+    {
+      "name": "1055",
+      "description": "House Bill 1055",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1055.htm",
+      "createdDate": "2024-12-12T22:41:08.007Z"
+    }
+  ],
+  "billReports": [],
+  "billAmendments": []
+}

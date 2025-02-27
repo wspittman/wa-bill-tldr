@@ -59,9 +59,11 @@ PROCESS:
 
 3. SUMMARIZE the key changes
   - Start a section with the heading "### Key Changes"
+  - Focus on changes to the substantive content of the bill
+  - Ignore changes to the bill title or identifiers. Ignore "SUBSTITUTE HOUSE BILL 1234". Ignore "H-1234.5"
+  - Ignore changes to the bill's listed sponsors. Ignore the sponsor list being replaced with a committee name.
+  - Ignore changes to bill reading dates. Ignore "READ FIRST TIME".
   - Group the changes into categories with "####" subheadings
-  - Ignore the bill title or identifiers changing
-  - Ignore the bill's listed sponsors changing
   - If there are multiple changes in a category, format category content using "-" bullet points, with 4-space indentation.
   - Be specific but concise
   - Write as much as necessary to capture the essence of the changes

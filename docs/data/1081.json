@@ -1,0 +1,34 @@
+{
+  "id": 1081,
+  "lastUpdated": "2025-02-27T04:29:27.116Z",
+  "agency": "House",
+  "description": "Establishing consumer protections for owners of solicited real estate.",
+  "introducedDate": "2025-01-13T08:00:00.000Z",
+  "status": "Referred to Rules 2 Review.",
+  "actionDate": "2025-02-21T08:00:00.000Z",
+  "sponsors": [
+    "Donaghy",
+    "Connors",
+    "Ryu",
+    "Taylor",
+    "Fosse",
+    "Kloba",
+    "Reeves"
+  ],
+  "billDocuments": [
+    {
+      "name": "1081",
+      "description": "House Bill 1081",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1081.htm",
+      "createdDate": "2024-12-16T19:42:45.360Z"
+    },
+    {
+      "name": "1081-S",
+      "description": "Substitute House Bill 1081 as Recommended by Consumer Protection & Business",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1081-S.htm",
+      "createdDate": "2025-02-20T23:51:16.210Z"
+    }
+  ],
+  "billReports": [],
+  "billAmendments": []
+}
