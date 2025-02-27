@@ -1,0 +1,38 @@
+{
+  "id": 1023,
+  "lastUpdated": "2025-02-27T00:51:55.764Z",
+  "agency": "House",
+  "description": "Adopting the cosmetology licensure compact.",
+  "introducedDate": "2025-01-13T08:00:00.000Z",
+  "status": "Referred to Rules 2 Review.",
+  "actionDate": "2025-02-12T08:00:00.000Z",
+  "sponsors": [
+    "Ryu",
+    "Leavitt",
+    "Schmidt",
+    "Jacobsen",
+    "Reed",
+    "Eslick",
+    "Doglio",
+    "Simmons",
+    "Berg",
+    "Reeves",
+    "Donaghy"
+  ],
+  "billDocuments": [
+    {
+      "name": "1023",
+      "description": "House Bill 1023",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1023.htm",
+      "createdDate": "2024-12-09T19:42:57.160Z"
+    },
+    {
+      "name": "1023-S",
+      "description": "Substitute House Bill 1023 as Recommended by Appropriations",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1023-S.htm",
+      "createdDate": "2025-02-11T16:10:12.783Z"
+    }
+  ],
+  "billReports": [],
+  "billAmendments": []
+}

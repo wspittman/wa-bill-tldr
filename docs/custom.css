@@ -58,7 +58,7 @@
   border-bottom: 2px solid var(--border);
 }
 
-.view-toggle button {
+button.view-tab {
   background: none;
   border: 2px solid transparent;
   border-bottom: none;
@@ -67,12 +67,12 @@
   color: var(--text);
 }
 
-.view-toggle button:hover {
+button.view-tab:hover {
   background: var(--accent-bg);
   border-color: var(--border);
 }
 
-.view-toggle button.active {
+button.view-tab.active {
   background: var(--bg);
   border-color: var(--border);
 }

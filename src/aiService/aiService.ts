@@ -23,8 +23,8 @@ PROCESS:
 3. SUMMARIZE the key provisions
   - Start a section with the heading "### Key Provisions"
   - Group the provisions into categories with "####" subheadings
-  - Do NOT include a "Definitions" category
-  - Format category content using "-" bullet points, with 4-space indentation.
+  - Do NOT include a category about "Definitions"
+  - If there are multiple changes in a category, format category content using "-" bullet points, with 4-space indentation.
   - Be specific but concise
   - Write as much as necessary to capture the essence of the document
 
@@ -60,7 +60,9 @@ PROCESS:
 3. SUMMARIZE the key changes
   - Start a section with the heading "### Key Changes"
   - Group the changes into categories with "####" subheadings
-  - Format category content using "-" bullet points, with 4-space indentation.
+  - Ignore the bill title or identifiers changing
+  - Ignore the bill's listed sponsors changing
+  - If there are multiple changes in a category, format category content using "-" bullet points, with 4-space indentation.
   - Be specific but concise
   - Write as much as necessary to capture the essence of the changes
 `;
