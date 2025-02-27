@@ -57,7 +57,12 @@
         <h1><span>🏛</span> WA Bill TL;DR</h1>
       </a>
       <div class="search-container">
-        <input type="text" id="billId" placeholder="Enter Bill Number" />
+        <input
+          type="text"
+          id="billId"
+          placeholder="Enter Bill Number"
+          onkeypress="onEnter(event, findBill)"
+        />
         <button onclick="findBill()">Find</button>
       </div>
     </header>
