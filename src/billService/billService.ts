@@ -9,8 +9,9 @@ import {
   writeBillFull,
   writeBills,
   writeBillSummary,
-} from "./billData";
-import type { Bill, BillDoc, BillFull, BillSummary } from "./types";
+} from "./billStorage";
+import type { Bill, BillFull, BillSummary } from "./types";
+import { wslToBill, wslToBillFull } from "./wslToBill";
 
 class BillService {
   private bills: Map<number, Bill> = new Map();
@@ -41,37 +42,19 @@ class BillService {
     amendments: LegislativeDocument[]
   ): Promise<BillFull | undefined> {
     if (!this.initialized) throw new Error("Service not initialized");
-    if (!legislation.length) return;
 
-    // If multiple, get the earliest one
-    const leg = legislation.reduce((a, b) =>
-      a.IntroducedDate < b.IntroducedDate ? a : b
-    );
-    const id = leg.BillNumber;
+    const id = legislation[0].BillNumber;
+    const bill = wslToBill(id, legislation, sponsors);
 
-    const bill: Bill = {
-      id,
-      lastUpdated: new Date().toISOString(),
-      agency: leg.OriginalAgency,
-      description: leg.LongDescription ?? "",
-      introducedDate: leg.IntroducedDate.toISOString(),
-      status: leg.CurrentStatus?.HistoryLine ?? "",
-      actionDate: leg.CurrentStatus?.ActionDate.toISOString() ?? "",
-      sponsors: sponsors.map((s) => s.Name ?? String(s.Id)),
-    };
+    if (!bill) return;
 
-    const newBill: BillFull = {
-      ...bill,
-      billDocuments: documents.map(formBillDoc),
-      billReports: billReports.map(formBillDoc),
-      billAmendments: amendments.map(formBillDoc),
-    };
+    const billFull = wslToBillFull(bill, documents, billReports, amendments);
 
     this.bills.set(id, bill);
     this.modified = true;
-    await writeBillFull(id, newBill);
+    await writeBillFull(id, billFull);
 
-    return newBill;
+    return billFull;
   }
 
   async getBillSummary(id: number): Promise<BillSummary> {
@@ -102,17 +85,3 @@ class BillService {
 }
 
 export const billService = new BillService();
-
-function formBillDoc({
-  Name: name = "",
-  LongFriendlyName: description = "",
-  HtmUrl: url = "",
-  HtmCreateDate: createdDate,
-}: LegislativeDocument): BillDoc {
-  return {
-    name,
-    description,
-    url,
-    createdDate: createdDate.toISOString(),
-  };
-}
