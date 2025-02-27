@@ -369,5 +369,124 @@
       "Peterson",
       "Wylie"
     ]
+  },
+  {
+    "id": 1019,
+    "lastUpdated": "2025-02-27T00:51:55.712Z",
+    "agency": "House",
+    "description": "Concerning tax incentives for farmers.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": "First reading, referred to Finance.",
+    "actionDate": "2025-01-13T08:00:00.000Z",
+    "sponsors": [
+      "Shavers",
+      "Wylie",
+      "Kloba",
+      "Fosse",
+      "Reeves"
+    ]
+  },
+  {
+    "id": 1020,
+    "lastUpdated": "2025-02-27T00:51:55.701Z",
+    "agency": "House",
+    "description": "Increasing the accessibility of academic reengagement opportunities for eligible students.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": "First reading, referred to Education.",
+    "actionDate": "2025-01-13T08:00:00.000Z",
+    "sponsors": [
+      "Shavers",
+      "Reed",
+      "Fosse",
+      "Pollet",
+      "Davis"
+    ]
+  },
+  {
+    "id": 1021,
+    "lastUpdated": "2025-02-27T00:51:55.783Z",
+    "agency": "House",
+    "description": "Promoting educational stability for children of military families.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": "First reading, referred to Education.",
+    "actionDate": "2025-01-13T08:00:00.000Z",
+    "sponsors": [
+      "Shavers",
+      "Ryu",
+      "Leavitt",
+      "Callan",
+      "Timmons",
+      "Simmons",
+      "Peterson",
+      "Reeves",
+      "Donaghy"
+    ]
+  },
+  {
+    "id": 1022,
+    "lastUpdated": "2025-02-27T00:51:55.773Z",
+    "agency": "House",
+    "description": "Creating a homes for heroes program.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": "Referred to Capital Budget.",
+    "actionDate": "2025-01-20T08:00:00.000Z",
+    "sponsors": [
+      "Connors",
+      "McClintock",
+      "Low",
+      "Barkis",
+      "Schmidt",
+      "Marshall",
+      "Taylor",
+      "Barnard",
+      "Klicker",
+      "Reed",
+      "Alvarado",
+      "Shavers",
+      "Eslick",
+      "Fosse",
+      "Simmons",
+      "Peterson",
+      "Reeves"
+    ]
+  },
+  {
+    "id": 1023,
+    "lastUpdated": "2025-02-27T00:51:55.764Z",
+    "agency": "House",
+    "description": "Adopting the cosmetology licensure compact.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": "Referred to Rules 2 Review.",
+    "actionDate": "2025-02-12T08:00:00.000Z",
+    "sponsors": [
+      "Ryu",
+      "Leavitt",
+      "Schmidt",
+      "Jacobsen",
+      "Reed",
+      "Eslick",
+      "Doglio",
+      "Simmons",
+      "Berg",
+      "Reeves",
+      "Donaghy"
+    ]
+  },
+  {
+    "id": 1024,
+    "lastUpdated": "2025-02-27T00:52:08.561Z",
+    "agency": "House",
+    "description": "Concerning the leasing authority of the state parks and recreation commission at St. Edward State Park.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": "Referred to Rules 2 Review.",
+    "actionDate": "2025-02-21T08:00:00.000Z",
+    "sponsors": [
+      "Kloba",
+      "Duerr",
+      "Ryu",
+      "Berry",
+      "Pollet",
+      "Davis"
+    ]
   }
 ]

@@ -1,0 +1,39 @@
+{
+  "id": 1024,
+  "lastUpdated": "2025-02-27T00:52:08.561Z",
+  "agency": "House",
+  "description": "Concerning the leasing authority of the state parks and recreation commission at St. Edward State Park.",
+  "introducedDate": "2025-01-13T08:00:00.000Z",
+  "status": "Referred to Rules 2 Review.",
+  "actionDate": "2025-02-21T08:00:00.000Z",
+  "sponsors": [
+    "Kloba",
+    "Duerr",
+    "Ryu",
+    "Berry",
+    "Pollet",
+    "Davis"
+  ],
+  "billDocuments": [
+    {
+      "name": "1024",
+      "description": "House Bill 1024",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1024.htm",
+      "createdDate": "2024-12-09T19:42:58.780Z"
+    },
+    {
+      "name": "1024-S",
+      "description": "Substitute House Bill 1024 as Recommended by Environment & Energy",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1024-S.htm",
+      "createdDate": "2025-01-30T16:07:01.423Z"
+    },
+    {
+      "name": "1024-S2",
+      "description": "Second Substitute House Bill 1024 as Recommended by Capital Budget",
+      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1024-S2.htm",
+      "createdDate": "2025-02-21T22:02:56.450Z"
+    }
+  ],
+  "billReports": [],
+  "billAmendments": []
+}
