@@ -11,7 +11,7 @@ window.onload = async function () {
       const main = document.querySelector("main");
       main.innerHTML = `
         ${renderMetaSection(bill)}
-        ${renderViewSection(bill.id, summary.documents)}
+        ${renderViewSection(bill.id, bill.billDocuments, summary.documents)}
       `;
     } catch (error) {
       renderError(billId, error.message);
@@ -74,34 +74,68 @@ function renderMeta(name, value) {
   return `<p><strong>${name}:</strong> ${value}</p>`;
 }
 
-function renderViewSection(id, documents) {
+function renderViewSection(id, billDocuments, documents) {
+  const idString = String(id);
+  const components = billDocuments.map((billDoc) =>
+    renderViewComponents(
+      billDoc,
+      documents[billDoc.name],
+      billDoc.name === idString
+    )
+  );
+
   return `
     <div class="view-toggle" role="tablist">
-      ${renderViewTab("Summary", true)}
-      ${renderViewTab("Original")}
+      ${components.flatMap((c) => c.buttons).join("\n")}
     </div>
-    ${renderViewContent("Summary", documents[id], true, true)}
-    ${renderViewContent("Original", documents[id])}
+    ${components.flatMap((c) => c.contents).join("\n")}
   `;
 }
 
-function renderViewTab(name, isDefault = false) {
-  return `<button id="${name}Btn" role="tab" aria-selected="${isDefault}" aria-controls="${name}View" onclick="toggleView('${name}')" class="view-tab${
-    isDefault ? " active" : ""
-  }">${name}</button>`;
+function renderViewComponents({ name, description }, document, isDefault) {
+  const sid = `${name}_summary`;
+  const oid = `${name}_original`;
+  return {
+    buttons: [
+      renderViewTab(sid, `${name} Summary`, isDefault),
+      renderViewTab(oid, `${name} Original`),
+    ],
+    contents: [
+      renderViewContent(
+        sid,
+        `Summary: ${description}`,
+        document.summary,
+        true,
+        isDefault
+      ),
+      renderViewContent(oid, `Original: ${description}`, document.original),
+    ],
+  };
 }
 
-function renderViewContent(name, document, isAI = false, isDefault = false) {
+function renderViewTab(tabId, tabDisplay, isDefault = false) {
+  return `<button id="${tabId}Btn" role="tab" aria-selected="${isDefault}" aria-controls="${tabId}View" onclick="toggleView('${tabId}')" class="view-tab${
+    isDefault ? " active" : ""
+  }">${tabDisplay}</button>`;
+}
+
+function renderViewContent(
+  tabId,
+  tabDisplay,
+  html,
+  isAI = false,
+  isDefault = false
+) {
   const disclaimer = isAI
     ? "<i>AI-Generated Summary - May Contain Errors. Check Official Text.</i>"
     : "";
   return `
-    <div id="${name}View" role="tabpanel" aria-labelledby="${name}Btn" style="display: ${
+    <div id="${tabId}View" role="tabpanel" aria-labelledby="${tabId}Btn" style="display: ${
     isDefault ? "block" : "none"
   }; overflow: auto;">
-      <h2>${name}</h2>
+      <h2>${tabDisplay}</h2>
       ${disclaimer}
-      ${document[name.toLowerCase()]}
+      ${html}
     </div>
   `;
 }
