@@ -13,7 +13,7 @@ import {
 import type { Bill, BillFull, BillSummary } from "./types";
 import { wslToBill, wslToBillFull } from "./wslToBill";
 
-class BillService {
+export class BillService {
   private bills: Map<number, Bill> = new Map();
   private modified: boolean = false;
   private initialized: boolean = false;
