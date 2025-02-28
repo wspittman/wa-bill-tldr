@@ -1,4 +1,4 @@
-import { wslWebService } from "../wslWebService/wslWebService";
+import { wslWebService } from "./wslWebService/wslWebService";
 
 const biennium = "2025-26";
 const year = biennium.slice(0, 4);

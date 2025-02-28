@@ -5,7 +5,7 @@ import type {
 } from "../wslWebService/types/models";
 import type { Bill, BillDoc, BillFull } from "./types";
 
-export function wslToBill(
+export function toBill(
   id: number,
   legislation: Legislation[],
   sponsors: Sponsor[]
@@ -29,7 +29,7 @@ export function wslToBill(
   };
 }
 
-export function wslToBillFull(
+export function toBillFull(
   bill: Bill,
   billDocuments: LegislativeDocument[],
   billReports: LegislativeDocument[],
@@ -37,13 +37,13 @@ export function wslToBillFull(
 ): BillFull {
   return {
     ...bill,
-    billDocuments: billDocuments.map(wslToBillDoc),
-    billReports: billReports.map(wslToBillDoc),
-    billAmendments: billAmendments.map(wslToBillDoc),
+    billDocuments: billDocuments.map(toBillDoc),
+    billReports: billReports.map(toBillDoc),
+    billAmendments: billAmendments.map(toBillDoc),
   };
 }
 
-function wslToBillDoc({
+function toBillDoc({
   Name: name = "",
   LongFriendlyName: description = "",
   HtmUrl: url = "",
@@ -54,5 +54,14 @@ function wslToBillDoc({
     description,
     url,
     createdDate: createdDate.toISOString(),
+  };
+}
+
+export function toBlankBillSummary(id: number) {
+  return {
+    id,
+    documents: {},
+    reports: {},
+    amendments: {},
   };
 }

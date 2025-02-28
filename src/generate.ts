@@ -1,34 +1,22 @@
 import { aiService } from "./aiService/aiService";
-import {
-  readBills,
-  readBillSummary,
-  writeBillFull,
-  writeBills,
-  writeBillSummary,
-} from "./bills/billStorage";
-import type {
-  Bill,
-  BillDoc,
-  BillFull,
-  BillSummary,
-  DocSummary,
-} from "./bills/types";
+import { Storage } from "./storage";
+import { toBill, toBillFull } from "./types/toType";
+import type { Bill, BillDoc, BillFull, DocSummary } from "./types/types";
+import { asyncBatch } from "./utils/asyncBatch";
+import { markdownToHtml } from "./utils/html";
+import { logger } from "./utils/logger";
 import {
   getBillInfo,
   getLastActionDate,
   getLegislationIds,
-} from "./bills/wslHelpers";
-import { wslToBill, wslToBillFull } from "./bills/wslToBill";
-import { asyncBatch } from "./utils/asyncBatch";
-import { markdownToHtml } from "./utils/html";
-import { logger } from "./utils/logger";
+} from "./wslHelpers";
 
 const billMap = new Map<number, Bill>();
 let modified = false;
 
 export async function initialize() {
   logHeader("WA-Bill-TLDR Initialize");
-  const bills = await readBills();
+  const bills = await Storage.readBills();
   for (const bill of bills) {
     billMap.set(bill.id, bill);
   }
@@ -38,7 +26,7 @@ export async function finalize() {
   logHeader("Finalize");
   if (modified) {
     const bills = Array.from(billMap.values()).sort((a, b) => a.id - b.id);
-    await writeBills(bills);
+    await Storage.writeBills(bills);
   }
   aiService.logAggregation();
   logHeader("WA-Bill-TLDR Complete");
@@ -57,8 +45,7 @@ export async function findOutdatedIds(): Promise<number[]> {
 
   // Sequential execution with for...of (be kind to WSL's servers)
   for (const id of ids) {
-    const lastUpdated = billMap.get(id)?.lastUpdated;
-    const knownDate = lastUpdated ? new Date(lastUpdated) : undefined;
+    const knownDate = getKnownDate(id);
 
     if (!knownDate) {
       logger.debug(`Unknown bill ${id}`);
@@ -91,27 +78,23 @@ export async function updateBills(ids: number[]) {
 async function updateBill(id: number) {
   logger.info(`Updating bill ${id}`);
   const { legislation, sponsors, billDoc } = await getBillInfo(id);
-
-  const bill = wslToBill(id, legislation, sponsors);
+  const bill = toBill(id, legislation, sponsors);
 
   if (!bill) return;
 
-  const billFull = wslToBillFull(bill, billDoc, [], []);
-
   billMap.set(id, bill);
   modified = true;
-  await writeBillFull(id, billFull);
+  const billFull = toBillFull(bill, billDoc, [], []);
+  await Storage.writeBillFull(billFull);
 
   return billFull;
 }
 
 async function summarizeBill(bill: BillFull) {
   logger.info(`Summarizing bill ${bill.id}`);
-  const billSummary = await getBillSummary(bill.id);
-
+  const billSummary = await Storage.readBillSummary(bill.id);
   await addSummaries(bill.id, bill.billDocuments, billSummary.documents);
-
-  await writeBillSummary(billSummary.id, billSummary);
+  await Storage.writeBillSummary(billSummary);
 }
 
 async function addSummaries(
@@ -120,7 +103,6 @@ async function addSummaries(
   docSummaries: Record<string, DocSummary>
 ) {
   const idString = String(id);
-
   const primary = documents.find((doc) => doc.name === idString);
 
   if (primary) {
@@ -161,16 +143,9 @@ async function addSummary(
   }
 }
 
-async function getBillSummary(id: number): Promise<BillSummary> {
-  const summary = await readBillSummary(id);
-  return (
-    summary ?? {
-      id,
-      documents: {},
-      reports: {},
-      amendments: {},
-    }
-  );
+function getKnownDate(id: number) {
+  const lastUpdated = billMap.get(id)?.lastUpdated;
+  return lastUpdated ? new Date(lastUpdated) : undefined;
 }
 
 function logHeader(msg: string) {
