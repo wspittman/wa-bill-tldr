@@ -12,36 +12,30 @@ export interface Bill {
   introducedDate: string;
 
   // From LegislativeStatus section of Legislation
-  status: string;
-  actionDate: string;
+  status: TSString;
 
   // From Sponsors
   sponsors: string[];
+
+  // Generated
+  keywords?: TSString;
 }
 
 export interface BillFull extends Bill {
   // From Documents
-  billDocuments: BillDoc[];
-  billReports: BillDoc[];
-  billAmendments: BillDoc[];
+  document: BillDoc;
+  subDocuments: BillDoc[];
 }
 
 export interface BillDoc {
   name: string;
   description: string;
-  url: string;
-  createdDate: string;
+  url: TSString;
+  original?: TSString;
+  summary?: TSString;
 }
 
-export interface BillSummary {
-  id: number;
-  documents: Record<string, DocSummary>;
-  reports: Record<string, DocSummary>;
-  amendments: Record<string, DocSummary>;
-}
-
-export interface DocSummary {
-  createdDate: string;
-  original: string;
-  summary: string;
+export interface TSString {
+  ts: string;
+  text: string;
 }

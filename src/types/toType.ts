@@ -23,23 +23,28 @@ export function toBill(
     agency: leg.OriginalAgency,
     description: leg.LongDescription ?? "",
     introducedDate: leg.IntroducedDate.toISOString(),
-    status: leg.CurrentStatus?.HistoryLine ?? "",
-    actionDate: leg.CurrentStatus?.ActionDate.toISOString() ?? "",
+    status: {
+      ts: leg.CurrentStatus?.ActionDate.toISOString() ?? "",
+      text: leg.CurrentStatus?.HistoryLine ?? "",
+    },
     sponsors: sponsors.map((s) => s.Name ?? String(s.Id)),
   };
 }
 
 export function toBillFull(
   bill: Bill,
-  billDocuments: LegislativeDocument[],
-  billReports: LegislativeDocument[],
-  billAmendments: LegislativeDocument[]
-): BillFull {
+  billDocuments: LegislativeDocument[]
+): BillFull | undefined {
+  const idString = String(bill.id);
+  const primary = billDocuments.find((doc) => doc.Name === idString);
+  const others = billDocuments.filter((doc) => doc.Name !== idString);
+
+  if (!primary) return;
+
   return {
     ...bill,
-    billDocuments: billDocuments.map(toBillDoc),
-    billReports: billReports.map(toBillDoc),
-    billAmendments: billAmendments.map(toBillDoc),
+    document: toBillDoc(primary),
+    subDocuments: others.map(toBillDoc),
   };
 }
 
@@ -52,16 +57,24 @@ function toBillDoc({
   return {
     name,
     description,
-    url,
-    createdDate: createdDate.toISOString(),
+    url: { ts: createdDate.toISOString(), text: url },
   };
 }
 
-export function toBlankBillSummary(id: number) {
-  return {
-    id,
-    documents: {},
-    reports: {},
-    amendments: {},
-  };
+export function mergeBillDocs(
+  { document, subDocuments }: BillFull,
+  { document: oldDocument, subDocuments: oldSubDocuments }: BillFull
+) {
+  mergeBillDoc(document, oldDocument);
+  for (const doc of subDocuments) {
+    const oldDoc = oldSubDocuments.find(({ name }) => name === doc.name);
+    if (oldDoc) {
+      mergeBillDoc(doc, oldDoc);
+    }
+  }
+}
+
+function mergeBillDoc(base: BillDoc, { original, summary }: BillDoc) {
+  base.original = original;
+  base.summary = summary;
 }

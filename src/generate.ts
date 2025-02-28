@@ -1,32 +1,29 @@
 import { aiService } from "./aiService/aiService";
 import { Storage } from "./storage";
-import { toBill, toBillFull } from "./types/toType";
-import type { Bill, BillDoc, BillFull, DocSummary } from "./types/types";
+import { mergeBillDocs, toBill, toBillFull } from "./types/toType";
+import type { Bill, BillFull, TSString } from "./types/types";
 import { asyncBatch } from "./utils/asyncBatch";
 import { markdownToHtml } from "./utils/html";
 import { logger } from "./utils/logger";
 import {
+  getBillDocInfo,
   getBillInfo,
   getLastActionDate,
   getLegislationIds,
 } from "./wslHelpers";
 
-const billMap = new Map<number, Bill>();
+let billMap = new Map<number, Bill>();
 let modified = false;
 
-export async function initialize() {
+export async function initialize(): Promise<void> {
   logHeader("WA-Bill-TLDR Initialize");
-  const bills = await Storage.readBills();
-  for (const bill of bills) {
-    billMap.set(bill.id, bill);
-  }
+  billMap = await Storage.readBillMap();
 }
 
-export async function finalize() {
+export async function finalize(): Promise<void> {
   logHeader("Finalize");
   if (modified) {
-    const bills = Array.from(billMap.values()).sort((a, b) => a.id - b.id);
-    await Storage.writeBills(bills);
+    await Storage.writeBillMap(billMap);
   }
   aiService.logAggregation();
   logHeader("WA-Bill-TLDR Complete");
@@ -39,7 +36,7 @@ export async function findOutdatedIds(): Promise<number[]> {
   let ids = await getLegislationIds();
 
   // Cut down during development
-  ids = ids.slice(0, 120);
+  ids = ids.slice(0, 10);
 
   logger.info("Bills to check", ids.length);
 
@@ -65,82 +62,132 @@ export async function findOutdatedIds(): Promise<number[]> {
   return outdatedIds;
 }
 
-export async function updateBills(ids: number[]) {
+export async function updateBills(ids: number[]): Promise<void> {
   logHeader("Update Bills");
   await asyncBatch("BillUpdate", ids, async (id) => {
     const bill = await updateBill(id);
-    if (bill) {
-      await summarizeBill(bill);
-    }
+    if (!bill) return;
+
+    const billFull = await updateBillFull(bill);
+    if (!billFull) return;
+
+    await updateOriginalTexts(billFull);
+    await updateDocumentSummary(billFull);
+    await updateSubDocumentsSummary(billFull);
+    await updateKeywords(billFull);
+    bill.keywords = billFull.keywords;
+
+    await Storage.writeBillFull(billFull);
   });
 }
 
-async function updateBill(id: number) {
+async function updateBill(id: number): Promise<Bill | undefined> {
   logger.info(`Updating bill ${id}`);
-  const { legislation, sponsors, billDoc } = await getBillInfo(id);
+  const { legislation, sponsors } = await getBillInfo(id);
   const bill = toBill(id, legislation, sponsors);
 
-  if (!bill) return;
+  if (bill) {
+    billMap.set(id, bill);
+    modified = true;
+  }
 
-  billMap.set(id, bill);
-  modified = true;
-  const billFull = toBillFull(bill, billDoc, [], []);
-  await Storage.writeBillFull(billFull);
+  return bill;
+}
+
+async function updateBillFull(bill: Bill): Promise<BillFull | undefined> {
+  logger.info(`Updating bill full ${bill.id}`);
+
+  const docs = await getBillDocInfo(bill.id);
+  const billFull = toBillFull(bill, docs);
+
+  if (billFull) {
+    const oldBillFull = await Storage.readBillFull(bill.id);
+    if (oldBillFull) {
+      mergeBillDocs(billFull, oldBillFull);
+      billFull.keywords = oldBillFull.keywords;
+    }
+  }
 
   return billFull;
 }
 
-async function summarizeBill(bill: BillFull) {
-  logger.info(`Summarizing bill ${bill.id}`);
-  const billSummary = await Storage.readBillSummary(bill.id);
-  await addSummaries(bill.id, bill.billDocuments, billSummary.documents);
-  await Storage.writeBillSummary(billSummary);
-}
+async function updateOriginalTexts({
+  id,
+  document,
+  subDocuments,
+}: BillFull): Promise<void> {
+  logger.info(`Updating original texts ${id}`);
+  const docs = [document, ...subDocuments];
 
-async function addSummaries(
-  id: number,
-  documents: BillDoc[],
-  docSummaries: Record<string, DocSummary>
-) {
-  const idString = String(id);
-  const primary = documents.find((doc) => doc.name === idString);
-
-  if (primary) {
-    await addSummary(docSummaries, primary, (html) =>
-      aiService.summarize(html)
+  for (const doc of docs) {
+    const { url, original } = doc;
+    doc.original = await createTSString(url, original, async (x) =>
+      (await fetch(x)).text()
     );
-
-    const original = docSummaries[primary.name].original;
-
-    for (const doc of documents) {
-      if (doc.name !== primary.name) {
-        await addSummary(docSummaries, doc, (html) =>
-          aiService.compare(html, original)
-        );
-      }
-    }
   }
 }
 
-async function addSummary(
-  docSummaries: Record<string, DocSummary>,
-  { createdDate, url, name }: BillDoc,
-  fn: (html: string) => Promise<string | undefined>
-) {
-  const docSummary = docSummaries[name];
-  if (!docSummary || createdDate > docSummary.createdDate) {
-    const html = await (await fetch(url)).text();
-    const summary = await fn(html);
+async function updateDocumentSummary({
+  id,
+  document,
+}: BillFull): Promise<void> {
+  logger.info(`Updating document summary ${id}`);
+  const { original, summary } = document;
+  document.summary = await createTSString(original, summary, async (x) =>
+    markdownToHtml((await aiService.summarize(x)) ?? "")
+  );
+}
 
-    if (summary) {
-      const summaryHtml = markdownToHtml(summary);
-      docSummaries[name] = {
-        createdDate,
-        original: html,
-        summary: summaryHtml,
+async function updateSubDocumentsSummary({
+  id,
+  document,
+  subDocuments,
+}: BillFull): Promise<void> {
+  logger.info(`Updating subDocument summary ${id}`);
+  const documentHtml = document.original?.text;
+  if (!documentHtml) return;
+
+  for (const doc of subDocuments) {
+    const { original, summary } = doc;
+    document.summary = await createTSString(original, summary, async (x) =>
+      markdownToHtml((await aiService.compare(x, documentHtml)) ?? "")
+    );
+  }
+}
+
+async function updateKeywords(bill: BillFull): Promise<void> {
+  logger.info(`Updating keywords ${bill.id}`);
+  const { summary } = bill.document;
+
+  if (!summary) return;
+
+  createTSString(
+    summary,
+    bill.keywords,
+    async (x) =>
+      //aiService.getKeywords(summary)
+      ""
+  );
+}
+
+async function createTSString(
+  prime?: TSString,
+  derivative?: TSString,
+  fn?: (primeContent: string) => Promise<string | undefined>
+): Promise<TSString | undefined> {
+  if (requireUpdate(prime, derivative) && fn) {
+    const derivativeContent = await fn(prime!.text);
+    if (derivativeContent) {
+      return {
+        ts: prime!.ts,
+        text: derivativeContent,
       };
     }
   }
+}
+
+function requireUpdate(prime?: TSString, derivative?: TSString) {
+  return prime && (!derivative || derivative.ts < prime.ts);
 }
 
 function getKnownDate(id: number) {

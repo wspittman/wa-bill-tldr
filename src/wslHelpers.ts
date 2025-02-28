@@ -28,6 +28,9 @@ export async function getBillInfo(id: number) {
     // This is different than id
     legislation[0].BillId
   );
-  const billDoc = await wslWebService.getDocuments(biennium, "Bills", id);
-  return { legislation, sponsors, billDoc };
+  return { legislation, sponsors };
+}
+
+export async function getBillDocInfo(id: number) {
+  return wslWebService.getDocuments(biennium, "Bills", id);
 }
