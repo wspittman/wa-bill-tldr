@@ -67,6 +67,28 @@ PROCESS:
   - If there are multiple changes in a category, format category content using "-" bullet points, with 4-space indentation.
   - Be specific but concise
   - Write as much as necessary to capture the essence of the changes
+
+The output should be a summary of the changes in markdown format.
+`;
+
+const keywordPrompt = `
+You are an AI assistant specialized in human web search behavior.
+Your task is to extract keywords from a webpage that summarizes a bill in the Washington State Legislature.
+
+PROCESS:
+
+1. READ the provided JSON object
+  - The JSON object contains two fields:
+    - "html" contains the html for bill summary page
+    - "description" contains the official text description of the bill, which are already used as keywords
+
+2. EXTRACT keywords
+  - Extract the 10 keywords from the html that are most likely to be used in a search query from a user looking for the content.
+  - Ignore words that are common across all bills, such as "bill", "legislation", "state", etc.
+  - Ignore words that duplicate already selected keywords or are variations of already selected keywords.
+  - Ignore words that are already included in the "description" field.
+
+The output should be a list of new keywords as an all-lowercase, space-separated list.
 `;
 
 class AIService {
@@ -84,6 +106,17 @@ class AIService {
       original: originalHtml,
       edited: html,
     });
+  }
+
+  async extractKeywords(
+    html: string,
+    description: string
+  ): Promise<string | undefined> {
+    const result = await proseCompletion("Extract Keywords", keywordPrompt, {
+      html,
+      description,
+    });
+    return result ? result.toLowerCase() : undefined;
   }
 
   logAggregation() {

@@ -164,12 +164,8 @@ async function updateKeywords(bill: BillFull): Promise<void> {
 
   if (!summary) return;
 
-  bill.keywords = await createTSString(
-    summary,
-    bill.keywords,
-    async (x) =>
-      //aiService.getKeywords(summary)
-      "test"
+  bill.keywords = await createTSString(summary, bill.keywords, async (x) =>
+    aiService.extractKeywords(x, bill.description)
   );
 }
 
