@@ -12,6 +12,7 @@ import {
   getLegislationIds,
 } from "./wslHelpers";
 
+const LIMIT = 1;
 let billMap = new Map<number, Bill>();
 let modified = false;
 
@@ -36,7 +37,9 @@ export async function findOutdatedIds(): Promise<number[]> {
   let ids = await getLegislationIds();
 
   // Cut down during development
-  ids = ids.slice(0, 10);
+  if (LIMIT) {
+    ids = ids.slice(0, LIMIT);
+  }
 
   logger.info("Bills to check", ids.length);
 
@@ -161,12 +164,12 @@ async function updateKeywords(bill: BillFull): Promise<void> {
 
   if (!summary) return;
 
-  createTSString(
+  bill.keywords = await createTSString(
     summary,
     bill.keywords,
     async (x) =>
       //aiService.getKeywords(summary)
-      ""
+      "test"
   );
 }
 
@@ -184,6 +187,8 @@ async function createTSString(
       };
     }
   }
+
+  return derivative;
 }
 
 function requireUpdate(prime?: TSString, derivative?: TSString) {
