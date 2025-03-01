@@ -1,0 +1,38 @@
+{
+  "id": 1027,
+  "lastUpdated": "2025-03-01T00:31:09.710Z",
+  "agency": "House",
+  "description": "Concerning housing of inmates in state correctional facilities.",
+  "introducedDate": "2025-01-13T08:00:00.000Z",
+  "status": {
+    "ts": "2025-01-13T08:00:00.000Z",
+    "text": "First reading, referred to Community Safety."
+  },
+  "sponsors": [
+    "Jacobsen",
+    "Marshall",
+    "Burnett",
+    "Couture"
+  ],
+  "document": {
+    "name": "1027",
+    "description": "House Bill 1027",
+    "url": {
+      "ts": "2024-12-10T19:33:04.340Z",
+      "text": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1027.htm"
+    },
+    "original": {
+      "ts": "2024-12-10T19:33:04.340Z",
+      "text": "<!DOCTYPE html ><html><body><div>H-0195.1</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><div style=\"font-weight:bold;text-align:center;\">HOUSE BILL 1027</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><table style=\"width:622px;margin-top:0.1in;\"><tr><td><div style=\"font-weight:bold;\">State of Washington</div></td><td><div style=\"font-weight:bold;\">69th Legislature</div></td><td><div style=\"font-weight:bold;\">2025 Regular Session</div></td></tr></table><div style=\"margin-top:0.1in;\"><span style=\"font-weight:bold;margin-right:0.25in;\">By</span><!-- field: Sponsors -->Representatives Jacobsen, Marshall, Burnett, and Couture<!-- field: --></div><div style=\"margin-top:0.1in;\"><span style=\"margin-right:0.25in;\">Prefiled 12/10/24.</span><span style=\"margin-right:0.25in;\">Read first time 01/13/25.</span><span style=\"margin-right:0.25in;\">Referred to Committee on Community Safety.</span></div><div style=\"text-indent:0.5in;margin-top:0.5in;\"><!-- field: CaptionsTitles -->AN ACT Relating to housing of inmates in state correctional facilities; and adding a new section to chapter  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=72.09'>72.09</a> RCW.<!-- field: --></div><div style=\"margin-top:0.25in;margin-bottom:0.25in;\">BE IT ENACTED BY THE LEGISLATURE OF THE STATE OF WASHINGTON:</div><div style=\"margin-top:0.25in;text-indent:0.5in;\"><!-- field: BeginningSection --><span style=\"text-decoration:underline;\">NEW SECTION.</span><span>  </span><span style=\"font-weight:bold;padding-right:0.1in;\">Sec. 1.  </span>A new section is added to chapter  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=72.09'>72.09</a> RCW to read as follows:<!-- field: --></div><div style=\"text-indent:0.5in;\"><!-- field: Text -->An inmate may not be housed in a correctional facility that primarily houses persons of a different biological sex than that of the inmate if the inmate has previously been convicted of a sex offense as defined in RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=9.94A.030'>9.94A.030</a> against a victim whose biological sex is the same as those persons who are primarily housed in that correctional facility.</div><!-- field: --><div style=\"margin-top:0.1in;font-weight:bold;text-align:center;\">--- END ---</div></body></html>"
+    },
+    "summary": {
+      "ts": "2024-12-10T19:33:04.340Z",
+      "text": "<h3>Purpose</h3>\n<p>The main goal of House Bill 1027 is to regulate the housing of inmates in state correctional facilities based on their biological sex and previous convictions for sex offenses. The bill aims to ensure that inmates who have been convicted of sex offenses against victims of the same biological sex will not be placed in facilities primarily housing individuals of that sex, which is intended to enhance safety and security in correctional environments.</p>\n<h3>Key Provisions</h3>\n<h4>Housing Restrictions</h4>\n<ul>\n<li>An inmate who has previously been convicted of a sex offense against a victim of the same biological sex cannot be housed in a correctional facility that primarily houses persons of that same biological sex.</li>\n</ul>"
+    }
+  },
+  "subDocuments": [],
+  "keywords": {
+    "ts": "2024-12-10T19:33:04.340Z",
+    "text": "regulate housing inmates correctional facilities biological sex convictions sex offenses enhance safety security"
+  }
+}

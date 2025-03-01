@@ -1,0 +1,50 @@
+{
+  "id": 1049,
+  "lastUpdated": "2025-03-01T00:38:02.329Z",
+  "agency": "House",
+  "description": "Increasing the availability of sexual assault nurse examiners.",
+  "introducedDate": "2025-01-13T08:00:00.000Z",
+  "status": {
+    "ts": "2025-01-13T08:00:00.000Z",
+    "text": "First reading, referred to Appropriations."
+  },
+  "sponsors": [
+    "Shavers",
+    "Leavitt",
+    "Berry",
+    "Reed",
+    "Doglio",
+    "Fosse",
+    "Simmons",
+    "Goodman",
+    "Wylie",
+    "Pollet",
+    "Duerr",
+    "Nance",
+    "Davis",
+    "Ormsby",
+    "Reeves",
+    "Hill"
+  ],
+  "document": {
+    "name": "1049",
+    "description": "House Bill 1049",
+    "url": {
+      "ts": "2024-12-12T22:41:03.467Z",
+      "text": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1049.htm"
+    },
+    "original": {
+      "ts": "2024-12-12T22:41:03.467Z",
+      "text": "<!DOCTYPE html ><html><body><div>H-0221.1</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><div style=\"font-weight:bold;text-align:center;\">HOUSE BILL 1049</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><table style=\"width:622px;margin-top:0.1in;\"><tr><td><div style=\"font-weight:bold;\">State of Washington</div></td><td><div style=\"font-weight:bold;\">69th Legislature</div></td><td><div style=\"font-weight:bold;\">2025 Regular Session</div></td></tr></table><div style=\"margin-top:0.1in;\"><span style=\"font-weight:bold;margin-right:0.25in;\">By</span><!-- field: Sponsors -->Representatives Shavers, Leavitt, Berry, Reed, Doglio, Fosse, Simmons, Goodman, Wylie, Pollet, Duerr, Nance, Davis, Ormsby, Reeves, and Hill<!-- field: --></div><div style=\"margin-top:0.1in;\"><span style=\"margin-right:0.25in;\">Prefiled 12/12/24.</span><span style=\"margin-right:0.25in;\">Read first time 01/13/25.</span><span style=\"margin-right:0.25in;\">Referred to Committee on Appropriations.</span></div><div style=\"text-indent:0.5in;margin-top:0.5in;\"><!-- field: CaptionsTitles -->AN ACT Relating to increasing the availability of sexual assault nurse examiners; and adding a new section to chapter  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=43.70'>43.70</a> RCW.<!-- field: --></div><div style=\"margin-top:0.25in;margin-bottom:0.25in;\">BE IT ENACTED BY THE LEGISLATURE OF THE STATE OF WASHINGTON:</div><div style=\"margin-top:0.25in;text-indent:0.5in;\"><!-- field: BeginningSection --><span style=\"text-decoration:underline;\">NEW SECTION.</span><span>  </span><span style=\"font-weight:bold;padding-right:0.1in;\">Sec. 1.  </span>A new section is added to chapter  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=43.70'>43.70</a> RCW to read as follows:<!-- field: --></div><div style=\"text-indent:0.5in;\"><!-- field: Text -->(1) Subject to the availability of amounts appropriated for this specific purpose, the department shall establish a stipend program to defray the out-of-pocket expenses incurred by registered nurses completing the training necessary to become adult/adolescent or pediatric sexual assault nurse examiners.</div><div style=\"text-indent:0.5in;\">(2) The total amount of the stipend for any individual nurse may not exceed $2,500.</div><div style=\"text-indent:0.5in;\">(3) For purposes of this section, \"out-of-pocket expenses\" include:</div><div style=\"text-indent:0.5in;\">(a) Fees, tuition, educational materials, or other charges imposed by the entity providing training;</div><div style=\"text-indent:0.5in;\">(b) Reasonable travel expenses, including air travel, rental car costs, mileage on a personal vehicle, lodging, and meals; and</div><div style=\"text-indent:0.5in;\">(c) Any other expenses deemed appropriate by the department.</div><div style=\"text-indent:0.5in;\">(4) The department may adopt any rules necessary to implement this section.</div><!-- field: --><div style=\"margin-top:0.1in;font-weight:bold;text-align:center;\">--- END ---</div></body></html>"
+    },
+    "summary": {
+      "ts": "2024-12-12T22:41:03.467Z",
+      "text": "<h3>Purpose</h3>\n<p>The purpose of House Bill 1049 is to increase the availability of sexual assault nurse examiners in Washington State. The bill aims to support registered nurses in obtaining the necessary training to become certified in this crucial role. The key change from prior legislation is the establishment of a stipend program to help cover training costs, which is designed to encourage more nurses to enter this field and ultimately improve services for sexual assault survivors.</p>\n<h3>Key Provisions</h3>\n<h4>Stipend Program</h4>\n<ul>\n<li>The Department of Health will create a stipend program for registered nurses who complete training to become adult/adolescent or pediatric sexual assault nurse examiners, contingent on funding.</li>\n<li>Each nurse may receive up to $2,500 to defray out-of-pocket costs related to training.</li>\n<li>Out-of-pocket expenses covered by the stipend may include:<ul>\n<li>Training fees, tuition, educational materials, and other charges imposed by the training provider.</li>\n<li>Reasonable travel expenses such as air travel, rental car costs, mileage on personal vehicles, lodging, and meals.</li>\n<li>Additional expenses deemed appropriate by the Department.</li></ul></li>\n<li>The Department of Health has the authority to adopt rules necessary for implementing this stipend program.</li>\n</ul>"
+    }
+  },
+  "subDocuments": [],
+  "keywords": {
+    "ts": "2024-12-12T22:41:03.467Z",
+    "text": "sexual assault nurse examiners stipend program training costs registered nurses certification educational materials expenses travel lodging meals"
+  }
+}

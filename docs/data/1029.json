@@ -1,0 +1,38 @@
+{
+  "id": 1029,
+  "lastUpdated": "2025-03-01T00:31:09.704Z",
+  "agency": "House",
+  "description": "Concerning 3D-printed building construction.",
+  "introducedDate": "2025-01-13T08:00:00.000Z",
+  "status": {
+    "ts": "2025-01-13T08:00:00.000Z",
+    "text": "First reading, referred to Local Government."
+  },
+  "sponsors": [
+    "Shavers",
+    "Reed",
+    "Peterson",
+    "Wylie"
+  ],
+  "document": {
+    "name": "1029",
+    "description": "House Bill 1029",
+    "url": {
+      "ts": "2024-12-10T19:33:06.827Z",
+      "text": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1029.htm"
+    },
+    "original": {
+      "ts": "2024-12-10T19:33:06.827Z",
+      "text": "<!DOCTYPE html ><html><body><div>H-0210.1</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><div style=\"font-weight:bold;text-align:center;\">HOUSE BILL 1029</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><table style=\"width:622px;margin-top:0.1in;\"><tr><td><div style=\"font-weight:bold;\">State of Washington</div></td><td><div style=\"font-weight:bold;\">69th Legislature</div></td><td><div style=\"font-weight:bold;\">2025 Regular Session</div></td></tr></table><div style=\"margin-top:0.1in;\"><span style=\"font-weight:bold;margin-right:0.25in;\">By</span><!-- field: Sponsors -->Representatives Shavers, Reed, Peterson, and Wylie<!-- field: --></div><div style=\"margin-top:0.1in;\"><span style=\"margin-right:0.25in;\">Prefiled 12/10/24.</span><span style=\"margin-right:0.25in;\">Read first time 01/13/25.</span><span style=\"margin-right:0.25in;\">Referred to Committee on Local Government.</span></div><div style=\"text-indent:0.5in;margin-top:0.5in;\"><!-- field: CaptionsTitles -->AN ACT Relating to 3D-printed building construction; and adding a new section to chapter  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=19.27'>19.27</a> RCW.<!-- field: --></div><div style=\"margin-top:0.25in;margin-bottom:0.25in;\">BE IT ENACTED BY THE LEGISLATURE OF THE STATE OF WASHINGTON:</div><div style=\"margin-top:0.25in;text-indent:0.5in;\"><!-- field: BeginningSection --><span style=\"text-decoration:underline;\">NEW SECTION.</span><span>  </span><span style=\"font-weight:bold;padding-right:0.1in;\">Sec. 1.  </span>A new section is added to chapter  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=19.27'>19.27</a> RCW to read as follows:<!-- field: --></div><div style=\"text-indent:0.5in;\"><!-- field: Text -->(1) Within the adoption cycle for the 2024 Washington state residential code, the state building code council shall amend the Washington state residential code to adopt the 2024 international residential code appendix BM related to 3D-printed building construction.</div><div style=\"text-indent:0.5in;\">(2) Within the adoption cycle for the 2027 Washington state residential code, the state building code council shall amend the Washington state residential code to authorize 3D-printed building construction in the main body of the code rather than in an appendix.</div><!-- field: --><div style=\"margin-top:0.1in;font-weight:bold;text-align:center;\">--- END ---</div></body></html>"
+    },
+    "summary": {
+      "ts": "2024-12-10T19:33:06.827Z",
+      "text": "<h3>Purpose</h3>\n<p>The purpose of House Bill 1029 is to provide a framework for the regulation and adoption of 3D-printed building construction within the state's building codes. The bill mandates updates to the Washington state residential code to include specific provisions for 3D-printed construction, which currently does not have formal recognition in the main body of the code. This aims to modernize building practices and enhance the acceptance of innovative construction technologies.</p>\n<h3>Key Provisions</h3>\n<h4>Amendments to the Washington State Residential Code</h4>\n<ul>\n<li>The state building code council is required to:<ul>\n<li><strong>Amend the 2024 Washington state residential code</strong> to include the 2024 international residential code appendix BM, which pertains to 3D-printed building construction.</li>\n<li><strong>Authorize 3D-printed building construction</strong> in the main body of the Washington state residential code during the adoption cycle for the 2027 residential code, moving it from the appendix into the core regulations.</li></ul></li>\n</ul>"
+    }
+  },
+  "subDocuments": [],
+  "keywords": {
+    "ts": "2024-12-10T19:33:06.827Z",
+    "text": "3d-printed construction building codes residential code council amendments technology adoption"
+  }
+}

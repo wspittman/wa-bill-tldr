@@ -1,0 +1,40 @@
+{
+  "id": 1026,
+  "lastUpdated": "2025-03-01T00:31:09.753Z",
+  "agency": "House",
+  "description": "Protecting spouses by allowing the sharing of benefits under the long-term services and supports trust program.",
+  "introducedDate": "2025-01-13T08:00:00.000Z",
+  "status": {
+    "ts": "2025-01-13T08:00:00.000Z",
+    "text": "First reading, referred to Early Learning & Human Services."
+  },
+  "sponsors": [
+    "Abbarno",
+    "Schmick",
+    "Burnett",
+    "Jacobsen",
+    "Eslick",
+    "McClintock"
+  ],
+  "document": {
+    "name": "1026",
+    "description": "House Bill 1026",
+    "url": {
+      "ts": "2024-12-10T19:33:03.460Z",
+      "text": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1026.htm"
+    },
+    "original": {
+      "ts": "2024-12-10T19:33:03.460Z",
+      "text": "<!DOCTYPE html ><html><body><div>H-0184.1</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><div style=\"font-weight:bold;text-align:center;\">HOUSE BILL 1026</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><table style=\"width:622px;margin-top:0.1in;\"><tr><td><div style=\"font-weight:bold;\">State of Washington</div></td><td><div style=\"font-weight:bold;\">69th Legislature</div></td><td><div style=\"font-weight:bold;\">2025 Regular Session</div></td></tr></table><div style=\"margin-top:0.1in;\"><span style=\"font-weight:bold;margin-right:0.25in;\">By</span><!-- field: Sponsors -->Representatives Abbarno, Schmick, Burnett, Jacobsen, Eslick, and McClintock<!-- field: --></div><div style=\"margin-top:0.1in;\"><span style=\"margin-right:0.25in;\">Prefiled 12/10/24.</span><span style=\"margin-right:0.25in;\">Read first time 01/13/25.</span><span style=\"margin-right:0.25in;\">Referred to Committee on Early Learning &amp; Human Services.</span></div><div style=\"text-indent:0.5in;margin-top:0.5in;\"><!-- field: CaptionsTitles -->AN ACT Relating to protecting spouses by allowing the sharing of benefits under the long-term services and supports trust program; and adding a new section to chapter  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=50B.04'>50B.04</a> RCW.<!-- field: --></div><div style=\"margin-top:0.25in;margin-bottom:0.25in;\">BE IT ENACTED BY THE LEGISLATURE OF THE STATE OF WASHINGTON:</div><div style=\"margin-top:0.25in;text-indent:0.5in;\"><!-- field: BeginningSection --><span style=\"text-decoration:underline;\">NEW SECTION.</span><span>  </span><span style=\"font-weight:bold;padding-right:0.1in;\">Sec. 1.  </span>A new section is added to chapter  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=50B.04'>50B.04</a> RCW to read as follows:<!-- field: --></div><div style=\"text-indent:0.5in;\"><!-- field: Text -->(1) A qualified individual may elect to transfer any or all of the qualified individual's available benefit units to the qualified individual's spouse if the receiving spouse:</div><div style=\"text-indent:0.5in;\">(a)(i) Does not meet the criteria to be a qualified individual under RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=50B.04.050'>50B.04.050</a>; and</div><div style=\"text-indent:0.5in;\">(ii) Following an evaluation, is determined to meet the functional criteria necessary to become an eligible beneficiary as established in RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=50B.04.060'>50B.04.060</a>; or</div><div style=\"text-indent:0.5in;\">(b)(i) Has met the criteria to be a qualified individual under RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=50B.04.050'>50B.04.050</a>;</div><div style=\"text-indent:0.5in;\">(ii) Following an evaluation, is determined to meet the functional criteria necessary to become an eligible beneficiary as established in RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=50B.04.060'>50B.04.060</a>; and</div><div style=\"text-indent:0.5in;\">(iii) Has exhausted the benefit units available to the receiving spouse under the program.</div><div style=\"text-indent:0.5in;\">(2) A qualified individual who transfers benefit units to a spouse shall have the amount of transferred units deducted from the amount of benefit units available to the qualified individual who makes the transfer.</div><!-- field: --><div style=\"margin-top:0.1in;font-weight:bold;text-align:center;\">--- END ---</div></body></html>"
+    },
+    "summary": {
+      "ts": "2024-12-10T19:33:03.460Z",
+      "text": "<h3>Purpose</h3>\n<p>The purpose of House Bill 1026 is to enhance financial protections for spouses within the long-term services and supports trust program. This bill allows qualified individuals to share their available benefit units with their spouses, thereby ensuring that spouses can access necessary support even if they do not directly qualify under existing criteria. The key change is the introduction of a mechanism for benefit unit transfer, which increases the flexibility of the program to accommodate family needs.</p>\n<h3>Key Provisions</h3>\n<h4>Benefit Unit Transfer</h4>\n<ul>\n<li>A qualified individual can transfer any or all of their available benefit units to their spouse under specific conditions:<ul>\n<li>The receiving spouse must either:<ul>\n<li>Not qualify as a \"qualified individual\" under RCW 50B.04.050 and be determined eligible after evaluation; or</li>\n<li>Be a \"qualified individual\" who has met the criteria and has exhausted their own benefit units after evaluation.</li></ul></li></ul></li>\n<li>When benefit units are transferred, the same amount will be deducted from the transferring individual's available benefits.</li>\n</ul>"
+    }
+  },
+  "subDocuments": [],
+  "keywords": {
+    "ts": "2024-12-10T19:33:03.460Z",
+    "text": "enhance financial protections long-term services support program qualified individuals share benefit units mechanism transfer family needs eligibility receiving spouse evaluation exhausted"
+  }
+}

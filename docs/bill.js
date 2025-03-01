@@ -14,7 +14,6 @@ window.onload = async function () {
         ${renderViewSection(bill)}
       `;
     } catch (error) {
-      console.log(error);
       renderError(billId, error.message);
     }
   }

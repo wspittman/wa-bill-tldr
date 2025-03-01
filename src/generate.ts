@@ -12,7 +12,7 @@ import {
   getLegislationIds,
 } from "./wslHelpers";
 
-const LIMIT = 20;
+const LIMIT = 60;
 let billMap = new Map<number, Bill>();
 let modified = false;
 
