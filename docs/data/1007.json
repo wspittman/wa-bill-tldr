@@ -1,0 +1,39 @@
+{
+  "id": 1007,
+  "lastUpdated": "2025-03-01T00:04:23.624Z",
+  "agency": "House",
+  "description": "Concerning requisites of notice in small claims actions.",
+  "introducedDate": "2025-01-13T08:00:00.000Z",
+  "status": {
+    "ts": "2025-02-14T08:00:00.000Z",
+    "text": "First reading, referred to Law & Justice."
+  },
+  "sponsors": [
+    "Low",
+    "Taylor",
+    "Walen",
+    "Eslick",
+    "Goodman"
+  ],
+  "document": {
+    "name": "1007",
+    "description": "House Bill 1007",
+    "url": {
+      "ts": "2024-12-03T20:20:57.547Z",
+      "text": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1007.htm"
+    },
+    "original": {
+      "ts": "2024-12-03T20:20:57.547Z",
+      "text": "<!DOCTYPE html ><html><body><div>H-0106.2</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><div style=\"font-weight:bold;text-align:center;\">HOUSE BILL 1007</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><table style=\"width:622px;margin-top:0.1in;\"><tr><td><div style=\"font-weight:bold;\">State of Washington</div></td><td><div style=\"font-weight:bold;\">69th Legislature</div></td><td><div style=\"font-weight:bold;\">2025 Regular Session</div></td></tr></table><div style=\"margin-top:0.1in;\"><span style=\"font-weight:bold;margin-right:0.25in;\">By</span><!-- field: Sponsors -->Representatives Low, Taylor, Walen, Eslick, and Goodman<!-- field: --></div><div style=\"margin-top:0.1in;\"><span style=\"margin-right:0.25in;\">Prefiled 12/03/24.</span><span style=\"margin-right:0.25in;\">Read first time 01/13/25.</span><span style=\"margin-right:0.25in;\">Referred to Committee on Civil Rights &amp; Judiciary.</span></div><div style=\"text-indent:0.5in;margin-top:0.5in;\"><!-- field: CaptionsTitles -->AN ACT Relating to requisites of notice in small claims actions; and amending RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=12.40.060'>12.40.060</a>.<!-- field: --></div><div style=\"margin-top:0.25in;margin-bottom:0.25in;\">BE IT ENACTED BY THE LEGISLATURE OF THE STATE OF WASHINGTON:</div><div style=\"margin-top:0.25in;text-indent:0.5in;\"><!-- field: BeginningSection --><span style=\"font-weight:bold;padding-right:0.1in;\">Sec. 1.  </span>RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=12.40.060'>12.40.060</a> and 1984 c 258 s 63 are each amended to read as follows:<!-- field: --></div><div style=\"text-indent:0.5in;\"><!-- field: Text -->The notice of claim directed to the defendant shall contain: (1) The name and address of the plaintiff; (2) a brief and concise statement of the nature and amount of the claim; (3) a statement directing and requiring defendant to appear personally in the small claims department at a time certain, which shall not be less than five days from the date of service of the notice; and (4) a statement advising the defendant that in case of his or her failure to appear, judgment ((<span style=\"text-decoration:line-through;\">will</span>))<span style=\"text-decoration:underline;\">may</span> be given against defendant for the amount of the claim.<!-- field: --></div><!-- field: --><div style=\"margin-top:0.1in;font-weight:bold;text-align:center;\">--- END ---</div></body></html>"
+    },
+    "summary": {
+      "ts": "2024-12-03T20:20:57.547Z",
+      "text": "<h3>Purpose</h3>\n<p>The purpose of House Bill 1007 is to modify the requirements for notices sent in small claims actions in Washington State. The main change is the adjustment of the terminology concerning the potential outcomes for defendants who do not appear in court. Previously, the notice stated that a judgment \"will\" be entered against the defendant; this has been revised to state that a judgment \"may\" be given. This change aims to clarify the possible consequences if a defendant fails to appear in small claims court.</p>\n<h3>Key Provisions</h3>\n<h4>Notice Requirements</h4>\n<ul>\n<li>The notice to the defendant must include:<ul>\n<li>The plaintiff's name and address.</li>\n<li>A brief and concise statement summarizing the nature and amount of the claim.</li>\n<li>A directive requiring the defendant to appear in the small claims department at a specific time, which must be at least five days from the date the notice is served.</li>\n<li>A statement advising the defendant that if they fail to appear, a judgment \"may\" be entered against them for the amount of the claim.</li></ul></li>\n</ul>"
+    }
+  },
+  "subDocuments": [],
+  "keywords": {
+    "ts": "2024-12-03T20:20:57.547Z",
+    "text": "modifications small claims actions notices requirements outcomes defendants judgment consequences plaintiffs appearance"
+  }
+}

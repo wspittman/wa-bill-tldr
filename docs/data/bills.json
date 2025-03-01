@@ -23,5 +23,487 @@
       "ts": "2024-12-02T22:22:43.770Z",
       "text": "major violations trafficking drug offenses fentanyl distribution exceptional sentencing aggravated circumstances judicial tools accountability criminal conduct"
     }
+  },
+  {
+    "id": 1001,
+    "lastUpdated": "2025-03-01T00:03:58.115Z",
+    "agency": "House",
+    "description": "Concerning capital projects for the provision of fire protection services.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Capital Budget."
+    },
+    "sponsors": [
+      "Abbarno",
+      "Waters",
+      "Barnard",
+      "Orcutt",
+      "Bronoske",
+      "Caldier"
+    ],
+    "keywords": {
+      "ts": "2024-12-02T22:22:44.507Z",
+      "text": "competitive grant program funding rural counties fire protection infrastructure community health safety project prioritization matching funds reporting requirements"
+    }
+  },
+  {
+    "id": 1002,
+    "lastUpdated": "2025-03-01T00:03:58.087Z",
+    "agency": "House",
+    "description": "Recognizing posttraumatic stress disorder as an occupational disease for county coroners, examiners, and investigative personnel.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-04T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Abbarno",
+      "Rude",
+      "Marshall",
+      "Callan",
+      "Doglio",
+      "Timmons",
+      "Goodman",
+      "Pollet",
+      "Davis",
+      "Scott"
+    ],
+    "keywords": {
+      "ts": "2024-12-02T22:22:45.193Z",
+      "text": "posttraumatic stress disorder protections county coroners psychological examination claims firefighters law enforcement officers public safety telecommunicators occupational disease definition disciplinary actions mental health conditions"
+    }
+  },
+  {
+    "id": 1003,
+    "lastUpdated": "2025-03-01T00:03:58.102Z",
+    "agency": "House",
+    "description": "Addressing service of notice by mail in cases involving forcible entry and forcible and unlawful detainer.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-07T08:00:00.000Z",
+      "text": "First reading, referred to Housing."
+    },
+    "sponsors": [
+      "Abbarno",
+      "Barkis",
+      "Jacobsen",
+      "Connors",
+      "Peterson",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2024-12-02T22:22:45.887Z",
+      "text": "certified mail eviction requirements notice served response regulations jurisdictions premises"
+    }
+  },
+  {
+    "id": 1004,
+    "lastUpdated": "2025-03-01T00:03:58.095Z",
+    "agency": "House",
+    "description": "Increasing the personal property tax exemption.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-27T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Leavitt",
+      "Volz",
+      "Ryu",
+      "Parshley",
+      "Walen",
+      "Schmidt",
+      "Shavers",
+      "Richards",
+      "Paul",
+      "Goodman",
+      "Rule",
+      "Pollet",
+      "Fey",
+      "Reeves"
+    ],
+    "keywords": {
+      "ts": "2024-12-03T20:20:54.857Z",
+      "text": "personal property tax exemption increase individuals qualifying motor vehicles mobile homes assessment corrections attestation january 1 2026"
+    }
+  },
+  {
+    "id": 1005,
+    "lastUpdated": "2025-03-01T00:03:58.066Z",
+    "agency": "House",
+    "description": "Concerning prearrangement funeral services.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-23T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Ryu",
+      "Corry",
+      "Reeves"
+    ],
+    "keywords": {
+      "ts": "2024-12-03T20:20:55.817Z",
+      "text": "prearrangement funeral services trust fund requirements financial provisions refund policies transfer ownership public assistance consumer protection guidelines"
+    }
+  },
+  {
+    "id": 1006,
+    "lastUpdated": "2025-03-01T00:04:23.617Z",
+    "agency": "House",
+    "description": "Regulating service contracts and protection product guarantees.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-31T08:00:00.000Z",
+      "text": "First reading, referred to Business, Financial Services & Trade."
+    },
+    "sponsors": [
+      "Ryu",
+      "McClintock",
+      "Reeves"
+    ],
+    "keywords": {
+      "ts": "2024-12-03T20:20:56.797Z",
+      "text": "enhance regulation service contracts protection product guarantees financial responsibility consumer protection accountability transparency compliance enforcement violations"
+    }
+  },
+  {
+    "id": 1007,
+    "lastUpdated": "2025-03-01T00:04:23.624Z",
+    "agency": "House",
+    "description": "Concerning requisites of notice in small claims actions.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-14T08:00:00.000Z",
+      "text": "First reading, referred to Law & Justice."
+    },
+    "sponsors": [
+      "Low",
+      "Taylor",
+      "Walen",
+      "Eslick",
+      "Goodman"
+    ],
+    "keywords": {
+      "ts": "2024-12-03T20:20:57.547Z",
+      "text": "modifications small claims actions notices requirements outcomes defendants judgment consequences plaintiffs appearance"
+    }
+  },
+  {
+    "id": 1008,
+    "lastUpdated": "2025-03-01T00:04:23.612Z",
+    "agency": "House",
+    "description": "Concerning county local roads.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Local Government."
+    },
+    "sponsors": [
+      "Low",
+      "Barkis",
+      "Eslick"
+    ],
+    "keywords": {
+      "ts": "2024-12-03T20:20:58.460Z",
+      "text": "county local road program trust account preservation improvement project selection criteria collaboration cities matching funds eligibility restrictions infrastructure maintenance"
+    }
+  },
+  {
+    "id": 1009,
+    "lastUpdated": "2025-03-01T00:04:23.636Z",
+    "agency": "House",
+    "description": "Adjusting the membership of the pharmacy quality assurance commission.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-31T08:00:00.000Z",
+      "text": "First reading, referred to Health & Long-Term Care."
+    },
+    "sponsors": [
+      "Low",
+      "Ramel",
+      "Eslick"
+    ],
+    "keywords": {
+      "ts": "2024-12-04T19:42:48.650Z",
+      "text": "membership composition appointment terms pharmacy technician public members governor licensed pharmacists owners operators vacancies resignation disqualification"
+    }
+  },
+  {
+    "id": 1010,
+    "lastUpdated": "2025-03-01T00:17:41.447Z",
+    "agency": "House",
+    "description": "Authorizing accessory dwelling units in rural areas.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Housing."
+    },
+    "sponsors": [
+      "Low",
+      "Leavitt",
+      "Barkis",
+      "Connors",
+      "Jacobsen",
+      "Couture",
+      "Paul",
+      "Timmons",
+      "Wylie",
+      "Ormsby",
+      "Bernbaum",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2024-12-04T19:42:49.580Z",
+      "text": "detached accessory dwelling units housing crisis rural areas construction affordable pathways water supply sewage regulations size design specifications compliance reporting"
+    }
+  },
+  {
+    "id": 1011,
+    "lastUpdated": "2025-03-01T00:17:41.452Z",
+    "agency": "House",
+    "description": "Creating a school safety capital grant program.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Capital Budget."
+    },
+    "sponsors": [
+      "Jacobsen",
+      "Barkis",
+      "Eslick",
+      "McClintock",
+      "Caldier",
+      "Pollet"
+    ],
+    "keywords": {
+      "ts": "2024-12-04T19:42:50.437Z",
+      "text": "school safety capital grant program projects eligibility criteria funding applications administration security vestibules metal detectors fencing lighting crime prevention"
+    }
+  },
+  {
+    "id": 1012,
+    "lastUpdated": "2025-03-01T00:17:41.463Z",
+    "agency": "House",
+    "description": "Authorizing the women's commission to solicit gifts, grants, and endowments from public or private sources.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-31T08:00:00.000Z",
+      "text": "First reading, referred to State Government, Tribal Affairs & Elections."
+    },
+    "sponsors": [
+      "Taylor",
+      "Mena",
+      "Ryu",
+      "Reed",
+      "Macri",
+      "Cortes",
+      "Doglio",
+      "Gregerson",
+      "Ortiz-Self",
+      "Simmons",
+      "Street",
+      "Pollet",
+      "Fey",
+      "Duerr",
+      "Berg",
+      "Ormsby",
+      "Lekanoff",
+      "Parshley",
+      "Reeves",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2024-12-05T22:48:07.943Z",
+      "text": "women's commission funding authority solicit establish relationships equal opportunities projects report regulations community organizations"
+    }
+  },
+  {
+    "id": 1013,
+    "lastUpdated": "2025-03-01T00:17:41.441Z",
+    "agency": "House",
+    "description": "Concerning exemption of certain personnel of the department of social and health services from civil service.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-31T08:00:00.000Z",
+      "text": "First reading, referred to State Government, Tribal Affairs & Elections."
+    },
+    "sponsors": [
+      "Schmidt",
+      "Fosse",
+      "Berry",
+      "Reeves"
+    ],
+    "keywords": {
+      "ts": "2024-12-05T22:48:08.803Z",
+      "text": "amend, civil service, exemptions, flexibility, employment, managerial, executive, leadership, operational, hiring"
+    }
+  },
+  {
+    "id": 1014,
+    "lastUpdated": "2025-03-01T00:17:41.434Z",
+    "agency": "House",
+    "description": "Implementing recommendations of the 2023 child support schedule work group.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-23T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Schmidt",
+      "Walen",
+      "Timmons",
+      "Fey",
+      "Ormsby",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2024-12-05T22:48:10.360Z",
+      "text": "input ai process recommendations 2023 child support schedule work group"
+    }
+  },
+  {
+    "id": 1015,
+    "lastUpdated": "2025-03-01T00:26:41.404Z",
+    "agency": "House",
+    "description": "Concerning energy labeling of residential buildings.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-28T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Duerr",
+      "Ramel",
+      "Ryu",
+      "Berry",
+      "Reed",
+      "Fitzgibbon",
+      "Macri",
+      "Doglio",
+      "Simmons",
+      "Peterson",
+      "Pollet",
+      "Kloba",
+      "Parshley"
+    ],
+    "keywords": {
+      "ts": "2024-12-05T22:48:21.450Z",
+      "text": "energy labeling residential buildings homebuyers performance reports energy efficiency greenhouse gas emissions energy audits financial impact analysis home energy score"
+    }
+  },
+  {
+    "id": 1016,
+    "lastUpdated": "2025-03-01T00:17:49.353Z",
+    "agency": "House",
+    "description": "Providing employer tax incentives for the support of veterans and military families.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Finance."
+    },
+    "sponsors": [
+      "Abbarno",
+      "Shavers",
+      "Leavitt",
+      "Marshall",
+      "Jacobsen",
+      "Eslick",
+      "McClintock",
+      "Callan",
+      "Orcutt",
+      "Caldier"
+    ],
+    "keywords": {
+      "ts": "2024-12-05T22:48:22.537Z",
+      "text": "employer tax incentives hiring veterans military families tax credit wages maximum employee qualified claims conditions"
+    }
+  },
+  {
+    "id": 1017,
+    "lastUpdated": "2025-03-01T00:17:49.374Z",
+    "agency": "House",
+    "description": "Designating kimchi day.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-20T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Ryu",
+      "Mena",
+      "Leavitt",
+      "Berry",
+      "Morgan",
+      "Reed",
+      "Cortes",
+      "Tharinger",
+      "Ortiz-Self",
+      "Simmons",
+      "Peterson",
+      "Duerr",
+      "Gregerson",
+      "Berg",
+      "Ormsby",
+      "Scott",
+      "Reeves",
+      "Donaghy",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2024-12-09T19:42:49.777Z",
+      "text": "november 22nd kimchi cultural heritage health benefits probiotics vitamins stroke cancer diabetes kimjang unescorecognized"
+    }
+  },
+  {
+    "id": 1018,
+    "lastUpdated": "2025-03-01T00:17:49.398Z",
+    "agency": "House",
+    "description": "Adding fusion energy to facilities that may obtain site certification for the purposes of chapter 80.50 RCW.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-07T08:00:00.000Z",
+      "text": "First reading, referred to Environment, Energy & Technology."
+    },
+    "sponsors": [
+      "Shavers",
+      "Ryu",
+      "Barnard",
+      "Reed",
+      "Fitzgibbon",
+      "Leavitt",
+      "Bronoske",
+      "Tharinger",
+      "Gregerson",
+      "Peterson",
+      "Wylie"
+    ],
+    "keywords": {
+      "ts": "2024-12-09T19:42:51.060Z",
+      "text": "fusion energy facilities site certification energy resources innovative solutions licenses registrations radiation control local governments tribal governments modifications"
+    }
+  },
+  {
+    "id": 1019,
+    "lastUpdated": "2025-03-01T00:17:49.344Z",
+    "agency": "House",
+    "description": "Concerning tax incentives for farmers.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Finance."
+    },
+    "sponsors": [
+      "Shavers",
+      "Wylie",
+      "Kloba",
+      "Fosse",
+      "Reeves"
+    ],
+    "keywords": {
+      "ts": "2024-12-09T19:42:52.323Z",
+      "text": "tax incentives farmers conservation programs tax credit agricultural expenditures new equipment infrastructure animal feed soil amendments eligibility"
+    }
   }
 ]

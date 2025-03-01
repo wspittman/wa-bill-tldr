@@ -12,7 +12,7 @@ import {
   getLegislationIds,
 } from "./wslHelpers";
 
-const LIMIT = 1;
+const LIMIT = 20;
 let billMap = new Map<number, Bill>();
 let modified = false;
 
@@ -152,7 +152,7 @@ async function updateSubDocumentsSummary({
 
   for (const doc of subDocuments) {
     const { original, summary } = doc;
-    document.summary = await createTSString(original, summary, async (x) =>
+    doc.summary = await createTSString(original, summary, async (x) =>
       markdownToHtml((await aiService.compare(x, documentHtml)) ?? "")
     );
   }

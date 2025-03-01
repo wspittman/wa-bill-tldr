@@ -14,6 +14,7 @@ window.onload = async function () {
         ${renderViewSection(bill)}
       `;
     } catch (error) {
+      console.log(error);
       renderError(billId, error.message);
     }
   }
@@ -65,7 +66,7 @@ function renderMeta(name, value) {
   return `<p><strong>${name}:</strong> ${value}</p>`;
 }
 
-function renderViewSection({ id, document, subDocuments }) {
+function renderViewSection({ document, subDocuments }) {
   const components = [
     renderViewComponents(document, true),
     ...subDocuments.map((subDoc) => renderViewComponents(subDoc)),

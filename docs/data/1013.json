@@ -1,0 +1,38 @@
+{
+  "id": 1013,
+  "lastUpdated": "2025-03-01T00:17:41.441Z",
+  "agency": "House",
+  "description": "Concerning exemption of certain personnel of the department of social and health services from civil service.",
+  "introducedDate": "2025-01-13T08:00:00.000Z",
+  "status": {
+    "ts": "2025-01-31T08:00:00.000Z",
+    "text": "First reading, referred to State Government, Tribal Affairs & Elections."
+  },
+  "sponsors": [
+    "Schmidt",
+    "Fosse",
+    "Berry",
+    "Reeves"
+  ],
+  "document": {
+    "name": "1013",
+    "description": "House Bill 1013",
+    "url": {
+      "ts": "2024-12-05T22:48:08.803Z",
+      "text": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1013.htm"
+    },
+    "original": {
+      "ts": "2024-12-05T22:48:08.803Z",
+      "text": "<!DOCTYPE html ><html><body><div>Z-0085.1</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><div style=\"font-weight:bold;text-align:center;\">HOUSE BILL 1013</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><table style=\"width:622px;margin-top:0.1in;\"><tr><td><div style=\"font-weight:bold;\">State of Washington</div></td><td><div style=\"font-weight:bold;\">69th Legislature</div></td><td><div style=\"font-weight:bold;\">2025 Regular Session</div></td></tr></table><div style=\"margin-top:0.1in;\"><span style=\"font-weight:bold;margin-right:0.25in;\">By</span><!-- field: Sponsors -->Representatives Schmidt, Fosse, Berry, and Reeves; by request of Department of Social and Health Services<!-- field: --></div><div style=\"margin-top:0.1in;\"><span style=\"margin-right:0.25in;\">Prefiled 12/05/24.</span><span style=\"margin-right:0.25in;\">Read first time 01/13/25.</span><span style=\"margin-right:0.25in;\">Referred to Committee on State Government &amp; Tribal Relations.</span></div><div style=\"text-indent:0.5in;margin-top:0.5in;\"><!-- field: CaptionsTitles -->AN ACT Relating to exemption of certain personnel of the department of social and health services from civil service; and amending RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=41.06.076'>41.06.076</a>.<!-- field: --></div><div style=\"margin-top:0.25in;margin-bottom:0.25in;\">BE IT ENACTED BY THE LEGISLATURE OF THE STATE OF WASHINGTON:</div><div style=\"margin-top:0.25in;text-indent:0.5in;\"><!-- field: BeginningSection --><span style=\"font-weight:bold;padding-right:0.1in;\">Sec. 1.  </span>RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=41.06.076'>41.06.076</a> and 2011 1st sp.s. c 43 s 402 are each amended to read as follows:<!-- field: --></div><div style=\"text-indent:0.5in;\"><!-- field: Text -->In addition to the exemptions set forth in RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=41.06.070'>41.06.070</a>, the provisions of this chapter shall not apply in the department of social and health services to the secretary((<span style=\"text-decoration:line-through;\">;</span>))<span style=\"text-decoration:underline;\">,</span> the secretary's executive assistant, ((<span style=\"text-decoration:line-through;\">if any; not to exceed six assistant secretaries, thirteen division directors, six regional directors; one confidential secretary for each of the above-named officers; not to exceed six bureau chiefs; and all superintendents of institutions of which the average daily population equals or exceeds one hundred residents</span>))<span style=\"text-decoration:underline;\">the chief of staff and deputy chief of staff, assistant secretaries, deputy assistant secretaries, senior directors, division directors, assistant and deputy division directors, regional administrators, district managers, and executive officers and superintendents of institutions, and executive assistants supporting the officers named in this section</span>.<!-- field: --></div><!-- field: --><div style=\"margin-top:0.1in;font-weight:bold;text-align:center;\">--- END ---</div></body></html>"
+    },
+    "summary": {
+      "ts": "2024-12-05T22:48:08.803Z",
+      "text": "<h3>Purpose</h3>\n<p>The purpose of House Bill 1013 is to amend the civil service exemptions for certain personnel within the Washington State Department of Social and Health Services (DSHS). The bill seeks to provide greater flexibility in the employment structure by exempting additional managerial and executive roles from civil service rules, which could facilitate quicker hiring and management processes.</p>\n<p>Key changes from the previous version include the removal of specific limitations on the number of exempt positions, allowing for a broader range of leadership roles to be exempted from civil service requirements.</p>\n<h3>Key Provisions</h3>\n<h4>Exemptions</h4>\n<ul>\n<li>Expands the list of positions within the DSHS that are exempt from civil service rules, including:<ul>\n<li>The chief of staff</li>\n<li>Deputy chief of staff</li>\n<li>Assistant secretaries</li>\n<li>Deputy assistant secretaries</li>\n<li>Senior directors</li>\n<li>Division directors</li>\n<li>Assistant and deputy division directors</li>\n<li>Regional administrators</li>\n<li>District managers</li>\n<li>Executive officers and superintendents of institutions</li>\n<li>Executive assistants supporting the named officers</li></ul></li>\n</ul>\n<p>This amendment aims to streamline the operational capabilities of the DSHS by allowing more flexibility in managing key leadership roles.</p>"
+    }
+  },
+  "subDocuments": [],
+  "keywords": {
+    "ts": "2024-12-05T22:48:08.803Z",
+    "text": "amend, civil service, exemptions, flexibility, employment, managerial, executive, leadership, operational, hiring"
+  }
+}
