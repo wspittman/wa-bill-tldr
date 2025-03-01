@@ -1,11 +1,13 @@
 {
   "id": 1078,
-  "lastUpdated": "2025-02-27T04:29:17.849Z",
+  "lastUpdated": "2025-03-01T01:05:01.518Z",
   "agency": "House",
   "description": "Concerning pet insurance.",
   "introducedDate": "2025-01-13T08:00:00.000Z",
-  "status": "First reading, referred to Consumer Protection & Business.",
-  "actionDate": "2025-01-13T08:00:00.000Z",
+  "status": {
+    "ts": "2025-01-13T08:00:00.000Z",
+    "text": "First reading, referred to Consumer Protection & Business."
+  },
   "sponsors": [
     "Walen",
     "Ryu",
@@ -15,14 +17,25 @@
     "Berg",
     "Donaghy"
   ],
-  "billDocuments": [
-    {
-      "name": "1078",
-      "description": "House Bill 1078",
-      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1078.htm",
-      "createdDate": "2024-12-16T19:42:33.120Z"
+  "document": {
+    "name": "1078",
+    "description": "House Bill 1078",
+    "url": {
+      "ts": "2024-12-16T19:42:33.120Z",
+      "text": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1078.htm"
+    },
+    "original": {
+      "ts": "2024-12-16T19:42:33.120Z",
+      "text": "<!DOCTYPE html ><html><body><div>H-0109.1</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><div style=\"font-weight:bold;text-align:center;\">HOUSE BILL 1078</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><table style=\"width:622px;margin-top:0.1in;\"><tr><td><div style=\"font-weight:bold;\">State of Washington</div></td><td><div style=\"font-weight:bold;\">69th Legislature</div></td><td><div style=\"font-weight:bold;\">2025 Regular Session</div></td></tr></table><div style=\"margin-top:0.1in;\"><span style=\"font-weight:bold;margin-right:0.25in;\">By</span><!-- field: Sponsors -->Representatives Walen, Ryu, Leavitt, Callan, Farivar, Berg, and Donaghy<!-- field: --></div><div style=\"margin-top:0.1in;\"><span style=\"margin-right:0.25in;\">Prefiled 12/16/24.</span><span style=\"margin-right:0.25in;\">Read first time 01/13/25.</span><span style=\"margin-right:0.25in;\">Referred to Committee on Consumer Protection &amp; Business.</span></div><div style=\"text-indent:0.5in;margin-top:0.5in;\"><!-- field: CaptionsTitles -->AN ACT Relating to pet insurance; and amending RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=48.205.050'>48.205.050</a>.<!-- field: --></div><div style=\"margin-top:0.25in;margin-bottom:0.25in;\">BE IT ENACTED BY THE LEGISLATURE OF THE STATE OF WASHINGTON:</div><div style=\"margin-top:0.25in;text-indent:0.5in;\"><!-- field: BeginningSection --><span style=\"font-weight:bold;padding-right:0.1in;\">Sec. 1.  </span>RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=48.205.050'>48.205.050</a> and 2023 c 42 s 5 are each amended to read as follows:<!-- field: --></div><div style=\"text-indent:0.5in;\"><!-- field: Text -->(1) A pet insurer may issue policies that exclude coverage on the basis of one or more preexisting conditions with appropriate disclosure to the consumer. The pet insurer has the burden of proving that the preexisting condition exclusion applies to the condition for which a claim is being made.</div><div style=\"text-indent:0.5in;\">(2)(a) A pet insurer may issue policies that impose waiting periods upon effectuation of the policy that do not exceed 30 days for illnesses or orthopedic conditions not resulting from an accident. Waiting periods for accidents are prohibited. Waiting periods may not be applied to renewals of existing coverage.</div><div style=\"text-indent:0.5in;\">(b) A pet insurer utilizing a waiting period permitted in (a) of this subsection shall include a provision in its policy that allows the waiting periods to be waived upon completion of a medical examination. Pet insurers may require the examination to be conducted by a licensed veterinarian after the purchase of the policy.</div><div style=\"text-indent:0.5in;\">(c) A medical examination under (b) of this subsection must be paid for by the policyholder, unless the policy specifies that the pet insurer will pay for the examination.</div><div style=\"text-indent:0.5in;\">(d) A pet insurer can specify elements to be included as part of the examination and require documentation thereof, provided the specifications do not unreasonably restrict a consumer's ability to waive the waiting periods listed in (a) of this subsection.</div><div style=\"text-indent:0.5in;\">(3) A pet insurer may not require a veterinary examination of the covered pet for the insured to have their policy renewed.</div><div style=\"text-indent:0.5in;\">(4) If a pet insurer includes any prescriptive, wellness, or noninsurance benefits in the policy form, then it is made part of the policy contract and must follow all applicable laws and regulations in the insurance code.</div><div style=\"text-indent:0.5in;\">(5) An insured's eligibility to purchase a pet insurance policy must not be based on participation, or lack of participation, in a separate wellness program.</div><div style=\"text-indent:0.5in;\"><span style=\"text-decoration:underline;\">(6) A pet insurer may not cancel or refuse to renew a pet insurance policy based on any one or more of the following:</span></div><div style=\"text-indent:0.5in;\"><span style=\"text-decoration:underline;\">(a) The covered pet's age; or</span></div><div style=\"text-indent:0.5in;\"><span style=\"text-decoration:underline;\">(b) The detection or development of a health condition during a covered policy period including, but not limited to:</span></div><div style=\"text-indent:0.5in;\"><span style=\"text-decoration:underline;\">(i) A chronic condition;</span></div><div style=\"text-indent:0.5in;\"><span style=\"text-decoration:underline;\">(ii) An orthopedic condition;</span></div><div style=\"text-indent:0.5in;\"><span style=\"text-decoration:underline;\">(iii) A congenital anomaly;</span></div><div style=\"text-indent:0.5in;\"><span style=\"text-decoration:underline;\">(iv) A hereditary disorder; or</span></div><div style=\"text-indent:0.5in;\"><span style=\"text-decoration:underline;\">(v) Any other health condition that might otherwise</span></div><div style=\"text-indent:0pt;\"><span style=\"text-decoration:underline;\">constitute a preexisting condition as defined in RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=48.205.020'>48.205.020</a>.</span></div><div style=\"text-indent:0.5in;\"><span style=\"text-decoration:underline;\">(7) If an insurer ceases writing pet insurance through one affiliated company and moves that business to another affiliated company, current policyholders must receive an offer of insurance from the replacement affiliated company, and the replacement affiliated company may not do any of the following:</span></div><div style=\"text-indent:0.5in;\"><span style=\"text-decoration:underline;\">(a) Impose a waiting period on the new policy;</span></div><div style=\"text-indent:0.5in;\"><span style=\"text-decoration:underline;\">(b) Require a veterinary examination of the covered pet in order to issue or subsequently renew the policy; or</span></div><div style=\"text-indent:0.5in;\"><span style=\"text-decoration:underline;\">(c) Cancel, refuse to issue, or refuse to renew the new pet insurance policy for any reason in subsection (6) of this section.</span><!-- field: --></div><!-- field: --><div style=\"margin-top:0.1in;font-weight:bold;text-align:center;\">--- END ---</div></body></html>"
+    },
+    "summary": {
+      "ts": "2024-12-16T19:42:33.120Z",
+      "text": "<h3>Purpose</h3>\n<p>The purpose of this bill is to amend Washington's pet insurance regulations to provide greater protections for pet owners. The main goals are to enhance transparency around preexisting condition exclusions and waiting periods, to ensure pet insurance policies are more accessible and equitable, and to prevent insurers from canceling or refusing to renew policies based on certain health conditions or the pet's age. This bill aims to improve the insurance landscape for pet owners by making it easier to obtain and maintain coverage.</p>\n<h3>Key Provisions</h3>\n<h4>Coverage Exclusions</h4>\n<ul>\n<li>A pet insurer can exclude coverage for preexisting conditions if they disclose this clearly to consumers.</li>\n<li>The burden of proof lies with the insurer to demonstrate that a claimed condition falls under the preexisting condition exclusion.</li>\n</ul>\n<h4>Waiting Periods</h4>\n<ul>\n<li>Insurers may impose waiting periods for illnesses or orthopedic conditions that do not result from an accident, with a maximum of 30 days. Accidental conditions cannot have waiting periods.</li>\n<li>Waiting periods cannot apply to renewals of existing coverage.</li>\n<li>Insurers must allow for waiting periods to be waived if a medical examination is completed by a licensed veterinarian, although the pet owner generally pays for the examination unless otherwise specified.</li>\n</ul>\n<h4>Policy Renewals</h4>\n<ul>\n<li>Insurers cannot require a veterinary examination to renew an existing pet insurance policy.</li>\n</ul>\n<h4>Other Benefits</h4>\n<ul>\n<li>Any wellness or prescriptive benefits included in the insurance policy are considered part of the contract and must comply with the insurance code.</li>\n</ul>\n<h4>Eligibility</h4>\n<ul>\n<li>Pet insurers cannot base eligibility for purchasing a policy on participation in a separate wellness program.</li>\n</ul>\n<h4>Policy Cancellation and Non-Renewal</h4>\n<ul>\n<li>Insurers cannot cancel or refuse to renew a policy due to the covered pet's age or the development of health conditions during the coverage period, including chronic, orthopedic, congenital, or hereditary conditions.</li>\n<li>If an insurer stops offering pet insurance through one company and transfers business to another, the new company must offer coverage without imposing waiting periods or requiring veterinary examinations, and they cannot cancel or refuse to issue based on the above criteria.</li>\n</ul>"
     }
-  ],
-  "billReports": [],
-  "billAmendments": []
+  },
+  "subDocuments": [],
+  "keywords": {
+    "ts": "2024-12-16T19:42:33.120Z",
+    "text": "pet insurance protections transparency preexisting conditions waiting periods coverage exclusions policy renewals veterinary examination eligibility non-renewal"
+  }
 }

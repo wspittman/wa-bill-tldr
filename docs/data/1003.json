@@ -1,11 +1,13 @@
 {
   "id": 1003,
-  "lastUpdated": "2025-02-26T19:53:49.533Z",
+  "lastUpdated": "2025-03-01T00:03:58.102Z",
   "agency": "House",
   "description": "Addressing service of notice by mail in cases involving forcible entry and forcible and unlawful detainer.",
   "introducedDate": "2025-01-13T08:00:00.000Z",
-  "status": "First reading, referred to Housing.",
-  "actionDate": "2025-02-07T08:00:00.000Z",
+  "status": {
+    "ts": "2025-02-07T08:00:00.000Z",
+    "text": "First reading, referred to Housing."
+  },
   "sponsors": [
     "Abbarno",
     "Barkis",
@@ -14,14 +16,25 @@
     "Peterson",
     "Hill"
   ],
-  "billDocuments": [
-    {
-      "name": "1003",
-      "description": "House Bill 1003",
-      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1003.htm",
-      "createdDate": "2024-12-02T22:22:45.887Z"
+  "document": {
+    "name": "1003",
+    "description": "House Bill 1003",
+    "url": {
+      "ts": "2024-12-02T22:22:45.887Z",
+      "text": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1003.htm"
+    },
+    "original": {
+      "ts": "2024-12-02T22:22:45.887Z",
+      "text": "<!DOCTYPE html ><html><body><div>H-0107.1</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><div style=\"font-weight:bold;text-align:center;\">HOUSE BILL 1003</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><table style=\"width:622px;margin-top:0.1in;\"><tr><td><div style=\"font-weight:bold;\">State of Washington</div></td><td><div style=\"font-weight:bold;\">69th Legislature</div></td><td><div style=\"font-weight:bold;\">2025 Regular Session</div></td></tr></table><div style=\"margin-top:0.1in;\"><span style=\"font-weight:bold;margin-right:0.25in;\">By</span><!-- field: Sponsors -->Representatives Abbarno, Barkis, Jacobsen, Connors, Peterson, and Hill<!-- field: --></div><div style=\"margin-top:0.1in;\"><span style=\"margin-right:0.25in;\">Prefiled 12/02/24.</span><span style=\"margin-right:0.25in;\">Read first time 01/13/25.</span><span style=\"margin-right:0.25in;\">Referred to Committee on Housing.</span></div><div style=\"text-indent:0.5in;margin-top:0.5in;\"><!-- field: CaptionsTitles -->AN ACT Relating to service of notice by mail in cases involving forcible entry and forcible and unlawful detainer; and amending RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=59.12.040'>59.12.040</a>.<!-- field: --></div><div style=\"margin-top:0.25in;margin-bottom:0.25in;\">BE IT ENACTED BY THE LEGISLATURE OF THE STATE OF WASHINGTON:</div><div style=\"margin-top:0.25in;text-indent:0.5in;\"><!-- field: BeginningSection --><span style=\"font-weight:bold;padding-right:0.1in;\">Sec. 1.  </span>RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=59.12.040'>59.12.040</a> and 2021 c 115 s 14 are each amended to read as follows:<!-- field: --></div><div style=\"text-indent:0.5in;\"><!-- field: Text -->Any notice provided for in this chapter shall be served either (1) by delivering a copy personally to the person entitled thereto; or (2) if he or she be absent from the premises unlawfully held, by leaving there a copy, with some person of suitable age and discretion, and sending a copy ((<span style=\"text-decoration:line-through;\">through the mail addressed to</span>))<span style=\"text-decoration:underline;\">by certified mail, posted from within Washington state, to the last known address of</span> the person entitled thereto ((<span style=\"text-decoration:line-through;\">at his or her place of residence</span>)); or (3) if the person to be notified be a tenant, or an unlawful holder of premises, and his or her place of residence is not known, or if a person of suitable age and discretion there cannot be found then by affixing a copy of the notice in a conspicuous place on the premises unlawfully held, and also delivering a copy to a person there residing, if such a person can be found, and also sending a copy through the mail addressed to the tenant, or unlawful occupant, at the place where the premises unlawfully held are situated. Service upon a subtenant may be made in the same manner: PROVIDED, That in cases where the tenant or unlawful occupant, shall be conducting a hotel, inn, lodging house, boarding house, or shall be renting rooms while still retaining control of the premises as a whole, that the guests, lodgers, boarders, or persons renting such rooms shall not be considered as subtenants within the meaning of this chapter, but all such persons may be served by affixing a copy of the notice to be served in two conspicuous places upon the premises unlawfully held; and such persons shall not be necessary parties defendant in an action to recover possession of said premises. Service of any notice provided for in this chapter may be had upon a corporation by delivering a copy thereof to any officer, agent, or person having charge of the business of such corporation, at the premises unlawfully held, and in case no such officer, agent, or person can be found upon such premises, then service may be had by affixing a copy of such notice in a conspicuous place upon said premises and by sending a copy through the mail addressed to such corporation at the place where said premises are situated. Proof of any service under this section may be made by the affidavit of the person making the same in like manner and with like effect as the proof of service of summons in civil actions. When a copy of notice is sent through the mail, as provided in this section, service shall be deemed complete when such copy is deposited in the United States mail ((<span style=\"text-decoration:line-through;\">in the county in which the property is situated properly addressed with</span>)) postage prepaid<span style=\"text-decoration:underline;\">, by certified mail, posted from within Washington state, directed to the last known address of the person entitled thereto</span>: PROVIDED, HOWEVER, That when service is made by mail ((<span style=\"text-decoration:line-through;\">one additional day</span>))<span style=\"text-decoration:underline;\">five additional days</span> shall be allowed before the commencement of an action based upon such notice. <span style=\"text-decoration:underline;\">A termination notice served pursuant to this section shall specify in the notice the date by which the person to whom the notice is sent must vacate or, if applicable, comply.</span><!-- field: --></div><!-- field: --><div style=\"margin-top:0.1in;font-weight:bold;text-align:center;\">--- END ---</div></body></html>"
+    },
+    "summary": {
+      "ts": "2024-12-02T22:22:45.887Z",
+      "text": "<h3>Purpose</h3>\n<p>The main goal of this bill is to update the legal requirements for serving notices related to forcible entry and unlawful detainer in Washington state. The bill modifies existing regulations to ensure clarity and efficiency in notifying individuals involved in eviction situations. Key changes include replacing standard mail with certified mail for notifications and extending the time allowed for the recipient to respond after being notified.</p>\n<h3>Key Provisions</h3>\n<h4>Service of Notice</h4>\n<ul>\n<li>Notices can be served in person or by leaving a copy with a suitable person.</li>\n<li><strong>Certified Mail Requirement</strong>: Notices must now be sent via certified mail, posted from within Washington state, to the individual's last known address instead of through standard mail.</li>\n<li>If the recipient's address is unknown, the notice can be affixed in a visible place on the premises and sent via certified mail to the location of the unlawful holding.</li>\n</ul>\n<h4>Additional Regulations</h4>\n<ul>\n<li>Service upon corporations allows for delivery to an officer or agent at the unlawful premises, or by affixing the notice in a conspicuous place and sending it to the corporation's address.</li>\n<li>Proof of service can be achieved by affidavit, similar to civil actions.</li>\n<li>Notices sent via certified mail shall be considered served once they are mailed, with an allowance of five additional days for the recipient before legal actions can commence.</li>\n<li>A termination notice must clearly indicate the date by which the recipient must vacate or comply.</li>\n</ul>"
     }
-  ],
-  "billReports": [],
-  "billAmendments": []
+  },
+  "subDocuments": [],
+  "keywords": {
+    "ts": "2024-12-02T22:22:45.887Z",
+    "text": "certified mail eviction requirements notice served response regulations jurisdictions premises"
+  }
 }

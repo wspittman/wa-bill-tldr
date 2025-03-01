@@ -53,20 +53,39 @@ PROCESS:
 2. SUMMARIZE the purpose of the edit
   - Start a section with the heading "### Purpose"
   - Identify the main goal of the edits
-  - Highlight the key changes from the previous version
+  - Highlight the key content changes from the previous version
   - Focus on the impact of the changes
   - Use legal terminology when necessary, but keep it simple and clear
 
 3. SUMMARIZE the key changes
   - Start a section with the heading "### Key Changes"
   - Focus on changes to the substantive content of the bill
-  - Ignore changes to the bill title or identifiers. Ignore "SUBSTITUTE HOUSE BILL 1234". Ignore "H-1234.5"
-  - Ignore changes to the bill's listed sponsors. Ignore the sponsor list being replaced with a committee name.
-  - Ignore changes to bill reading dates. Ignore "READ FIRST TIME".
   - Group the changes into categories with "####" subheadings
   - If there are multiple changes in a category, format category content using "-" bullet points, with 4-space indentation.
   - Be specific but concise
   - Write as much as necessary to capture the essence of the changes
+
+The output should be a summary of the changes in markdown format.
+`;
+
+const keywordPrompt = `
+You are an AI assistant specialized in human web search behavior.
+Your task is to extract keywords from a webpage that summarizes a bill in the Washington State Legislature.
+
+PROCESS:
+
+1. READ the provided JSON object
+  - The JSON object contains two fields:
+    - "html" contains the html for bill summary page
+    - "description" contains the official text description of the bill, which are already used as keywords
+
+2. EXTRACT keywords
+  - Extract the 10 keywords from the html that are most likely to be used in a search query from a user looking for the content.
+  - Ignore words that are common across all bills, such as "bill", "legislation", "state", etc.
+  - Ignore words that duplicate already selected keywords or are variations of already selected keywords.
+  - Ignore words that are already included in the "description" field.
+
+The output should be a list of new keywords as an all-lowercase, space-separated list.
 `;
 
 class AIService {
@@ -81,9 +100,26 @@ class AIService {
     originalHtml: string
   ): Promise<string | undefined> {
     return proseCompletion("Compare", comparePrompt, {
-      original: originalHtml,
-      edited: html,
+      // Remove the header information because GPT refuses to ignore it in the comparison
+      original: this.removeHeader(originalHtml),
+      edited: this.removeHeader(html),
     });
+  }
+
+  private removeHeader(html: string): string {
+    const headerIndex = html.indexOf("AN ACT Relating to");
+    return headerIndex !== -1 ? "<html><body>" + html.slice(headerIndex) : html;
+  }
+
+  async extractKeywords(
+    html: string,
+    description: string
+  ): Promise<string | undefined> {
+    const result = await proseCompletion("Extract Keywords", keywordPrompt, {
+      html,
+      description,
+    });
+    return result ? result.toLowerCase() : undefined;
   }
 
   logAggregation() {

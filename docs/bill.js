@@ -6,27 +6,18 @@ window.onload = async function () {
     try {
       document.getElementById("currentBillId").textContent = billId;
 
-      const { bill, summary } = await fetchBill(billId);
+      const bill = await fetchJson(`data/${billId}.json`);
 
       const main = document.querySelector("main");
       main.innerHTML = `
         ${renderMetaSection(bill)}
-        ${renderViewSection(bill.id, bill.billDocuments, summary.documents)}
+        ${renderViewSection(bill)}
       `;
     } catch (error) {
       renderError(billId, error.message);
     }
   }
 };
-
-async function fetchBill(id) {
-  const [bill, summary] = await Promise.all([
-    fetchJson(`data/${id}.json`),
-    fetchJson(`data/${id}_Summary.json`),
-  ]);
-
-  return { bill, summary };
-}
 
 async function fetchJson(url) {
   const response = await fetch(url);
@@ -59,8 +50,8 @@ function renderMetaSection(bill) {
     <p>${bill.description}</p>
     ${renderMeta("Sponsors", bill.sponsors)}
     ${renderMeta("Introduced", new Date(bill.introducedDate))}
-    ${renderMeta("Last Action", new Date(bill.actionDate))}
-    ${renderMeta("Status", bill.status)}
+    ${renderMeta("Last Action", new Date(bill.status.ts))}
+    ${renderMeta("Status", bill.status.text)}
   `;
 }
 
@@ -74,15 +65,11 @@ function renderMeta(name, value) {
   return `<p><strong>${name}:</strong> ${value}</p>`;
 }
 
-function renderViewSection(id, billDocuments, documents) {
-  const idString = String(id);
-  const components = billDocuments.map((billDoc) =>
-    renderViewComponents(
-      billDoc,
-      documents[billDoc.name],
-      billDoc.name === idString
-    )
-  );
+function renderViewSection({ document, subDocuments }) {
+  const components = [
+    renderViewComponents(document, true),
+    ...subDocuments.map((subDoc) => renderViewComponents(subDoc)),
+  ];
 
   return `
     <div class="view-toggle" role="tablist">
@@ -92,7 +79,10 @@ function renderViewSection(id, billDocuments, documents) {
   `;
 }
 
-function renderViewComponents({ name, description }, document, isDefault) {
+function renderViewComponents(
+  { name, description, original, summary },
+  isDefault
+) {
   const sid = `${name}_summary`;
   const oid = `${name}_original`;
   return {
@@ -104,11 +94,11 @@ function renderViewComponents({ name, description }, document, isDefault) {
       renderViewContent(
         sid,
         `Summary: ${description}`,
-        document.summary,
+        summary.text,
         true,
         isDefault
       ),
-      renderViewContent(oid, `Original: ${description}`, document.original),
+      renderViewContent(oid, `Original: ${description}`, original.text),
     ],
   };
 }

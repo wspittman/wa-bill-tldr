@@ -9,7 +9,7 @@ function sortBills(column) {
     Description: (a, b) => a.description.localeCompare(b.description),
     Sponsors: (a, b) =>
       a.sponsors.join(", ").localeCompare(b.sponsors.join(", ")),
-    Status: (a, b) => a.status.localeCompare(b.status),
+    Status: (a, b) => a.status.localeCompare(b.status.text),
   };
 
   if (currentSortColumn === column) {
@@ -37,7 +37,8 @@ function matchesFilter(bill) {
   return (
     bill.description.toLowerCase().includes(filterText) ||
     bill.sponsors.join(", ").toLowerCase().includes(filterText) ||
-    bill.status.toLowerCase().includes(filterText)
+    bill.status.text.toLowerCase().includes(filterText) ||
+    bill.keywords.text.toLowerCase().includes(filterText)
   );
 }
 
@@ -55,7 +56,7 @@ function updateTableDisplay() {
           })</td>
                 <td>${bill.description}</td>
                 <td>${bill.sponsors.join(", ")}</td>
-                <td>${bill.status}</td>
+                <td>${bill.status.text}</td>
             </tr>
         `
         )

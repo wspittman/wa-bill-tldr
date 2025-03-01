@@ -1,11 +1,13 @@
 {
   "id": 1019,
-  "lastUpdated": "2025-02-27T00:51:55.712Z",
+  "lastUpdated": "2025-03-01T00:17:49.344Z",
   "agency": "House",
   "description": "Concerning tax incentives for farmers.",
   "introducedDate": "2025-01-13T08:00:00.000Z",
-  "status": "First reading, referred to Finance.",
-  "actionDate": "2025-01-13T08:00:00.000Z",
+  "status": {
+    "ts": "2025-01-13T08:00:00.000Z",
+    "text": "First reading, referred to Finance."
+  },
   "sponsors": [
     "Shavers",
     "Wylie",
@@ -13,14 +15,25 @@
     "Fosse",
     "Reeves"
   ],
-  "billDocuments": [
-    {
-      "name": "1019",
-      "description": "House Bill 1019",
-      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1019.htm",
-      "createdDate": "2024-12-09T19:42:52.323Z"
+  "document": {
+    "name": "1019",
+    "description": "House Bill 1019",
+    "url": {
+      "ts": "2024-12-09T19:42:52.323Z",
+      "text": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1019.htm"
+    },
+    "original": {
+      "ts": "2024-12-09T19:42:52.323Z",
+      "text": "<!DOCTYPE html ><html><body><div>H-0052.1</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><div style=\"font-weight:bold;text-align:center;\">HOUSE BILL 1019</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><table style=\"width:622px;margin-top:0.1in;\"><tr><td><div style=\"font-weight:bold;\">State of Washington</div></td><td><div style=\"font-weight:bold;\">69th Legislature</div></td><td><div style=\"font-weight:bold;\">2025 Regular Session</div></td></tr></table><div style=\"margin-top:0.1in;\"><span style=\"font-weight:bold;margin-right:0.25in;\">By</span><!-- field: Sponsors -->Representatives Shavers, Wylie, Kloba, Fosse, and Reeves<!-- field: --></div><div style=\"margin-top:0.1in;\"><span style=\"margin-right:0.25in;\">Prefiled 12/09/24.</span><span style=\"margin-right:0.25in;\">Read first time 01/13/25.</span><span style=\"margin-right:0.25in;\">Referred to Committee on Finance.</span></div><div style=\"text-indent:0.5in;margin-top:0.5in;\"><!-- field: CaptionsTitles -->AN ACT Relating to tax incentives for farmers; adding a new section to chapter  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=82.04'>82.04</a> RCW; creating a new section; and providing an expiration date.<!-- field: --></div><div style=\"margin-top:0.25in;margin-bottom:0.25in;\">BE IT ENACTED BY THE LEGISLATURE OF THE STATE OF WASHINGTON:</div><div style=\"margin-top:0.25in;text-indent:0.5in;\"><!-- field: BeginningSection --><span style=\"text-decoration:underline;\">NEW SECTION.</span><span>  </span><span style=\"font-weight:bold;padding-right:0.1in;\">Sec. 1.  </span>A new section is added to chapter  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=82.04'>82.04</a> RCW to read as follows:<!-- field: --></div><div style=\"text-indent:0.5in;\"><!-- field: Text -->(1) Beginning January 1, 2026, a credit is allowed against taxes due under this chapter for 25 percent of expenditures made in the previous year by a qualified farmer for the purchase of new equipment, infrastructure, seed, seedlings, spores, animal feed, and amendments.</div><div style=\"text-indent:0.5in;\">(2) To qualify for a credit, a farmer must meet at least one of the following criteria:</div><div style=\"text-indent:0.5in;\">(a) Is a recipient of grant funds originating directly from the Washington state conservation commission or indirectly receives grant funds through a conservation district or other Washington public entity; or</div><div style=\"text-indent:0.5in;\">(b) Is a participant in a Washington state conservation commission or conservation district conservation program.</div><div style=\"text-indent:0.5in;\">(3) The credit claimed may not exceed the tax that would otherwise be due under this chapter. Any unused credit not used in the current calendar year may be carried over and claimed against the person's tax liability for the next succeeding calendar year. Any credit remaining unused in the next succeeding calendar year may be carried forward and claimed against the person's tax liability for the second succeeding calendar year; but may not be carried over for any calendar year thereafter. Refunds may not be granted in the place of credits.</div><div style=\"text-indent:0.5in;\">(4) An application is not required to claim the credit, but the claimant must keep records necessary for the department to determine eligibility for the credit under this section including documentation of grant funds received and verification of program participation.</div><div style=\"text-indent:0.5in;\">(5) The department may adopt rules necessary to implement this section.</div><div style=\"text-indent:0.5in;\">(6) For the purposes of this section, \"farmer\" has the same meaning as in RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=82.04.213'>82.04.213</a>.</div><div style=\"margin-bottom:9.75pt;text-indent:0.5in;\">(7) This section expires January 1, 2036.</div><!-- field: --><div style=\"margin-top:0.25in;text-indent:0.5in;\"><!-- field: BeginningSection --><span style=\"text-decoration:underline;\">NEW SECTION.</span><span>  </span><span style=\"font-weight:bold;padding-right:0.1in;\">Sec. 2.  </span><span style=\"text-indent:0.5in;\">This section is the tax preference performance statement for the tax preference contained in section 1, chapter . . ., Laws of 2025 (section 1 of this act). This performance statement is only intended to be used for subsequent evaluation of the tax preference. It is not intended to create a private right of action by any party or be used to determine eligibility for preferential tax treatment.</span><!-- field: --></div><div style=\"text-indent:0.5in;\"><!-- field: Text -->(1) The legislature categorizes this tax preference as one intended to induce certain designated behavior by taxpayers, as indicated in RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=82.32.808'>82.32.808</a>(2)(a).</div><div style=\"text-indent:0.5in;\">(2) It is the legislature's specific public policy objective to provide a tax incentive for farmers in order to attract more farmers to participate in conservation programs in Washington.</div><div style=\"text-indent:0.5in;\">(3) If a review finds increased farmer participation in conservation programs in Washington after the effective date of this section, then the legislature intends to extend the expiration date of the tax preference.</div><div style=\"text-indent:0.5in;\">(4) In order to obtain the data necessary to perform the review in subsection (3) of this section, the joint legislative audit and review committee may refer to any data collected by the state.</div><!-- field: --><div style=\"margin-top:0.1in;font-weight:bold;text-align:center;\">--- END ---</div></body></html>"
+    },
+    "summary": {
+      "ts": "2024-12-09T19:42:52.323Z",
+      "text": "<h3>Purpose</h3>\n<p>The purpose of this bill is to provide tax incentives for farmers in Washington State to encourage their participation in conservation programs. Specifically, the bill introduces a tax credit for farmers who invest in certain agricultural expenditures. This credit aims to incentivize farmers to purchase new equipment and resources that align with conservation efforts. Key changes include the introduction of a credit starting January 1, 2026, and an expiration date for the provisions set for January 1, 2036.</p>\n<h3>Key Provisions</h3>\n<h4>Tax Credit for Qualified Farmers</h4>\n<ul>\n<li>A tax credit is available for 25% of expenditures made in the previous year for:<ul>\n<li>New equipment</li>\n<li>Infrastructure</li>\n<li>Seed, seedlings, and spores</li>\n<li>Animal feed</li>\n<li>Soil amendments</li></ul></li>\n<li>To qualify for the tax credit, farmers must meet at least one of the following:<ul>\n<li>Be a recipient of grant funds from the Washington State Conservation Commission or through a local conservation district.</li>\n<li>Participate in a conservation program through the Washington State Conservation Commission or a conservation district.</li></ul></li>\n</ul>\n<h4>Credit Limitations and Carryover</h4>\n<ul>\n<li>The credit cannot exceed the amount of tax due under chapter 82.04 RCW.</li>\n<li>Unused credits may be carried forward for up to two succeeding calendar years, but not beyond that. </li>\n<li>Refunds are not allowed in place of credits.</li>\n</ul>\n<h4>Application and Record Keeping</h4>\n<ul>\n<li>No application is required to claim the credit; however, farmers must keep records to verify eligibility, including records of grant funds and participation in conservation programs.</li>\n</ul>\n<h4>Performance Statement</h4>\n<ul>\n<li>A performance statement outlines the intent behind the tax preference, aiming to stimulate farmer participation in conservation programs.</li>\n<li>If a review shows increased participation in these programs after the credit's implementation, the legislature may consider extending the expiration date of the tax preference. Data will be gathered by the Joint Legislative Audit and Review Committee for this review. </li>\n</ul>\n<h4>Expiration</h4>\n<ul>\n<li>This section of the bill expires on January 1, 2036.</li>\n</ul>"
     }
-  ],
-  "billReports": [],
-  "billAmendments": []
+  },
+  "subDocuments": [],
+  "keywords": {
+    "ts": "2024-12-09T19:42:52.323Z",
+    "text": "tax incentives farmers conservation programs tax credit agricultural expenditures new equipment infrastructure animal feed soil amendments eligibility"
+  }
 }

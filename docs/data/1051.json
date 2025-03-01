@@ -1,25 +1,38 @@
 {
   "id": 1051,
-  "lastUpdated": "2025-02-27T04:27:53.781Z",
+  "lastUpdated": "2025-03-01T00:38:16.232Z",
   "agency": "House",
   "description": "Permitting the recording of individualized education program team meetings.",
   "introducedDate": "2025-01-13T08:00:00.000Z",
-  "status": "First reading, referred to Education.",
-  "actionDate": "2025-01-13T08:00:00.000Z",
+  "status": {
+    "ts": "2025-01-13T08:00:00.000Z",
+    "text": "First reading, referred to Education."
+  },
   "sponsors": [
     "Walsh",
     "Penner",
     "Jacobsen",
     "Couture"
   ],
-  "billDocuments": [
-    {
-      "name": "1051",
-      "description": "House Bill 1051",
-      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1051.htm",
-      "createdDate": "2024-12-12T22:41:05.027Z"
+  "document": {
+    "name": "1051",
+    "description": "House Bill 1051",
+    "url": {
+      "ts": "2024-12-12T22:41:05.027Z",
+      "text": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1051.htm"
+    },
+    "original": {
+      "ts": "2024-12-12T22:41:05.027Z",
+      "text": "<!DOCTYPE html ><html><body><div>H-0055.1</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><div style=\"font-weight:bold;text-align:center;\">HOUSE BILL 1051</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><table style=\"width:622px;margin-top:0.1in;\"><tr><td><div style=\"font-weight:bold;\">State of Washington</div></td><td><div style=\"font-weight:bold;\">69th Legislature</div></td><td><div style=\"font-weight:bold;\">2025 Regular Session</div></td></tr></table><div style=\"margin-top:0.1in;\"><span style=\"font-weight:bold;margin-right:0.25in;\">By</span><!-- field: Sponsors -->Representatives Walsh, Penner, Jacobsen, and Couture<!-- field: --></div><div style=\"margin-top:0.1in;\"><span style=\"margin-right:0.25in;\">Prefiled 12/12/24.</span><span style=\"margin-right:0.25in;\">Read first time 01/13/25.</span><span style=\"margin-right:0.25in;\">Referred to Committee on Education.</span></div><div style=\"text-indent:0.5in;margin-top:0.5in;\"><!-- field: CaptionsTitles -->AN ACT Relating to recording of individualized education program team meetings; amending RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=9.73.030'>9.73.030</a>; and adding a new section to chapter  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=28A.155'>28A.155</a> RCW.<!-- field: --></div><div style=\"margin-top:0.25in;margin-bottom:0.25in;\">BE IT ENACTED BY THE LEGISLATURE OF THE STATE OF WASHINGTON:</div><div style=\"margin-top:0.25in;text-indent:0.5in;\"><!-- field: BeginningSection --><span style=\"text-decoration:underline;\">NEW SECTION.</span><span>  </span><span style=\"font-weight:bold;padding-right:0.1in;\">Sec. 1.  </span>A new section is added to chapter  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=28A.155'>28A.155</a> RCW to read as follows:<!-- field: --></div><div style=\"text-indent:0.5in;\"><!-- field: Text -->(1) Notwithstanding RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=9.73.030'>9.73.030</a>, parents or guardians of a student have the right to audio record their student's individualized education program team meetings.</div><div style=\"text-indent:0.5in;\">(2) Except as provided under subsection (1) of this section, members of a student's individualized education program team must comply with RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=9.73.030'>9.73.030</a> when recording an individualized education program team meeting.</div><!-- field: --><div style=\"margin-top:0.25in;text-indent:0.5in;\"><!-- field: BeginningSection --><span style=\"font-weight:bold;padding-right:0.1in;\">Sec. 2.  </span>RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=9.73.030'>9.73.030</a> and 2021 c 329 s 21 are each amended to read as follows:<!-- field: --></div><div style=\"text-indent:0.5in;\"><!-- field: Text -->(1) Except as otherwise provided in this chapter, it shall be unlawful for any individual, partnership, corporation, association, or the state of Washington, its agencies, and political subdivisions to intercept, or record any:</div><div style=\"text-indent:0.5in;\">(a) Private communication transmitted by telephone, telegraph, radio, or other device between two or more individuals between points within or without the state by any device electronic or otherwise designed to record and/or transmit said communication regardless how such device is powered or actuated, without first obtaining the consent of all the participants in the communication;</div><div style=\"text-indent:0.5in;\">(b) Private conversation, by any device electronic or otherwise designed to record or transmit such conversation regardless how the device is powered or actuated without first obtaining the consent of all the persons engaged in the conversation.</div><div style=\"text-indent:0.5in;\">(2) Notwithstanding subsection (1) of this section, wire communications or conversations (a) of an emergency nature, such as the reporting of a fire, medical emergency, crime, or disaster, or (b) which convey threats of extortion, blackmail, bodily harm, or other unlawful requests or demands, or (c) which occur anonymously or repeatedly or at an extremely inconvenient hour, or (d) which relate to communications by a hostage holder or barricaded person as defined in RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=70.85.100'>70.85.100</a>, whether or not conversation ensues, may be recorded with the consent of one party to the conversation.</div><div style=\"text-indent:0.5in;\">(3) Where consent by all parties is needed pursuant to this chapter, consent shall be considered obtained whenever one party has announced to all other parties engaged in the communication or conversation, in any reasonably effective manner, that such communication or conversation is about to be recorded or transmitted: PROVIDED, That if the conversation is to be recorded that said announcement shall also be recorded.</div><div style=\"text-indent:0.5in;\">(4) An employee of any regularly published newspaper, magazine, wire service, radio station, or television station acting in the course of bona fide news gathering duties on a full-time or contractual or part-time basis, shall be deemed to have consent to record and divulge communications or conversations otherwise prohibited by this chapter if the consent is expressly given or if the recording or transmitting device is readily apparent or obvious to the speakers. Withdrawal of the consent after the communication has been made shall not prohibit any such employee of a newspaper, magazine, wire service, or radio or television station from divulging the communication or conversation.</div><div style=\"text-indent:0.5in;\">(5) This section does not apply to the recording of custodial interrogations pursuant to RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=10.122.040'>10.122.040</a>.</div><div style=\"text-indent:0.5in;\"><span style=\"text-decoration:underline;\">(6) This section does not apply to the audio recording of individualized education program team meetings by a student's parent or guardian pursuant to section 1(1) of this act.</span><!-- field: --></div><!-- field: --><div style=\"margin-top:0.1in;font-weight:bold;text-align:center;\">--- END ---</div></body></html>"
+    },
+    "summary": {
+      "ts": "2024-12-12T22:41:05.027Z",
+      "text": "<h3>Purpose</h3>\n<p>The bill aims to enhance the rights of parents or guardians regarding their children's education by allowing them to audio record individualized education program (IEP) team meetings. The primary goal is to ensure that parents can keep personal records of discussions related to their child's education. A key change introduced is an exemption that allows these recordings without needing the consent of all participants, which contrasts with general recording laws that require consent from all parties involved in a conversation.</p>\n<h3>Key Provisions</h3>\n<h4>Parental Rights</h4>\n<ul>\n<li>Parents or guardians of a student are granted the right to audio record their child's IEP team meetings without needing to obtain prior consent from other attendees.</li>\n</ul>\n<h4>Compliance Requirements</h4>\n<ul>\n<li>All other members of the IEP team must continue to comply with existing recording laws (RCW 9.73.030) when recording meetings, unless the recording is done by the parent or guardian as specified above. </li>\n</ul>\n<h4>Amendments to Current Law</h4>\n<ul>\n<li>Specific amendments are made to RCW 9.73.030 to explicitly state that the section does not apply to recordings made by parents or guardians during IEP meetings, acknowledging their newly granted rights.</li>\n</ul>"
     }
-  ],
-  "billReports": [],
-  "billAmendments": []
+  },
+  "subDocuments": [],
+  "keywords": {
+    "ts": "2024-12-12T22:41:05.027Z",
+    "text": "parents guardians audio record iep meetings consent exemption rights compliance amendments"
+  }
 }

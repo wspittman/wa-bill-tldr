@@ -1,25 +1,38 @@
 {
   "id": 1074,
-  "lastUpdated": "2025-02-27T04:28:48.004Z",
+  "lastUpdated": "2025-03-01T01:04:41.067Z",
   "agency": "House",
   "description": "Excluding any person who is convicted of a hit and run resulting in death from being eligible for a first-time offender waiver.",
   "introducedDate": "2025-01-13T08:00:00.000Z",
-  "status": "First reading, referred to Community Safety.",
-  "actionDate": "2025-01-13T08:00:00.000Z",
+  "status": {
+    "ts": "2025-01-13T08:00:00.000Z",
+    "text": "First reading, referred to Community Safety."
+  },
   "sponsors": [
     "Jacobsen",
     "Schmidt",
     "Burnett",
     "Caldier"
   ],
-  "billDocuments": [
-    {
-      "name": "1074",
-      "description": "House Bill 1074",
-      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1074.htm",
-      "createdDate": "2024-12-16T19:42:29.500Z"
+  "document": {
+    "name": "1074",
+    "description": "House Bill 1074",
+    "url": {
+      "ts": "2024-12-16T19:42:29.500Z",
+      "text": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1074.htm"
+    },
+    "original": {
+      "ts": "2024-12-16T19:42:29.500Z",
+      "text": "<!DOCTYPE html ><html><body><div>H-0241.1</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><div style=\"font-weight:bold;text-align:center;\">HOUSE BILL 1074</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><table style=\"width:622px;margin-top:0.1in;\"><tr><td><div style=\"font-weight:bold;\">State of Washington</div></td><td><div style=\"font-weight:bold;\">69th Legislature</div></td><td><div style=\"font-weight:bold;\">2025 Regular Session</div></td></tr></table><div style=\"margin-top:0.1in;\"><span style=\"font-weight:bold;margin-right:0.25in;\">By</span><!-- field: Sponsors -->Representatives Jacobsen, Schmidt, Burnett, and Caldier<!-- field: --></div><div style=\"margin-top:0.1in;\"><span style=\"margin-right:0.25in;\">Prefiled 12/16/24.</span><span style=\"margin-right:0.25in;\">Read first time 01/13/25.</span><span style=\"margin-right:0.25in;\">Referred to Committee on Community Safety.</span></div><div style=\"text-indent:0.5in;margin-top:0.5in;\"><!-- field: CaptionsTitles -->AN ACT Relating to excluding any person who is convicted of a hit and run resulting in death from being eligible for a first-time offender waiver; and amending RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=9.94A.650'>9.94A.650</a>.<!-- field: --></div><div style=\"margin-top:0.25in;margin-bottom:0.25in;\">BE IT ENACTED BY THE LEGISLATURE OF THE STATE OF WASHINGTON:</div><div style=\"margin-top:0.25in;text-indent:0.5in;\"><!-- field: BeginningSection --><span style=\"font-weight:bold;padding-right:0.1in;\">Sec. 1.  </span>RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=9.94A.650'>9.94A.650</a> and 2022 c 16 s 6 are each amended to read as follows:<!-- field: --></div><div style=\"text-indent:0.5in;\"><!-- field: Text -->(1) This section applies to offenders who have never been previously convicted of a felony in this state, federal court, or another state, and who have never participated in a program of deferred prosecution for a felony, and who are convicted of a felony that is not:</div><div style=\"text-indent:0.5in;\">(a) Classified as a violent offense or a sex offense under this chapter;</div><div style=\"text-indent:0.5in;\">(b) Manufacture, delivery, or possession with intent to manufacture or deliver a controlled substance classified in Schedule I or II that is a narcotic drug or flunitrazepam classified in Schedule IV;</div><div style=\"text-indent:0.5in;\">(c) Manufacture, delivery, or possession with intent to deliver a methamphetamine, its salts, isomers, and salts of its isomers as defined in RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=69.50.206'>69.50.206</a>(d)(2);</div><div style=\"text-indent:0.5in;\">(d) The selling for profit of any controlled substance or counterfeit substance classified in Schedule I, RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=69.50.204'>69.50.204</a>, except leaves and flowering tops of cannabis; ((<span style=\"text-decoration:line-through;\">or</span>))</div><div style=\"text-indent:0.5in;\">(e) Felony driving while under the influence of intoxicating liquor or any drug or felony physical control of a vehicle while under the influence of intoxicating liquor or any drug<span style=\"text-decoration:underline;\">; or</span></div><div style=\"text-indent:0.5in;\"><span style=\"text-decoration:underline;\">(f) Hit and run resulting in death under RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=46.52.020'>46.52.020</a>(4)(a)</span>.</div><div style=\"text-indent:0.5in;\">(2) In sentencing a first-time offender the court may waive the imposition of a sentence within the standard sentence range and impose a sentence which may include up to ninety days of confinement in a facility operated or utilized under contract by the county and a requirement that the offender refrain from committing new offenses.</div><div style=\"text-indent:0.5in;\">(3) The court may impose up to six months of community custody unless treatment is ordered, in which case the period of community custody may include up to the period of treatment, but shall not exceed one year.</div><div style=\"text-indent:0.5in;\">(4) As a condition of community custody, in addition to any conditions authorized in RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=9.94A.703'>9.94A.703</a>, the court may order the offender to pay all court-ordered legal financial obligations and/or perform community restitution work.</div><div style=\"text-indent:0.5in;\">(5) For the purposes of this section, \"cannabis\" has the meaning provided in RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=69.50.101'>69.50.101</a>.<!-- field: --></div><!-- field: --><div style=\"margin-top:0.1in;font-weight:bold;text-align:center;\">--- END ---</div></body></html>"
+    },
+    "summary": {
+      "ts": "2024-12-16T19:42:29.500Z",
+      "text": "<h3>Purpose</h3>\n<p>The purpose of this bill is to ensure that individuals convicted of a hit and run resulting in death are excluded from eligibility for a first-time offender waiver under Washington law. This change aims to address the severity of such offenses and prevent leniency in sentencing for offenders in these cases. The key change from the previous law is the explicit addition of hit and run resulting in death as a disqualifying offense for first-time offender status, making it clear that this crime is not treated with the same leniency as other less severe felonies.</p>\n<h3>Key Provisions</h3>\n<h4>Eligibility for First-Time Offender Waiver</h4>\n<ul>\n<li>Individuals convicted of hit and run resulting in death under RCW 46.52.020(4)(a) are not eligible for a first-time offender waiver.</li>\n</ul>\n<h4>Conditions of Sentencing</h4>\n<ul>\n<li>Courts can waive the standard sentence for eligible first-time offenders, with an alternative sentence including up to ninety days of confinement.</li>\n<li>The court may impose up to six months of community custody, extendable in cases of ordered treatment, not to exceed one year.</li>\n<li>Offenders placed under community custody may be required to pay legal financial obligations and perform community restitution work as part of their sentence.</li>\n</ul>"
     }
-  ],
-  "billReports": [],
-  "billAmendments": []
+  },
+  "subDocuments": [],
+  "keywords": {
+    "ts": "2024-12-16T19:42:29.500Z",
+    "text": "hit and run community custody sentencing offenders legal financial obligations restitution work severity disqualifying offense waive"
+  }
 }

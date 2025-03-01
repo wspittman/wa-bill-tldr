@@ -1,25 +1,38 @@
 {
   "id": 1083,
-  "lastUpdated": "2025-02-27T04:29:27.091Z",
+  "lastUpdated": "2025-03-01T01:10:41.955Z",
   "agency": "House",
   "description": "Concerning the distribution of aircraft fuel tax revenue.",
   "introducedDate": "2025-01-13T08:00:00.000Z",
-  "status": "First reading, referred to Appropriations.",
-  "actionDate": "2025-01-13T08:00:00.000Z",
+  "status": {
+    "ts": "2025-01-13T08:00:00.000Z",
+    "text": "First reading, referred to Appropriations."
+  },
   "sponsors": [
     "Dent",
     "Keaton",
     "Dye",
     "Eslick"
   ],
-  "billDocuments": [
-    {
-      "name": "1083",
-      "description": "House Bill 1083",
-      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1083.htm",
-      "createdDate": "2024-12-16T19:42:46.557Z"
+  "document": {
+    "name": "1083",
+    "description": "House Bill 1083",
+    "url": {
+      "ts": "2024-12-16T19:42:46.557Z",
+      "text": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1083.htm"
+    },
+    "original": {
+      "ts": "2024-12-16T19:42:46.557Z",
+      "text": "<!DOCTYPE html ><html><body><div>H-0140.1</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><div style=\"font-weight:bold;text-align:center;\">HOUSE BILL 1083</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><table style=\"width:622px;margin-top:0.1in;\"><tr><td><div style=\"font-weight:bold;\">State of Washington</div></td><td><div style=\"font-weight:bold;\">69th Legislature</div></td><td><div style=\"font-weight:bold;\">2025 Regular Session</div></td></tr></table><div style=\"margin-top:0.1in;\"><span style=\"font-weight:bold;margin-right:0.25in;\">By</span><!-- field: Sponsors -->Representatives Dent, Keaton, Dye, and Eslick<!-- field: --></div><div style=\"margin-top:0.1in;\"><span style=\"margin-right:0.25in;\">Prefiled 12/16/24.</span><span style=\"margin-right:0.25in;\">Read first time 01/13/25.</span><span style=\"margin-right:0.25in;\">Referred to Committee on Appropriations.</span></div><div style=\"text-indent:0.5in;margin-top:0.5in;\"><!-- field: CaptionsTitles -->AN ACT Relating to the distribution of aircraft fuel tax revenue; amending RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=82.42.090'>82.42.090</a>; providing an effective date; and declaring an emergency.<!-- field: --></div><div style=\"margin-top:0.25in;margin-bottom:0.25in;\">BE IT ENACTED BY THE LEGISLATURE OF THE STATE OF WASHINGTON:</div><div style=\"margin-top:0.25in;text-indent:0.5in;\"><!-- field: BeginningSection --><span style=\"font-weight:bold;padding-right:0.1in;\">Sec. 1.  </span>RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=82.42.090'>82.42.090</a> and 2017 3rd sp.s. c 25 s 42 are each amended to read as follows:<!-- field: --></div><div style=\"text-indent:0.5in;\"><!-- field: Text --><span style=\"text-decoration:underline;\">(1)</span> All moneys collected by the director from the aircraft fuel excise tax as provided in RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=82.42.020'>82.42.020</a> ((<span style=\"text-decoration:line-through;\">shall</span>))<span style=\"text-decoration:underline;\">must</span> be transmitted to the state treasurer and ((<span style=\"text-decoration:line-through;\">shall</span>))<span style=\"text-decoration:underline;\">must</span> be credited to the aeronautics account hereby created in the state treasury.</div><div style=\"text-indent:0.5in;\"><span style=\"text-decoration:underline;\">(2)</span> Moneys collected from the consumer or user of aircraft fuel from either the use tax imposed by RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=82.12.020'>82.12.020</a> or the retail sales tax imposed by RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=82.08.020'>82.08.020</a> ((<span style=\"text-decoration:line-through;\">shall</span>))<span style=\"text-decoration:underline;\">must</span> be transmitted to the state treasurer and <span style=\"text-decoration:underline;\">distributed as follows:</span></div><div style=\"text-indent:0.5in;\"><span style=\"text-decoration:underline;\">(a)(i) During the period from July 1, 2025, to June 30, 2027, an amount equivalent to imposing 0.5 percent tax must be credited to the aeronautics account; and</span></div><div style=\"text-indent:0.5in;\"><span style=\"text-decoration:underline;\">(ii) Beginning July 1, 2027, an amount equivalent to imposing a one percent tax must be credited to the aeronautics account; and</span></div><div style=\"text-indent:0.5in;\"><span style=\"text-decoration:underline;\">(b) An amount equivalent to 6.5 percent minus the amount in (a) of this subsection must be</span> credited to the state general fund.</div><div style=\"text-indent:0.5in;\"><span style=\"text-decoration:underline;\">(3) Beginning July 1, 2025, the aviation division of the department of transportation must track the amount of additional funds awarded for airport projects through the airport aid grant program. The aviation division of the department of transportation must report annually to the transportation committees of the legislature for the years 2025 to 2031, and thereafter as needed. The report must include, but is not limited to:</span></div><div style=\"text-indent:0.5in;\"><span style=\"text-decoration:underline;\">(a) A short description of each airport project funded;</span></div><div style=\"text-indent:0.5in;\"><span style=\"text-decoration:underline;\">(b) The state grant amount from the aeronautics account contributed to each project;</span></div><div style=\"text-indent:0.5in;\"><span style=\"text-decoration:underline;\">(c) The amount of federal matching funds contributed to the project; and</span></div><div style=\"text-indent:0.5in;\"><span style=\"text-decoration:underline;\">(d) The amount of local airport sponsor matching funds contributed to the project.</span></div><div style=\"text-indent:0.5in;\"><span style=\"text-decoration:underline;\">(4) At the end of fiscal close of each biennium, beginning June 30, 2027, the aviation division of the department of transportation must report to the senate ways and means, house appropriations, and the transportation committees of the legislature the estimated amount of funds returned to the general fund giving consideration of sales and business and occupation taxes generated as a result of the funded airport projects.</span><!-- field: --></div><!-- field: --><div style=\"margin-top:0.25in;text-indent:0.5in;\"><!-- field: BeginningSection --><span style=\"text-decoration:underline;\">NEW SECTION.</span><span>  </span><span style=\"font-weight:bold;padding-right:0.1in;\">Sec. 2.  </span><span style=\"text-indent:0.5in;\">This act is necessary for the immediate preservation of the public peace, health, or safety, or support of the state government and its existing public institutions, and takes effect July 1, 2025.</span><!-- field: --></div><!-- field: --><div style=\"margin-top:0.1in;font-weight:bold;text-align:center;\">--- END ---</div></body></html>"
+    },
+    "summary": {
+      "ts": "2024-12-16T19:42:46.557Z",
+      "text": "<h3>Purpose</h3>\n<p>The purpose of House Bill 1083 is to amend the distribution of revenues collected from aircraft fuel taxes in Washington State. The bill specifies that all funds collected will be transmitted to the state treasurer and allocated to an aeronautics account, which supports airport projects and the aviation industry. Key changes include adjustments to the percentage of tax that will go to the aeronautics account and the requirement for reporting on funds awarded for airport projects.</p>\n<h3>Key Provisions</h3>\n<h4>Fund Distribution</h4>\n<ul>\n<li>All moneys from the aircraft fuel excise tax must be transmitted to the state treasurer and credited to the aeronautics account.</li>\n<li>Moneys collected from the use tax or retail sales tax on aircraft fuel will be transmitted to the state treasurer and distributed:<ul>\n<li><strong>From July 1, 2025, to June 30, 2027</strong>: 0.5 percent of the amount will go to the aeronautics account.</li>\n<li><strong>Beginning July 1, 2027</strong>: 1 percent will be credited to the aeronautics account.</li>\n<li>6.5 percent minus the amount credited to the aeronautics account will go to the state general fund.</li></ul></li>\n</ul>\n<h4>Reporting Requirements</h4>\n<ul>\n<li>Starting July 1, 2025, the aviation division of the Department of Transportation must track and report on additional funds for airport projects annually until 2031. The report will include:<ul>\n<li>Descriptions of each airport project funded.</li>\n<li>The state grant amounts from the aeronautics account for each project.</li>\n<li>Federal and local matching funds contributed to each project.</li></ul></li>\n</ul>\n<h4>Biennium Reporting</h4>\n<ul>\n<li>After each biennium ends, beginning June 30, 2027, the aviation division must report to relevant legislative committees the estimated funds returned to the general fund based on the taxes generated from the funded airport projects.</li>\n</ul>"
     }
-  ],
-  "billReports": [],
-  "billAmendments": []
+  },
+  "subDocuments": [],
+  "keywords": {
+    "ts": "2024-12-16T19:42:46.557Z",
+    "text": "aeronautics account aviation industry airport projects fund distribution reporting requirements state treasurer excise tax tax percentage revenue collection biennium funds"
+  }
 }

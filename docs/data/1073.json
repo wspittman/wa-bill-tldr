@@ -1,11 +1,13 @@
 {
   "id": 1073,
-  "lastUpdated": "2025-02-27T04:28:48.124Z",
+  "lastUpdated": "2025-03-01T01:04:41.077Z",
   "agency": "House",
   "description": "Keeping our Washington national guard strong act.",
   "introducedDate": "2025-01-13T08:00:00.000Z",
-  "status": "Referred to Appropriations.",
-  "actionDate": "2025-01-22T08:00:00.000Z",
+  "status": {
+    "ts": "2025-01-22T08:00:00.000Z",
+    "text": "Referred to Appropriations."
+  },
   "sponsors": [
     "Leavitt",
     "Abbarno",
@@ -20,14 +22,25 @@
     "Reeves",
     "Donaghy"
   ],
-  "billDocuments": [
-    {
-      "name": "1073",
-      "description": "House Bill 1073",
-      "url": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1073.htm",
-      "createdDate": "2024-12-16T19:42:28.813Z"
+  "document": {
+    "name": "1073",
+    "description": "House Bill 1073",
+    "url": {
+      "ts": "2024-12-16T19:42:28.813Z",
+      "text": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1073.htm"
+    },
+    "original": {
+      "ts": "2024-12-16T19:42:28.813Z",
+      "text": "<!DOCTYPE html ><html><body><div>H-0276.2</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><div style=\"font-weight:bold;text-align:center;\">HOUSE BILL 1073</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><table style=\"width:622px;margin-top:0.1in;\"><tr><td><div style=\"font-weight:bold;\">State of Washington</div></td><td><div style=\"font-weight:bold;\">69th Legislature</div></td><td><div style=\"font-weight:bold;\">2025 Regular Session</div></td></tr></table><div style=\"margin-top:0.1in;\"><span style=\"font-weight:bold;margin-right:0.25in;\">By</span><!-- field: Sponsors -->Representatives Leavitt, Abbarno, Ryu, Shavers, Paul, Timmons, Simmons, Rule, Barnard, Nance, Reeves, and Donaghy<!-- field: --></div><div style=\"margin-top:0.1in;\"><span style=\"margin-right:0.25in;\">Prefiled 12/16/24.</span><span style=\"margin-right:0.25in;\">Read first time 01/13/25.</span><span style=\"margin-right:0.25in;\">Referred to Committee on Technology, Economic Development, &amp; Veterans.</span></div><div style=\"text-indent:0.5in;margin-top:0.5in;\"><!-- field: CaptionsTitles -->AN ACT Relating to keeping our Washington national guard strong act; and adding a new section to chapter  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=38.24'>38.24</a> RCW.<!-- field: --></div><div style=\"margin-top:0.25in;margin-bottom:0.25in;\">BE IT ENACTED BY THE LEGISLATURE OF THE STATE OF WASHINGTON:</div><div style=\"margin-top:0.25in;text-indent:0.5in;\"><!-- field: BeginningSection --><span style=\"text-decoration:underline;\">NEW SECTION.</span><span>  </span><span style=\"font-weight:bold;padding-right:0.1in;\">Sec. 1.  </span>A new section is added to chapter  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=38.24'>38.24</a> RCW to read as follows:<!-- field: --></div><div style=\"text-indent:0.5in;\"><!-- field: Text -->(1) Subject to the availability of amounts appropriated for this specific purpose, there is created the Washington national guard retention program.</div><div style=\"text-indent:0.5in;\">(2) The adjutant general shall establish the program to study retention needs, including length of service and critical skills retention. The adjutant general may consider the reenlistment term, conversion to a shortage specialty, and other retention factors to determine the amount of any reenlistment bonus that will encourage members of the Washington national guard to extend their terms of service.</div><div style=\"text-indent:0.5in;\">(3) The adjutant general shall determine eligibility criteria for the retention program. The criteria must be specified in policy and changes must be published.</div><div style=\"text-indent:0.5in;\">(4) The adjutant general shall determine the amount of any reenlistment bonus and the schedule to make bonus payments.</div><div style=\"text-indent:0.5in;\">(5) The state military department must report to the governor and the legislature on retention needs and recommendations at least once every three years, beginning November 1, 2027.</div><!-- field: --><div style=\"margin-top:0.1in;font-weight:bold;text-align:center;\">--- END ---</div></body></html>"
+    },
+    "summary": {
+      "ts": "2024-12-16T19:42:28.813Z",
+      "text": "<h3>Purpose</h3>\n<p>The bill aims to create a retention program for the Washington National Guard to help maintain and strengthen its forces. This initiative intends to address issues related to the retention of service members by offering incentives such as reenlistment bonuses. Key changes include the establishment of eligibility criteria and requirements for ongoing reporting to the governor and legislature about retention needs and recommendations.</p>\n<h3>Key Provisions</h3>\n<h4>Washington National Guard Retention Program</h4>\n<ul>\n<li>A new program is created to focus on the retention of National Guard members.</li>\n<li>The adjutant general is responsible for studying retention needs, considering factors like length of service and critical skills.</li>\n<li>Factors affecting reenlistment bonuses will include:<ul>\n<li>Reenlistment term</li>\n<li>Conversion to a shortage specialty</li>\n<li>Other relevant retention factors</li></ul></li>\n<li>The adjutant general will set eligibility criteria that must be clearly published.</li>\n<li>Bonus amounts and the schedule for bonus payments will be determined by the adjutant general.</li>\n<li>The state military department is required to report to the governor and legislature at least once every three years, starting from November 1, 2027, on the retention needs and recommendations.</li>\n</ul>"
     }
-  ],
-  "billReports": [],
-  "billAmendments": []
+  },
+  "subDocuments": [],
+  "keywords": {
+    "ts": "2024-12-16T19:42:28.813Z",
+    "text": "retention program washington national guard reenlistment bonuses eligibility criteria adjutant general shortage specialty service members military department reporting"
+  }
 }
