@@ -9,7 +9,7 @@ function sortBills(column) {
     Description: (a, b) => a.description.localeCompare(b.description),
     Sponsors: (a, b) =>
       a.sponsors.join(", ").localeCompare(b.sponsors.join(", ")),
-    Status: (a, b) => a.status.localeCompare(b.status.text),
+    Status: (a, b) => a.status.text.localeCompare(b.status.text),
   };
 
   if (currentSortColumn === column) {
