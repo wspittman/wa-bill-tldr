@@ -37,7 +37,11 @@ export async function proseCompletion(
       } else if (errorType !== "429") {
         logger.error("OpenAI Non-Backoff Error", error);
         return "An error occurred while processing.";
+      } else if (attempt >= MAX_RETRIES) {
+        logger.error("OpenAI Back Off Limit Exceeded", error);
+        return "An error occurred while processing.";
       }
+
       await backoff(action, attempt);
       attempt++;
     }
@@ -148,8 +152,15 @@ function getBackoffDelay(attempt: number) {
 
 function getErrorType(error: unknown): "429" | "Too Long" | "Other" {
   if (error instanceof OpenAI.APIError) {
-    if (error.status === 429) return "429";
-    if (error.code === "context_length_exceeded") return "Too Long";
+    const { code, status, error: innerError } = error;
+    if (
+      code === "context_length_exceeded" ||
+      (code === "rate_limit_exceeded" &&
+        innerError.message.startsWith("Request too large"))
+    ) {
+      return "Too Long";
+    }
+    if (status === 429) return "429";
   }
   return "Other";
 }

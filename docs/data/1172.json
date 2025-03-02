@@ -1,0 +1,36 @@
+{
+  "id": 1172,
+  "lastUpdated": "2025-03-01T06:51:40.788Z",
+  "agency": "House",
+  "description": "Concerning fire protection district civil service systems.",
+  "introducedDate": "2025-01-13T08:00:00.000Z",
+  "status": {
+    "ts": "2025-02-11T08:00:00.000Z",
+    "text": "Rules Committee relieved of further consideration.  Placed on second reading."
+  },
+  "sponsors": [
+    "Schmidt",
+    "Bronoske"
+  ],
+  "document": {
+    "name": "1172",
+    "description": "House Bill 1172",
+    "url": {
+      "ts": "2025-01-06T19:21:52.103Z",
+      "text": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1172.htm"
+    },
+    "original": {
+      "ts": "2025-01-06T19:21:52.103Z",
+      "text": "<!DOCTYPE html ><html><body><div>H-0394.1</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><div style=\"font-weight:bold;text-align:center;\">HOUSE BILL 1172</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><table style=\"width:622px;margin-top:0.1in;\"><tr><td><div style=\"font-weight:bold;\">State of Washington</div></td><td><div style=\"font-weight:bold;\">69th Legislature</div></td><td><div style=\"font-weight:bold;\">2025 Regular Session</div></td></tr></table><div style=\"margin-top:0.1in;\"><span style=\"font-weight:bold;margin-right:0.25in;\">By</span><!-- field: Sponsors -->Representatives Schmidt and Bronoske<!-- field: --></div><div style=\"margin-top:0.1in;\"><span style=\"margin-right:0.25in;\">Prefiled 01/06/25.</span><span style=\"margin-right:0.25in;\">Read first time 01/13/25.</span><span style=\"margin-right:0.25in;\">Referred to Committee on Local Government.</span></div><div style=\"text-indent:0.5in;margin-top:0.5in;\"><!-- field: CaptionsTitles -->AN ACT Relating to authorizing fire protection districts to dissolve existing civil service systems with approval from the civil service employees; and amending RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=52.30.040'>52.30.040</a>.<!-- field: --></div><div style=\"margin-top:0.25in;margin-bottom:0.25in;\">BE IT ENACTED BY THE LEGISLATURE OF THE STATE OF WASHINGTON:</div><div style=\"margin-top:0.25in;text-indent:0.5in;\"><!-- field: BeginningSection --><span style=\"font-weight:bold;padding-right:0.1in;\">Sec. 1.  </span>RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=52.30.040'>52.30.040</a> and 1984 c 230 s 79 are each amended to read as follows:<!-- field: --></div><div style=\"text-indent:0.5in;\"><!-- field: Text --><span style=\"text-decoration:underline;\">(1)</span> A fire protection district with a fully-paid fire department may, by resolution of its board of fire commissioners, provide for civil service in its fire department in the same manner, with the same powers, and with the same force and effect as provided by chapter  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=41.08'>41.08</a> RCW for cities, towns, and municipalities, including restrictions against the discharge of an employee because of residence outside the limits of the fire protection district.</div><div style=\"text-indent:0.5in;\"><span style=\"text-decoration:underline;\">(2) A fire protection district that has adopted civil service in its fire department as provided for in subsection (1) of this section may dissolve its civil service system if:</span></div><div style=\"text-indent:0.5in;\"><span style=\"text-decoration:underline;\">(a) Its board of fire commissioners adopts a resolution to dissolve the civil service system; and</span></div><div style=\"text-indent:0.5in;\"><span style=\"text-decoration:underline;\">(b) A majority of the civil service employees employed by the fire protection district vote to dissolve the civil service system within 60 calendar days of the adoption of the resolution by the board of fire commissioners.</span><!-- field: --></div><!-- field: --><div style=\"margin-top:0.1in;font-weight:bold;text-align:center;\">--- END ---</div></body></html>"
+    },
+    "summary": {
+      "ts": "2025-01-06T19:21:52.103Z",
+      "text": "<h3>Purpose</h3>\n<p>The purpose of House Bill 1172 is to allow fire protection districts in Washington State to discontinue their existing civil service systems. This can happen only with the approval of the civil service employees themselves. The bill modifies RCW 52.30.040 to establish a clear process for dissolving these systems, which aims to provide more flexibility for fire districts in managing their personnel.</p>\n<h3>Key Provisions</h3>\n<h4>Dissolution of Civil Service Systems</h4>\n<ul>\n<li>A fire protection district can dissolve its civil service system if:<ul>\n<li>The board of fire commissioners passes a resolution for dissolution.</li>\n<li>A majority of the civil service employees vote in favor of dissolving the civil service system within 60 days of the resolution. </li></ul></li>\n</ul>\n<p>This change allows for greater local control and adaptability in the management of fire department personnel, contingent upon employee agreement.</p>"
+    }
+  },
+  "subDocuments": [],
+  "keywords": {
+    "ts": "2025-01-06T19:21:52.103Z",
+    "text": "fire protection districts discontinue civil service systems employee approval flexibility process resolution local control adaptability management"
+  }
+}

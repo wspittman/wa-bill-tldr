@@ -1,0 +1,35 @@
+{
+  "id": 1145,
+  "lastUpdated": "2025-03-01T06:51:39.133Z",
+  "agency": "House",
+  "description": "Concerning county public works reporting requirements.",
+  "introducedDate": "2025-01-13T08:00:00.000Z",
+  "status": {
+    "ts": "2025-01-13T08:00:00.000Z",
+    "text": "First reading, referred to Local Government."
+  },
+  "sponsors": [
+    "Barkis"
+  ],
+  "document": {
+    "name": "1145",
+    "description": "House Bill 1145",
+    "url": {
+      "ts": "2024-12-31T19:02:58.563Z",
+      "text": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1145.htm"
+    },
+    "original": {
+      "ts": "2024-12-31T19:02:58.563Z",
+      "text": "<!DOCTYPE html ><html><body><div>H-0260.3</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><div style=\"font-weight:bold;text-align:center;\">HOUSE BILL 1145</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><table style=\"width:622px;margin-top:0.1in;\"><tr><td><div style=\"font-weight:bold;\">State of Washington</div></td><td><div style=\"font-weight:bold;\">69th Legislature</div></td><td><div style=\"font-weight:bold;\">2025 Regular Session</div></td></tr></table><div style=\"margin-top:0.1in;\"><span style=\"font-weight:bold;margin-right:0.25in;\">By</span><!-- field: Sponsors -->Representative Barkis<!-- field: --></div><div style=\"margin-top:0.1in;\"><span style=\"margin-right:0.25in;\">Prefiled 12/31/24.</span><span style=\"margin-right:0.25in;\">Read first time 01/13/25.</span><span style=\"margin-right:0.25in;\">Referred to Committee on Local Government.</span></div><div style=\"text-indent:0.5in;margin-top:0.5in;\"><!-- field: CaptionsTitles -->AN ACT Relating to county public works reporting requirements; and adding a new section to chapter  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=36.01'>36.01</a> RCW.<!-- field: --></div><div style=\"margin-top:0.25in;margin-bottom:0.25in;\">BE IT ENACTED BY THE LEGISLATURE OF THE STATE OF WASHINGTON:</div><div style=\"margin-top:0.25in;text-indent:0.5in;\"><!-- field: BeginningSection --><span style=\"text-decoration:underline;\">NEW SECTION.</span><span>  </span><span style=\"font-weight:bold;padding-right:0.1in;\">Sec. 1.  </span>A new section is added to chapter  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=36.01'>36.01</a> RCW to read as follows:<!-- field: --></div><div style=\"text-indent:0.5in;\"><!-- field: Text -->(1)(a) Counties must collect and retain records of any public works activity that it undertakes.</div><div style=\"text-indent:0.5in;\">(b) At a minimum, the records of public works activity must include:</div><div style=\"text-indent:0.5in;\">(i) If more than a de minimis amount of soil, trees, shrubs, gravel, or other natural or organic material that was present prior to the public works activity was removed during the activity, the amount of such material that was removed;</div><div style=\"text-indent:0.5in;\">(ii) Where the removed materials were taken and how they were disposed of;</div><div style=\"text-indent:0.5in;\">(iii) Whether any of the removed materials were reused for other projects; and</div><div style=\"text-indent:0.5in;\">(iv) Whether the materials were tested for contaminants and the results of any such tests.</div><div style=\"text-indent:0.5in;\">(2) For the purposes of this section:</div><div style=\"text-indent:0.5in;\">(a) \"De minimis amount\" means an amount of natural or organic material removed that would be too small to be reasonably noticed by the naked eye without a detailed examination of the area.</div><div style=\"text-indent:0.5in;\">(b) \"Public works activity\" means any maintenance or construction activity that is undertaken by the county on a county road as defined in chapter  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=46.04'>46.04</a> RCW that is on or adjacent to property owned by another.</div><!-- field: --><div style=\"margin-top:0.1in;font-weight:bold;text-align:center;\">--- END ---</div></body></html>"
+    },
+    "summary": {
+      "ts": "2024-12-31T19:02:58.563Z",
+      "text": "<h3>Purpose</h3>\n<p>The purpose of House Bill 1145 is to establish new reporting requirements for counties regarding public works activities. This bill aims to enhance accountability and transparency by mandating counties to collect and maintain detailed records of public works activities, especially regarding the removal of natural materials. The key change from prior regulations is the introduction of specific data points that counties must document, thereby impacting how such activities are reported and monitored.</p>\n<h3>Key Provisions</h3>\n<h4>Record Keeping Requirements</h4>\n<ul>\n<li>Counties must collect and keep records for any public works activity they undertake.</li>\n<li>The records must include at minimum:<ul>\n<li>The amount of soil, trees, shrubs, gravel, or other natural or organic materials removed if more than a de minimis amount.</li>\n<li>Details on where the removed materials were taken and how they were disposed of.</li>\n<li>Information on whether any of the removed materials were reused for other projects.</li>\n<li>Results from any tests performed on the materials for contaminants.</li></ul></li>\n</ul>\n<h4>Definitions for Clarity</h4>\n<ul>\n<li>\"De minimis amount\" is defined as a quantity of natural or organic material that is too small to be easily noticed without detailed examination.</li>\n<li>\"Public works activity\" refers to any maintenance or construction activities conducted by the county on a county road that is on or near privately owned property.</li>\n</ul>"
+    }
+  },
+  "subDocuments": [],
+  "keywords": {
+    "ts": "2024-12-31T19:02:58.563Z",
+    "text": "public works reporting counties accountability transparency records materials removal disposal monitoring"
+  }
+}

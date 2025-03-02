@@ -1,0 +1,49 @@
+{
+  "id": 1173,
+  "lastUpdated": "2025-03-01T06:51:40.797Z",
+  "agency": "House",
+  "description": "Concerning wages for journeypersons in high-hazard facilities.",
+  "introducedDate": "2025-01-13T08:00:00.000Z",
+  "status": {
+    "ts": "2025-01-24T08:00:00.000Z",
+    "text": "Referred to Rules 2 Review."
+  },
+  "sponsors": [
+    "Bronoske",
+    "Berry",
+    "Reed",
+    "Ramel",
+    "Obras",
+    "Fosse",
+    "Simmons",
+    "Ortiz-Self",
+    "Goodman",
+    "Gregerson",
+    "Pollet",
+    "Nance",
+    "Ormsby",
+    "Lekanoff",
+    "Hill"
+  ],
+  "document": {
+    "name": "1173",
+    "description": "House Bill 1173",
+    "url": {
+      "ts": "2025-01-06T19:21:52.793Z",
+      "text": "http://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Bills/House Bills/1173.htm"
+    },
+    "original": {
+      "ts": "2025-01-06T19:21:52.793Z",
+      "text": "<!DOCTYPE html ><html><body><div>H-0303.1</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><div style=\"font-weight:bold;text-align:center;\">HOUSE BILL 1173</div><hr style=\"margin-left:1.25in;margin-right:1.25in;height:1px;color:#333;\" /><table style=\"width:622px;margin-top:0.1in;\"><tr><td><div style=\"font-weight:bold;\">State of Washington</div></td><td><div style=\"font-weight:bold;\">69th Legislature</div></td><td><div style=\"font-weight:bold;\">2025 Regular Session</div></td></tr></table><div style=\"margin-top:0.1in;\"><span style=\"font-weight:bold;margin-right:0.25in;\">By</span><!-- field: Sponsors -->Representatives Bronoske, Berry, Reed, Ramel, Obras, Fosse, Simmons, Ortiz-Self, Goodman, Gregerson, Pollet, Nance, Ormsby, Lekanoff, and Hill<!-- field: --></div><div style=\"margin-top:0.1in;\"><span style=\"margin-right:0.25in;\">Prefiled 01/06/25.</span><span style=\"margin-right:0.25in;\">Read first time 01/13/25.</span><span style=\"margin-right:0.25in;\">Referred to Committee on Labor &amp; Workplace Standards.</span></div><div style=\"text-indent:0.5in;margin-top:0.5in;\"><!-- field: CaptionsTitles -->AN ACT Relating to wages for journeypersons in high-hazard facilities; amending RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=49.80.010'>49.80.010</a>; and providing an effective date.<!-- field: --></div><div style=\"margin-top:0.25in;margin-bottom:0.25in;\">BE IT ENACTED BY THE LEGISLATURE OF THE STATE OF WASHINGTON:</div><div style=\"margin-top:0.25in;text-indent:0.5in;\"><!-- field: BeginningSection --><span style=\"font-weight:bold;padding-right:0.1in;\">Sec. 1.  </span>RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=49.80.010'>49.80.010</a> and 2019 c 306 s 1 are each amended to read as follows:<!-- field: --></div><div style=\"text-indent:0.5in;\"><!-- field: Text -->The definitions in this section apply throughout this chapter unless the context clearly requires otherwise.</div><div style=\"text-indent:0.5in;\">(1) \"Apprenticeable occupation\" means an occupation for which an apprenticeship program has been approved by the Washington state apprenticeship and training council pursuant to chapter  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=49.04'>49.04</a> RCW.</div><div style=\"text-indent:0.5in;\">(2) \"Department\" means the department of labor and industries.</div><div style=\"text-indent:0.5in;\">(3) \"On-site work\" does not include ship and rail car support activities; environmental inspection and testing; security guard services; work which is performed by an original equipment manufacturer for warranty, repair, or maintenance on the vendor's equipment if required by the original equipment manufacturer's warranty agreement between the original equipment manufacturer and the owner; industrial cleaning not related to construction; safety services requiring professional safety certification; nonconstruction catalyst loading, regeneration, and removal; chemical purging and cleaning; refinery by-product separation and recovery; inspection services not related to construction; and work performed that is not in an apprenticeable occupation.</div><div style=\"text-indent:0.5in;\">(4) \"Prevailing ((<span style=\"text-decoration:line-through;\">hourly wage</span>)) rate <span style=\"text-decoration:underline;\">of wage</span>\" has the <span style=\"text-decoration:underline;\">same</span> meaning <span style=\"text-decoration:underline;\">as</span> provided ((<span style=\"text-decoration:line-through;\">for \"prevailing rate of wage\"</span>)) in RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=39.12.010'>39.12.010</a>.</div><div style=\"text-indent:0.5in;\">(5) \"Registered apprentice\" means an apprentice registered in an apprenticeship program approved by the Washington state apprenticeship and training council according to chapter  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=49.04'>49.04</a> RCW.</div><div style=\"text-indent:0.5in;\">(6) \"Skilled and trained workforce\" means a workforce that meets both of the following criteria:</div><div style=\"text-indent:0.5in;\">(a) All the workers are either registered apprentices or skilled journeypersons; and</div><div style=\"text-indent:0.5in;\">(b) The workforce meets the apprenticeship graduation and approved advanced safety training requirements established in RCW  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=49.80.030'>49.80.030</a>.</div><div style=\"text-indent:0.5in;\">(7) \"Skilled journeyperson\" means a worker who meets all of the following criteria:</div><div style=\"text-indent:0.5in;\">(a) The worker either graduated from an apprenticeship program for the applicable occupation that was approved by the Washington state apprenticeship and training council according to chapter  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=49.04'>49.04</a> RCW, or has at least as many hours of on-the-job experience in the applicable occupation that would be required to graduate from an apprenticeship program approved by the Washington state apprenticeship and training council according to chapter  <a href='http://app.leg.wa.gov/RCW/default.aspx?cite=49.04'>49.04</a> RCW; and</div><div style=\"text-indent:0.5in;\">(b) The worker is being paid at least a rate ((<span style=\"text-decoration:line-through;\">commensurate with the wages typically paid for the occupation in the applicable geographic area, subject to the following provisions:</span></div><div style=\"text-indent:0.5in;\"><span style=\"text-decoration:line-through;\">(i) The prevailing wage rate paid for a worker in the applicable occupation and geographic area on public works projects may be used to determine the appropriate rate of pay, however, this subsection (7)(b) does not require a contractor to pay prevailing wage rates; and</span></div><div style=\"text-indent:0.5in;\"><span style=\"text-decoration:line-through;\">(ii) In no case may the worker be paid at a rate less than an hourly rate consistent with the seventy-fifth percentile in the applicable occupation and geographic area in the most recent occupational employment statistics published by the employment security department</span>))<span style=\"text-decoration:underline;\">consistent with the prevailing rate of wage for a worker in the applicable occupation and geographic area</span>.<!-- field: --></div><!-- field: --><div style=\"margin-top:0.25in;text-indent:0.5in;\"><!-- field: BeginningSection --><span style=\"text-decoration:underline;\">NEW SECTION.</span><span>  </span><span style=\"font-weight:bold;padding-right:0.1in;\">Sec. 2.  </span><span style=\"text-indent:0.5in;\">This act takes effect January 1, 2026.</span><!-- field: --></div><!-- field: --><div style=\"margin-top:0.1in;font-weight:bold;text-align:center;\">--- END ---</div></body></html>"
+    },
+    "summary": {
+      "ts": "2025-01-06T19:21:52.793Z",
+      "text": "<h3>Purpose</h3>\n<p>The purpose of this bill is to amend the existing laws regarding wages for journeypersons who work in high-hazard facilities. It updates RCW 49.80.010 to clarify definitions and requirements regarding wage standards for these workers. The key changes include the modification of the \"prevailing wage rate\" definition and adjustments to the criteria for skilled journeypersons, emphasizing their compensation based on the prevailing wage rather than a previously specified lower standard.</p>\n<h3>Key Provisions</h3>\n<h4>Wage Definitions and Changes</h4>\n<ul>\n<li>The term \"prevailing wage rate\" is now referred to as \"prevailing rate of wage\" and aligns with definitions provided in RCW 39.12.010.</li>\n<li>Skilled journeypersons must now be compensated at a wage that is consistent with the prevailing wage for their occupation and geographic area.</li>\n</ul>\n<h4>Employment Standards</h4>\n<ul>\n<li>To qualify as a \"skilled journeyperson,\" a worker must:<ul>\n<li>Have either graduated from an approved apprenticeship program or possess equivalent experience.</li>\n<li>Be paid at a rate aligned with the prevailing rate of wage within their occupation and area.</li></ul></li>\n</ul>\n<h4>Effective Date</h4>\n<ul>\n<li>The provisions of this act will take effect on January 1, 2026.</li>\n</ul>"
+    }
+  },
+  "subDocuments": [],
+  "keywords": {
+    "ts": "2025-01-06T19:21:52.793Z",
+    "text": "wages journeypersons high-hazard facilities prevailing rate skilled compensation employment standards effective date apprenticeship program"
+  }
+}

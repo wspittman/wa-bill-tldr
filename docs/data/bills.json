@@ -2734,5 +2734,2793 @@
       "ts": "2024-12-19T19:10:07.740Z",
       "text": "tenant assistance program economic mobility housing affordability rent-burdened financial hardship public housing authorities eligibility criteria landlord disqualification documentation compliance"
     }
+  },
+  {
+    "id": 1100,
+    "lastUpdated": "2025-03-01T06:51:35.468Z",
+    "agency": "House",
+    "description": "Creating a local sales and use tax.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Finance."
+    },
+    "sponsors": [
+      "Jacobsen"
+    ],
+    "keywords": {
+      "ts": "2024-12-19T19:10:08.530Z",
+      "text": "local sales use tax counties cities financial challenges public safety infrastructure revenue economic stability tax rate tax collection"
+    }
+  },
+  {
+    "id": 1101,
+    "lastUpdated": "2025-03-01T06:51:35.411Z",
+    "agency": "House",
+    "description": "Concerning vehicular homicide offenses.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-03T08:00:00.000Z",
+      "text": "Referred to Appropriations."
+    },
+    "sponsors": [
+      "Jacobsen",
+      "Klicker"
+    ],
+    "keywords": {
+      "ts": "2024-12-19T19:10:09.410Z",
+      "text": "amendment vehicular homicide offenses public safety sentencing guidelines traffic offense specific language expiration date effective date driving under the influence"
+    }
+  },
+  {
+    "id": 1102,
+    "lastUpdated": "2025-03-01T06:51:35.435Z",
+    "agency": "House",
+    "description": "Increasing support and services for veterans.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-28T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Shavers",
+      "Ryu",
+      "Leavitt",
+      "Callan",
+      "Simmons",
+      "Goodman",
+      "Wylie",
+      "Nance",
+      "Fosse",
+      "Reeves"
+    ],
+    "keywords": {
+      "ts": "2024-12-19T19:10:20.403Z",
+      "text": "veterans service officer program funding benefits eligibility awareness resources counties quality of life demographics"
+    }
+  },
+  {
+    "id": 1103,
+    "lastUpdated": "2025-03-01T06:51:35.440Z",
+    "agency": "House",
+    "description": "Expanding protections against unwanted telephone calls and text messages for cellular users.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Consumer Protection & Business."
+    },
+    "sponsors": [
+      "Shavers",
+      "Ryu",
+      "Simmons",
+      "Wylie",
+      "Nance",
+      "Fosse",
+      "Reeves"
+    ],
+    "keywords": {
+      "ts": "2024-12-19T19:10:21.163Z",
+      "text": "cellular users unwanted calls text messages telephone solicitation accountability opt-out option immediate call termination do not call registry compliance penalties"
+    }
+  },
+  {
+    "id": 1104,
+    "lastUpdated": "2025-03-01T06:51:35.415Z",
+    "agency": "House",
+    "description": "Updating the professional engineers' registration act.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-03T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Waters",
+      "Bernbaum",
+      "Reeves"
+    ],
+    "keywords": {
+      "ts": "2024-12-19T19:10:21.960Z",
+      "text": "professional engineers registration act update board membership procedures qualifications responsibilities land surveyors examination continuing education compliance enforcement"
+    }
+  },
+  {
+    "id": 1105,
+    "lastUpdated": "2025-03-01T06:51:35.764Z",
+    "agency": "House",
+    "description": "Exempting exclusive bargaining representatives for department of corrections employees from certain provisions related to coalition bargaining.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-28T08:00:00.000Z",
+      "text": "Rules Committee relieved of further consideration.  Placed on second reading."
+    },
+    "sponsors": [
+      "Fosse",
+      "Low",
+      "Stearns",
+      "Leavitt",
+      "Berry",
+      "Ryu",
+      "Cortes",
+      "Farivar",
+      "Doglio",
+      "Paul",
+      "Goodman",
+      "Wylie",
+      "Pollet",
+      "Fey",
+      "Kloba",
+      "Nance",
+      "Lekanoff",
+      "Bernbaum"
+    ],
+    "keywords": {
+      "ts": "2024-12-19T19:10:22.963Z",
+      "text": "exclusive bargaining representatives corrections employees negotiation framework coalition negotiate agreements oversight financial requests higher education terms"
+    }
+  },
+  {
+    "id": 1106,
+    "lastUpdated": "2025-03-01T06:51:35.755Z",
+    "agency": "House",
+    "description": "Recognizing the tremendous sacrifices made by our military veterans by phasing down the disability rating requirements to ensure more disabled veterans are eligible for property tax relief.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-13T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Barnard",
+      "Leavitt",
+      "Eslick",
+      "Penner",
+      "Klicker",
+      "Richards",
+      "Shavers",
+      "Couture",
+      "McClintock",
+      "Callan",
+      "Marshall",
+      "Kloba",
+      "Nance",
+      "Simmons"
+    ],
+    "keywords": {
+      "ts": "2024-12-20T18:52:26.143Z",
+      "text": "property tax exemption eligibility disability rating adjustments surviving spouse income thresholds valuation residence exemption maintenance conditions financial relief"
+    }
+  },
+  {
+    "id": 1107,
+    "lastUpdated": "2025-03-01T06:51:35.826Z",
+    "agency": "House",
+    "description": "Concerning environmental impacts of fashion.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Environment & Energy."
+    },
+    "sponsors": [
+      "Mena",
+      "Ramel",
+      "Berry",
+      "Reed",
+      "Macri",
+      "Doglio",
+      "Gregerson",
+      "Simmons",
+      "Peterson",
+      "Goodman",
+      "Pollet",
+      "Kloba",
+      "Duerr",
+      "Berg",
+      "Ormsby",
+      "Scott",
+      "Reeves",
+      "Bernbaum",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2024-12-20T18:52:27.213Z",
+      "text": "environmental impacts fashion industry excessive water usage pollution carbon emissions waste disclosure requirements apparel footwear mandatory disclosures high-priority chemicals"
+    }
+  },
+  {
+    "id": 1108,
+    "lastUpdated": "2025-03-01T06:51:35.773Z",
+    "agency": "House",
+    "description": "Creating a task force on housing cost driver analysis.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-28T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Klicker",
+      "Peterson",
+      "Barkis",
+      "Ybarra",
+      "Low",
+      "Leavitt",
+      "Schmidt",
+      "Eslick",
+      "Penner",
+      "Connors",
+      "Paul",
+      "Ramel",
+      "Jacobsen",
+      "Shavers",
+      "Burnett",
+      "Rude",
+      "Keaton",
+      "Obras",
+      "Timmons",
+      "Wylie",
+      "Caldier",
+      "Barnard",
+      "Rule",
+      "Nance",
+      "Berg",
+      "Bernbaum"
+    ],
+    "keywords": {
+      "ts": "2024-12-20T18:52:28.140Z",
+      "text": "task force housing costs analysis stakeholders affordable housing recommendations economics developers reimbursements findings"
+    }
+  },
+  {
+    "id": 1109,
+    "lastUpdated": "2025-03-01T06:51:35.876Z",
+    "agency": "House",
+    "description": "Concerning public facilities districts.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-10T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Ryu",
+      "Cortes",
+      "Peterson",
+      "Volz"
+    ],
+    "keywords": {
+      "ts": "2024-12-20T18:52:39.080Z",
+      "text": "public facilities districts sales tax regional centers tax collection tax revenue tax adjustments construction improvement tax rates expiration"
+    }
+  },
+  {
+    "id": 1110,
+    "lastUpdated": "2025-03-01T06:51:36.083Z",
+    "agency": "House",
+    "description": "Vacating convictions for driving under the influence.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-20T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Ortiz-Self",
+      "Goodman",
+      "Reed",
+      "Simmons",
+      "Peterson",
+      "Wylie"
+    ],
+    "keywords": {
+      "ts": "2024-12-20T18:52:40.120Z",
+      "text": "vacation convictions driving offenses reintegration apply restrictions criteria trafficking implications record updates"
+    }
+  },
+  {
+    "id": 1111,
+    "lastUpdated": "2025-03-01T06:51:36.100Z",
+    "agency": "House",
+    "description": "Concerning the indeterminate sentence review board.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Community Safety."
+    },
+    "sponsors": [
+      "Farivar",
+      "Hackney",
+      "Goodman",
+      "Simmons",
+      "Macri",
+      "Scott",
+      "Fosse",
+      "Taylor",
+      "Street",
+      "Cortes",
+      "Mena",
+      "Stearns",
+      "Parshley",
+      "Peterson",
+      "Pollet",
+      "Ramel",
+      "Reed",
+      "Obras",
+      "Ormsby",
+      "Bergquist",
+      "Salahuddin",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2024-12-20T18:52:41.263Z",
+      "text": "early release petition juveniles rehabilitation incentives criminal behavior assessments housing assistance monitoring compliance victim involvement youth hope act"
+    }
+  },
+  {
+    "id": 1112,
+    "lastUpdated": "2025-03-01T06:51:36.091Z",
+    "agency": "House",
+    "description": "Removing the city residency requirement for judges pro tempore in municipalities with a population of more than 400,000 inhabitants.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-31T08:00:00.000Z",
+      "text": "First reading, referred to Law & Justice."
+    },
+    "sponsors": [
+      "Farivar",
+      "Davis",
+      "Berry",
+      "Reed",
+      "Macri",
+      "Bergquist",
+      "Scott",
+      "Ryu",
+      "Fitzgibbon",
+      "Taylor",
+      "Obras",
+      "Gregerson",
+      "Street",
+      "Ormsby",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2024-12-20T18:52:41.953Z",
+      "text": "eliminate requirement, judges pro tempore, municipalities, temporary judges, administration of justice, residency requirements, qualified attorney, appointment, qualifications, compensation"
+    }
+  },
+  {
+    "id": 1113,
+    "lastUpdated": "2025-03-01T06:51:36.107Z",
+    "agency": "House",
+    "description": "Concerning accountability and access to services for individuals charged with a misdemeanor.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-13T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Farivar",
+      "Goodman",
+      "Simmons",
+      "Taylor",
+      "Macri",
+      "Scott",
+      "Fosse",
+      "Street",
+      "Reed",
+      "Senn",
+      "Berry",
+      "Alvarado",
+      "Morgan",
+      "Mena",
+      "Peterson",
+      "Stonier",
+      "Walen",
+      "Pollet",
+      "Wylie",
+      "Cortes",
+      "Obras",
+      "Gregerson",
+      "Ormsby",
+      "Bergquist",
+      "Salahuddin",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2024-12-20T18:52:42.920Z",
+      "text": "public safe-t act accountability services misdemeanors dismissal restitution compliance treatment hearings exclusions offenses driving"
+    }
+  },
+  {
+    "id": 1114,
+    "lastUpdated": "2025-03-01T06:51:36.076Z",
+    "agency": "House",
+    "description": "Concerning the respiratory care interstate compact.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-28T08:00:00.000Z",
+      "text": "Rules Committee relieved of further consideration.  Placed on second reading."
+    },
+    "sponsors": [
+      "Leavitt",
+      "Ybarra",
+      "Schmidt",
+      "Ryu",
+      "Reed",
+      "Macri",
+      "Doglio",
+      "Simmons",
+      "Ormsby",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2024-12-23T19:19:43.923Z",
+      "text": "respiratory care interstate compact access practice public health cooperation workforce shortages military personnel data system licensees adverse actions "
+    }
+  },
+  {
+    "id": 1115,
+    "lastUpdated": "2025-03-01T06:51:36.327Z",
+    "agency": "House",
+    "description": "Concerning the excise tax treatment of amounts received by title and escrow businesses from clients for remittance to a county filing office for the purpose of recording documents.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Finance."
+    },
+    "sponsors": [
+      "Tharinger",
+      "Corry",
+      "Wylie"
+    ],
+    "keywords": {
+      "ts": "2024-12-23T19:19:44.927Z",
+      "text": "excise tax treatment recording documents title escrow companies clarification financial burdens independent small businesses penalties sales use taxes business occupation taxes new regulations compliance"
+    }
+  },
+  {
+    "id": 1116,
+    "lastUpdated": "2025-03-01T06:51:36.345Z",
+    "agency": "House",
+    "description": "Recognizing election day.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-10T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Mena",
+      "Ramel",
+      "Berry",
+      "Reed",
+      "Paul",
+      "Macri",
+      "Farivar",
+      "Doglio",
+      "Ortiz-Self",
+      "Simmons",
+      "Peterson",
+      "Nance",
+      "Ormsby",
+      "Fosse",
+      "Salahuddin",
+      "Reeves",
+      "Richards",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2024-12-23T19:19:45.820Z",
+      "text": "election day civic engagement voter participation democratic process voting rights legal holidays educational programming cultural organizations resources"
+    }
+  },
+  {
+    "id": 1117,
+    "lastUpdated": "2025-03-01T06:51:36.350Z",
+    "agency": "House",
+    "description": "Removing the delegation of authority related to California motor vehicle emissions standards to generate new transportation revenue for the state by reducing administration burdens on the government and the people.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Environment & Energy."
+    },
+    "sponsors": [
+      "Barkis",
+      "Low",
+      "Schmidt",
+      "Couture",
+      "Corry",
+      "Ley",
+      "Dent",
+      "Eslick",
+      "Penner",
+      "Connors",
+      "Klicker",
+      "Marshall",
+      "Dye",
+      "Jacobsen",
+      "Burnett",
+      "Keaton",
+      "Orcutt",
+      "Caldier",
+      "Barnard",
+      "Schmick"
+    ],
+    "keywords": {
+      "ts": "2024-12-23T19:19:46.430Z",
+      "text": "remove motor vehicle emissions california registration department ecology greenhouse gas standards authority licensing immediate"
+    }
+  },
+  {
+    "id": 1118,
+    "lastUpdated": "2025-03-01T06:51:36.337Z",
+    "agency": "House",
+    "description": "Concerning restoration of the right to possess a firearm.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Civil Rights & Judiciary."
+    },
+    "sponsors": [
+      "Simmons",
+      "McEntire",
+      "Leavitt",
+      "Walsh"
+    ],
+    "keywords": {
+      "ts": "2024-12-23T19:19:47.243Z",
+      "text": "firearm possession restoration eligibility waiting periods petition process felony conviction domestic violence stalking background checks court decision notification responsibilities"
+    }
+  },
+  {
+    "id": 1119,
+    "lastUpdated": "2025-03-01T06:51:36.332Z",
+    "agency": "House",
+    "description": "Concerning supervision compliance credit.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-21T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Goodman",
+      "Simmons"
+    ],
+    "keywords": {
+      "ts": "2024-12-23T19:19:47.840Z",
+      "text": "purpose supervision compliance credit offenders regulations streamline monthly eligibility earning 10 days"
+    }
+  },
+  {
+    "id": 1120,
+    "lastUpdated": "2025-03-01T06:51:36.593Z",
+    "agency": "House",
+    "description": "Determining state allocations for school staff salaries.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Appropriations."
+    },
+    "sponsors": [
+      "Shavers",
+      "Reed",
+      "Wylie",
+      "Pollet",
+      "Kloba",
+      "Reeves"
+    ],
+    "keywords": {
+      "ts": "2024-12-23T19:19:58.617Z",
+      "text": "school funding salary allocations adjustments certificated instructional classified administrative inflation regional cost differences minimum salary review rebasing"
+    }
+  },
+  {
+    "id": 1121,
+    "lastUpdated": "2025-03-01T06:51:36.588Z",
+    "agency": "House",
+    "description": "Concerning restrictions on the working conditions and hours of sixteen- and seventeen-year olds.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-28T08:00:00.000Z",
+      "text": "Rules Committee relieved of further consideration.  Placed on second reading."
+    },
+    "sponsors": [
+      "McClintock",
+      "Schmidt",
+      "Jacobsen",
+      "Orcutt"
+    ],
+    "keywords": {
+      "ts": "2024-12-23T19:19:59.137Z",
+      "text": "working conditions hours sixteen seventeen educational programs equitable flexibility college career technical experience minors labor industries school year vacations holidays program approved superintendent public instruction"
+    }
+  },
+  {
+    "id": 1122,
+    "lastUpdated": "2025-03-01T06:51:36.602Z",
+    "agency": "House",
+    "description": "Restricting mobile device usage by public school students.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Education."
+    },
+    "sponsors": [
+      "McClintock",
+      "Leavitt",
+      "Berry",
+      "Rude",
+      "Callan",
+      "Keaton",
+      "Doglio",
+      "Wylie",
+      "Pollet",
+      "Barnard",
+      "Nance",
+      "Berg",
+      "Ormsby",
+      "Bergquist",
+      "Reeves"
+    ],
+    "keywords": {
+      "ts": "2024-12-23T19:19:59.747Z",
+      "text": "mobile devices student outcomes distractions learning environment mental health cyberbullying strategies school year reporting recommendations model policies school districts"
+    }
+  },
+  {
+    "id": 1123,
+    "lastUpdated": "2025-03-01T06:51:36.626Z",
+    "agency": "House",
+    "description": "Ensuring access to primary care, behavioral health, and affordable hospital services.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-10T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Macri",
+      "Berry",
+      "Reed",
+      "Fitzgibbon",
+      "Alvarado",
+      "Callan",
+      "Obras",
+      "Farivar",
+      "Doglio",
+      "Simmons",
+      "Wylie",
+      "Nance",
+      "Berg",
+      "Ormsby",
+      "Lekanoff",
+      "Reeves",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2024-12-23T19:20:00.590Z",
+      "text": "primary care behavioral health public employees reimbursement rates healthcare costs quality of care payment methodology premium adjustments data sharing"
+    }
+  },
+  {
+    "id": 1124,
+    "lastUpdated": "2025-03-01T06:51:36.606Z",
+    "agency": "House",
+    "description": "Establishing a prescribing psychologist certification in Washington state.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Health Care & Wellness."
+    },
+    "sponsors": [
+      "Simmons",
+      "Macri",
+      "Senn",
+      "Stonier",
+      "Ormsby",
+      "Tharinger",
+      "Kloba",
+      "Duerr",
+      "Ryu",
+      "Morgan",
+      "Reed",
+      "Callan",
+      "Obras",
+      "Doglio",
+      "Ortiz-Self",
+      "Goodman",
+      "Reeves",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2024-12-23T19:20:01.490Z",
+      "text": "psychologists prescribing medications psychotropic mental health certification competency examination care coordination healthcare opioid treatment psychiatric prescribing continuing education accessibility"
+    }
+  },
+  {
+    "id": 1125,
+    "lastUpdated": "2025-03-01T06:51:36.916Z",
+    "agency": "House",
+    "description": "Providing judicial discretion to modify sentences in the interest of justice.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-27T08:00:00.000Z",
+      "text": "Minority; do not pass."
+    },
+    "sponsors": [
+      "Simmons",
+      "Obras",
+      "Scott",
+      "Stearns",
+      "Ryu",
+      "Taylor",
+      "Peterson",
+      "Reeves",
+      "Tharinger",
+      "Fey",
+      "Morgan",
+      "Alvarado",
+      "Macri",
+      "Ormsby",
+      "Stonier",
+      "Doglio",
+      "Berg",
+      "Fosse",
+      "Reed",
+      "Berry",
+      "Duerr",
+      "Kloba",
+      "Goodman",
+      "Farivar",
+      "Street",
+      "Donaghy",
+      "Pollet",
+      "Bernbaum",
+      "Nance",
+      "Ortiz-Self",
+      "Ramel",
+      "Mena",
+      "Gregerson",
+      "Wylie",
+      "Hill",
+      "Salahuddin"
+    ],
+    "keywords": {
+      "ts": "2024-12-23T19:20:02.400Z",
+      "text": "judicial discretion modifying sentences long-term incarceration recidivism good behavior petitioning eligibility supportive documentation rehabilitation victim impact legal counsel victim advocacy support funding"
+    }
+  },
+  {
+    "id": 1126,
+    "lastUpdated": "2025-03-01T06:51:36.853Z",
+    "agency": "House",
+    "description": "Standardizing notification provisions relating to local tax rate changes and shared taxes administered by the department.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-31T08:00:00.000Z",
+      "text": "First reading, referred to Local Government."
+    },
+    "sponsors": [
+      "Walen",
+      "Reeves",
+      "Ryu",
+      "Wylie",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2024-12-23T19:20:03.353Z",
+      "text": "notification procedures local tax rate changes department revenue amendments timelines responsibilities communication transparency public facilities districts community development management"
+    }
+  },
+  {
+    "id": 1127,
+    "lastUpdated": "2025-03-01T06:51:36.847Z",
+    "agency": "House",
+    "description": "Modifying provisions of the revised uniform unclaimed property act.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-20T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Walen",
+      "Reeves",
+      "Simmons",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2024-12-23T19:20:04.220Z",
+      "text": "abandonment reporting prearrangement funeral service contracts trusts notification requirements holder responsibilities property exemptions penalties virtual currency"
+    }
+  },
+  {
+    "id": 1128,
+    "lastUpdated": "2025-03-01T06:51:36.894Z",
+    "agency": "House",
+    "description": "Establishing a child care workforce standards board.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-12T08:00:00.000Z",
+      "text": "Referred to Appropriations."
+    },
+    "sponsors": [
+      "Fosse",
+      "Stonier",
+      "Berry",
+      "Bronoske",
+      "Davis",
+      "Taylor",
+      "Wylie",
+      "Nance",
+      "Pollet",
+      "Ormsby",
+      "Scott",
+      "Mena",
+      "Doglio",
+      "Alvarado",
+      "Berg",
+      "Peterson",
+      "Goodman",
+      "Reeves",
+      "Reed",
+      "Parshley",
+      "Stearns",
+      "Simmons",
+      "Cortes",
+      "Ramel",
+      "Ryu",
+      "Timmons",
+      "Hackney",
+      "Kloba",
+      "Callan",
+      "Farivar",
+      "Ortiz-Self",
+      "Paul",
+      "Morgan",
+      "Shavers",
+      "Macri",
+      "Obras",
+      "Rule",
+      "Fey",
+      "Lekanoff",
+      "Bergquist",
+      "Salahuddin",
+      "Bernbaum",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2024-12-23T19:20:05.290Z",
+      "text": "child care workforce standards board minimum compensation employment standards working conditions economic stability child development public hearings training requirements rights protection enforcement"
+    }
+  },
+  {
+    "id": 1129,
+    "lastUpdated": "2025-03-01T06:51:36.880Z",
+    "agency": "House",
+    "description": "Concerning health plan coverage of fertility-related services.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-28T08:00:00.000Z",
+      "text": "Referred to Appropriations."
+    },
+    "sponsors": [
+      "Stonier",
+      "Macri",
+      "Street",
+      "Shavers",
+      "Farivar",
+      "Simmons",
+      "Tharinger",
+      "Parshley",
+      "Obras",
+      "Fosse",
+      "Reeves",
+      "Bernbaum",
+      "Mena",
+      "Fey",
+      "Taylor",
+      "Berry",
+      "Pollet",
+      "Entenman",
+      "Alvarado",
+      "Reed",
+      "Fitzgibbon",
+      "Callan",
+      "Cortes",
+      "Timmons",
+      "Ortiz-Self",
+      "Peterson",
+      "Goodman",
+      "Wylie",
+      "Berg",
+      "Ormsby",
+      "Lekanoff",
+      "Salahuddin",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2024-12-23T19:20:06.407Z",
+      "text": "infertility treatment fertility preservation services diagnosis health outcomes demographics disparities insurance coverage oocyte retrieval medicaid family planning"
+    }
+  },
+  {
+    "id": 1130,
+    "lastUpdated": "2025-03-01T06:51:37.163Z",
+    "agency": "House",
+    "description": "Concerning utilization of developmental disabilities waivers.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-21T08:00:00.000Z",
+      "text": "First reading, referred to Human Services."
+    },
+    "sponsors": [
+      "Farivar",
+      "Couture",
+      "Leavitt",
+      "Taylor",
+      "Reed",
+      "Callan",
+      "Doglio",
+      "Timmons",
+      "Simmons",
+      "Pollet",
+      "Fey",
+      "Ormsby",
+      "Salahuddin",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2024-12-23T19:20:07.050Z",
+      "text": "improve access developmental disabilities services supports shortage resources timely intervention prioritize service enrollment vulnerable populations crisis comprehensive support system administrative actions waiver slots home community-based services unfulfilled service requests"
+    }
+  },
+  {
+    "id": 1131,
+    "lastUpdated": "2025-03-01T06:51:37.150Z",
+    "agency": "House",
+    "description": "Concerning clemency and pardons.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-21T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Goodman",
+      "Hackney",
+      "Simmons",
+      "Wylie",
+      "Ormsby",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2024-12-24T20:39:14.367Z",
+      "text": "supervision probation community custody corrections clemency pardons diversity justice reoffending violent offenses oversight"
+    }
+  },
+  {
+    "id": 1132,
+    "lastUpdated": "2025-03-01T06:51:37.172Z",
+    "agency": "House",
+    "description": "Enhancing public safety by limiting bulk purchases and transfers of firearms and ammunition.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-04T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Farivar",
+      "Ormsby",
+      "Ryu",
+      "Ramel",
+      "Berry",
+      "Mena",
+      "Alvarado",
+      "Reed",
+      "Parshley",
+      "Fitzgibbon",
+      "Callan",
+      "Macri",
+      "Obras",
+      "Doglio",
+      "Gregerson",
+      "Simmons",
+      "Peterson",
+      "Street",
+      "Goodman",
+      "Wylie",
+      "Pollet",
+      "Berg",
+      "Davis",
+      "Fosse",
+      "Salahuddin",
+      "Hill",
+      "Tharinger"
+    ],
+    "keywords": {
+      "ts": "2024-12-24T20:39:15.237Z",
+      "text": "public safety limitations firearms ammunition purchases penalties restrictions exemptions violations"
+    }
+  },
+  {
+    "id": 1133,
+    "lastUpdated": "2025-03-01T06:51:37.146Z",
+    "agency": "House",
+    "description": "Concerning sexually violent predators.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-21T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Leavitt",
+      "Couture",
+      "Bronoske",
+      "Wylie",
+      "Reeves",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2024-12-24T20:39:16.000Z",
+      "text": "amend management evaluation procedures release protocols mental health evaluations petition standards treatment facilities community transition oversight technology safety measures"
+    }
+  },
+  {
+    "id": 1134,
+    "lastUpdated": "2025-03-01T06:51:37.159Z",
+    "agency": "House",
+    "description": "Promoting resource conservation practices in public schools.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Education."
+    },
+    "sponsors": [
+      "Bergquist",
+      "McEntire",
+      "Doglio",
+      "Ryu",
+      "Ramel",
+      "Reed",
+      "Shavers",
+      "Paul",
+      "Callan",
+      "Pollet",
+      "Nance",
+      "Ormsby",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2024-12-24T20:39:16.640Z",
+      "text": "green schools program resource conservation funding environmental education climate resilience urban forestry education waste reduction energy reduction water conservation"
+    }
+  },
+  {
+    "id": 1135,
+    "lastUpdated": "2025-03-01T06:51:37.396Z",
+    "agency": "House",
+    "description": "Ensuring that local government planning complies with the growth management act.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-28T08:00:00.000Z",
+      "text": "Rules Committee relieved of further consideration.  Placed on second reading."
+    },
+    "sponsors": [
+      "Duerr",
+      "Parshley",
+      "Berry",
+      "Fitzgibbon",
+      "Doglio",
+      "Peterson",
+      "Wylie",
+      "Berg",
+      "Davis",
+      "Lekanoff",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2024-12-26T18:32:19.640Z",
+      "text": "local government planning growth management act local jurisdictions determinations noncompliance comprehensive plans development regulations interim measures invalidity hearings compliance sanctions"
+    }
+  },
+  {
+    "id": 1136,
+    "lastUpdated": "2025-03-01T06:51:37.392Z",
+    "agency": "House",
+    "description": "Providing student navigational supports to increase postsecondary enrollment.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-31T08:00:00.000Z",
+      "text": "Referred to Appropriations."
+    },
+    "sponsors": [
+      "Leavitt",
+      "Shavers",
+      "Callan",
+      "Bronoske",
+      "Simmons",
+      "Pollet",
+      "Nance",
+      "Bernbaum"
+    ],
+    "keywords": {
+      "ts": "2024-12-26T18:32:20.687Z",
+      "text": "student navigational supports financial aid counseling postsecondary outreach enrollment specialist program school district financial aid training college board outreach specialists community colleges tribal organizations continuing education credits"
+    }
+  },
+  {
+    "id": 1137,
+    "lastUpdated": "2025-03-01T06:51:37.407Z",
+    "agency": "House",
+    "description": "Establishing uniform policies and procedures within department of corrections facilities relating to disciplinary proceedings and administrative segregation.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-27T08:00:00.000Z",
+      "text": "Referred to Appropriations."
+    },
+    "sponsors": [
+      "Peterson",
+      "Gregerson",
+      "Berry",
+      "Alvarado",
+      "Macri",
+      "Cortes",
+      "Callan",
+      "Ryu",
+      "Farivar",
+      "Doglio",
+      "Ortiz-Self",
+      "Simmons",
+      "Street",
+      "Pollet",
+      "Kloba",
+      "Nance",
+      "Berg",
+      "Ormsby",
+      "Lekanoff",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2024-12-27T19:36:50.677Z",
+      "text": "uniform policies procedures disciplinary proceedings administrative segregation fairness transparency presumption innocence evidence serious assault protective custody ombuds office"
+    }
+  },
+  {
+    "id": 1138,
+    "lastUpdated": "2025-03-01T06:51:37.401Z",
+    "agency": "House",
+    "description": "Improving public safety by implementing evidence-based interview practices that increase the reliability of statements collected during criminal investigations.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Community Safety."
+    },
+    "sponsors": [
+      "Peterson",
+      "Macri",
+      "Obras",
+      "Ryu",
+      "Farivar",
+      "Doglio",
+      "Simmons",
+      "Street",
+      "Duerr",
+      "Nance",
+      "Berg",
+      "Ormsby",
+      "Lekanoff",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2024-12-27T19:36:51.523Z",
+      "text": "public safety interview practices rapport-based techniques deception false confessions interrogation training peace method cognitive interview trauma-informed"
+    }
+  },
+  {
+    "id": 1139,
+    "lastUpdated": "2025-03-01T06:51:37.385Z",
+    "agency": "House",
+    "description": "Promoting public safety and deterring unlawful firearm possession by increasing criminal penalties for unlawful possession of a firearm.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Community Safety."
+    },
+    "sponsors": [
+      "Low",
+      "Leavitt",
+      "Eslick",
+      "Davis"
+    ],
+    "keywords": {
+      "ts": "2024-12-30T18:47:21.707Z",
+      "text": "enhance public safety unlawful possession firearms criminal penalties violent criminal behavior classifying sentencing levels jail booking domestic violence offender score"
+    }
+  },
+  {
+    "id": 1140,
+    "lastUpdated": "2025-03-01T06:51:37.917Z",
+    "agency": "House",
+    "description": "Establishing empowerED scholarships using educational savings accounts.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Education."
+    },
+    "sponsors": [
+      "Couture",
+      "Walsh",
+      "Corry",
+      "Ley",
+      "Jacobsen",
+      "Barnard"
+    ],
+    "keywords": {
+      "ts": "2024-12-30T18:47:22.817Z",
+      "text": "empowered scholarships school choice educational savings families inequality socioeconomic underperforming students tax credits academic performance"
+    }
+  },
+  {
+    "id": 1141,
+    "lastUpdated": "2025-03-01T06:51:37.944Z",
+    "agency": "House",
+    "description": "Concerning collective bargaining for agricultural cannabis workers.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-24T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Ortiz-Self",
+      "Fosse",
+      "Ryu",
+      "Leavitt",
+      "Stearns",
+      "Farivar",
+      "Berry",
+      "Reed",
+      "Ramel",
+      "Fitzgibbon",
+      "Macri",
+      "Cortes",
+      "Obras",
+      "Doglio",
+      "Bronoske",
+      "Gregerson",
+      "Simmons",
+      "Peterson",
+      "Street",
+      "Goodman",
+      "Wylie",
+      "Kloba",
+      "Ormsby",
+      "Scott",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2024-12-30T18:47:23.803Z",
+      "text": "public employment relations commission agricultural workers cannabis industry collective bargaining labor conditions unions negotiate wages bargaining unit certification election procedures employer responsibilities employee grievances unfair labor practices"
+    }
+  },
+  {
+    "id": 1142,
+    "lastUpdated": "2025-03-01T06:51:37.961Z",
+    "agency": "House",
+    "description": "Standardizing basic training and certification requirements for long-term care workers who provide in-home care for their family members, including spouses or domestic partners.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-06T08:00:00.000Z",
+      "text": "1st substitute bill substituted."
+    },
+    "sponsors": [
+      "Macri",
+      "Ryu",
+      "Reed",
+      "Callan",
+      "Farivar",
+      "Simmons",
+      "Street",
+      "Ormsby",
+      "Lekanoff",
+      "Reeves",
+      "Hill",
+      "Tharinger"
+    ],
+    "keywords": {
+      "ts": "2024-12-30T18:47:34.853Z",
+      "text": "long-term care workers training certification exemptions family caregivers training hours respite services department of social and health services compliance quality standards"
+    }
+  },
+  {
+    "id": 1143,
+    "lastUpdated": "2025-03-01T06:51:37.909Z",
+    "agency": "House",
+    "description": "Concerning Washington college grant award amounts.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Postsecondary Education & Workforce."
+    },
+    "sponsors": [
+      "Mena",
+      "Simmons",
+      "Nance",
+      "Salahuddin"
+    ],
+    "keywords": {
+      "ts": "2024-12-30T18:47:35.837Z",
+      "text": "grant program higher education institutions tuition growth private for-profit compliance nondiscrimination affidavit restrictions discriminatory practices adjustments"
+    }
+  },
+  {
+    "id": 1144,
+    "lastUpdated": "2025-03-01T06:51:37.913Z",
+    "agency": "House",
+    "description": "Adding an additional superior court judge in Skagit county.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-13T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Lekanoff",
+      "Low",
+      "Ramel",
+      "Shavers",
+      "Paul"
+    ],
+    "keywords": {
+      "ts": "2024-12-30T18:47:36.567Z",
+      "text": "increase number superior court judges skagit county judicial capacity efficiency handling court cases judicial resources"
+    }
+  },
+  {
+    "id": 1145,
+    "lastUpdated": "2025-03-01T06:51:39.133Z",
+    "agency": "House",
+    "description": "Concerning county public works reporting requirements.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Local Government."
+    },
+    "sponsors": [
+      "Barkis"
+    ],
+    "keywords": {
+      "ts": "2024-12-31T19:02:58.563Z",
+      "text": "public works reporting counties accountability transparency records materials removal disposal monitoring"
+    }
+  },
+  {
+    "id": 1146,
+    "lastUpdated": "2025-03-01T06:51:39.156Z",
+    "agency": "House",
+    "description": "Improving access and removing barriers to voting in jails and state hospitals.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-12T08:00:00.000Z",
+      "text": "Referred to Appropriations."
+    },
+    "sponsors": [
+      "Simmons",
+      "Farivar",
+      "Ryu",
+      "Mena",
+      "Macri",
+      "Obras",
+      "Doglio",
+      "Gregerson",
+      "Pollet",
+      "Ormsby",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2024-12-31T19:02:59.387Z",
+      "text": "improve access voting incarcerated individuals patients jails hospitals coordinators counties plans registration materials tracking enforcement"
+    }
+  },
+  {
+    "id": 1147,
+    "lastUpdated": "2025-03-01T06:51:39.163Z",
+    "agency": "House",
+    "description": "Supporting civic engagement for incarcerated and institutionalized individuals in state custody to promote inclusion and rehabilitation.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-04T08:00:00.000Z",
+      "text": "Referred to Appropriations."
+    },
+    "sponsors": [
+      "Farivar",
+      "Simmons",
+      "Ryu",
+      "Ramel",
+      "Mena",
+      "Macri",
+      "Doglio",
+      "Goodman",
+      "Ormsby",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2024-12-31T19:03:00.120Z",
+      "text": "civic engagement rights incarcerated institutions rehabilitation political organizations voting access civil action democratic processes recidivism public safety"
+    }
+  },
+  {
+    "id": 1148,
+    "lastUpdated": "2025-03-01T06:51:39.148Z",
+    "agency": "House",
+    "description": "Exempting goods and services provided by youth athletic facilities from sales and use tax.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Finance."
+    },
+    "sponsors": [
+      "Schmidt",
+      "Leavitt",
+      "Shavers",
+      "Eslick",
+      "Rule"
+    ],
+    "keywords": {
+      "ts": "2024-12-31T19:03:10.750Z",
+      "text": "sales tax exemption use tax exemption youth athletic facilities competitive youth sports physical health teamwork social development underserved communities local economies"
+    }
+  },
+  {
+    "id": 1149,
+    "lastUpdated": "2025-03-02T21:30:06.358Z",
+    "agency": "House",
+    "description": "Preventing cruelty to animals.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-12T08:00:00.000Z",
+      "text": "1st substitute bill substituted."
+    },
+    "sponsors": [
+      "Hackney",
+      "Low",
+      "Ramel",
+      "Leavitt",
+      "Obras",
+      "Timmons",
+      "Peterson",
+      "Wylie",
+      "Pollet",
+      "Kloba",
+      "Farivar",
+      "Berg",
+      "Ormsby",
+      "Fosse",
+      "Hill",
+      "Walen"
+    ],
+    "keywords": {
+      "ts": "2024-12-31T19:03:11.607Z",
+      "text": "animal cruelty prevention adequate care penalties enforcement accountability seizure notification custody well-being"
+    }
+  },
+  {
+    "id": 1150,
+    "lastUpdated": "2025-03-01T06:51:39.559Z",
+    "agency": "House",
+    "description": "Improving Washington's solid waste management outcomes.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-28T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Berry",
+      "Donaghy",
+      "Ryu",
+      "Ramel",
+      "Farivar",
+      "Mena",
+      "Alvarado",
+      "Duerr",
+      "Reed",
+      "Fitzgibbon",
+      "Callan",
+      "Macri",
+      "Doglio",
+      "Fosse",
+      "Simmons",
+      "Street",
+      "Pollet",
+      "Kloba",
+      "Nance",
+      "Davis",
+      "Ormsby",
+      "Salahuddin",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2025-01-02T18:38:06.440Z",
+      "text": "improve solid waste management recycling extended producer responsibility programs packaging paper products financing recycling programs collection systems underserved areas performance targets advisory council environmental health guidelines funding mechanisms"
+    }
+  },
+  {
+    "id": 1151,
+    "lastUpdated": "2025-03-01T06:51:39.548Z",
+    "agency": "House",
+    "description": "Establishing the ninth grade success grant program.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Appropriations."
+    },
+    "sponsors": [
+      "Steele",
+      "Stonier",
+      "Scott",
+      "Corry",
+      "Cortes",
+      "Springer",
+      "Timmons",
+      "Fosse",
+      "Parshley",
+      "Mena",
+      "Paul",
+      "Callan",
+      "Pollet",
+      "Nance",
+      "Davis",
+      "Lekanoff",
+      "Bergquist",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2025-01-02T18:38:17.303Z",
+      "text": "ninth grade success grant program students support at risk schools success teams funding distribution graduation rates accountability demographics interventions"
+    }
+  },
+  {
+    "id": 1152,
+    "lastUpdated": "2025-03-01T06:51:39.573Z",
+    "agency": "House",
+    "description": "Enhancing public safety by establishing secure storage requirements for firearms in vehicles and residences.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-04T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Doglio",
+      "Walen",
+      "Ryu",
+      "Ramel",
+      "Farivar",
+      "Berry",
+      "Leavitt",
+      "Alvarado",
+      "Mena",
+      "Duerr",
+      "Reed",
+      "Parshley",
+      "Fitzgibbon",
+      "Callan",
+      "Macri",
+      "Cortes",
+      "Obras",
+      "Gregerson",
+      "Simmons",
+      "Peterson",
+      "Rule",
+      "Street",
+      "Goodman",
+      "Wylie",
+      "Pollet",
+      "Nance",
+      "Berg",
+      "Davis",
+      "Ormsby",
+      "Lekanoff",
+      "Fosse",
+      "Salahuddin",
+      "Hill",
+      "Tharinger"
+    ],
+    "keywords": {
+      "ts": "2025-01-02T18:38:18.277Z",
+      "text": "secure storage firearms vehicles residences public safety penalties education access prevention unauthorized accidents shootings safety measures"
+    }
+  },
+  {
+    "id": 1153,
+    "lastUpdated": "2025-03-01T06:51:39.533Z",
+    "agency": "House",
+    "description": "Concerning urban forest management ordinances.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Agriculture & Natural Resources."
+    },
+    "sponsors": [
+      "Duerr",
+      "Ramel",
+      "Parshley",
+      "Berg",
+      "Ormsby",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2025-01-03T20:17:04.317Z",
+      "text": "tree bank urban forestry housing development significant trees environmental sustainability salmon orca recovery incentives green spaces community outreach vulnerable populations grant program"
+    }
+  },
+  {
+    "id": 1154,
+    "lastUpdated": "2025-03-01T06:51:39.540Z",
+    "agency": "House",
+    "description": "Ensuring environmental and public health protection from solid waste handling facility operations.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-28T08:00:00.000Z",
+      "text": "Rules Committee relieved of further consideration.  Placed on second reading."
+    },
+    "sponsors": [
+      "Duerr",
+      "Doglio",
+      "Ramel",
+      "Berry",
+      "Ryu",
+      "Callan",
+      "Pollet",
+      "Berg",
+      "Davis",
+      "Kloba",
+      "Hunt"
+    ],
+    "keywords": {
+      "ts": "2025-01-03T20:17:06.090Z",
+      "text": "solid waste handling facility operations permit application approval permit review process permit renewal compliance enforcement penalties reporting requirements"
+    }
+  },
+  {
+    "id": 1155,
+    "lastUpdated": "2025-03-01T06:51:39.841Z",
+    "agency": "House",
+    "description": "Prohibiting noncompetition agreements and clarifying nonsolicitation agreements.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-11T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Berry",
+      "Walen",
+      "Ramel",
+      "Reed",
+      "Ryu",
+      "Alvarado",
+      "Mena",
+      "Macri",
+      "Farivar",
+      "Fosse",
+      "Simmons",
+      "Peterson",
+      "Goodman",
+      "Pollet",
+      "Kloba",
+      "Ormsby",
+      "Salahuddin",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2025-01-03T20:17:07.053Z",
+      "text": "purpose competition economic growth workforce mobility employees independent contractors enforcement penalties existing laws job mobility"
+    }
+  },
+  {
+    "id": 1156,
+    "lastUpdated": "2025-03-01T06:51:39.865Z",
+    "agency": "House",
+    "description": "Concerning volunteer firefighter participation in the state deferred compensation program.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-21T08:00:00.000Z",
+      "text": "First reading, referred to Ways & Means."
+    },
+    "sponsors": [
+      "Steele",
+      "Ormsby",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2025-01-03T20:17:07.860Z",
+      "text": "volunteer firefighters eligibility deferred compensation financial planning retirement enrollment roth option investments pension systems"
+    }
+  },
+  {
+    "id": 1157,
+    "lastUpdated": "2025-03-01T06:51:39.824Z",
+    "agency": "House",
+    "description": "Authorizing access to certifications of birth and death to additional family members.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-31T08:00:00.000Z",
+      "text": "First reading, referred to Health & Long-Term Care."
+    },
+    "sponsors": [
+      "Steele"
+    ],
+    "keywords": {
+      "ts": "2025-01-03T20:17:08.713Z",
+      "text": "access certifications family members vital records birth death process heirloom delayed adoption confidential information"
+    }
+  },
+  {
+    "id": 1158,
+    "lastUpdated": "2025-03-01T06:51:39.859Z",
+    "agency": "House",
+    "description": "Improving community inclusion services for individuals with developmental disabilities.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Early Learning & Human Services."
+    },
+    "sponsors": [
+      "Leavitt",
+      "Eslick",
+      "Taylor",
+      "Barkis",
+      "Ryu",
+      "Jacobsen",
+      "Macri",
+      "Obras",
+      "Callan",
+      "Bronoske",
+      "Simmons",
+      "Gregerson",
+      "Goodman",
+      "Wylie",
+      "Caldier",
+      "Rule",
+      "Kloba",
+      "Ormsby",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2025-01-03T20:17:09.600Z",
+      "text": "community inclusion services personal care service providers provider-client ratios transportation assessed service hours employment services transitioning programs long-term care workers family caregivers"
+    }
+  },
+  {
+    "id": 1159,
+    "lastUpdated": "2025-03-01T06:51:39.828Z",
+    "agency": "House",
+    "description": "Concerning the crime of endangerment with a controlled substance.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Community Safety."
+    },
+    "sponsors": [
+      "Leavitt",
+      "Griffey",
+      "Barkis",
+      "Bronoske"
+    ],
+    "keywords": {
+      "ts": "2025-01-03T20:17:10.613Z",
+      "text": "endangerment dependency controlled substance children adults recklessly affirmative defense crime classification felony"
+    }
+  },
+  {
+    "id": 1160,
+    "lastUpdated": "2025-03-01T06:51:40.066Z",
+    "agency": "House",
+    "description": "Concerning local government design review.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-28T08:00:00.000Z",
+      "text": "Rules Committee relieved of further consideration.  Placed on second reading."
+    },
+    "sponsors": [
+      "Walen",
+      "Ramel",
+      "Leavitt",
+      "Duerr"
+    ],
+    "keywords": {
+      "ts": "2025-01-03T20:17:11.580Z",
+      "text": "housing development process efficiency architectural drawings design review approvals density requirements affordable housing commitments middle housing regulations exemptions comprehensive plan updates"
+    }
+  },
+  {
+    "id": 1161,
+    "lastUpdated": "2025-03-01T06:51:40.077Z",
+    "agency": "House",
+    "description": "Establishing the veteran employability training and career advancement for reentry program.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-24T08:00:00.000Z",
+      "text": "Referred to Appropriations."
+    },
+    "sponsors": [
+      "Ryu",
+      "Obras",
+      "Paul",
+      "Davis",
+      "Ormsby",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2025-01-03T20:17:12.897Z",
+      "text": "veteran employability training career advancement reentry program justice involved veterans community colleges transition employment readiness services family support data collection interagency collaboration"
+    }
+  },
+  {
+    "id": 1162,
+    "lastUpdated": "2025-03-01T06:51:40.082Z",
+    "agency": "House",
+    "description": "Concerning workplace violence in health care settings.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-28T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Leavitt",
+      "Schmidt",
+      "Berry",
+      "Ryu",
+      "Macri",
+      "Bronoske",
+      "Pollet",
+      "Nance",
+      "Timmons",
+      "Ormsby",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2025-01-06T19:21:32.420Z",
+      "text": "workplace violence prevention safety plans security systems emergency response staffing considerations job design incident investigation education training"
+    }
+  },
+  {
+    "id": 1163,
+    "lastUpdated": "2025-03-01T06:51:40.187Z",
+    "agency": "House",
+    "description": "Enhancing requirements relating to the purchase, transfer, and possession of firearms.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-28T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Berry",
+      "Taylor",
+      "Farivar",
+      "Walen",
+      "Pollet",
+      "Alvarado",
+      "Mena",
+      "Duerr",
+      "Reed",
+      "Ryu",
+      "Parshley",
+      "Ramel",
+      "Fitzgibbon",
+      "Callan",
+      "Macri",
+      "Cortes",
+      "Obras",
+      "Doglio",
+      "Gregerson",
+      "Simmons",
+      "Peterson",
+      "Street",
+      "Goodman",
+      "Wylie",
+      "Fey",
+      "Kloba",
+      "Berg",
+      "Davis",
+      "Fosse",
+      "Salahuddin",
+      "Hill",
+      "Tharinger"
+    ],
+    "keywords": {
+      "ts": "2025-01-06T19:21:43.450Z",
+      "text": "permit purchase firearm safety training background checks recordkeeping accountability firearm dealers transfers"
+    }
+  },
+  {
+    "id": 1164,
+    "lastUpdated": "2025-03-01T06:51:40.074Z",
+    "agency": "House",
+    "description": "Expanding urban growth area boundaries for residential development.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Local Government."
+    },
+    "sponsors": [
+      "Connors",
+      "Leavitt",
+      "Low",
+      "Jacobsen",
+      "Couture",
+      "Barkis",
+      "Barnard"
+    ],
+    "keywords": {
+      "ts": "2025-01-06T19:21:44.580Z",
+      "text": "urban growth area residential development housing supply comprehensive plan implementation report floodplain regulations tribal consultation density regulations environmental sustainability"
+    }
+  },
+  {
+    "id": 1165,
+    "lastUpdated": "2025-03-01T06:51:40.477Z",
+    "agency": "House",
+    "description": "Expanding access to the property tax exemption program for seniors, people retired due to disability, and veterans with disabilities.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Finance."
+    },
+    "sponsors": [
+      "Shavers",
+      "Wylie",
+      "Ryu",
+      "Callan",
+      "Goodman"
+    ],
+    "keywords": {
+      "ts": "2025-01-06T19:21:45.600Z",
+      "text": "property tax exemption income thresholds seniors veterans adjustments household income financial constraints"
+    }
+  },
+  {
+    "id": 1166,
+    "lastUpdated": "2025-03-01T06:51:40.462Z",
+    "agency": "House",
+    "description": "Establishing the providing effective education for reentry success act.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Postsecondary Education & Workforce."
+    },
+    "sponsors": [
+      "Shavers",
+      "Ryu",
+      "Simmons"
+    ],
+    "keywords": {
+      "ts": "2025-01-06T19:21:46.617Z",
+      "text": "providing effective education reentry success act educational opportunities incarcerated individuals digital literacy internet access personal laptop computers online learning enhancements funding support financial responsibilities"
+    }
+  },
+  {
+    "id": 1167,
+    "lastUpdated": "2025-03-01T06:51:40.472Z",
+    "agency": "House",
+    "description": "Directing the statewide career and technical education task force to consider educational opportunities for careers in maritime professions.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-28T08:00:00.000Z",
+      "text": "Rules Committee relieved of further consideration.  Placed on second reading."
+    },
+    "sponsors": [
+      "Shavers",
+      "Reed",
+      "Ryu",
+      "Paul",
+      "Simmons",
+      "Nance",
+      "Timmons"
+    ],
+    "keywords": {
+      "ts": "2025-01-06T19:21:47.453Z",
+      "text": "maritime education work-based learning career-connected learning apprenticeship programs industry-recognized credentials training for educators community colleges task force recommendations employer recruitment"
+    }
+  },
+  {
+    "id": 1168,
+    "lastUpdated": "2025-03-01T06:51:40.481Z",
+    "agency": "House",
+    "description": "Increasing transparency in artificial intelligence.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-31T08:00:00.000Z",
+      "text": "Referred to Appropriations."
+    },
+    "sponsors": [
+      "Shavers",
+      "Taylor",
+      "Ryu",
+      "Fosse"
+    ],
+    "keywords": {
+      "ts": "2025-01-06T19:21:48.317Z",
+      "text": "generative ai datasets documentation consumer data public trust accountability innovation security standards data protection military purposes enforcement penalties"
+    }
+  },
+  {
+    "id": 1169,
+    "lastUpdated": "2025-03-01T06:51:40.487Z",
+    "agency": "House",
+    "description": "Concerning offenses involving fabricated depictions of minors.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Community Safety."
+    },
+    "sponsors": [
+      "Leavitt",
+      "Ryu",
+      "Berry",
+      "Bronoske",
+      "Pollet",
+      "Ormsby",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2025-01-06T19:21:49.293Z",
+      "text": "strengthen protection offenses fabricated depictions artificial intelligence digital exploitation sexual conduct minors"
+    }
+  },
+  {
+    "id": 1170,
+    "lastUpdated": "2025-03-01T06:51:40.817Z",
+    "agency": "House",
+    "description": "Informing users when content is developed or modified by artificial intelligence.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-31T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Shavers",
+      "Taylor",
+      "Ryu",
+      "Ramel",
+      "Fosse",
+      "Wylie",
+      "Pollet",
+      "Ormsby",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2025-01-06T19:21:50.343Z",
+      "text": "ai detection tool requirements content disclosure consumers transparency personal information licensing exemptions"
+    }
+  },
+  {
+    "id": 1171,
+    "lastUpdated": "2025-03-01T06:51:40.793Z",
+    "agency": "House",
+    "description": "Exempting attorney higher education employees from certain mandated reporting of child abuse and neglect.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-28T08:00:00.000Z",
+      "text": "Rules Committee relieved of further consideration.  Placed on second reading."
+    },
+    "sponsors": [
+      "Pollet",
+      "Goodman"
+    ],
+    "keywords": {
+      "ts": "2025-01-06T19:21:51.317Z",
+      "text": "child abuse neglect attorney confidentiality reporting requirements exemptions higher education institutions legal representation protections public awareness"
+    }
+  },
+  {
+    "id": 1172,
+    "lastUpdated": "2025-03-01T06:51:40.788Z",
+    "agency": "House",
+    "description": "Concerning fire protection district civil service systems.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-11T08:00:00.000Z",
+      "text": "Rules Committee relieved of further consideration.  Placed on second reading."
+    },
+    "sponsors": [
+      "Schmidt",
+      "Bronoske"
+    ],
+    "keywords": {
+      "ts": "2025-01-06T19:21:52.103Z",
+      "text": "fire protection districts discontinue civil service systems employee approval flexibility process resolution local control adaptability management"
+    }
+  },
+  {
+    "id": 1173,
+    "lastUpdated": "2025-03-01T06:51:40.797Z",
+    "agency": "House",
+    "description": "Concerning wages for journeypersons in high-hazard facilities.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-24T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Bronoske",
+      "Berry",
+      "Reed",
+      "Ramel",
+      "Obras",
+      "Fosse",
+      "Simmons",
+      "Ortiz-Self",
+      "Goodman",
+      "Gregerson",
+      "Pollet",
+      "Nance",
+      "Ormsby",
+      "Lekanoff",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2025-01-06T19:21:52.793Z",
+      "text": "wages journeypersons high-hazard facilities prevailing rate skilled compensation employment standards effective date apprenticeship program"
+    }
+  },
+  {
+    "id": 1174,
+    "lastUpdated": "2025-03-01T06:51:40.811Z",
+    "agency": "House",
+    "description": "Concerning court interpreters.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-28T08:00:00.000Z",
+      "text": "Minority; without recommendation."
+    },
+    "sponsors": [
+      "Peterson",
+      "Thai",
+      "Ryu",
+      "Taylor",
+      "Ortiz-Self",
+      "Simmons",
+      "Goodman",
+      "Davis",
+      "Ormsby",
+      "Lekanoff",
+      "Salahuddin",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2025-01-07T18:32:18.863Z",
+      "text": "credentialed interpreters language access interpreter appointment guidelines legal proceedings interpreter qualifications training programs interpreter costs responsibilities court users access plans"
+    }
+  },
+  {
+    "id": 1175,
+    "lastUpdated": "2025-03-01T06:51:41.059Z",
+    "agency": "House",
+    "description": "Allowing small business establishments in residential zones.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-25T08:00:00.000Z",
+      "text": "APP - Majority; 2nd substitute bill be substituted, do pass."
+    },
+    "sponsors": [
+      "Klicker",
+      "Leavitt",
+      "Taylor",
+      "Parshley",
+      "Richards",
+      "Ryu",
+      "Thai",
+      "Barkis",
+      "Fitzgibbon",
+      "Dye",
+      "Macri",
+      "Doglio",
+      "Wylie",
+      "Kloba",
+      "Nance",
+      "Bernbaum"
+    ],
+    "keywords": {
+      "ts": "2025-01-07T18:32:19.773Z",
+      "text": "small business neighborhood stores cafés residential zones operational hours parking regulations additional rules convenience grocery store mini-market"
+    }
+  },
+  {
+    "id": 1176,
+    "lastUpdated": "2025-03-01T06:51:41.046Z",
+    "agency": "House",
+    "description": "Concerning greater consistency in the provision of health care services for minors under the age of 17.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Health Care & Wellness."
+    },
+    "sponsors": [
+      "Walsh",
+      "Corry",
+      "Jacobsen",
+      "Couture",
+      "Marshall"
+    ],
+    "keywords": {
+      "ts": "2025-01-07T18:32:20.573Z",
+      "text": "consent health care minors treatment parental notification responsibilities hiv substance use emancipation"
+    }
+  },
+  {
+    "id": 1177,
+    "lastUpdated": "2025-03-01T06:51:41.038Z",
+    "agency": "House",
+    "description": "Concerning the child welfare housing assistance program.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-28T08:00:00.000Z",
+      "text": "Rules Committee relieved of further consideration.  Placed on second reading."
+    },
+    "sponsors": [
+      "Ortiz-Self",
+      "Callan",
+      "Alvarado",
+      "Macri",
+      "Simmons"
+    ],
+    "keywords": {
+      "ts": "2025-01-07T18:32:21.417Z",
+      "text": "child welfare housing assistance program eligibility criteria housing vouchers rental assistance support services foster care housing barriers stakeholder consultation reporting requirements funding increase"
+    }
+  },
+  {
+    "id": 1178,
+    "lastUpdated": "2025-03-01T06:51:41.080Z",
+    "agency": "House",
+    "description": "Concerning sentencing enhancements.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-10T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Goodman",
+      "Hackney",
+      "Simmons",
+      "Peterson"
+    ],
+    "keywords": {
+      "ts": "2025-01-07T18:32:22.413Z",
+      "text": "amend update sentencing enhancements felony offenses violent crimes firearms penalties minors public safety community custody"
+    }
+  },
+  {
+    "id": 1179,
+    "lastUpdated": "2025-03-01T06:51:41.070Z",
+    "agency": "House",
+    "description": "Providing a property tax valuation freeze for senior citizens and disabled veterans.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Finance."
+    },
+    "sponsors": [
+      "Volz",
+      "Leavitt",
+      "Low",
+      "Schmidt",
+      "Graham",
+      "Shavers",
+      "Couture",
+      "Callan",
+      "Barkis",
+      "Caldier",
+      "Rule",
+      "Schmick",
+      "Nance",
+      "Richards"
+    ],
+    "keywords": {
+      "ts": "2025-01-07T18:32:23.333Z",
+      "text": "property tax valuation freeze senior citizens disabled veterans exemption eligibility income calculation claimants valuation freeze implementation timeline"
+    }
+  },
+  {
+    "id": 1180,
+    "lastUpdated": "2025-03-01T06:51:41.284Z",
+    "agency": "House",
+    "description": "Implementing certain recommendations from the sex offender policy board concerning the criminal offense of failure to register.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-20T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Farivar",
+      "Goodman",
+      "Reed",
+      "Obras",
+      "Simmons",
+      "Ormsby",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2025-01-07T18:32:34.277Z",
+      "text": "registration offenses community custody recidivism penalties diversion programs review removal safety integration amendments guidelines minors compliance"
+    }
+  },
+  {
+    "id": 1181,
+    "lastUpdated": "2025-03-01T06:51:41.289Z",
+    "agency": "House",
+    "description": "Concerning labor standards and the Washington minimum wage act.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Labor & Workplace Standards."
+    },
+    "sponsors": [
+      "Mena",
+      "Berry",
+      "Reed",
+      "Macri",
+      "Obras",
+      "Farivar",
+      "Fosse",
+      "Simmons",
+      "Pollet",
+      "Ormsby",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2025-01-07T18:32:35.263Z",
+      "text": "minimum wage employee rights paid leave sick leave vacation leave bereavement leave wage compliance penalties tips gratuities driver protections"
+    }
+  },
+  {
+    "id": 1182,
+    "lastUpdated": "2025-03-01T06:51:41.298Z",
+    "agency": "House",
+    "description": "Granting interest arbitration to certain parks and recreation commission employees.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-05T08:00:00.000Z",
+      "text": "Referred to Appropriations."
+    },
+    "sponsors": [
+      "Paul",
+      "Ybarra",
+      "Berry",
+      "Leavitt",
+      "Stearns",
+      "Shavers",
+      "Doglio",
+      "Bronoske",
+      "Fosse",
+      "Simmons",
+      "Rule",
+      "Ormsby",
+      "Bernbaum",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2025-01-07T18:32:36.233Z",
+      "text": "interest arbitration rights parks and recreation commission employment disputes negotiation process mediation arbitration procedures retention challenges binding decisions court jurisdiction"
+    }
+  },
+  {
+    "id": 1183,
+    "lastUpdated": "2025-03-01T06:51:41.518Z",
+    "agency": "House",
+    "description": "Concerning building code and development regulation reform.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-25T08:00:00.000Z",
+      "text": "Minority; do not pass."
+    },
+    "sponsors": [
+      "Duerr",
+      "Leavitt",
+      "Berry",
+      "Parshley",
+      "Reed",
+      "Ryu",
+      "Fitzgibbon",
+      "Taylor",
+      "Doglio",
+      "Berg",
+      "Davis"
+    ],
+    "keywords": {
+      "ts": "2025-01-07T18:32:37.100Z",
+      "text": "affordable housing sustainable practices building codes housing density parking requirements passive house standards construction modifications design regulations insulation requirements roof height solar energy"
+    }
+  },
+  {
+    "id": 1184,
+    "lastUpdated": "2025-03-01T06:51:41.292Z",
+    "agency": "House",
+    "description": "Creating a narrow exemption from overtime provisions for certain nonprofits and small businesses.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Labor & Workplace Standards."
+    },
+    "sponsors": [
+      "Schmidt",
+      "Couture",
+      "Jacobsen",
+      "Eslick",
+      "Klicker",
+      "McClintock"
+    ],
+    "keywords": {
+      "ts": "2025-01-07T18:32:38.037Z",
+      "text": "overtime exemption nonprofits small businesses flexibility salary threshold 501(c)(3) regulations employment hours claims unpaid overtime legal protection"
+    }
+  },
+  {
+    "id": 1185,
+    "lastUpdated": "2025-03-01T06:51:41.712Z",
+    "agency": "House",
+    "description": "Concerning membership on the correctional industries advisory committee.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-28T08:00:00.000Z",
+      "text": "Rules Committee relieved of further consideration.  Placed on second reading."
+    },
+    "sponsors": [
+      "Fosse",
+      "Farivar",
+      "Simmons",
+      "Wylie",
+      "Salahuddin"
+    ],
+    "keywords": {
+      "ts": "2025-01-07T18:32:38.600Z",
+      "text": "governor underrepresented populations diversity representation voting members terms service compensation reimbursement staffing"
+    }
+  },
+  {
+    "id": 1186,
+    "lastUpdated": "2025-03-01T06:51:41.717Z",
+    "agency": "House",
+    "description": "Expanding the situations in which medications can be dispensed or delivered from hospitals and health care entities.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-11T08:00:00.000Z",
+      "text": "Rules Committee relieved of further consideration.  Placed on second reading."
+    },
+    "sponsors": [
+      "Parshley",
+      "Rule",
+      "Low",
+      "Reed",
+      "Ramel",
+      "Macri",
+      "Obras",
+      "Farivar",
+      "Doglio",
+      "Fosse",
+      "Ormsby",
+      "Salahuddin",
+      "Bernbaum",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2025-01-07T18:32:39.430Z",
+      "text": "emergency medications opioid overdose reversal healthcare practitioners pharmacies accessibility training policies immediate dose delivery hiv prophylaxis controlled substances"
+    }
+  },
+  {
+    "id": 1187,
+    "lastUpdated": "2025-03-01T06:51:41.706Z",
+    "agency": "House",
+    "description": "Protecting patients involved in motor vehicle accidents from delayed ambulance bills.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-21T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Ryu",
+      "Thai",
+      "Obras",
+      "Macri",
+      "Paul",
+      "Callan",
+      "Pollet",
+      "Fey",
+      "Kloba"
+    ],
+    "keywords": {
+      "ts": "2025-01-07T18:32:39.997Z",
+      "text": "patient insurance ambulance consumer notice billing timeline accidents rights education"
+    }
+  },
+  {
+    "id": 1188,
+    "lastUpdated": "2025-03-01T06:51:41.693Z",
+    "agency": "House",
+    "description": "Requiring local government and tribal approval of wind and solar siting recommendations by the energy facility site evaluation council.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Environment & Energy."
+    },
+    "sponsors": [
+      "Dye",
+      "Klicker",
+      "Jacobsen",
+      "Caldier",
+      "Couture"
+    ],
+    "keywords": {
+      "ts": "2025-01-07T18:32:40.850Z",
+      "text": "local government tribal approval wind solar energy facility siting community input oversight renewable projects public comments expedited processing legislative authority"
+    }
+  },
+  {
+    "id": 1189,
+    "lastUpdated": "2025-03-01T06:51:41.700Z",
+    "agency": "House",
+    "description": "Addressing parental involvement through volunteering in schools after a criminal conviction.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Education."
+    },
+    "sponsors": [
+      "Simmons",
+      "Ortiz-Self",
+      "Macri",
+      "Peterson",
+      "Davis",
+      "Ormsby",
+      "Stonier",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2025-01-07T18:32:41.647Z",
+      "text": "parental involvement volunteering criminal convictions schools application rehabilitation documents appeal process child safety education"
+    }
+  },
+  {
+    "id": 1190,
+    "lastUpdated": "2025-03-01T06:51:41.979Z",
+    "agency": "House",
+    "description": "Allowing additional health professions to access the University of Washington health sciences library.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-31T08:00:00.000Z",
+      "text": "First reading, referred to Health & Long-Term Care."
+    },
+    "sponsors": [
+      "Marshall",
+      "Leavitt",
+      "Jacobsen",
+      "Couture",
+      "Barkis",
+      "Timmons"
+    ],
+    "keywords": {
+      "ts": "2025-01-07T18:32:42.257Z",
+      "text": "university health sciences library access health care providers licensing fees advisory committee emergency medical services nursing resource center retired volunteer medical worker"
+    }
+  },
+  {
+    "id": 1191,
+    "lastUpdated": "2025-03-01T06:51:42.004Z",
+    "agency": "House",
+    "description": "Concerning removing vehicle titles from manufactured homes.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-18T08:00:00.000Z",
+      "text": "Placed on second reading by Rules Committee."
+    },
+    "sponsors": [
+      "Connors",
+      "Peterson",
+      "Ryu",
+      "Gregerson",
+      "Barkis",
+      "Ormsby",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2025-01-08T21:48:02.017Z",
+      "text": "purpose title elimination transfer security interests owner responsibilities procedures moving manufactured homes effective date"
+    }
+  },
+  {
+    "id": 1192,
+    "lastUpdated": "2025-03-01T06:51:41.975Z",
+    "agency": "House",
+    "description": "Concerning disciplinary hearings held by the department of corrections.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-19T08:00:00.000Z",
+      "text": "Referred to Appropriations."
+    },
+    "sponsors": [
+      "Simmons",
+      "Peterson",
+      "Obras",
+      "Ormsby",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2025-01-08T21:48:02.950Z",
+      "text": "structured process sanctions violations confinement offenders hearings evidence behavioral link privileges early release"
+    }
+  },
+  {
+    "id": 1193,
+    "lastUpdated": "2025-03-01T06:51:41.968Z",
+    "agency": "House",
+    "description": "Increasing protections for child welfare workers.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Community Safety."
+    },
+    "sponsors": [
+      "Couture",
+      "Eslick",
+      "Caldier"
+    ],
+    "keywords": {
+      "ts": "2025-01-08T21:48:03.860Z",
+      "text": "child welfare workers assault safety measures training de-escalation mental health professional domestic violence in-service training support victims"
+    }
+  },
+  {
+    "id": 1194,
+    "lastUpdated": "2025-03-01T06:51:41.984Z",
+    "agency": "House",
+    "description": "Creating additional requirements for collector vehicle and horseless carriage license plates to improve compliance and public safety.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Transportation."
+    },
+    "sponsors": [
+      "Goodman",
+      "Eslick",
+      "Ryu"
+    ],
+    "keywords": {
+      "ts": "2025-01-08T21:48:04.857Z",
+      "text": "collector vehicle horseless carriage license plates insurance proof financial responsibility penalties registration compliance accountability"
+    }
+  },
+  {
+    "id": 1195,
+    "lastUpdated": "2025-03-01T06:51:42.563Z",
+    "agency": "House",
+    "description": "Concerning compliance with siting, development permit processes and standards, and requirements for permanent supportive housing, transitional housing, indoor emergency housing, or indoor emergency shelters.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-21T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Peterson",
+      "Macri",
+      "Alvarado",
+      "Ryu",
+      "Berry",
+      "Ramel",
+      "Fitzgibbon",
+      "Mena",
+      "Callan",
+      "Obras",
+      "Farivar",
+      "Doglio",
+      "Gregerson",
+      "Simmons",
+      "Street",
+      "Duerr",
+      "Nance",
+      "Berg",
+      "Davis",
+      "Ormsby",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2025-01-08T21:48:05.827Z",
+      "text": "improve housing siting development permits local governments streamline approvals waivers dispute resolution compliance enforcement inclusivity document submission"
+    }
+  },
+  {
+    "id": 1196,
+    "lastUpdated": "2025-03-01T06:51:42.278Z",
+    "agency": "House",
+    "description": "Revoking a person's voting rights only when convicted of a state crime punishable by death.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-02-13T08:00:00.000Z",
+      "text": "Referred to Rules 2 Review."
+    },
+    "sponsors": [
+      "Simmons",
+      "Mena",
+      "Ryu",
+      "Ormsby",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2025-01-08T21:48:06.747Z",
+      "text": "revocation voting rights infamous crime restoration eligibility voter registration oath challenges procedures jury service"
+    }
+  },
+  {
+    "id": 1197,
+    "lastUpdated": "2025-03-01T23:26:10.728Z",
+    "agency": "House",
+    "description": "Making 2023-2025 fiscal biennium second supplemental operating appropriations.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Appropriations."
+    },
+    "sponsors": [
+      "Ormsby",
+      "Gregerson",
+      "Macri",
+      "Wylie"
+    ]
+  },
+  {
+    "id": 1198,
+    "lastUpdated": "2025-03-01T23:26:10.782Z",
+    "agency": "House",
+    "description": "Making 2025-2027 fiscal biennium operating appropriations.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Appropriations."
+    },
+    "sponsors": [
+      "Ormsby",
+      "Gregerson",
+      "Macri"
+    ]
+  },
+  {
+    "id": 1199,
+    "lastUpdated": "2025-03-01T06:51:42.286Z",
+    "agency": "House",
+    "description": "Strengthening consumer protection through increased insurer accountability for violations of the insurance code.",
+    "introducedDate": "2025-01-13T08:00:00.000Z",
+    "status": {
+      "ts": "2025-01-13T08:00:00.000Z",
+      "text": "First reading, referred to Consumer Protection & Business."
+    },
+    "sponsors": [
+      "Taylor",
+      "Berry",
+      "Reed",
+      "Duerr",
+      "Tharinger",
+      "Paul",
+      "Simmons",
+      "Wylie",
+      "Pollet",
+      "Kloba",
+      "Ormsby",
+      "Salahuddin",
+      "Hill"
+    ],
+    "keywords": {
+      "ts": "2025-01-08T21:48:52.890Z",
+      "text": "consumer protection accountability insurers enforcement penalties restitution cease and desist orders fines insurance laws regulatory framework"
+    }
   }
 ]

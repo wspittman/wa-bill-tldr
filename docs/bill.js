@@ -85,6 +85,9 @@ function renderViewComponents(
 ) {
   const sid = `${name}_summary`;
   const oid = `${name}_original`;
+  const summaryText = summary?.text || "No summary available.";
+  const originalText = original?.text || "No text available.";
+
   return {
     buttons: [
       renderViewTab(sid, `${name} Summary`, isDefault),
@@ -94,11 +97,11 @@ function renderViewComponents(
       renderViewContent(
         sid,
         `Summary: ${description}`,
-        summary.text,
+        summaryText,
         true,
         isDefault
       ),
-      renderViewContent(oid, `Original: ${description}`, original.text),
+      renderViewContent(oid, `Original: ${description}`, originalText),
     ],
   };
 }

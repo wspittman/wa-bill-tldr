@@ -12,7 +12,7 @@ import {
   getLegislationIds,
 } from "./wslHelpers";
 
-const LIMIT = 100;
+const LIMIT = 200;
 let billMap = new Map<number, Bill>();
 let modified = false;
 
@@ -124,9 +124,12 @@ async function updateOriginalTexts({
 
   for (const doc of docs) {
     const { url, original } = doc;
-    doc.original = await createTSString(url, original, async (x) =>
-      (await fetch(x)).text()
-    );
+    doc.original = await createTSString(url, original, async (x) => {
+      const html = await (await fetch(x)).text();
+      // Remove empty divs, which happen sometimes in WSL's HTML
+      // Leaving the empty divs causes the frontend problems when appending HTML
+      return html.replace(/<div\s+[^>]*\/>/gi, "");
+    });
   }
 }
 
@@ -162,7 +165,8 @@ async function updateKeywords(bill: BillFull): Promise<void> {
   logger.info(`Updating keywords ${bill.id}`);
   const { summary } = bill.document;
 
-  if (!summary) return;
+  // Length check is for error strings
+  if (!summary || summary.text.length < 100) return;
 
   bill.keywords = await createTSString(summary, bill.keywords, async (x) =>
     aiService.extractKeywords(x, bill.description)

@@ -38,7 +38,7 @@ function matchesFilter(bill) {
     bill.description.toLowerCase().includes(filterText) ||
     bill.sponsors.join(", ").toLowerCase().includes(filterText) ||
     bill.status.text.toLowerCase().includes(filterText) ||
-    bill.keywords.text.toLowerCase().includes(filterText)
+    bill.keywords?.text.toLowerCase().includes(filterText)
   );
 }
 
