@@ -1,10 +1,10 @@
+import { batch } from "dry-utils/async";
 import { markdownToHtml } from "dry-utils/htmldown";
 import { logger } from "dry-utils/logger";
 import { aiService } from "./aiService/aiService";
 import { Storage } from "./storage";
 import { mergeBillDocs, toBill, toBillFull } from "./types/toType";
 import type { Bill, BillFull, TSString } from "./types/types";
-import { asyncBatch } from "./utils/asyncBatch";
 import {
   getBillDocInfo,
   getBillInfo,
@@ -12,7 +12,7 @@ import {
   getLegislationIds,
 } from "./wslHelpers";
 
-const LIMIT = 5;
+const LIMIT = 15;
 let billMap = new Map<number, Bill>();
 let modified = false;
 
@@ -67,7 +67,7 @@ export async function findOutdatedIds(): Promise<number[]> {
 
 export async function updateBills(ids: number[]): Promise<void> {
   logHeader("Update Bills");
-  await asyncBatch("BillUpdate", ids, async (id) => {
+  await batch("BillUpdate", ids, async (id) => {
     const bill = await updateBill(id);
     if (!bill) return;
 

@@ -1,5 +1,11 @@
+import { setAsyncLogging } from "dry-utils/async";
 import { logger } from "dry-utils/logger";
 import { finalize, findOutdatedIds, initialize, updateBills } from "./generate";
+
+setAsyncLogging({
+  logFn: logger.debug.bind(logger),
+  errorFn: logger.error.bind(logger),
+});
 
 async function main() {
   try {
