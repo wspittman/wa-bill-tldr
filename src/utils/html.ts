@@ -5,7 +5,7 @@ export function markdownToHtml(markdown: string): string {
   const converter = new Showdown.Converter();
   const newHtml = converter.makeHtml(markdown);
 
-  const s = sanitizeHtml(newHtml, {
+  return sanitizeHtml(newHtml, {
     allowedAttributes: {
       ...sanitizeHtml.defaults.allowedAttributes,
       a: ["href", "name", "target", "rel"],
@@ -21,6 +21,4 @@ export function markdownToHtml(markdown: string): string {
       }),
     },
   });
-
-  return s;
 }
