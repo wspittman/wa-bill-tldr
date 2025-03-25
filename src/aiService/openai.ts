@@ -1,7 +1,7 @@
+import { logger } from "dry-utils/logger";
 import { setTimeout } from "node:timers/promises";
 import OpenAI from "openai";
 import { ChatCompletionMessageParam } from "openai/resources";
-import { logger } from "../utils/logger";
 
 const client = new OpenAI();
 const MODEL = "gpt-4o-mini";

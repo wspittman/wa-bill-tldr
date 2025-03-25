@@ -1,10 +1,10 @@
+import { logger } from "dry-utils/logger";
 import { aiService } from "./aiService/aiService";
 import { Storage } from "./storage";
 import { mergeBillDocs, toBill, toBillFull } from "./types/toType";
 import type { Bill, BillFull, TSString } from "./types/types";
 import { asyncBatch } from "./utils/asyncBatch";
 import { markdownToHtml } from "./utils/html";
-import { logger } from "./utils/logger";
 import {
   getBillDocInfo,
   getBillInfo,
@@ -12,7 +12,7 @@ import {
   getLegislationIds,
 } from "./wslHelpers";
 
-const LIMIT = 200;
+const LIMIT = 5;
 let billMap = new Map<number, Bill>();
 let modified = false;
 

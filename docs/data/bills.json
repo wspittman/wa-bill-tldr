@@ -49,13 +49,13 @@
   },
   {
     "id": 1002,
-    "lastUpdated": "2025-03-01T00:03:58.087Z",
+    "lastUpdated": "2025-03-25T18:04:57.296Z",
     "agency": "House",
     "description": "Recognizing posttraumatic stress disorder as an occupational disease for county coroners, examiners, and investigative personnel.",
     "introducedDate": "2025-01-13T08:00:00.000Z",
     "status": {
-      "ts": "2025-02-04T08:00:00.000Z",
-      "text": "Referred to Rules 2 Review."
+      "ts": "2025-03-19T07:00:00.000Z",
+      "text": "Returned to Rules Committee for second reading."
     },
     "sponsors": [
       "Abbarno",
@@ -76,13 +76,13 @@
   },
   {
     "id": 1003,
-    "lastUpdated": "2025-03-01T00:03:58.102Z",
+    "lastUpdated": "2025-03-25T18:04:57.292Z",
     "agency": "House",
     "description": "Addressing service of notice by mail in cases involving forcible entry and forcible and unlawful detainer.",
     "introducedDate": "2025-01-13T08:00:00.000Z",
     "status": {
-      "ts": "2025-02-07T08:00:00.000Z",
-      "text": "First reading, referred to Housing."
+      "ts": "2025-03-20T07:00:00.000Z",
+      "text": "Passed to Rules Committee for second reading."
     },
     "sponsors": [
       "Abbarno",

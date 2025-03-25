@@ -1,4 +1,4 @@
-import { logger } from "./logger";
+import { logger } from "dry-utils/logger";
 
 /**
  * Processes an array of values in batches using an async function.

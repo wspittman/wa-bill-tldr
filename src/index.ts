@@ -1,5 +1,5 @@
+import { logger } from "dry-utils/logger";
 import { finalize, findOutdatedIds, initialize, updateBills } from "./generate";
-import { logger } from "./utils/logger";
 
 async function main() {
   try {

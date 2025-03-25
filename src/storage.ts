@@ -4,7 +4,6 @@ import { readJsonFile, writeJsonFile } from "./utils/file";
 const DATA_DIR = ["docs", "data"];
 const BILLS_PATH = [...DATA_DIR, "bills.json"];
 const billPath = (id: number) => [...DATA_DIR, `${id}.json`];
-const summaryPath = (id: number) => [...DATA_DIR, `${id}_Summary.json`];
 
 export class Storage {
   static async readBillMap(): Promise<Map<number, Bill>> {
