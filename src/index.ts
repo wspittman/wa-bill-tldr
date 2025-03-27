@@ -1,5 +1,10 @@
-import { finalize, findOutdatedIds, initialize, updateBills } from "./generate";
-import { logger } from "./utils/logger";
+import {
+  finalize,
+  findOutdatedIds,
+  initialize,
+  updateBills,
+} from "./generate.ts";
+import { logger } from "./utils/logger.ts";
 
 async function main() {
   try {

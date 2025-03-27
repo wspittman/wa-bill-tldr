@@ -1,4 +1,4 @@
-import type { Agency } from "../wslWebService/types/models";
+import type { Agency } from "../wslWebService/types/models.ts";
 
 export interface Bill {
   id: number;

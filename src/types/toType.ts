@@ -2,8 +2,8 @@ import type {
   Legislation,
   LegislativeDocument,
   Sponsor,
-} from "../wslWebService/types/models";
-import type { Bill, BillDoc, BillFull } from "./types";
+} from "../wslWebService/types/models.ts";
+import type { Bill, BillDoc, BillFull } from "./types.ts";
 
 export function toBill(
   id: number,
@@ -64,7 +64,7 @@ function toBillDoc({
 export function mergeBillDocs(
   { document, subDocuments }: BillFull,
   { document: oldDocument, subDocuments: oldSubDocuments }: BillFull
-) {
+): void {
   mergeBillDoc(document, oldDocument);
   for (const doc of subDocuments) {
     const oldDoc = oldSubDocuments.find(({ name }) => name === doc.name);

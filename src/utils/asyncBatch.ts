@@ -1,4 +1,4 @@
-import { logger } from "./logger";
+import { logger } from "./logger.ts";
 
 /**
  * Processes an array of values in batches using an async function.
@@ -15,7 +15,7 @@ export async function asyncBatch<T>(
   values: T[],
   fn: (value: T) => Promise<void>,
   size = 5
-) {
+): Promise<void> {
   if (!values.length) return;
 
   logger.debug(`Begin Batch ${name}`, values.length);

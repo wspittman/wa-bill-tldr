@@ -1,4 +1,4 @@
-import { logAggregation, proseCompletion } from "./openai";
+import { logAggregation, proseCompletion } from "./openai.ts";
 
 const summarizePrompt = `
 You are an AI assistant specialized in analyzing government documents.
@@ -122,9 +122,9 @@ class AIService {
     return result ? result.toLowerCase() : undefined;
   }
 
-  logAggregation() {
+  logAggregation(): void {
     logAggregation();
   }
 }
 
-export const aiService = new AIService();
+export const aiService: AIService = new AIService();

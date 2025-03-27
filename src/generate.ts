@@ -1,16 +1,16 @@
-import { aiService } from "./aiService/aiService";
-import { Storage } from "./storage";
-import { mergeBillDocs, toBill, toBillFull } from "./types/toType";
-import type { Bill, BillFull, TSString } from "./types/types";
-import { asyncBatch } from "./utils/asyncBatch";
-import { markdownToHtml } from "./utils/html";
-import { logger } from "./utils/logger";
+import { aiService } from "./aiService/aiService.ts";
+import { Storage } from "./storage.ts";
+import { mergeBillDocs, toBill, toBillFull } from "./types/toType.ts";
+import type { Bill, BillFull, TSString } from "./types/types.ts";
+import { asyncBatch } from "./utils/asyncBatch.ts";
+import { markdownToHtml } from "./utils/html.ts";
+import { logger } from "./utils/logger.ts";
 import {
   getBillDocInfo,
   getBillInfo,
   getLastActionDate,
   getLegislationIds,
-} from "./wslHelpers";
+} from "./wslHelpers.ts";
 
 const LIMIT = 200;
 let billMap = new Map<number, Bill>();

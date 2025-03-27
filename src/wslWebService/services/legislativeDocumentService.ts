@@ -2,8 +2,8 @@ import type {
   Biennium,
   DocumentClass,
   LegislativeDocument,
-} from "../types/models";
-import { BaseService } from "./baseService";
+} from "../types/models.ts";
+import { BaseService } from "./baseService.ts";
 
 class LegislativeDocumentService extends BaseService {
   protected readonly wsdlFileName = "LegislativeDocumentService.wsdl";
@@ -40,4 +40,5 @@ class LegislativeDocumentService extends BaseService {
   }
 }
 
-export const legislativeDocumentService = new LegislativeDocumentService();
+export const legislativeDocumentService: LegislativeDocumentService =
+  new LegislativeDocumentService();

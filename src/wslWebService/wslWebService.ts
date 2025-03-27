@@ -1,13 +1,15 @@
-import { legislationService } from "./services/legislationService";
-import { legislativeDocumentService } from "./services/legislativeDocumentService";
-import {
+import { legislationService } from "./services/legislationService.ts";
+import { legislativeDocumentService } from "./services/legislativeDocumentService.ts";
+import type {
   Agency,
   Biennium,
   DocumentClass,
   Legislation,
   LegislationInfo,
   LegislativeDocument,
-} from "./types/models";
+  LegislativeStatus,
+  Sponsor,
+} from "./types/models.ts";
 
 type BillStatus =
   | "Passed"
@@ -106,7 +108,10 @@ class WSLWebService {
     throw new Error("Invalid Request");
   }
 
-  async getLegislationStatus(biennium: Biennium, billNumber: string | number) {
+  async getLegislationStatus(
+    biennium: Biennium,
+    billNumber: string | number
+  ): Promise<LegislativeStatus> {
     return legislationService.getCurrentStatus({
       biennium,
       billNumber: String(billNumber),
@@ -123,11 +128,11 @@ class WSLWebService {
     });
   }
 
-  async getSponsors(biennium: Biennium, billId: string) {
+  async getSponsors(biennium: Biennium, billId: string): Promise<Sponsor[]> {
     return legislationService.getSponsors({ biennium, billId });
   }
 
-  async getDocumentClasses(biennium: Biennium) {
+  async getDocumentClasses(biennium: Biennium): Promise<DocumentClass[]> {
     return legislativeDocumentService.getDocumentClasses(biennium);
   }
 
@@ -176,4 +181,4 @@ class WSLWebService {
 const errorHas = (error: unknown, msg: string) =>
   error instanceof Error && error.message.includes(msg);
 
-export const wslWebService = new WSLWebService();
+export const wslWebService: WSLWebService = new WSLWebService();

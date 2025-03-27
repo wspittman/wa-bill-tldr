@@ -1,4 +1,9 @@
-import { wslWebService } from "./wslWebService/wslWebService";
+import type {
+  Legislation,
+  LegislativeDocument,
+  Sponsor,
+} from "./wslWebService/types/models.ts";
+import { wslWebService } from "./wslWebService/wslWebService.ts";
 
 const biennium = "2025-26";
 const year = biennium.slice(0, 4);
@@ -21,16 +26,26 @@ export async function getLastActionDate(id: number): Promise<Date> {
   return status.ActionDate;
 }
 
-export async function getBillInfo(id: number) {
+export async function getBillInfo(id: number): Promise<{
+  legislation: Legislation[];
+  sponsors: Sponsor[];
+}> {
   const legislation = await wslWebService.getLegislation(biennium, id);
-  const sponsors = await wslWebService.getSponsors(
-    biennium,
-    // This is different than id
-    legislation[0].BillId
-  );
-  return { legislation, sponsors };
+
+  if (0 in legislation) {
+    const sponsors = await wslWebService.getSponsors(
+      biennium,
+      // This is different than id
+      legislation[0].BillId
+    );
+    return { legislation, sponsors };
+  }
+
+  return { legislation: [], sponsors: [] };
 }
 
-export async function getBillDocInfo(id: number) {
+export async function getBillDocInfo(
+  id: number
+): Promise<LegislativeDocument[]> {
   return wslWebService.getDocuments(biennium, "Bills", id);
 }

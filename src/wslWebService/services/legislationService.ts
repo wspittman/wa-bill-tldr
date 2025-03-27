@@ -8,8 +8,8 @@ import type {
   LegislativeStatus,
   RollCall,
   Sponsor,
-} from "../types/models";
-import { BaseService } from "./baseService";
+} from "../types/models.ts";
+import { BaseService } from "./baseService.ts";
 
 class LegislationService extends BaseService {
   protected readonly wsdlFileName = "LegislationService.wsdl";
@@ -358,4 +358,4 @@ class LegislationService extends BaseService {
   }
 }
 
-export const legislationService = new LegislationService();
+export const legislationService: LegislationService = new LegislationService();

@@ -1,7 +1,7 @@
 import { setTimeout } from "node:timers/promises";
 import OpenAI from "openai";
-import { ChatCompletionMessageParam } from "openai/resources";
-import { logger } from "../utils/logger";
+import type { ChatCompletionMessageParam } from "openai/resources";
+import { logger } from "../utils/logger.ts";
 
 const client = new OpenAI();
 const MODEL = "gpt-4o-mini";
@@ -22,7 +22,7 @@ export async function proseCompletion(
   prompt: string,
   input: string | object,
   history: ChatCompletionMessageParam[] = []
-) {
+): Promise<string | undefined> {
   input = typeof input === "string" ? input : JSON.stringify(input);
   let attempt = 0;
 
@@ -65,7 +65,7 @@ async function proseComplete(
   });
   const duration = Date.now() - start;
 
-  const message = completion.choices[0].message.content ?? undefined;
+  const message = completion.choices[0]?.message.content ?? undefined;
 
   logLLMAction(action, input, duration, completion, message);
 
@@ -74,7 +74,7 @@ async function proseComplete(
 
 // #region Telemetry
 
-export function logAggregation() {
+export function logAggregation(): void {
   logger.info("OpenAI Aggregation", aggregation);
 }
 
@@ -112,15 +112,15 @@ function logLLMAction(
     };
 
     if (finish_reason !== "stop") {
-      log.finishReason = finish_reason;
+      log["finishReason"] = finish_reason;
     }
 
     if (message?.refusal) {
-      log.refusal = message.refusal;
+      log["refusal"] = message.refusal;
     }
 
     if (result) {
-      log.out = result;
+      log["out"] = result;
     }
 
     aggregation.count++;

@@ -1,4 +1,4 @@
-import { createLogger, format, transports } from "winston";
+import { createLogger, format, Logger, transports } from "winston";
 
 const start = new Date();
 const startTime = start.getTime();
@@ -33,8 +33,8 @@ const addTimestamp = format.timestamp({
 const addSplat = format((info) => {
   const { [Symbol.for("splat")]: splat } = info;
   const val = Array.isArray(splat) ? splat[0] : splat;
-  info.simpleSplat = getSimpleVal(val);
-  info.fullSplat = val;
+  info["simpleSplat"] = getSimpleVal(val);
+  info["fullSplat"] = val;
   return info;
 })();
 
@@ -47,7 +47,7 @@ const formatPrint = (splatType: string) =>
     return `${timestamp} [${level.toUpperCase()}]: ${message}${splatString}`;
   });
 
-export const logger = createLogger({
+export const logger: Logger = createLogger({
   level: "info",
   format: format.combine(addTimestamp, addSplat),
   transports: [
