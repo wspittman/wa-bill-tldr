@@ -14,11 +14,6 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
 
-    // [Library Only] Emitting .d.ts files
-    "declaration": true,
-    "declarationMap": true,
-    "isolatedDeclarations": true,
-
     // [Node Only] Don't allow non-JS constructs, including JSX
     "erasableSyntaxOnly": true,
     "verbatimModuleSyntax": true,
