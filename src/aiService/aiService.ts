@@ -143,7 +143,7 @@ class AIService {
     description: string
   ): Promise<string | undefined> {
     const { error, content } = await proseCompletion(
-      "Extract Keywords",
+      "Extract_Keywords",
       keywordPrompt,
       {
         html,
