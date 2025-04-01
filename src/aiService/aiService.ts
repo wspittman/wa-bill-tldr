@@ -1,4 +1,5 @@
-import { logAggregation, proseCompletion } from "./openai.ts";
+import { proseCompletion, setAILogging } from "dry-utils/ai";
+import { logger } from "dry-utils/logger";
 
 const summarizePrompt = `
 You are an AI assistant specialized in analyzing government documents.
@@ -88,22 +89,48 @@ PROCESS:
 The output should be a list of new keywords as an all-lowercase, space-separated list.
 `;
 
+const aggregation = {
+  counts: {},
+  count: 0,
+  tokens: 0,
+  inTokens: 0,
+  outTokens: 0,
+  cacheTokens: 0,
+  ms: 0,
+};
+
+setAILogging({
+  logFn: logger.debug.bind(logger),
+  errorFn: logger.error.bind(logger),
+  aggregatorFn: () => aggregation,
+});
+
 class AIService {
   constructor() {}
 
   async summarize(html: string): Promise<string | undefined> {
-    return proseCompletion("Summarize", summarizePrompt, html);
+    const { error, content } = await proseCompletion(
+      "Summarize",
+      summarizePrompt,
+      html
+    );
+
+    const err = this.errorToUserFriendly(error);
+    return err ?? content;
   }
 
   async compare(
     html: string,
     originalHtml: string
   ): Promise<string | undefined> {
-    return proseCompletion("Compare", comparePrompt, {
+    const { error, content } = await proseCompletion("Compare", comparePrompt, {
       // Remove the header information because GPT refuses to ignore it in the comparison
       original: this.removeHeader(originalHtml),
       edited: this.removeHeader(html),
     });
+
+    const err = this.errorToUserFriendly(error);
+    return err ?? content;
   }
 
   private removeHeader(html: string): string {
@@ -115,15 +142,30 @@ class AIService {
     html: string,
     description: string
   ): Promise<string | undefined> {
-    const result = await proseCompletion("Extract Keywords", keywordPrompt, {
-      html,
-      description,
-    });
-    return result ? result.toLowerCase() : undefined;
+    const { error, content } = await proseCompletion(
+      "Extract_Keywords",
+      keywordPrompt,
+      {
+        html,
+        description,
+      }
+    );
+
+    const err = this.errorToUserFriendly(error);
+    return err ?? content?.toLowerCase();
   }
 
   logAggregation(): void {
-    logAggregation();
+    logger.info("AI Aggregation", aggregation);
+  }
+
+  private errorToUserFriendly(error?: string) {
+    if (error === "OpenAI Context Too Long") {
+      return "The input is too long for the AI to process.";
+    } else if (error) {
+      return "An error occurred while processing.";
+    }
+    return undefined;
   }
 }
 
