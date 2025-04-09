@@ -1,5 +1,5 @@
-import { logger } from "@dry-utils/logger";
-import { proseCompletion, setAILogging } from "@dry-utils/openai";
+import { logger } from "dry-utils-logger";
+import { proseCompletion, setAILogging } from "dry-utils-openai";
 
 const summarizePrompt = `
 You are an AI assistant specialized in analyzing government documents.
