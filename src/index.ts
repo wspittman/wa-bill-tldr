@@ -1,5 +1,5 @@
-import { setAsyncLogging } from "dry-utils/async";
-import { logger } from "dry-utils/logger";
+import { setAsyncLogging } from "dry-utils-async";
+import { logger } from "dry-utils-logger";
 import {
   finalize,
   findOutdatedIds,
