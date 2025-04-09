@@ -9,6 +9,10 @@
     "unlink-dry-utils": "npm unlink dry-utils-async dry-utils-logger dry-utils-openai dry-utils-text"
   },
   "dependencies": {
+    "dry-utils-async": "^0.1.0",
+    "dry-utils-logger": "^0.1.0",
+    "dry-utils-openai": "^0.1.0",
+    "dry-utils-text": "^0.1.0",
     "soap": "^1.1.8"
   },
   "devDependencies": {
