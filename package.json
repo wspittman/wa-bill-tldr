@@ -4,11 +4,12 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx tsx --env-file=.env src/index.ts"
+    "start": "npx tsx --env-file=.env src/index.ts",
+    "link-dry-utils": "npm link @dry-utils/async @dry-utils/logger @dry-utils/openai @dry-utils/text",
+    "unlink-dry-utils": "npm unlink @dry-utils/async @dry-utils/logger @dry-utils/openai @dry-utils/text"
   },
   "dependencies": {
-    "soap": "^1.1.8",
-    "dry-utils": "^0.1.0"
+    "soap": "^1.1.8"
   },
   "devDependencies": {
     "@types/node": "^22.13.4",

@@ -1,6 +1,6 @@
-import { batch } from "dry-utils/async";
-import { markdownToHtml } from "dry-utils/htmldown";
-import { logger } from "dry-utils/logger";
+import { batch } from "@dry-utils/async";
+import { logger } from "@dry-utils/logger";
+import { markdownToHtml } from "@dry-utils/text";
 import { aiService } from "./aiService/aiService.ts";
 import { Storage } from "./storage.ts";
 import { mergeBillDocs, toBill, toBillFull } from "./types/toType.ts";
